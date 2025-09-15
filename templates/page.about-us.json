@@ -1,0 +1,407 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "compact-size-enabled": true,
+          "size_heading": 140,
+          "size_heading_mobile": 100,
+          "color-body-text": "rgba(0,0,0,0)",
+          "color-bg-overlay": "rgba(0,0,0,0)",
+          "color-overlay-opacity": 100,
+          "margin-top": 40,
+          "margin-bottom": 0
+        }
+      },
+      "b0118af0-7eaf-42de-8ebe-2bacbdcdac45": {
+        "type": "background-video",
+        "blocks": {
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1": {
+            "type": "subheading",
+            "disabled": true,
+            "settings": {
+              "subheading": "Tell your story",
+              "subheading_disable_on_mobile": false
+            }
+          },
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1": {
+            "type": "heading",
+            "settings": {
+              "heading": "About Us",
+              "disable_on_mobile": false,
+              "size_heading": 200,
+              "size_heading_mobile": 180
+            }
+          },
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Discover Our Story</p>",
+              "disable_on_mobile": false
+            }
+          },
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1": {
+            "type": "button",
+            "settings": {
+              "button_select": "primary",
+              "button_label": "Button label",
+              "disable_on_mobile": false,
+              "button_link": "",
+              "second_button_select": "primary",
+              "second_button_label": "Button label",
+              "second_disable_on_mobile": false,
+              "second_button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1",
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1",
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1",
+          "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1"
+        ],
+        "settings": {
+          "heading": "",
+          "full-width-enabled": true,
+          "autoplay": true,
+          "video_controls": false,
+          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "original_ratio": "fixed_height",
+          "desktop_fixed_height": 520,
+          "mobile_fixed_height": 380,
+          "color-body-heading": "rgba(0,0,0,0)",
+          "color-overlay": "rgba(0,0,0,0)",
+          "color-overlay-opacity": 100,
+          "color-body-text": "#ffffff",
+          "desktop_text_horizontal_position": "center",
+          "mobile_text_horizontal_position": "center",
+          "margin-top": 0,
+          "margin-bottom": 0
+        }
+      },
+      "1778038b-a0c4-48d6-9085-3312ff830b43": {
+        "type": "rich-text",
+        "blocks": {
+          "template--16408320606408__1778038b-a0c4-48d6-9085-3312ff830b43-heading-1": {
+            "type": "heading",
+            "settings": {
+              "heading": "Big thanks",
+              "disable_on_mobile": false,
+              "size_heading": 100,
+              "size_heading_mobile": 100
+            }
+          },
+          "template--16408320606408__1778038b-a0c4-48d6-9085-3312ff830b43-text-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>We could not have created this demo without the help of an amazing source of content and products.</p><p>We extend our sincere appreciation to Mokosh, Bkind, and Herbivore for generously allowing us to showcase their product images on our demo store. Their collaboration has been instrumental in creating a visually engaging and informative experience for our visitors. We are proud to align with brands that share our commitment to quality and innovation. Thank you for the opportunity to feature your exceptional products and contribute to a more vibrant online shopping experience.</p>",
+              "disable_on_mobile": false
+            }
+          },
+          "template--16408320606408__1778038b-a0c4-48d6-9085-3312ff830b43-button-1": {
+            "type": "button",
+            "disabled": true,
+            "settings": {
+              "button_select": "primary",
+              "button_label": "Button label",
+              "button_link": "/",
+              "disable_on_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "template--16408320606408__1778038b-a0c4-48d6-9085-3312ff830b43-heading-1",
+          "template--16408320606408__1778038b-a0c4-48d6-9085-3312ff830b43-text-1",
+          "template--16408320606408__1778038b-a0c4-48d6-9085-3312ff830b43-button-1"
+        ],
+        "settings": {
+          "section_width": "regular",
+          "desktop_text_horizontal_position": "center",
+          "color-body-text": "rgba(0,0,0,0)",
+          "background_color": "rgba(0,0,0,0)",
+          "margin-top": 48,
+          "margin-bottom": 48
+        }
+      },
+      "43cbdafd-d48f-4d66-9ab5-c471be313d5b": {
+        "type": "image-with-text",
+        "blocks": {
+          "596defd1-ab18-43c7-aa4e-97c7e317dd71": {
+            "type": "heading",
+            "settings": {
+              "heading": "Mokosh",
+              "disable_on_mobile": false,
+              "size_heading": 100,
+              "size_heading_mobile": 90
+            }
+          },
+          "3f541413-67b8-4c65-8d71-a84071ae664f": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Mokosh Cosmetics produces exceptional natural cosmetics that captivate with their quality and selection of raw materials, texture and fragrance. The recipes of Mokosh products are the result of joint work of technologists and cosmetologists, which is why they respond so well to the real needs of customers.</p>",
+              "text_style": "body",
+              "disable_on_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "596defd1-ab18-43c7-aa4e-97c7e317dd71",
+          "3f541413-67b8-4c65-8d71-a84071ae664f"
+        ],
+        "settings": {
+          "title": "",
+          "layout": "text_first",
+          "desktop-percentage-image-width": 50,
+          "full-width-enabled": true,
+          "slide_height": "adapt_to_first_image",
+          "desktop_fixed_height": 320,
+          "mobile_fixed_height": 460,
+          "section-color-body-text": "#000000",
+          "section-color-overlay": "rgba(0,0,0,0)",
+          "section-color-overlay-opacity": 100,
+          "color-body-text": "rgba(0,0,0,0)",
+          "color-overlay": "#daefda",
+          "color-overlay-opacity": 100,
+          "desktop_text_vertical_position": "center",
+          "desktop_text_horizontal_position": "left",
+          "mobile_text_horizontal_position": "center",
+          "margin-top": 0,
+          "margin-bottom": 0
+        }
+      },
+      "d4180441-144f-448c-a157-500e0a202d36": {
+        "type": "image-with-text",
+        "blocks": {
+          "8d31b27b-83be-4c20-b72f-904a9c543da3": {
+            "type": "heading",
+            "settings": {
+              "heading": "BKIND",
+              "disable_on_mobile": false,
+              "size_heading": 100,
+              "size_heading_mobile": 90
+            }
+          },
+          "210693db-9734-4e2b-b162-2d4089b64b48": {
+            "type": "text",
+            "settings": {
+              "text": "<p>At BKIND, we offer all-natural, plant-based, vegan, eco-friendly beauty and skin care products made in Quebec. Each product is carefully developed. From ingredients to packaging, we choose the best options for you, your skin and the environment.</p>",
+              "text_style": "body",
+              "disable_on_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "8d31b27b-83be-4c20-b72f-904a9c543da3",
+          "210693db-9734-4e2b-b162-2d4089b64b48"
+        ],
+        "settings": {
+          "title": "",
+          "layout": "image_first",
+          "desktop-percentage-image-width": 50,
+          "full-width-enabled": true,
+          "slide_height": "adapt_to_first_image",
+          "desktop_fixed_height": 320,
+          "mobile_fixed_height": 460,
+          "section-color-body-text": "#000000",
+          "section-color-overlay": "#f9ebe0",
+          "section-color-overlay-opacity": 100,
+          "color-body-text": "rgba(0,0,0,0)",
+          "color-overlay": "rgba(0,0,0,0)",
+          "color-overlay-opacity": 100,
+          "desktop_text_vertical_position": "center",
+          "desktop_text_horizontal_position": "left",
+          "mobile_text_horizontal_position": "center",
+          "margin-top": 0,
+          "margin-bottom": 0
+        }
+      },
+      "85b9cb93-1be6-474a-a740-29ece523f118": {
+        "type": "image-with-text",
+        "blocks": {
+          "4f3d2481-cce6-4e8f-b40f-8ce5beba1fd8": {
+            "type": "heading",
+            "settings": {
+              "heading": "Herbivore",
+              "disable_on_mobile": false,
+              "size_heading": 100,
+              "size_heading_mobile": 90
+            }
+          },
+          "b36f9bca-3524-473d-b88f-21d201462254": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Herbivore believes in the power of nature to bring tangible results you can see and feel. We make our products, ingredients, and packaging as gentle on the planet as they are on our bodies.</p>",
+              "text_style": "body",
+              "disable_on_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "4f3d2481-cce6-4e8f-b40f-8ce5beba1fd8",
+          "b36f9bca-3524-473d-b88f-21d201462254"
+        ],
+        "settings": {
+          "title": "",
+          "layout": "text_first",
+          "desktop-percentage-image-width": 50,
+          "full-width-enabled": true,
+          "slide_height": "adapt_to_first_image",
+          "desktop_fixed_height": 320,
+          "mobile_fixed_height": 460,
+          "section-color-body-text": "#000000",
+          "section-color-overlay": "#fcebee",
+          "section-color-overlay-opacity": 100,
+          "color-body-text": "rgba(0,0,0,0)",
+          "color-overlay": "rgba(0,0,0,0)",
+          "color-overlay-opacity": 100,
+          "desktop_text_vertical_position": "center",
+          "desktop_text_horizontal_position": "left",
+          "mobile_text_horizontal_position": "center",
+          "margin-top": 0,
+          "margin-bottom": 0
+        }
+      },
+      "0fb78468-9ddb-4ab4-b0f2-17627de7d650": {
+        "type": "features-banner",
+        "blocks": {
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-1": {
+            "type": "image",
+            "settings": {
+              "select_icon": "bag",
+              "heading": "Vegan",
+              "text": "<p>Our entire collection is vegan and cruelty free.</p>",
+              "link": ""
+            }
+          },
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-2": {
+            "type": "image",
+            "settings": {
+              "select_icon": "bag",
+              "heading": "Fast & Free Shipping",
+              "text": "<p>Doorstep delivery to most of the US</p>",
+              "link": ""
+            }
+          },
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-3": {
+            "type": "image",
+            "settings": {
+              "select_icon": "bag",
+              "heading": "Natural",
+              "text": "<p>We only use the finest natural ingredients.</p>",
+              "link": ""
+            }
+          },
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-4": {
+            "type": "image",
+            "settings": {
+              "select_icon": "bag",
+              "heading": "Recyclable",
+              "text": "<p>All packaging is recyclable and eco conscious.</p>",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-1",
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-2",
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-3",
+          "template--15329436369096__0fb78468-9ddb-4ab4-b0f2-17627de7d650-image-4"
+        ],
+        "settings": {
+          "heading": "",
+          "size_heading_mobile": 80,
+          "size_heading": 60,
+          "icon_width_mobile": 36,
+          "icon_width_desktop": 48,
+          "icon_layout": "center",
+          "columns_desktop": "4",
+          "icon_layout_mobile": "grid",
+          "color_body_icon": "rgba(0,0,0,0)",
+          "color_background_icon": "transparent",
+          "color_body_text": "rgba(0,0,0,0)",
+          "background_color": "rgba(0,0,0,0)",
+          "margin-top": 40,
+          "margin-bottom": 52
+        }
+      },
+      "map_address_CgFhaF": {
+        "type": "map-address",
+        "blocks": {
+          "address_header_kBNy3U": {
+            "type": "address_header",
+            "settings": {
+              "address_title": "Our Store",
+              "disable_on_mobile": false,
+              "size_heading": 100,
+              "size_heading_mobile": 100
+            }
+          },
+          "map_address_ynyAMX": {
+            "type": "map_address",
+            "settings": {
+              "address_to_display": "<p>151 O'Connor Street, Ground floor, Ottawa, ON, K2P 2L8.</p>"
+            }
+          },
+          "button_jtWi7h": {
+            "type": "button",
+            "settings": {
+              "button_style": "secondary",
+              "button_label": "Get Direction",
+              "button_link": "https://www.google.com/maps/place/Shopify/@45.419181,-75.7016012,17z/data=!3m1!4b1!4m6!3m5!1s0x4cce05468ce3bf21:0x4dfbad2ddac86336!8m2!3d45.4191773!4d-75.6967303!16s%2Fg%2F11wxj_z427?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+            }
+          }
+        },
+        "block_order": [
+          "address_header_kBNy3U",
+          "map_address_ynyAMX",
+          "button_jtWi7h"
+        ],
+        "settings": {
+          "heading": "",
+          "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
+          "api_key": "",
+          "initial_map_zoom": 14,
+          "map_style": "default",
+          "image": "shopify://shop_images/map-mobile_a3c1f15c-192e-4b58-abdf-68f25498d8e3.jpg",
+          "image_desktop": "shopify://shop_images/map-desktop.jpg",
+          "full-width-enabled": false,
+          "slide_height": "adapt_to_first_image",
+          "desktop_fixed_height": 320,
+          "mobile_fixed_height": 460,
+          "content_alignment": "left",
+          "content_alignment_desktop": "left",
+          "content_position": "top_left",
+          "section-color-body-text": "transparent",
+          "section-color-overlay": "transparent",
+          "section-color-overlay-opacity": 100,
+          "color-body-text": "transparent",
+          "background_color": "#ffffff",
+          "background_color_opacity": 85,
+          "background_blur": 0,
+          "margin-top": 0,
+          "margin-bottom": 40
+        }
+      }
+    },
+    "order": [
+      "main",
+      "b0118af0-7eaf-42de-8ebe-2bacbdcdac45",
+      "1778038b-a0c4-48d6-9085-3312ff830b43",
+      "43cbdafd-d48f-4d66-9ab5-c471be313d5b",
+      "d4180441-144f-448c-a157-500e0a202d36",
+      "85b9cb93-1be6-474a-a740-29ece523f118",
+      "0fb78468-9ddb-4ab4-b0f2-17627de7d650",
+      "map_address_CgFhaF"
+    ]
+  }
+  
