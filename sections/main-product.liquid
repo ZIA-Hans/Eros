@@ -855,7 +855,7 @@
                 {%- endform -%}
               </div>
             {%- when 'separator' -%}
-              <div data-block-id="{{ block.id }}">
+              <div class="wt-separator__wrapper" data-block-id="{{ block.id }}">
                 <hr
                   class="wt-separator__line wt-product__separator {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
                   style="
@@ -1213,7 +1213,7 @@
                 >
                   {% if block.settings.custom_option_type == 'dropdown' %}
                     <div class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-                      <span class="label">{{ block.settings.heading }}</span>: <strong class="value"></strong>
+                      <span class="label">{{ block.settings.heading }}</span>: <span class="value"></span>
                     </div>
                     <button
                       aria-label="{{ options.first }}"
@@ -1244,7 +1244,7 @@
                     </div>
                   {% elsif block.settings.custom_option_type == 'text' %}
                     <div class="wt-product__option__title">
-                      <span class="label">{{ block.settings.heading }}</span>: <strong class="value"></strong>
+                      <span class="label">{{ block.settings.heading }}</span>: <span class="value"></span>
                     </div>
                     <input
                       type="textarea"
@@ -1421,7 +1421,62 @@
                         {% assign swatch_option_key = 'option' | append: forloop.index %}
                         <div class="js wt-product__option">
                           <div class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-                            <span class="label">{{ option.name }}: </span> <strong class="value"></strong>
+                            {% assign option_name_downcase = option.name | downcase %}
+                            <script>console.log('option_name_downcase:', '{{ option_name_downcase }}');</script>
+                            {% comment %} 设定为Size的Option可以打开弹窗看尺寸选择 {% endcomment %}
+                            {% if option_name_downcase == 'size' %}
+                              <div class="wt-product__page">
+                                <modal-opener
+                                  class="wt-product__opener no-js-hidden quick-add-hidden"
+                                  data-modal="#PopupModal-{{ block.id }}"
+                                  {{ block.shopify_attributes }}
+                                >
+                                  <button
+                                    {% comment %} aria-label="{{ block.settings.size_link | default: block.settings.size_page.title }}" {% endcomment %}
+                                    id="ProductPopup-{{ block.id }}"
+                                    class="wt-product__size-chat"
+                                    type="button"
+                                    aria-haspopup="dialog"
+                                  >
+                                    {{ option.name }}
+                                  </button>
+                                </modal-opener>
+                              </div>
+                              <modal-dialog
+                                id="PopupModal-{{ block.id }}"
+                                class="wt-product__modal"
+                                {{ block.shopify_attributes }}
+                              >
+                                <div
+                                  role="dialog"
+                                  {% comment %} aria-label="{{ block.settings.size_link }}" {% endcomment %}
+                                  aria-modal="true"
+                                  class="wt-product__modal--content"
+                                  tabindex="-1"
+                                >
+                                  <div class="wt-product__modal-top">
+                                    <div
+                                      id="ModalClose-{{ block.id }}"
+                                      role="button"
+                                      class="wt-product__modal--toggle"
+                                      aria-label="{{ 'accessibility.close' | t }}"
+                                    >
+                                      {% render 'icons',
+                                        id: 'close',
+                                        icon_id: 'wt-announcement__close',
+                                        icon_class: 'wt-announcement__close'
+                                      %}
+                                    </div>
+                                  </div>
+                                  <div class="wt-product__modal--content-info rte">
+                                    <p class="headline__title">{{ block.settings.size_page.title }}</p>
+                                    {{ block.settings.size_page.content }}
+                                  </div>
+                                </div>
+                              </modal-dialog>
+                            {% else %}
+                              <span class="label">{{ option.name }} </span>
+                            {% endif %}
                           </div>
 
                           {% assign options_body_class = 'tiles' %}
@@ -1562,6 +1617,44 @@
                           {% endif %}
                         </div>
                       {%- endfor -%}
+                      
+                      {% comment %} Size弹窗 {% endcomment %}
+                      {% comment %} {% assign size_block = section.blocks | where: 'type', 'size_popup' | first %}
+                      {% if size_block and size_block.settings.size_page != blank %}
+                        <modal-dialog
+                          id="SizePopupModal-{{ size_block.id }}"
+                          class="wt-product__modal"
+                          {{ size_block.shopify_attributes }}
+                        >
+                          <div
+                            role="dialog"
+                            aria-label="{{ size_block.settings.size_page.title }}"
+                            aria-modal="true"
+                            class="wt-product__modal--content"
+                            tabindex="-1"
+                          >
+                            <div class="wt-product__modal-top">
+                              <div
+                                id="SizeModalClose-{{ size_block.id }}"
+                                role="button"
+                                class="wt-product__modal--toggle"
+                                aria-label="{{ 'accessibility.close' | t }}"
+                              >
+                                {% render 'icons',
+                                  id: 'close',
+                                  icon_id: 'wt-announcement__close',
+                                  icon_class: 'wt-announcement__close'
+                                %}
+                              </div>
+                            </div>
+                            <div class="wt-product__modal--content-info rte">
+                              <p class="headline__title">{{ size_block.settings.size_page.title }}</p>
+                              {{ size_block.settings.size_page.content }}
+                            </div>
+                          </div>
+                        </modal-dialog>
+                      {% endif %} {% endcomment %}
+                      
                       <script type="application/json">
                         {{ product.variants | json }}
                       </script>
@@ -2054,7 +2147,7 @@
                     <span class="label">
                       {% comment %} check if sorted_variants length > 0 {% endcomment %}
                       {% if block.settings.option_name != empty and sorted_variants.size > 0 %}
-                        {{ block.settings.option_name }}: <strong class="value">{{ option_name }}</strong>
+                        {{ block.settings.option_name }}: <span class="value">{{ option_name }}</span>
                       {% endif %}
                     </span>
                   </div>
@@ -2068,7 +2161,15 @@
                         {% assign option_color = '' %}
                         {% assign option_name = '' %}
 
+                        {% comment %} 获取当前产品/变体的元字段值 {% endcomment %}
                         {% assign option_value = variant.metafields[metafield_namespace][metafield_key] %}
+                        
+                        {% comment %} 检查当前配置的产品是否为页面当前产品 {% endcomment %}
+                        {% assign is_current_product = false %}
+                        {% if variant.id == product.id %}
+                          {% assign is_current_product = true %}
+                        {% endif %}
+                        
                         {% if option_value.type == 'metaobject_reference' %}
                           {% assign option_metaobject = option_value.value %}
                           {% assign option_image = option_metaobject.image %}
@@ -2090,7 +2191,7 @@
                               <a
                                 href="{{ variant.url }}"
                                 tabindex="0"
-                                class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %} {% if option_value == current_option %} active {% endif %} {% if block.settings.radius == 'custom' %} custom-radius {% endif %}"
+                                class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %} {% if option_value == current_option or is_current_product %} active {% endif %} {% if block.settings.radius == 'custom' %} custom-radius {% endif %}"
                                 for="{{ section.id }}-{{ block.id }}-{{ forloop.index0 }}"
                               >
                                 {{ option_name }}
@@ -2099,7 +2200,7 @@
                               <a
                                 href="{{ variant.url }}"
                                 tabindex="0"
-                                class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %} {% if option_value == current_option %} active {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
+                                class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %} {% if option_value == current_option or is_current_product %} active {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
                               >
                                 <div
                                   class="{{ options_container_class }}__list__link__content {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius {% endif %}"
@@ -2308,6 +2409,42 @@
 
 <script type="module" src="{{ 'gallery.js' | asset_url }}" defer="defer"></script>
 <script type="module" src="{{ 'pdp.js' | asset_url }}" defer="defer"></script>
+
+{% comment %} <script>
+  // 调试脚本：检查产品选项
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('=== 产品选项调试信息 ===');
+    
+    // 检查产品是否有选项
+    const productOptions = document.querySelectorAll('.wt-product__option');
+    console.log('找到的产品选项数量:', productOptions.length);
+    
+    productOptions.forEach((option, index) => {
+      const title = option.querySelector('.wt-product__option__title');
+      const label = title ? title.querySelector('.label, button') : null;
+      const optionName = label ? label.textContent.trim() : 'unknown';
+      
+      console.log(`选项 ${index + 1}:`, {
+        element: option,
+        title: title,
+        optionName: optionName,
+        isSize: optionName.toLowerCase() === 'size'
+      });
+      
+      if (optionName.toLowerCase() === 'size') {
+        console.log('找到Size选项！', option);
+        const sizeButton = option.querySelector('button[aria-haspopup="dialog"]');
+        const modalOpener = option.querySelector('modal-opener');
+        console.log('Size按钮:', sizeButton);
+        console.log('Modal opener:', modalOpener);
+      }
+    });
+    
+    // 检查size弹窗是否存在
+    const sizeModal = document.querySelector('[id^="SizePopupModal-"]');
+    console.log('Size弹窗:', sizeModal);
+  });
+</script> {% endcomment %}
 
 {% schema %}
 {
@@ -2972,6 +3109,12 @@
           "default": 8,
           "label": "t:sections.settings.settings.distance-bottom.label",
           "info": "t:sections.settings.settings.distance-bottom.info"
+        },
+        {
+          "id": "size_page",
+          "type": "page",
+          "label": "选择尺寸选择介绍页面",
+          "info": "选择一个页面作为SIZE这个option的介绍弹窗"
         }
       ]
     },

@@ -367,7 +367,7 @@
     transform: translateX(-50%) rotate(90deg);
   }
   .wt-product__gallery--carousel-vertical .wt-slider__container--thumbs .swiper-slide {
-    width: calc(var(--gap, 8px) * 10);
+    width: 100%;
     height: auto;
   }
   .wt-product__gallery--carousel-vertical .wt-slider__container--thumbs .swiper-button-next {
