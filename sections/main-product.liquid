@@ -773,7 +773,17 @@
         <div class="swiper-button-prev wt-slider__nav-btn wt-slider__nav-prev wt-slider__nav-prev--basic">
           {% render 'icons', id: 'arrow-left' %}
         </div>
-
+        {% comment %} TODO: 上下切换按钮 {% endcomment %}
+        {% comment %} <div class="swiper-button-next wt-slider__nav-btn wt-slider__nav-next wt-slider__nav-next--basic">
+          <div class="swiper-button__box">
+            <svg t="1758709505307" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7508" width="16" height="16"><path d="M761.6 489.6l-432-435.2c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l416 416-416 425.6c-9.6 9.6-9.6 25.6 0 35.2s25.6 9.6 35.2 0l432-441.6C771.2 515.2 771.2 499.2 761.6 489.6z" p-id="7509" fill="#ffffff"></path></svg>
+          </div>
+        </div>
+        <div class="swiper-button-prev wt-slider__nav-btn wt-slider__nav-prev wt-slider__nav-prev--basic">
+          <div class="swiper-button__box">
+            <svg t="1758709424590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6403" width="16" height="16"><path d="M729.6 931.2l-416-425.6 416-416c9.6-9.6 9.6-25.6 0-35.2-9.6-9.6-25.6-9.6-35.2 0l-432 435.2c-9.6 9.6-9.6 25.6 0 35.2l432 441.6c9.6 9.6 25.6 9.6 35.2 0C739.2 956.8 739.2 940.8 729.6 931.2z" p-id="6404" fill="#ffffff"></path></svg>
+          </div>
+        </div> {% endcomment %}
         <script data-swiper-configuration type="text/json">
           {
               "freeMode": false,
@@ -781,8 +791,8 @@
               "direction": "{{ thumbnails_direction }}",
               "spaceBetween": 8,
               {% if desktop_layout == 'carousel-vertical' %}
-                  "slidesPerView": {% if section.settings.desktop-image-ratio == 'portrait' %} 7 {% else %} 6 {% endif %},
-                  "slidesPerGroup": {% if section.settings.desktop-image-ratio == 'portrait' %} 5 {% else %} 4 {% endif %},
+                  "slidesPerView": 5,
+                  "slidesPerGroup": 4,
               {%  else %}
                   "slidesPerView": "auto",
                   "slidesPerGroup": 4,

@@ -1,1 +1,1006 @@
-{"sections":{"breadcrumbs":{"type":"main-breadcrumbs","disabled":true,"settings":{"full-width-enabled":true,"text_color":"#ffffff","background_color":"#f29f00","margin-top":12,"margin-bottom":12}},"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"brand":"Eros Lingerie","size_text":300,"size_text_mobile":160}},"feature_tags_ktxUht":{"type":"feature_tags","settings":{"metafield":"shopify.detailed-ingredients","limit":4,"text_color":"rgba(0,0,0,0)","border_color":"rgba(0,0,0,0)"}},"share_buttons_QJQBWK":{"type":"share_buttons","settings":{"heading":"Share","social_facebook_link":true,"social_twitter_link":true,"social_pinterest_link":true,"social_whatsapp_link":true,"mail_link":false}},"separator_reBrRK":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#000000","margin-top":8,"margin-bottom":8}},"price":{"type":"price","settings":{"show_tax_included":true,"show_shipping_policy":true,"size_text":140,"size_text_mobile":140}},"dd5cf19e-afbd-4294-a8c3-4a0a19669079":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}},"text_LQ6bM9":{"type":"text","disabled":true,"settings":{"heading":"","content":"<p>Topical skincare is key, but lasting results start within. WELLNESS Collagen provides 2000 mg of Collagen Peptides plus Vitamins C and E to promote clear skin and boost natural collagen. Elevate your skincare from the inside out.<\/p>","page":""}},"c1ba8695-94d2-40ad-ac06-93ec3b8cf38e":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#ffffff","margin-top":8,"margin-bottom":0}},"product_variations_7LBAAU":{"type":"product_variations","settings":{"option_name":"Color","picker_type":"swatch","swatch_size":36,"radius":"default","border_radius":0,"option_value_metafield":"custom.color","products":["eros-no-1-10d-tight-nude","eros-no-1-10d-tight-black"]}},"variant_picker_7mHC3V":{"type":"variant_picker","settings":{"picker_type":"button","color_swatch_names":"","variant_picture_swatch_names":"","thumb_size":60,"radius":"default","border_radius":15,"dropdown_swatch_names":"","margin-top":0,"margin-bottom":8}},"information_popup_pw9mqt":{"type":"information_popup","settings":{"size_icon":"ruler","size_link":"Size Chart","size_content":"brand-story-stockings-pantyhose-tights"}},"separator_xgqTJM":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#000000","margin-top":8,"margin-bottom":4}},"promo_EEWbjj":{"type":"promo","settings":{"content":"<p>Promo block<\/p>","text_alignment":"center","color-body-text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true,"show_qty_selector":true,"text_color":"#ffffff","background_color":"#151515"}},"description":{"type":"description","disabled":true,"settings":{"is_open":false,"icon":"none"}},"collapsible_tab_Q7UFgL":{"type":"collapsible_tab","settings":{"heading":"BENEFITS","content":"<ul><li><strong>Supports Healthy Skin<\/strong>: Boosts skin elasticity, hydration, and firmness, helping to reduce the appearance of wrinkles and promote a youthful glow.<\/li><li><strong>Strengthens Hair and Nails<\/strong>: Encourages healthier, stronger hair growth and helps to reduce brittle nails, giving you a polished look from within.<\/li><li><strong>Promotes Joint Health<\/strong>: Enhances joint flexibility and reduces discomfort, supporting an active lifestyle and overall mobility.<\/li><li><strong>Improves Bone Density<\/strong>: Aids in maintaining strong and healthy bones by supporting bone structure and density.<\/li><li><strong>Enhances Muscle Recovery<\/strong>: Assists in muscle repair and recovery, making it an excellent supplement for active individuals and athletes.<\/li><\/ul>","metafield_variables":"","page":"","icon":"none"}},"separator_gDwzxi":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#ffffff","margin-top":0,"margin-bottom":0}},"collapsible_tab_3rErRt":{"type":"collapsible_tab","settings":{"heading":"How to take supplement?","content":"<ol><li>Recommended Dosage: Take 1 capsules daily, preferably with water or your favorite beverage.<\/li><li>Best Time to Take: For optimal results, consume the supplement in the morning on an empty stomach or as advised by your healthcare professional.<\/li><li>Consistency is Key: Incorporate the supplement into your daily routine to maximize its benefits.<\/li><li>Optional Pairing: Pair with a balanced diet and a healthy lifestyle to enhance the effects.<\/li><li>Always read the product label for specific instructions and consult your healthcare provider if you are pregnant, nursing, or taking medications.<br\/>This is demo store, this information are only for demo purpose<\/li><\/ol>","metafield_variables":"","page":"","icon":"none"}},"separator_pEEMHg":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#ffffff","margin-top":0,"margin-bottom":0}},"collapsible_tab_cAT6Ne":{"type":"collapsible_tab","settings":{"heading":"INGREDIENTS","content":"<ul><li><strong>Protein<\/strong><\/li><li><strong>Vitamin C<\/strong> (as L-Ascorbic Acid)<\/li><li><strong>Vitamin E<\/strong> (as D-Alpha Tocopherol Succinate)<\/li><li><strong>Hydrolysed Collagen<\/strong> (from Bovine)<\/li><\/ul>","metafield_variables":"","page":"","icon":"none"}},"feature_icons_VEKFdJ":{"type":"feature_icons","settings":{"metafield":"","layout_select":"column","show_icons_label":true,"items_per_row_desktop":2,"icon_size_desktop":48,"size_text":100,"items_per_row":2,"icon_size_mobile":40,"size_text_mobile":100}}},"block_order":["title","feature_tags_ktxUht","share_buttons_QJQBWK","separator_reBrRK","price","dd5cf19e-afbd-4294-a8c3-4a0a19669079","text_LQ6bM9","c1ba8695-94d2-40ad-ac06-93ec3b8cf38e","product_variations_7LBAAU","variant_picker_7mHC3V","information_popup_pw9mqt","separator_xgqTJM","promo_EEWbjj","buy_buttons","description","collapsible_tab_Q7UFgL","separator_gDwzxi","collapsible_tab_3rErRt","separator_pEEMHg","collapsible_tab_cAT6Ne","feature_icons_VEKFdJ"],"settings":{"enable_sticky_buy_button":true,"full-width-enabled":false,"desktop-media-size":"normal","desktop-layout":"carousel-vertical","desktop-image-ratio":"portrait","enable_video_looping":true,"enable-preselected-variant":true,"enable-image-zoom":true,"mobile-image":"small","text_color":"#bfb8b8","background_color":"#edeae0","margin-top":8,"margin-bottom":8}},"3aeb6d9a447ae5270dc8":{"type":"apps","settings":{"include_margins":true}},"separator_a938wj":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"benefits_product_RArPDt":{"type":"benefits-product","blocks":{"benefit_Vd94d7":{"type":"benefit","settings":{"image":"shopify:\/\/shop_images\/20250404193434.jpg","item_heading":"Vitamin A","text":"<p>Essential for good vision, healthy skin, and a robust immune system, it also supports cell growth and reproduction.<\/p>"}}},"block_order":["benefit_Vd94d7"],"settings":{"heading":"Key Ingredients","full-width-enabled":false,"desktop_width":86,"desktop_max_width":840,"button_label":"","button_link":"","quick_buy_product":"","button_select":"primary","size_heading":140,"size_heading_mobile":120,"color-body-heading":"rgba(0,0,0,0)","color-overlay":"#fcf8f2","color-overlay-opacity":100,"color-body-text":"rgba(0,0,0,0)","margin-top":48,"margin-bottom":48}},"separator_eQP688":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"scrolling_text_banner_wcVbRd":{"type":"scrolling-text-banner","blocks":{"heading_FPpXkp":{"type":"heading","settings":{"heading":"Glow from Within – Strengthen with Collagen!","size_heading":700,"size_heading_mobile":240}},"button_E9kgHx":{"type":"button","settings":{"button_select":"secondary","button_label":"our mission","disable_on_mobile":false,"button_link":"\/","second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}}},"block_order":["heading_FPpXkp","button_E9kgHx"],"settings":{"heading":"","full-width-enabled":true,"animation_speed":4,"slide_height":"adapt_to_first_image","desktop_fixed_height":320,"mobile_fixed_height":460,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","color-heading":"rgba(0,0,0,0)","section-color-overlay":"rgba(0,0,0,0)","section-color-overlay-opacity":100,"color-body-text":"#ffffff","text-container-color":"#000000","color-overlay-opacity":20,"margin-top":0,"margin-bottom":0}},"separator_X8dBea":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"rich_text_zWj4cT":{"type":"rich-text","blocks":{"text_BDXGNa":{"type":"text","settings":{"text":"<p>Your Health in Trusted Hands!<\/p>","disable_on_mobile":false}},"heading_G4i3AE":{"type":"heading","settings":{"heading":"Real Stories, Real Results","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}}},"block_order":["text_BDXGNa","heading_G4i3AE"],"settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","margin-top":40,"margin-bottom":0}},"testimonial_video_reels_qnieGX":{"type":"testimonial-video-reels","blocks":{"video_xweXNL":{"type":"video","settings":{"rating":"5","testimonial":"<p>\"I was skeptical at first, but after just a few weeks, I noticed a huge difference in my energy and mood!\"<\/p>","author":"Sarah J."}},"video_CgLccj":{"type":"video","settings":{"rating":"5","testimonial":"<p>\"Finally, a product that delivers on its promises. My skin glows, and I feel amazing inside and out!\"<\/p>","author":"Anna P."}},"video_XqGWqn":{"type":"video","settings":{"rating":"4.5","testimonial":"<p>\"I’ve tried so many supplements, but nothing compares to these. I feel like the best version of myself!\"<\/p>","author":"Maria Z."}},"video_dtJqXE":{"type":"video","settings":{"rating":"4.5","testimonial":"<p>\"A game-changer for my daily routine. I wake up refreshed and ready to take on the day like never before!\"<\/p>","author":"Hanna S."}},"video_gAfQHf":{"type":"video","settings":{"rating":"5","testimonial":"<p>\"These supplements have truly changed my life! I feel healthier, more energetic, and confident every day.\"<\/p>","author":"Emma T."}}},"block_order":["video_xweXNL","video_CgLccj","video_XqGWqn","video_dtJqXE","video_gAfQHf"],"settings":{"heading":"","video_button":true,"text_alignment":"center","text_style":"body","color-body-text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","margin-top":20,"margin-bottom":40}},"separator_y6xcTk":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"rich_text_YecVJk":{"type":"rich-text","blocks":{"text_DAR9af":{"type":"text","settings":{"text":"<p>Everything You Need to Know!<\/p>","disable_on_mobile":false}},"heading_LFctxD":{"type":"heading","settings":{"heading":"Frequently Asked Questions","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}}},"block_order":["text_DAR9af","heading_LFctxD"],"settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"rgba(0,0,0,0)","background_color":"#ffffff","margin-top":20,"margin-bottom":20}},"collapsible_menu_WraA7j":{"type":"collapsible_menu","blocks":{"collapsible_tab_ndLBg3":{"type":"collapsible_tab","settings":{"heading":"Are Wellness supplements safe to use?","content":"<p>Absolutely! All our products are manufactured in certified facilities and meet strict safety and quality standards. We recommend consulting your healthcare provider if you have specific health conditions or are taking medications.This is the demo store.<\/p>","page":"","icon":"none"}},"collapsible_tab_74pBFd":{"type":"collapsible_tab","settings":{"heading":"How should I store my supplements?","content":"<p>To ensure the freshness and effectiveness of our products, store them in a cool, dry place away from direct sunlight. Always keep them out of reach of children.<\/p>","page":"","icon":"none"}},"collapsible_tab_ijR4af":{"type":"collapsible_tab","settings":{"heading":"Do you offer international shipping?","content":"<p>Yes, we ship worldwide! Shipping costs and delivery times may vary depending on your location. You can find more details on our Shipping Policy page.<\/p>","page":"","icon":"none"}},"collapsible_tab_nExPEQ":{"type":"collapsible_tab","settings":{"heading":"What is your return policy?","content":"<p>We offer a 30-day satisfaction guarantee. If you're not completely happy with your purchase, you can return it for a refund or exchange. Please visit our Return Policy page for more details.<\/p>","page":"","icon":"none"}}},"block_order":["collapsible_tab_ndLBg3","collapsible_tab_74pBFd","collapsible_tab_ijR4af","collapsible_tab_nExPEQ"],"settings":{"color-body-text":"rgba(0,0,0,0)","background_color":"#ffffff","compact-size-enabled":true,"margin-top":0,"margin-bottom":48}},"separator_UNtqVW":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"grid_view_7wXtrp":{"type":"grid-view","blocks":{"image_UxTPGi":{"type":"image","settings":{"heading":"Immunity \nBoost","heading_disable_on_mobile":false,"size_heading":300,"size_heading_mobile":200,"text":"","text_disable_on_mobile":false,"button_select":"link","button_label":"check now","button_disable_on_mobile":false,"button_link":"","button_link_in_new_window":false,"color-body-text":"#ffffff","color-overlay":"#ffffff","color-overlay-opacity":0,"desktop_text_vertical_position":"top","desktop_text_horizontal_position":"left","mobile_text_vertical_position":"top","mobile_text_horizontal_position":"left"}},"image_TmrRrn":{"type":"image","settings":{"heading":"Energy \nBoost","heading_disable_on_mobile":false,"size_heading":300,"size_heading_mobile":200,"text":"","text_disable_on_mobile":false,"button_select":"link","button_label":"check now","button_disable_on_mobile":false,"button_link":"","button_link_in_new_window":false,"color-body-text":"#ffffff","color-overlay":"rgba(0,0,0,0)","color-overlay-opacity":0,"desktop_text_vertical_position":"top","desktop_text_horizontal_position":"left","mobile_text_vertical_position":"top","mobile_text_horizontal_position":"left"}}},"block_order":["image_UxTPGi","image_TmrRrn"],"settings":{"title":"","swipe_on_mobile":false,"full-width-enabled":true,"image_ratio":"square","color-body-text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","margin-top":0,"margin-bottom":0}},"separator_4a7fFL":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"testimonial_images_3YJzHj":{"type":"testimonial-images","blocks":{"testimonial_gwwdEf":{"type":"testimonial","settings":{"icon_select":"100","text":"<p>\"Collagen Caps have helped with my joint comfort and even improved my skin. Simple, effective, and worth it. I'll definitely keep using them.\"<\/p>","author":"- Michael M.","image_link":""}},"testimonial_6rTqHb":{"type":"testimonial","settings":{"icon_select":"100","text":"<p>\"I've been taking Collagen Caps for a month now and I really see a difference — my skin feels smoother and looks brighter. Super easy to add to my routine.\"<\/p>","author":"- Anna M.","image_link":""}}},"block_order":["testimonial_gwwdEf","testimonial_6rTqHb"],"name":"t:sections.testimonial_images.name","settings":{"title":"","text_style":"body","testimonial_text_size_desktop":170,"testimonial_text_size":120,"layout":"image_first","desktop-percentage-image-width":50,"full-width-enabled":false,"auto-rotate":false,"change_slider_time":5,"slide_height":"adapt_to_first_image","desktop_fixed_height":480,"mobile_fixed_height":300,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"left","mobile_text_horizontal_position":"center","section-color-body-text":"#ffffff","section-color-overlay":"#f29f00","section-color-overlay-opacity":100,"color-body-text":"rgba(0,0,0,0)","color-overlay":"#ffffff","color-overlay-opacity":100,"margin-top":0,"margin-bottom":56}},"separator_daizRp":{"type":"separator","settings":{"heading":"","show-separator-line":true,"full-width-line":true,"color-background":"#000000","margin-top":0,"margin-bottom":0}},"features_banner_wiKkaQ":{"type":"features-banner","blocks":{"image_P4yL64":{"type":"image","settings":{"select_icon":"bag","heading":"Third-party tested","text":"<p>We hold ourselves and our ingredients to the highest standards.<\/p>","link":""}},"image_m7jjzm":{"type":"image","settings":{"select_icon":"user","heading":"Quality ingredients","text":"<p>We're dedicated to using scientifically backed, high-quality natural ingredients.<\/p>","link":""}},"image_AkKWrq":{"type":"image","settings":{"select_icon":"search","heading":"Non-GMO","text":"<p>We carefully evaluate every ingredient, ensuring they are non-GMO.<\/p>","link":""}},"image_XPgaAR":{"type":"image","settings":{"select_icon":"star","heading":"Vegan","text":"<p>We ensure the highest standards with 100% vegan, cruelty-free formulations.<\/p>","link":""}}},"block_order":["image_P4yL64","image_m7jjzm","image_AkKWrq","image_XPgaAR"],"settings":{"heading":"","size_heading_mobile":80,"size_heading":80,"icon_width_mobile":52,"icon_width_desktop":64,"icon_layout":"center","columns_desktop":"4","icon_layout_mobile":"grid","color_body_icon":"rgba(0,0,0,0)","color_background_icon":"rgba(0,0,0,0)","color_body_text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","margin-top":44,"margin-bottom":52}},"image_with_text_9jppHH":{"type":"image-with-text","blocks":{"subheading_KJzFhX":{"type":"subheading","settings":{"subheading":"Tell you story","subheading_disable_on_mobile":false}},"heading_rJHepa":{"type":"heading","settings":{"heading":"Image with text","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}}},"block_order":["subheading_KJzFhX","heading_rJHepa"],"name":"t:sections.image-with-text.presets.name","settings":{"title":"Image with text","layout":"image_first","desktop-percentage-image-width":50,"full-width-enabled":false,"slide_height":"fixed_height","desktop_fixed_height":320,"mobile_fixed_height":300,"section-color-body-text":"rgba(0,0,0,0)","section-color-overlay":"rgba(0,0,0,0)","section-color-overlay-opacity":100,"color-body-text":"rgba(0,0,0,0)","color-overlay":"rgba(0,0,0,0)","color-overlay-opacity":100,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_image":"shopify:\/\/shop_images\/4.jpg","mobile_text_horizontal_position":"left","margin-top":20,"margin-bottom":20}},"slideshow_GnnWB3":{"type":"slideshow","blocks":{"slide_99nkWM":{"type":"slide","settings":{"subheading":"Tell your story","subheading_disable_on_mobile":false,"heading":"Image slide","heading_disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100,"text":"<p>Tell your brand's story through images<\/p>","text_disable_on_mobile":false,"button_select":"primary","button_label":"Button label","button_disable_on_mobile":false,"button_link":"","second_button_select":"primary","second_button_label":"","button_disable_on_mobile_second":false,"second_button_link":"","color-body-text":"rgba(0,0,0,0)","color-overlay":"rgba(0,0,0,0)","color-overlay-opacity":0,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","out-background-color":"rgba(0,0,0,0)","out-text-color":"rgba(0,0,0,0)"}},"slide_YMVDxA":{"type":"slide","settings":{"subheading":"Tell your story","subheading_disable_on_mobile":false,"heading":"Image slide","heading_disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100,"text":"<p>Tell your brand's story through images<\/p>","text_disable_on_mobile":false,"button_select":"primary","button_label":"Button label","button_disable_on_mobile":false,"button_link":"","second_button_select":"primary","second_button_label":"","button_disable_on_mobile_second":false,"second_button_link":"","color-body-text":"rgba(0,0,0,0)","color-overlay":"rgba(0,0,0,0)","color-overlay-opacity":0,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","out-background-color":"rgba(0,0,0,0)","out-text-color":"rgba(0,0,0,0)"}},"slide_FJyhmh":{"type":"slide","settings":{"subheading":"Tell your story","subheading_disable_on_mobile":false,"heading":"Image slide","heading_disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100,"text":"<p>Tell your brand's story through images<\/p>","text_disable_on_mobile":false,"button_select":"primary","button_label":"Button label","button_disable_on_mobile":false,"button_link":"","second_button_select":"primary","second_button_label":"","button_disable_on_mobile_second":false,"second_button_link":"","color-body-text":"rgba(0,0,0,0)","color-overlay":"rgba(0,0,0,0)","color-overlay-opacity":0,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","out-background-color":"rgba(0,0,0,0)","out-text-color":"rgba(0,0,0,0)"}}},"block_order":["slide_99nkWM","slide_YMVDxA","slide_FJyhmh"],"name":"t:sections.slideshow.settings.presets.name","settings":{"heading":"Slideshow","full-width-enabled":false,"auto-rotate":false,"slide_height":"fixed_height","desktop_fixed_height":320,"mobile_fixed_height":460,"heading_color":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","out_hero_mobile":false,"margin-top":20,"margin-bottom":20}},"17553557861ba2a1f6":{"type":"apps","blocks":{"yotpo_product_reviews_reviews_kjWDyw":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"eros-no-1-10d-tight-black"}}},"block_order":["yotpo_product_reviews_reviews_kjWDyw"],"settings":{"include_margins":true}}},"order":["breadcrumbs","main","3aeb6d9a447ae5270dc8","separator_a938wj","benefits_product_RArPDt","separator_eQP688","scrolling_text_banner_wcVbRd","separator_X8dBea","rich_text_zWj4cT","testimonial_video_reels_qnieGX","separator_y6xcTk","rich_text_YecVJk","collapsible_menu_WraA7j","separator_UNtqVW","grid_view_7wXtrp","separator_4a7fFL","testimonial_images_3YJzHj","separator_daizRp","features_banner_wiKkaQ","image_with_text_9jppHH","slideshow_GnnWB3","17553557861ba2a1f6"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": true,
+        "text_color": "#ffffff",
+        "background_color": "#f29f00",
+        "margin-top": 12,
+        "margin-bottom": 12
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "brand": "Eros Lingerie",
+            "size_text": 300,
+            "size_text_mobile": 160
+          }
+        },
+        "feature_tags_ktxUht": {
+          "type": "feature_tags",
+          "settings": {
+            "metafield": "shopify.detailed-ingredients",
+            "limit": 4,
+            "text_color": "rgba(0,0,0,0)",
+            "border_color": "rgba(0,0,0,0)"
+          }
+        },
+        "share_buttons_QJQBWK": {
+          "type": "share_buttons",
+          "settings": {
+            "heading": "Share",
+            "social_facebook_link": true,
+            "social_twitter_link": true,
+            "social_pinterest_link": true,
+            "social_whatsapp_link": true,
+            "mail_link": false
+          }
+        },
+        "separator_reBrRK": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_included": true,
+            "show_shipping_policy": true,
+            "size_text": 140,
+            "size_text_mobile": 140
+          }
+        },
+        "dd5cf19e-afbd-4294-a8c3-4a0a19669079": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "text_LQ6bM9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "content": "<p>Topical skincare is key, but lasting results start within. WELLNESS Collagen provides 2000 mg of Collagen Peptides plus Vitamins C and E to promote clear skin and boost natural collagen. Elevate your skincare from the inside out.</p>",
+            "page": ""
+          }
+        },
+        "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#ffffff",
+            "margin-top": 8,
+            "margin-bottom": 0
+          }
+        },
+        "product_variations_7LBAAU": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "Color",
+            "picker_type": "swatch",
+            "swatch_size": 36,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "custom.tab",
+            "products": [
+              "eros-no-1-10d-tight-nude",
+              "eros-no-1-10d-tight-black"
+            ]
+          }
+        },
+        "variant_picker_7mHC3V": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_swatch_names": "",
+            "variant_picture_swatch_names": "",
+            "thumb_size": 60,
+            "radius": "default",
+            "border_radius": 15,
+            "dropdown_swatch_names": "",
+            "margin-top": 0,
+            "margin-bottom": 8,
+            "size_page": ""
+          }
+        },
+        "information_popup_pw9mqt": {
+          "type": "information_popup",
+          "settings": {
+            "size_icon": "ruler",
+            "size_link": "Size Chart",
+            "size_content": "brand-story-stockings-pantyhose-tights"
+          }
+        },
+        "separator_xgqTJM": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 4
+          }
+        },
+        "promo_EEWbjj": {
+          "type": "promo",
+          "settings": {
+            "content": "<p>Promo block</p>",
+            "text_alignment": "center",
+            "color-body-text": "rgba(0,0,0,0)",
+            "background_color": "rgba(0,0,0,0)"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_qty_selector": true,
+            "text_color": "#ffffff",
+            "background_color": "#151515"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_open": false,
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_Q7UFgL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "BENEFITS",
+            "content": "<ul><li><strong>Supports Healthy Skin</strong>: Boosts skin elasticity, hydration, and firmness, helping to reduce the appearance of wrinkles and promote a youthful glow.</li><li><strong>Strengthens Hair and Nails</strong>: Encourages healthier, stronger hair growth and helps to reduce brittle nails, giving you a polished look from within.</li><li><strong>Promotes Joint Health</strong>: Enhances joint flexibility and reduces discomfort, supporting an active lifestyle and overall mobility.</li><li><strong>Improves Bone Density</strong>: Aids in maintaining strong and healthy bones by supporting bone structure and density.</li><li><strong>Enhances Muscle Recovery</strong>: Assists in muscle repair and recovery, making it an excellent supplement for active individuals and athletes.</li></ul>",
+            "metafield_variables": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "separator_gDwzxi": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#ffffff",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_tab_3rErRt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to take supplement?",
+            "content": "<ol><li>Recommended Dosage: Take 1 capsules daily, preferably with water or your favorite beverage.</li><li>Best Time to Take: For optimal results, consume the supplement in the morning on an empty stomach or as advised by your healthcare professional.</li><li>Consistency is Key: Incorporate the supplement into your daily routine to maximize its benefits.</li><li>Optional Pairing: Pair with a balanced diet and a healthy lifestyle to enhance the effects.</li><li>Always read the product label for specific instructions and consult your healthcare provider if you are pregnant, nursing, or taking medications.<br/>This is demo store, this information are only for demo purpose</li></ol>",
+            "metafield_variables": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "separator_pEEMHg": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#ffffff",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_tab_cAT6Ne": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "INGREDIENTS",
+            "content": "<ul><li><strong>Protein</strong></li><li><strong>Vitamin C</strong> (as L-Ascorbic Acid)</li><li><strong>Vitamin E</strong> (as D-Alpha Tocopherol Succinate)</li><li><strong>Hydrolysed Collagen</strong> (from Bovine)</li></ul>",
+            "metafield_variables": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "feature_icons_VEKFdJ": {
+          "type": "feature_icons",
+          "settings": {
+            "metafield": "",
+            "layout_select": "column",
+            "show_icons_label": true,
+            "items_per_row_desktop": 2,
+            "icon_size_desktop": 48,
+            "size_text": 100,
+            "items_per_row": 2,
+            "icon_size_mobile": 40,
+            "size_text_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "feature_tags_ktxUht",
+        "share_buttons_QJQBWK",
+        "separator_reBrRK",
+        "price",
+        "dd5cf19e-afbd-4294-a8c3-4a0a19669079",
+        "text_LQ6bM9",
+        "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e",
+        "product_variations_7LBAAU",
+        "variant_picker_7mHC3V",
+        "information_popup_pw9mqt",
+        "separator_xgqTJM",
+        "promo_EEWbjj",
+        "buy_buttons",
+        "description",
+        "collapsible_tab_Q7UFgL",
+        "separator_gDwzxi",
+        "collapsible_tab_3rErRt",
+        "separator_pEEMHg",
+        "collapsible_tab_cAT6Ne",
+        "feature_icons_VEKFdJ"
+      ],
+      "settings": {
+        "enable_sticky_buy_button": true,
+        "full-width-enabled": false,
+        "desktop-media-size": "normal",
+        "desktop-layout": "carousel-vertical",
+        "desktop-image-ratio": "portrait",
+        "enable_video_looping": true,
+        "enable-preselected-variant": true,
+        "enable-image-zoom": true,
+        "mobile-image": "small",
+        "text_color": "#bfb8b8",
+        "background_color": "#edeae0",
+        "margin-top": 8,
+        "margin-bottom": 8
+      }
+    },
+    "3aeb6d9a447ae5270dc8": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "separator_a938wj": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "benefits_product_RArPDt": {
+      "type": "benefits-product",
+      "blocks": {
+        "benefit_Vd94d7": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/20250404193434.jpg",
+            "item_heading": "Vitamin A",
+            "text": "<p>Essential for good vision, healthy skin, and a robust immune system, it also supports cell growth and reproduction.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_Vd94d7"
+      ],
+      "settings": {
+        "heading": "Key Ingredients",
+        "full-width-enabled": false,
+        "desktop_width": 86,
+        "desktop_max_width": 840,
+        "button_label": "",
+        "button_link": "",
+        "quick_buy_product": "",
+        "button_select": "primary",
+        "size_heading": 140,
+        "size_heading_mobile": 120,
+        "color-body-heading": "rgba(0,0,0,0)",
+        "color-overlay": "#fcf8f2",
+        "color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "margin-top": 48,
+        "margin-bottom": 48
+      }
+    },
+    "separator_eQP688": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "scrolling_text_banner_wcVbRd": {
+      "type": "scrolling-text-banner",
+      "blocks": {
+        "heading_FPpXkp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glow from Within – Strengthen with Collagen!",
+            "size_heading": 700,
+            "size_heading_mobile": 240
+          }
+        },
+        "button_E9kgHx": {
+          "type": "button",
+          "settings": {
+            "button_select": "secondary",
+            "button_label": "our mission",
+            "disable_on_mobile": false,
+            "button_link": "/",
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_FPpXkp",
+        "button_E9kgHx"
+      ],
+      "settings": {
+        "heading": "",
+        "full-width-enabled": true,
+        "animation_speed": 4,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "color-heading": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "#ffffff",
+        "text-container-color": "#000000",
+        "color-overlay-opacity": 20,
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "separator_X8dBea": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "rich_text_zWj4cT": {
+      "type": "rich-text",
+      "blocks": {
+        "text_BDXGNa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your Health in Trusted Hands!</p>",
+            "disable_on_mobile": false
+          }
+        },
+        "heading_G4i3AE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Stories, Real Results",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "text_BDXGNa",
+        "heading_G4i3AE"
+      ],
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 40,
+        "margin-bottom": 0
+      }
+    },
+    "testimonial_video_reels_qnieGX": {
+      "type": "testimonial-video-reels",
+      "blocks": {
+        "video_xweXNL": {
+          "type": "video",
+          "settings": {
+            "rating": "5",
+            "testimonial": "<p>\"I was skeptical at first, but after just a few weeks, I noticed a huge difference in my energy and mood!\"</p>",
+            "author": "Sarah J."
+          }
+        },
+        "video_CgLccj": {
+          "type": "video",
+          "settings": {
+            "rating": "5",
+            "testimonial": "<p>\"Finally, a product that delivers on its promises. My skin glows, and I feel amazing inside and out!\"</p>",
+            "author": "Anna P."
+          }
+        },
+        "video_XqGWqn": {
+          "type": "video",
+          "settings": {
+            "rating": "4.5",
+            "testimonial": "<p>\"I’ve tried so many supplements, but nothing compares to these. I feel like the best version of myself!\"</p>",
+            "author": "Maria Z."
+          }
+        },
+        "video_dtJqXE": {
+          "type": "video",
+          "settings": {
+            "rating": "4.5",
+            "testimonial": "<p>\"A game-changer for my daily routine. I wake up refreshed and ready to take on the day like never before!\"</p>",
+            "author": "Hanna S."
+          }
+        },
+        "video_gAfQHf": {
+          "type": "video",
+          "settings": {
+            "rating": "5",
+            "testimonial": "<p>\"These supplements have truly changed my life! I feel healthier, more energetic, and confident every day.\"</p>",
+            "author": "Emma T."
+          }
+        }
+      },
+      "block_order": [
+        "video_xweXNL",
+        "video_CgLccj",
+        "video_XqGWqn",
+        "video_dtJqXE",
+        "video_gAfQHf"
+      ],
+      "settings": {
+        "heading": "",
+        "video_button": true,
+        "text_alignment": "center",
+        "text_style": "body",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 40
+      }
+    },
+    "separator_y6xcTk": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "rich_text_YecVJk": {
+      "type": "rich-text",
+      "blocks": {
+        "text_DAR9af": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything You Need to Know!</p>",
+            "disable_on_mobile": false
+          }
+        },
+        "heading_LFctxD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "text_DAR9af",
+        "heading_LFctxD"
+      ],
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#ffffff",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "collapsible_menu_WraA7j": {
+      "type": "collapsible_menu",
+      "blocks": {
+        "collapsible_tab_ndLBg3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are Wellness supplements safe to use?",
+            "content": "<p>Absolutely! All our products are manufactured in certified facilities and meet strict safety and quality standards. We recommend consulting your healthcare provider if you have specific health conditions or are taking medications.This is the demo store.</p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_74pBFd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How should I store my supplements?",
+            "content": "<p>To ensure the freshness and effectiveness of our products, store them in a cool, dry place away from direct sunlight. Always keep them out of reach of children.</p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_ijR4af": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer international shipping?",
+            "content": "<p>Yes, we ship worldwide! Shipping costs and delivery times may vary depending on your location. You can find more details on our Shipping Policy page.</p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_nExPEQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is your return policy?",
+            "content": "<p>We offer a 30-day satisfaction guarantee. If you're not completely happy with your purchase, you can return it for a refund or exchange. Please visit our Return Policy page for more details.</p>",
+            "page": "",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_ndLBg3",
+        "collapsible_tab_74pBFd",
+        "collapsible_tab_ijR4af",
+        "collapsible_tab_nExPEQ"
+      ],
+      "settings": {
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#ffffff",
+        "compact-size-enabled": true,
+        "margin-top": 0,
+        "margin-bottom": 48
+      }
+    },
+    "separator_UNtqVW": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "grid_view_7wXtrp": {
+      "type": "grid-view",
+      "blocks": {
+        "image_UxTPGi": {
+          "type": "image",
+          "settings": {
+            "heading": "Immunity \nBoost",
+            "heading_disable_on_mobile": false,
+            "size_heading": 300,
+            "size_heading_mobile": 200,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "check now",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "#ffffff",
+            "color-overlay": "#ffffff",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "top",
+            "desktop_text_horizontal_position": "left",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        },
+        "image_TmrRrn": {
+          "type": "image",
+          "settings": {
+            "heading": "Energy \nBoost",
+            "heading_disable_on_mobile": false,
+            "size_heading": 300,
+            "size_heading_mobile": 200,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "check now",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "#ffffff",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "top",
+            "desktop_text_horizontal_position": "left",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_UxTPGi",
+        "image_TmrRrn"
+      ],
+      "settings": {
+        "title": "",
+        "swipe_on_mobile": false,
+        "full-width-enabled": true,
+        "image_ratio": "square",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "separator_4a7fFL": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "testimonial_images_3YJzHj": {
+      "type": "testimonial-images",
+      "blocks": {
+        "testimonial_gwwdEf": {
+          "type": "testimonial",
+          "settings": {
+            "icon_select": "100",
+            "text": "<p>\"Collagen Caps have helped with my joint comfort and even improved my skin. Simple, effective, and worth it. I'll definitely keep using them.\"</p>",
+            "author": "- Michael M.",
+            "image_link": ""
+          }
+        },
+        "testimonial_6rTqHb": {
+          "type": "testimonial",
+          "settings": {
+            "icon_select": "100",
+            "text": "<p>\"I've been taking Collagen Caps for a month now and I really see a difference — my skin feels smoother and looks brighter. Super easy to add to my routine.\"</p>",
+            "author": "- Anna M.",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_gwwdEf",
+        "testimonial_6rTqHb"
+      ],
+      "name": "t:sections.testimonial_images.name",
+      "settings": {
+        "title": "",
+        "text_style": "body",
+        "testimonial_text_size_desktop": 170,
+        "testimonial_text_size": 120,
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "auto-rotate": false,
+        "change_slider_time": 5,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 480,
+        "mobile_fixed_height": 300,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "section-color-body-text": "#ffffff",
+        "section-color-overlay": "#f29f00",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "#ffffff",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 56
+      }
+    },
+    "separator_daizRp": {
+      "type": "separator",
+      "settings": {
+        "heading": "",
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "features_banner_wiKkaQ": {
+      "type": "features-banner",
+      "blocks": {
+        "image_P4yL64": {
+          "type": "image",
+          "settings": {
+            "select_icon": "bag",
+            "heading": "Third-party tested",
+            "text": "<p>We hold ourselves and our ingredients to the highest standards.</p>",
+            "link": ""
+          }
+        },
+        "image_m7jjzm": {
+          "type": "image",
+          "settings": {
+            "select_icon": "user",
+            "heading": "Quality ingredients",
+            "text": "<p>We're dedicated to using scientifically backed, high-quality natural ingredients.</p>",
+            "link": ""
+          }
+        },
+        "image_AkKWrq": {
+          "type": "image",
+          "settings": {
+            "select_icon": "search",
+            "heading": "Non-GMO",
+            "text": "<p>We carefully evaluate every ingredient, ensuring they are non-GMO.</p>",
+            "link": ""
+          }
+        },
+        "image_XPgaAR": {
+          "type": "image",
+          "settings": {
+            "select_icon": "star",
+            "heading": "Vegan",
+            "text": "<p>We ensure the highest standards with 100% vegan, cruelty-free formulations.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_P4yL64",
+        "image_m7jjzm",
+        "image_AkKWrq",
+        "image_XPgaAR"
+      ],
+      "settings": {
+        "heading": "",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 64,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "rgba(0,0,0,0)",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 44,
+        "margin-bottom": 52
+      }
+    },
+    "image_with_text_9jppHH": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_KJzFhX": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Tell you story",
+            "subheading_disable_on_mobile": false
+          }
+        },
+        "heading_rJHepa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "subheading_KJzFhX",
+        "heading_rJHepa"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "title": "Image with text",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 300,
+        "section-color-body-text": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/4.jpg",
+        "mobile_text_horizontal_position": "left",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "slideshow_GnnWB3": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_99nkWM": {
+          "type": "slide",
+          "settings": {
+            "subheading": "Tell your story",
+            "subheading_disable_on_mobile": false,
+            "heading": "Image slide",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "",
+            "button_disable_on_mobile_second": false,
+            "second_button_link": "",
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "out-background-color": "rgba(0,0,0,0)",
+            "out-text-color": "rgba(0,0,0,0)"
+          }
+        },
+        "slide_YMVDxA": {
+          "type": "slide",
+          "settings": {
+            "subheading": "Tell your story",
+            "subheading_disable_on_mobile": false,
+            "heading": "Image slide",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "",
+            "button_disable_on_mobile_second": false,
+            "second_button_link": "",
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "out-background-color": "rgba(0,0,0,0)",
+            "out-text-color": "rgba(0,0,0,0)"
+          }
+        },
+        "slide_FJyhmh": {
+          "type": "slide",
+          "settings": {
+            "subheading": "Tell your story",
+            "subheading_disable_on_mobile": false,
+            "heading": "Image slide",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "",
+            "button_disable_on_mobile_second": false,
+            "second_button_link": "",
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "out-background-color": "rgba(0,0,0,0)",
+            "out-text-color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "slide_99nkWM",
+        "slide_YMVDxA",
+        "slide_FJyhmh"
+      ],
+      "name": "t:sections.slideshow.settings.presets.name",
+      "settings": {
+        "heading": "Slideshow",
+        "full-width-enabled": false,
+        "auto-rotate": false,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "out_hero_mobile": false,
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "17553557861ba2a1f6": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_kjWDyw": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "eros-no-1-10d-tight-black"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_kjWDyw"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "3aeb6d9a447ae5270dc8",
+    "separator_a938wj",
+    "benefits_product_RArPDt",
+    "separator_eQP688",
+    "scrolling_text_banner_wcVbRd",
+    "separator_X8dBea",
+    "rich_text_zWj4cT",
+    "testimonial_video_reels_qnieGX",
+    "separator_y6xcTk",
+    "rich_text_YecVJk",
+    "collapsible_menu_WraA7j",
+    "separator_UNtqVW",
+    "grid_view_7wXtrp",
+    "separator_4a7fFL",
+    "testimonial_images_3YJzHj",
+    "separator_daizRp",
+    "features_banner_wiKkaQ",
+    "image_with_text_9jppHH",
+    "slideshow_GnnWB3",
+    "17553557861ba2a1f6"
+  ]
+}
