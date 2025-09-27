@@ -2257,6 +2257,22 @@
                   </div>
                 </div>
               </div>
+            {% when 'product_tip' %}
+              <div data-block-id="{{ block.id }}">
+                <div class="wt-product__product-tip">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_196_2987)">
+                    <path d="M12.2646 12.6849C10.2759 10.3914 3.30907 10.5498 3.19104 9.83562V4.63493C3.30821 3.62592 8.90267 4.06906 11.8277 1.36378C14.784 -1.37008 15.9099 3.8593 15.9099 7.43456C15.9099 11.0093 14.27 14.9981 12.2646 12.6849ZM0 8.35546V5.7201C0 5.13776 0.473867 4.66565 1.05829 4.66565H2.13248V9.41013H1.05829C0.473867 9.41013 0 8.93813 0 8.35546ZM4.43904 11.3134C5.18544 11.4623 5.74507 11.6923 5.74507 11.6923C5.74507 11.6923 5.98405 12.3496 6.63211 13.2621C7.41141 14.3593 8.38235 15.7571 7.27483 15.7571C6.91925 15.7571 6.61029 15.7636 6.31125 15.7636C5.39691 15.7636 4.86661 15.1099 3.99115 13.6178C2.9968 11.9225 3.24512 11.0535 3.24512 11.0535C3.24512 11.0535 3.69269 11.1647 4.43904 11.3134Z" fill="#6B5E52"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_196_2987">
+                    <rect width="16" height="16" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  <span>{{ block.settings.content }}</span>
+                </div>
+              </div>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -4167,6 +4183,17 @@
           "label": "t:sections.main-product.blocks.collapsible_files_row.settings.file_metafield_3.label",
           "info": "Example: custom.single_file3"
         }
+      ]
+    },
+    {
+      "type": "product_tip",
+      "name": "万能提醒",
+      "settings": [
+        {
+          "type": "text",
+          "id": "content",
+          "label": "提醒内容"
+        },
       ]
     }
   ]

@@ -7477,6 +7477,21 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
   list-style: none;
   gap: calc(var(--gap, 8px) * 1);
 }
+.wt-product__product-tip {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  background-color: #F3EFEA;
+  border-radius: 4px;
+}
+.wt-product__product-tip > span {
+  font-family: PingFang SC;
+  font-size: 14px;
+  color: rgba(43, 43, 43, 0.6);
+}
+
 .wt-product .product-form__input {
   padding: 0;
   margin: 0;
