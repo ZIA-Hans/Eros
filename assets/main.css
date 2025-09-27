@@ -7511,6 +7511,28 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
   grid-template-rows: 1fr;
   transition: grid-template-rows 500ms;
 }
+
+.wt-product__option-promotion {
+  display: block;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(135deg, #BC7A68 0%, #E3AB9C 100%);
+  background: url(https://cdn.shopify.com/s/files/1/0639/7716/0843/files/1_4b9f82de-4687-4876-8668-ad5e0b8cefe9.png?v=1758986184);
+  padding: 6px 0px 0 14px;
+  transform: translate(2px,-75%);
+  border-radius: 8px 0;
+  font-size: 12px;
+  color: #3C2F2F;
+  font-family: PingFang SC;
+  min-width: 77px;
+  min-height: 26px;
+  padding-left: 16px;
+}
+
+/* 当存在促销信息时，给wrapper添加上边距 */
+.wt-product__option-wrapper:has(.wt-product__option-promotion) {
+  margin-top: 18px;
+}
 .wt-product .metafields-variants {
   padding: 12px 0 16px 0;
   font-family: var(--font-price);

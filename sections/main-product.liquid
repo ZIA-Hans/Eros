@@ -605,9 +605,6 @@
                 {% endif %}
             </li>
           {% endfor %}
-          <script>
-            console.log('product.media', {{ product.media | json }}, 'selected_variant.featured_media', {{ selected_variant.featured_media | json }});
-          </script>
         </ul>
 
         {% if product.media.size > 1 %}
@@ -1350,7 +1347,6 @@
                         <div class="js wt-product__option">
                           <div class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
                             {% assign option_name_downcase = option.name | downcase %}
-                            <script>console.log('option_name_downcase:', '{{ option_name_downcase }}');</script>
                             {% comment %} 设定为Size的Option可以打开弹窗看尺寸选择 {% endcomment %}
                             {% if option_name_downcase == 'size' %}
                               <div class="wt-product__page">
@@ -1462,7 +1458,7 @@
                               </button>
                           {% endif %}
 
-                          <div class="wt-product__option__body wt-product__option__body--{{ options_body_class }}{% if options_body_class == 'drawer' %} {{ option.name | downcase }} {% endif %}">
+                          <div class="wt-product__option-wrapper wt-product__option__body wt-product__option__body--{{ options_body_class }}{% if options_body_class == 'drawer' %} {{ option.name | downcase }} {% endif %}">
                             {% if options_body_class == 'drawer' %}
                               <div class="drawer__list-nav">
                                 <div class="drawer__list-nav__title">{{ option.name }}:</div>
@@ -1498,6 +1494,22 @@
                                           >
                                             <span>{{ value }}</span>
                                           </label>
+                                          
+                                          {% comment %} 检查是否需要显示促销信息 {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                         {%- when 'button' -%}
                                           <label
                                             tabindex="0"
@@ -1506,6 +1518,22 @@
                                           >
                                             {{ value }}
                                           </label>
+                                          
+                                          {% comment %} 检查是否需要显示促销信息 {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                         {%- when 'variant_picture' -%}
                                           <label
                                             tabindex="0"
@@ -1518,6 +1546,22 @@
                                               swatch_search_color: value
                                             %}
                                           </label>
+                                          
+                                          {% comment %} 检查是否需要显示促销信息 {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                         {%- when 'color_swatch' -%}
                                           {%- assign swatches_config = settings.swatches_config
                                             | newline_to_br
@@ -1533,6 +1577,22 @@
                                               style="{% render 'color-swatch-style', swatches_config: swatches_config, value: value %}"
                                             ></div>
                                           </label>
+                                          
+                                          {% comment %} 检查是否需要显示促销信息 {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                       {% endcase %}
                                     </li>
                                   {%- endfor -%}
@@ -2305,6 +2365,18 @@
     assign seo_media = product.featured_media
   endif
 -%}
+
+<script>
+  console.log('=== SKU Promotion 元对象调试信息 ===', {{ product.options_with_values | json }});
+  console.log('元字段原始数据:', {{ product.metafields.custom.sku_promotion | json }});
+  console.log('元字段类型:', '{{ product.metafields.custom.sku_promotion.type }}');
+  
+  {% if product.metafields.custom.sku_promotion.value %}
+    console.log('元对象内容:', {{ product.metafields.custom.sku_promotion.value | json }});
+  {% else %}
+    console.log('元对象为空或未找到');
+  {% endif %}
+</script>
 
 <script type="application/ld+json">
     {
