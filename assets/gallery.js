@@ -491,33 +491,33 @@ if (!customElements.get("gallery-section")) {
 
         const getMediaId = (item) => item?.dataset?.mediaId;
 
-        let filteredGallerySlides = this.filterSlidesByOptions(
-          originalGallerySlides,
-          options,
-          featured_media_id,
-          matchAll,
-        );
-        let filteredThumbsSlides = this.filterSlidesByOptions(
-          originalThumbsSlides,
-          options,
-          featured_media_id,
-          matchAll,
-        );
+        let filteredGallerySlides, filteredThumbsSlides;
 
-        if (filteredGallerySlides.length === 0) {
+        // 如果没有选中变体，显示全部图片
+        if (!featured_media_id) {
           filteredGallerySlides = [...originalGallerySlides];
           filteredThumbsSlides = [...originalThumbsSlides];
-        }
+        } else {
+          // 如果有选中变体，基于主图位置显示5张连续图片
+          const featuredIndex = originalGallerySlides.findIndex((slide) => {
+            const mediaId = slide.querySelector("img")
+              ? Number(slide.querySelector("img").getAttribute("data-media-id"))
+              : null;
+            return mediaId === Number(featured_media_id);
+          });
 
-        if (featured_media_id) {
-          filteredGallerySlides = this.sortSlides(
-            filteredGallerySlides,
-            featured_media_id,
-          );
-          filteredThumbsSlides = this.sortSlides(
-            filteredThumbsSlides,
-            featured_media_id,
-          );
+          if (featuredIndex > -1) {
+            // 从主图位置开始取5张图片
+            const startIndex = featuredIndex;
+            const endIndex = Math.min(startIndex + 5, originalGallerySlides.length);
+            
+            filteredGallerySlides = originalGallerySlides.slice(startIndex, endIndex);
+            filteredThumbsSlides = originalThumbsSlides.slice(startIndex, endIndex);
+          } else {
+            // 如果找不到主图，显示全部图片
+            filteredGallerySlides = [...originalGallerySlides];
+            filteredThumbsSlides = [...originalThumbsSlides];
+          }
         }
 
         const renderedSlidesChanged =
@@ -605,15 +605,13 @@ if (!customElements.get("gallery-section")) {
           }
         }
 
-        if (featured_media_id) {
-          this.setActiveMedia(featured_media_id, true);
-        } else {
-          this.setActiveMedia(
-            filteredGallerySlides[0]
-              ?.querySelector("img")
-              ?.getAttribute("data-media-id"),
-            true,
-          );
+        // 设置第一张图片为活动状态
+        const firstSlideMediaId = filteredGallerySlides[0]
+          ?.querySelector("img")
+          ?.getAttribute("data-media-id");
+        
+        if (firstSlideMediaId) {
+          this.setActiveMedia(firstSlideMediaId, true);
         }
         this.gallerySwiper?.update();
 

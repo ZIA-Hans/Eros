@@ -391,90 +391,49 @@
           class="{% if desktop_layout == 'masonry' %}swiper-wrapper--masonry{% elsif desktop_layout == 'fashion' %}swiper-wrapper--masonry{% else %}swiper-wrapper{% endif %}"
           desktop-layout="{{ desktop_layout }}"
         >
-          {%- if selected_variant.featured_media != null -%}
-            {%- assign featured_media = selected_variant.featured_media -%}
-
+          {% comment %} 按原始顺序渲染所有产品图片，以便JavaScript能正确处理图片组 {% endcomment %}
+          {% for media in product.media %}
             <li
               data-swiper-slide
-              data-media-id="{{ featured_media.id }}"
+              data-media-id="{{ media.id }}"
+              data-model="{% if media.media_type == 'model' %}true{% endif %}"
               class="swiper-slide"
-              style="--slide-ratio: {{ featured_media.preview_image.aspect_ratio }}"
+              id="image-{{ forloop.index }}"
+              style="--slide-ratio: {{ media.preview_image.aspect_ratio }}"
             >
-              {%- if featured_media.media_type == 'image' -%}
+              {%- if media.media_type == 'image' -%}
                 {% if section.settings['enable-image-zoom'] -%}
                   <a
-                    href="{{ featured_media.preview_image | image_url: width: 4096 }}"
-                    data-pswp-width="{{ featured_media.width }}"
-                    data-pswp-height="{{ featured_media.height }}"
+                    href="{{ media | image_url: width: 4096 }}"
+                    data-pswp-width="{{ media.width }}"
+                    data-pswp-height="{{ media.height }}"
                     target="_blank"
                     tabindex="0"
                   >
-                {%- endif %}
+                {% endif %}
                 <img
                   srcset="
-                    {%- if featured_media.preview_image.width >= 500 -%}{{ featured_media.preview_image | image_url: width: 500 }} 500w,{%- endif -%}
-                    {%- if featured_media.preview_image.width >= 750 -%}{{ featured_media.preview_image | image_url: width: 750 }} 750w,{%- endif -%}
-                    {%- if featured_media.preview_image.width >= 1000 -%}{{ featured_media.preview_image | image_url: width: 1000 }} 1000w,{%- endif -%}
-                    {%- if featured_media.preview_image.width >= 1200 -%}{{ featured_media.preview_image | image_url: width: 1200 }} 1200w,{%- endif -%}
-                    {%- if featured_media.preview_image.width >= 1680 -%}{{ featured_media.preview_image | image_url: width: 1680 }} 1680w,{%- endif -%}
-                    {%- if featured_media.preview_image.width >= 2048 -%}{{ featured_media.preview_image | image_url: width: 2048 }} 2048w,{%- endif -%}
-                    {%- if featured_media.preview_image.width >= 4096 -%}{{ featured_media.preview_image | image_url: width: 4096 }} 4096w{%- endif -%}
+                    {%- if media.preview_image.width >= 500 -%}{{ media.preview_image | image_url: width: 500 }} 500w,{%- endif -%}
+                    {%- if media.preview_image.width >= 750 -%}{{ media.preview_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if media.preview_image.width >= 1000 -%}{{ media.preview_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                    {%- if media.preview_image.width >= 1200 -%}{{ media.preview_image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                    {%- if media.preview_image.width >= 1680 -%}{{ media.preview_image | image_url: width: 1680 }} 1680w,{%- endif -%}
+                    {%- if media.preview_image.width >= 2048 -%}{{ media.preview_image | image_url: width: 2048 }} 2048w,{%- endif -%}
+                    {%- if media.preview_image.width >= 4096 -%}{{ media.preview_image | image_url: width: 4096 }} 4096w{%- endif -%}
                   "
                   sizes="100vw"
-                  src="{{ featured_media.preview_image | image_url: width: 500 }}"
-                  alt="{{ featured_media.preview_image.alt | default: product.title | escape }}"
+                  src="{{ media.preview_image | image_url: width: 600 }}"
+                  alt="{{ media.preview_image.alt | default: product.title | escape }}"
                   width="1100"
-                  height="{{ 1100 | divided_by: featured_media.preview_image.aspect_ratio | ceil }}"
-                  data-media-id="{{ featured_media.id }}"
+                  height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                  data-media-id="{{ media.id }}"
                   class="wt-product__img {% if section.settings.enable-image-zoom %} wt-product__img--zoom-cursor {% endif %}"
+                  {% if forloop.index > 1 %}
+                    loading="lazy"
+                  {% endif %}
                 >
                 {% if section.settings['enable-image-zoom'] %}</a>{% endif %}
               {%- endif -%}
-            </li>
-          {%- endif -%}
-          {% for media in product.media %}
-            {%- unless media.id == selected_variant.featured_media.id -%}
-              <li
-                data-swiper-slide
-                data-media-id="{{ media.id }}"
-                data-model="{% if media.media_type == 'model' %}true{% endif %}"
-                class="swiper-slide"
-                id="image-{{ forloop.index }}"
-                style="--slide-ratio: {{ media.preview_image.aspect_ratio }}"
-              >
-                {%- if media.media_type == 'image' -%}
-                  {% if section.settings['enable-image-zoom'] -%}
-                    <a
-                      href="{{ media | image_url: width: 4096 }}"
-                      data-pswp-width="{{ media.width }}"
-                      data-pswp-height="{{ media.height }}"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                  {% endif %}
-                  <img
-                    srcset="
-                      {%- if media.preview_image.width >= 500 -%}{{ media.preview_image | image_url: width: 500 }} 500w,{%- endif -%}
-                      {%- if media.preview_image.width >= 750 -%}{{ media.preview_image | image_url: width: 750 }} 750w,{%- endif -%}
-                      {%- if media.preview_image.width >= 1000 -%}{{ media.preview_image | image_url: width: 1000 }} 1000w,{%- endif -%}
-                      {%- if media.preview_image.width >= 1200 -%}{{ media.preview_image | image_url: width: 1200 }} 1200w,{%- endif -%}
-                      {%- if media.preview_image.width >= 1680 -%}{{ media.preview_image | image_url: width: 1680 }} 1680w,{%- endif -%}
-                      {%- if media.preview_image.width >= 2048 -%}{{ media.preview_image | image_url: width: 2048 }} 2048w,{%- endif -%}
-                      {%- if media.preview_image.width >= 4096 -%}{{ media.preview_image | image_url: width: 4096 }} 4096w{%- endif -%}
-                    "
-                    sizes="100vw"
-                    src="{{ media.preview_image | image_url: width: 600 }}"
-                    alt="{{ media.preview_image.alt | default: product.title | escape }}"
-                    width="1100"
-                    height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-                    data-media-id="{{ media.id }}"
-                    class="wt-product__img  {% if section.settings.enable-image-zoom %} wt-product__img--zoom-cursor {% endif %}"
-                    {% if forloop.index > 1 %}
-                      loading="lazy"
-                    {% endif %}
-                  >
-                  {% if section.settings['enable-image-zoom'] %}</a>{% endif %}
-                {%- endif -%}
 
                 {% if media.media_type == 'video' %}
                   <div
@@ -644,9 +603,11 @@
                     </button>
                   </model-element>
                 {% endif %}
-              </li>
-            {%- endunless -%}
+            </li>
           {% endfor %}
+          <script>
+            console.log('product.media', {{ product.media | json }}, 'selected_variant.featured_media', {{ selected_variant.featured_media | json }});
+          </script>
         </ul>
 
         {% if product.media.size > 1 %}
@@ -684,11 +645,10 @@
 
       <div data-thumbs>
         <ul data-swiper-container class="thumbs-list" aria-live="polite">
-          {%- if selected_variant.featured_media != null -%}
-            {%- assign featured_media = selected_variant.featured_media -%}
-
+          {% comment %} 按原始顺序渲染所有产品缩略图 {% endcomment %}
+          {% for media in product.media %}
             {%- liquid
-              assign thumb_ratio = featured_media.preview_image.aspect_ratio
+              assign thumb_ratio = media.preview_image.aspect_ratio
               if section.settings['desktop-image-ratio'] == 'square'
                 assign thumb_ratio = 1
               elsif section.settings['desktop-image-ratio'] == 'portrait'
@@ -699,71 +659,29 @@
             <li
               data-swiper-slide
               class="thumbs-list-item"
-              data-slide-media-id="{{ featured_media.id }}"
+              data-slide-media-id="{{ media.id }}"
               style="--thumb-ratio: {{ thumb_ratio }};"
               tabindex="-1"
             >
-              <div
-                {% if featured_media.media_type == 'video' or featured_media.media_type == 'external_video' %}
-                  class="wt-product__thumbnail-video"
-                {% endif %}
-              >
-                <img
-                  src="{{ featured_media.preview_image | image_url: width: 300 }}"
-                  alt="{{ featured_media.preview_image.alt | default: product.title | escape }}"
-                  loading="lazy"
-                  width="300"
-                  height="{{ 300 | divided_by: featured_media.preview_image.aspect_ratio | ceil }}"
-                  data-media-id="{{ media.id }}"
-                  class="wt-product__img"
-                >
-                {% if featured_media.media_type == 'video' or featured_media.media_type == 'external_video' %}
-                  <div class="wt-product__thumbnail-video__icon">{% render 'icon-play' %}</div>
-                {% endif %}
-              </div>
-            </li>
-          {%- endif -%}
-
-          {% for media in product.media %}
-            {%- unless media.id == selected_variant.featured_media.id -%}
-              {%- liquid
-                assign thumb_ratio = media.preview_image.aspect_ratio
-                if section.settings['desktop-image-ratio'] == 'square'
-                  assign thumb_ratio = 1
-                elsif section.settings['desktop-image-ratio'] == 'portrait'
-                  assign thumb_ratio = 'var(--aspect-ratio-portait)'
-                endif
-              %}
-
-              <li
-                data-swiper-slide
-                class="thumbs-list-item"
-                data-slide-media-id="{{ media.id }}"
-                style="--thumb-ratio: {{ thumb_ratio }};"
-                tabindex="-1"
-              >
                 <div
                   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
                     class="wt-product__thumbnail-video"
                   {% endif %}
                 >
-                  <img
-                    src="{{ media.preview_image | image_url: width: 300 }}"
-                    alt="{{ media.preview_image.alt | default: product.title | escape }}"
-                    loading="lazy"
-                    width="300"
-                    height="{{ 300 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-                    data-media-id="{{ media.id }}"
-                    class="wt-product__img"
-                  >
-                  {% if media.media_type == 'video' or media.media_type == 'external_video' %}
-                    <div class="wt-product__thumbnail-video__icon">{% render 'icon-play' %}</div>
-                  {% endif %}
-                </div>
-              </li>
-
-              {% assign thumbCounter = thumbCounter | plus: 1 %}
-            {%- endunless -%}
+                <img
+                  src="{{ media.preview_image | image_url: width: 300 }}"
+                  alt="{{ media.preview_image.alt | default: product.title | escape }}"
+                  loading="lazy"
+                  width="300"
+                  height="{{ 300 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                  data-media-id="{{ media.id }}"
+                  class="wt-product__img"
+                >
+                {% if media.media_type == 'video' or media.media_type == 'external_video' %}
+                  <div class="wt-product__thumbnail-video__icon">{% render 'icon-play' %}</div>
+                {% endif %}
+              </div>
+            </li>
           {% endfor %}
         </ul>
 
