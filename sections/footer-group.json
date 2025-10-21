@@ -1,1 +1,65 @@
-{"type":"footer","name":"Footer Group","sections":{"footer":{"type":"page-footer","blocks":{"menu_FVzkic":{"type":"menu","settings":{"heading_links":"Customer Care","links":"footer"}},"newsletter_GheLtV":{"type":"newsletter","settings":{"heading_newsletter":"Join the Eros Girls ✨","text_newsletter":"<p>Get 10% off your first order when you subscribe.<br\/><\/p>","button_type":"primary"}}},"block_order":["menu_FVzkic","newsletter_GheLtV"],"settings":{"show-social-media-icons":true,"show_country_selector":true,"show_country_selector_label":true,"show_country_selector_flag":true,"show_language_selector":false,"enable_follow_on_shop":false,"show-payments-icons":true,"show-copyright":false,"text":"© 2025 Wonder-theme. Powered by Shopify.","big-logo-width":50,"margin-top":0,"margin-bottom":0}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "page-footer",
+      "blocks": {
+        "menu_FVzkic": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "Customer Care",
+            "links": "footer"
+          }
+        },
+        "menu_9f4hyN": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "Links",
+            "links": "footer"
+          }
+        },
+        "newsletter_GheLtV": {
+          "type": "newsletter",
+          "settings": {
+            "heading_newsletter": "Join the Eros Girls ✨",
+            "text_newsletter": "<p>Get 10% off your first order when you subscribe.<br/></p>",
+            "button_type": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "menu_FVzkic",
+        "menu_9f4hyN",
+        "newsletter_GheLtV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show-social-media-icons": true,
+        "show_country_selector": true,
+        "show_country_selector_label": true,
+        "show_country_selector_flag": true,
+        "show_language_selector": false,
+        "enable_follow_on_shop": false,
+        "show-payments-icons": true,
+        "show-copyright": false,
+        "text": "© 2025 Wonder-theme. Powered by Shopify.",
+        "big-logo-width": 50,
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

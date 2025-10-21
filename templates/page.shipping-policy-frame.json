@@ -1,1 +1,288 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"compact-size-enabled":true,"size_heading":140,"size_heading_mobile":100,"color-body-text":"rgba(0,0,0,0)","color-bg-overlay":"rgba(0,0,0,0)","color-overlay-opacity":100,"margin-top":40,"margin-bottom":0}},"rich_text_wnKE9f":{"type":"rich-text","blocks":{"heading_VHqgQr":{"type":"heading","settings":{"heading":"Return & Refund Policy","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}}},"block_order":["heading_VHqgQr"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"image_banner_LKJ8LF":{"type":"image-banner","name":"t:sections.image-banner.presets.name","settings":{"heading":"","full-width-enabled":false,"slide_height":"fixed_height","desktop_fixed_height":320,"mobile_fixed_height":200,"desktop_image":"shopify:\/\/shop_images\/08162677.jpg","desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","color-heading":"rgba(0,0,0,0)","section-color-overlay":"rgba(0,0,0,0)","section-color-overlay-opacity":100,"color-body-text":"rgba(0,0,0,0)","text-container-color":"rgba(0,0,0,0)","color-overlay-opacity":100,"margin-top":0,"margin-bottom":0}},"rich_text_gEWDbr":{"type":"rich-text","blocks":{"heading_b7wcTa":{"type":"heading","settings":{"heading":"Delivering Country","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"text_kYhD8p":{"type":"text","settings":{"text":"<p>Our website (www.eroslingiere.com.au) delivers exclusively to Australia and New Zealand Just now.<\/p>","disable_on_mobile":false}}},"block_order":["heading_b7wcTa","text_kYhD8p"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","margin-top":20,"margin-bottom":20}},"rich_text_hHmejP":{"type":"rich-text","blocks":{"heading_hbPdMy":{"type":"heading","settings":{"heading":"Australia Delivery Information","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"text_tDNfJQ":{"type":"text","disabled":true,"settings":{"text":"<p>Please find below the estimated shipping times from the table. <\/p>","disable_on_mobile":false}}},"block_order":["heading_hbPdMy","text_tDNfJQ"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"custom_liquid_3CE9GM":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<style>\n.delivery-table {\n  width: 90%;                   \/* 相对屏幕宽度 *\/\n  max-width: 1200px;            \/* 最大宽度，避免超宽 *\/\n  margin: 20px auto;            \/* 上下间距 + 自动居中 *\/\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n\/* hover 效果 *\/\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n\/* 移动端：卡片样式 *\/\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n<\/style>\n\n<table class=\"delivery-table\">\n  <thead>\n    <tr>\n      <th>Service<\/th>\n      <th>Delivered<\/th>\n      <th>Cost<\/th>\n      <th>Free if you spend<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td data-label=\"Service\">Standard delivery (AU Post)<\/td>\n      <td data-label=\"Delivered\">2–8 Working days<\/td>\n      <td data-label=\"Cost\">$9.99<\/td>\n      <td data-label=\"Free if you spend\">$59.99<\/td>\n    <\/tr>\n    <tr>\n      <td data-label=\"Service\">Express delivery (Express Post)<\/td>\n      <td data-label=\"Delivered\">1–5 Working days<\/td>\n      <td data-label=\"Cost\">$19.99<\/td>\n      <td data-label=\"Free if you spend\">N\/A<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>"}},"rich_text_R39zXU":{"type":"rich-text","blocks":{"heading_dXnjWC":{"type":"heading","settings":{"heading":"NewZealand Delivery Information","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"text_N6J7my":{"type":"text","disabled":true,"settings":{"text":"<p>Please find below the estimated shipping times from the table. <\/p>","disable_on_mobile":false}}},"block_order":["heading_dXnjWC","text_N6J7my"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"custom_liquid_Wa778E":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<style>\n.delivery-table {\n  width: 100%;\n  max-width: 900px;       \/* 最大宽度，防止全屏铺满 *\/\n  margin: 20px auto;      \/* 自动居中 *\/\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n\/* 表格整体居中 *\/\n.delivery-wrapper {\n  display: flex;\n  justify-content: center;  \/* 水平居中 *\/\n  width: 100%;\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n\/* hover 效果 *\/\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n\/* 移动端：卡片样式 *\/\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n<\/style>\n\n<div class=\"delivery-wrapper\">\n  <table class=\"delivery-table\">\n    <thead>\n      <tr>\n        <th>Service<\/th>\n        <th>Delivered<\/th>\n        <th>Cost<\/th>\n        <th>Free if you spend<\/th>\n      <\/tr>\n    <\/thead>\n    <tbody>\n      <tr>\n        <td data-label=\"Service\">Standard delivery (AU\/NZ Post)<\/td>\n        <td data-label=\"Delivered\">4–5 Working days<\/td>\n        <td data-label=\"Cost\">$12.99<\/td>\n        <td data-label=\"Free if you spend\">$59.99<\/td>\n      <\/tr>\n  \n    <\/tbody>\n  <\/table>\n<\/div>"}},"collapsible_menu_tMPhmg":{"type":"collapsible_menu","blocks":{"collapsible_tab_paFEXD":{"type":"collapsible_tab","settings":{"heading":"What Is the Delivery Service and Options?","content":"<p>We offer a number of delivery options. You can choose to have your order delivered to your home or work address. We do everything we can to ensure that your order is delivered complete and on time. However please note that during peak demand times (such as Christmas, Valentine's Day and Black Friday weekend) deliveries may take longer than expected.<\/p><p>EROS currently uses AU Post and Express Post services to ship to Australia, with standard and express shipping options available.<br\/><br\/><\/p>","page":"","icon":"check_mark"}},"collapsible_tab_wWeFhm":{"type":"collapsible_tab","settings":{"heading":"Delivery Packaging","content":"<p>Your order (single product) will be delivered in a plastic package with EROS logo and the outermost waterproof packaging.<\/p><p>Your order (three or more products) will be delivered in a plastic package with EROS logo, case box and the outermost waterproof packaging; In addition, you will be provided with pantyhose gloves to satisfy your better wearing and taking off experience and machine washable bags for delicate washing of products.<br\/><br\/><\/p>","page":"","icon":"check_mark"}},"collapsible_tab_ThxWTb":{"type":"collapsible_tab","settings":{"heading":"Tracking","content":"<p><strong>For maximum peace of mind, all standard orders are shipped with tracking.<\/strong><br\/><br\/>You will receive a tracking code in your shipping confirmation email, allowing you to monitor your parcel on the courier’s website.<\/p><p><strong>Please note:<\/strong> In the case of single-item replacements (e.g., a pair of tights sent as a complimentary reshipment), we may use an envelope delivery method to your original address. This option does not include tracking, so please keep an eye on your mailbox.<br\/><br\/><\/p>","page":"","icon":"check_mark"}},"collapsible_tab_fb6Nah":{"type":"collapsible_tab","settings":{"heading":"What If Your Order Dosen't Arrive When You Expect?","content":"<p>If your delivery is more than 3 working days overdue, please contact us. <\/p><p>We will then do everything we can to track down your order.<br\/><br\/><\/p>","page":"","icon":"check_mark"}}},"block_order":["collapsible_tab_paFEXD","collapsible_tab_wWeFhm","collapsible_tab_ThxWTb","collapsible_tab_fb6Nah"],"name":"t:sections.collapsible_menu.presets.name","settings":{"color-body-text":"#2b2b2b","background_color":"#ffffff","compact-size-enabled":true,"margin-top":20,"margin-bottom":20}}},"order":["main","rich_text_wnKE9f","image_banner_LKJ8LF","rich_text_gEWDbr","rich_text_hHmejP","custom_liquid_3CE9GM","rich_text_R39zXU","custom_liquid_Wa778E","collapsible_menu_tMPhmg"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0
+      }
+    },
+    "rich_text_wnKE9f": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VHqgQr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Return & Refund Policy",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading_VHqgQr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "image_banner_LKJ8LF": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "heading": "",
+        "full-width-enabled": false,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 200,
+        "desktop_image": "shopify://shop_images/08162677.jpg",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "color-heading": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "text-container-color": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "rich_text_gEWDbr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b7wcTa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Delivering Country",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_kYhD8p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our website (www.eroslingiere.com.au) delivers exclusively to Australia and New Zealand Just now.</p>",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_b7wcTa",
+        "text_kYhD8p"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "rich_text_hHmejP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hbPdMy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Australia Delivery Information",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_tDNfJQ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Please find below the estimated shipping times from the table. </p>",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hbPdMy",
+        "text_tDNfJQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "custom_liquid_3CE9GM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.delivery-table {\n  width: 90%;                   /* 相对屏幕宽度 */\n  max-width: 1200px;            /* 最大宽度，避免超宽 */\n  margin: 20px auto;            /* 上下间距 + 自动居中 */\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n/* hover 效果 */\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n/* 移动端：卡片样式 */\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n</style>\n\n<table class=\"delivery-table\">\n  <thead>\n    <tr>\n      <th>Service</th>\n      <th>Delivered</th>\n      <th>Cost</th>\n      <th>Free if you spend</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td data-label=\"Service\">Standard delivery (AU Post)</td>\n      <td data-label=\"Delivered\">2–8 Working days</td>\n      <td data-label=\"Cost\">$9.99</td>\n      <td data-label=\"Free if you spend\">$59.99</td>\n    </tr>\n    <tr>\n      <td data-label=\"Service\">Express delivery (Express Post)</td>\n      <td data-label=\"Delivered\">1–5 Working days</td>\n      <td data-label=\"Cost\">$19.99</td>\n      <td data-label=\"Free if you spend\">N/A</td>\n    </tr>\n  </tbody>\n</table>"
+      }
+    },
+    "rich_text_R39zXU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dXnjWC": {
+          "type": "heading",
+          "settings": {
+            "heading": "NewZealand Delivery Information",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_N6J7my": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Please find below the estimated shipping times from the table. </p>",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dXnjWC",
+        "text_N6J7my"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "custom_liquid_Wa778E": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.delivery-table {\n  width: 100%;\n  max-width: 900px;       /* 最大宽度，防止全屏铺满 */\n  margin: 20px auto;      /* 自动居中 */\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n/* 表格整体居中 */\n.delivery-wrapper {\n  display: flex;\n  justify-content: center;  /* 水平居中 */\n  width: 100%;\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n/* hover 效果 */\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n/* 移动端：卡片样式 */\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n</style>\n\n<div class=\"delivery-wrapper\">\n  <table class=\"delivery-table\">\n    <thead>\n      <tr>\n        <th>Service</th>\n        <th>Delivered</th>\n        <th>Cost</th>\n        <th>Free if you spend</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td data-label=\"Service\">Standard delivery (AU/NZ Post)</td>\n        <td data-label=\"Delivered\">4–5 Working days</td>\n        <td data-label=\"Cost\">$12.99</td>\n        <td data-label=\"Free if you spend\">$59.99</td>\n      </tr>\n  \n    </tbody>\n  </table>\n</div>"
+      }
+    },
+    "rich_text_KUGfkd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WifTUJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questioned",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading_WifTUJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "collapsible_menu_tMPhmg": {
+      "type": "collapsible_menu",
+      "blocks": {
+        "collapsible_tab_paFEXD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What Is the Delivery Service and Options?",
+            "content": "<p>We offer a number of delivery options. You can choose to have your order delivered to your home or work address. We do everything we can to ensure that your order is delivered complete and on time. However please note that during peak demand times (such as Christmas, Valentine's Day and Black Friday weekend) deliveries may take longer than expected.</p><p>EROS currently uses AU Post and Express Post services to ship to Australia, with standard and express shipping options available.<br/><br/></p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "collapsible_tab_wWeFhm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery Packaging",
+            "content": "<p>Your order (single product) will be delivered in a plastic package with EROS logo and the outermost waterproof packaging.</p><p>Your order (three or more products) will be delivered in a plastic package with EROS logo, case box and the outermost waterproof packaging; In addition, you will be provided with pantyhose gloves to satisfy your better wearing and taking off experience and machine washable bags for delicate washing of products.<br/><br/></p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "collapsible_tab_ThxWTb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Tracking",
+            "content": "<p><strong>For maximum peace of mind, all standard orders are shipped with tracking.</strong><br/><br/>You will receive a tracking code in your shipping confirmation email, allowing you to monitor your parcel on the courier’s website.</p><p><strong>Please note:</strong> In the case of single-item replacements (e.g., a pair of tights sent as a complimentary reshipment), we may use an envelope delivery method to your original address. This option does not include tracking, so please keep an eye on your mailbox.<br/><br/></p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "collapsible_tab_fb6Nah": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What If Your Order Dosen't Arrive When You Expect?",
+            "content": "<p>If your delivery is more than 3 working days overdue, please contact us. </p><p>We will then do everything we can to track down your order.<br/><br/></p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_paFEXD",
+        "collapsible_tab_wWeFhm",
+        "collapsible_tab_ThxWTb",
+        "collapsible_tab_fb6Nah"
+      ],
+      "name": "t:sections.collapsible_menu.presets.name",
+      "settings": {
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "compact-size-enabled": true,
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_wnKE9f",
+    "image_banner_LKJ8LF",
+    "rich_text_gEWDbr",
+    "rich_text_hHmejP",
+    "custom_liquid_3CE9GM",
+    "rich_text_R39zXU",
+    "custom_liquid_Wa778E",
+    "rich_text_KUGfkd",
+    "collapsible_menu_tMPhmg"
+  ]
+}

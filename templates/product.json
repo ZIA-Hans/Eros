@@ -26,9 +26,9 @@
         "title": {
           "type": "title",
           "settings": {
-            "brand": "Eros Lingerie",
-            "size_text": 300,
-            "size_text_mobile": 160
+            "brand": "",
+            "size_text": 120,
+            "size_text_mobile": 180
           }
         },
         "feature_tags_ktxUht": {
@@ -42,6 +42,7 @@
         },
         "share_buttons_QJQBWK": {
           "type": "share_buttons",
+          "disabled": true,
           "settings": {
             "heading": "Share",
             "social_facebook_link": true,
@@ -125,6 +126,7 @@
         },
         "information_popup_pw9mqt": {
           "type": "information_popup",
+          "disabled": true,
           "settings": {
             "size_icon": "ruler",
             "size_link": "Size Chart",
@@ -138,15 +140,6 @@
             "color-background": "#000000",
             "margin-top": 8,
             "margin-bottom": 4
-          }
-        },
-        "promo_EEWbjj": {
-          "type": "promo",
-          "settings": {
-            "content": "<p>Promo block</p>",
-            "text_alignment": "center",
-            "color-body-text": "rgba(0,0,0,0)",
-            "background_color": "rgba(0,0,0,0)"
           }
         },
         "buy_buttons": {
@@ -243,7 +236,6 @@
         "variant_picker_7mHC3V",
         "information_popup_pw9mqt",
         "separator_xgqTJM",
-        "promo_EEWbjj",
         "buy_buttons",
         "description",
         "collapsible_tab_Q7UFgL",
@@ -263,8 +255,8 @@
         "enable-preselected-variant": true,
         "enable-image-zoom": true,
         "mobile-image": "small",
-        "text_color": "#bfb8b8",
-        "background_color": "#edeae0",
+        "text_color": "#2b2b2b",
+        "background_color": "#ffffff",
         "margin-top": 8,
         "margin-bottom": 8
       }

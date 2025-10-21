@@ -1,0 +1,875 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": true,
+        "text_color": "#ffffff",
+        "background_color": "#f29f00",
+        "margin-top": 12,
+        "margin-bottom": 12
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "brand": "",
+            "size_text": 120,
+            "size_text_mobile": 180
+          }
+        },
+        "feature_tags_ktxUht": {
+          "type": "feature_tags",
+          "disabled": true,
+          "settings": {
+            "metafield": "shopify.detailed-ingredients",
+            "limit": 4,
+            "text_color": "#2b2b2b",
+            "border_color": "rgba(0,0,0,0)"
+          }
+        },
+        "share_buttons_QJQBWK": {
+          "type": "share_buttons",
+          "disabled": true,
+          "settings": {
+            "heading": "Share",
+            "social_facebook_link": true,
+            "social_twitter_link": true,
+            "social_pinterest_link": true,
+            "social_whatsapp_link": true,
+            "mail_link": false
+          }
+        },
+        "separator_reBrRK": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_included": true,
+            "show_shipping_policy": true,
+            "size_text": 140,
+            "size_text_mobile": 140
+          }
+        },
+        "dd5cf19e-afbd-4294-a8c3-4a0a19669079": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "text_LQ6bM9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "content": "<p>Topical skincare is key, but lasting results start within. WELLNESS Collagen provides 2000 mg of Collagen Peptides plus Vitamins C and E to promote clear skin and boost natural collagen. Elevate your skincare from the inside out.</p>",
+            "page": ""
+          }
+        },
+        "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#ffffff",
+            "margin-top": 8,
+            "margin-bottom": 0
+          }
+        },
+        "product_variations_7LBAAU": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "Color",
+            "picker_type": "swatch",
+            "swatch_size": 36,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "custom.tab",
+            "products": [
+              "eros-no-1-10d-tight-nude",
+              "eros-no-1-10d-tight-black"
+            ]
+          }
+        },
+        "variant_picker_7mHC3V": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_swatch_names": "",
+            "variant_picture_swatch_names": "",
+            "thumb_size": 60,
+            "radius": "default",
+            "border_radius": 15,
+            "dropdown_swatch_names": "",
+            "margin-top": 0,
+            "margin-bottom": 8,
+            "size_page": ""
+          }
+        },
+        "information_popup_pw9mqt": {
+          "type": "information_popup",
+          "disabled": true,
+          "settings": {
+            "size_icon": "ruler",
+            "size_link": "Size Chart",
+            "size_content": "brand-story-stockings-pantyhose-tights"
+          }
+        },
+        "separator_xgqTJM": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 4
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_qty_selector": true,
+            "text_color": "#ffffff",
+            "background_color": "#151515"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_open": false,
+            "icon": "none"
+          }
+        },
+        "collapsible_tab_Q7UFgL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material",
+            "content": "<ul><li>58% Polyamide, 42% Elastane</li><li>Ultra-fine, high-stretch fibers</li><li>Smooth, soft touch</li><li>Perfect adaptive fit</li></ul>",
+            "metafield_variables": "",
+            "page": "",
+            "icon": "leather"
+          }
+        },
+        "collapsible_tab_KatCG8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "content": "<ul><li>10 Denier sheer finish, ideal for Australia’s mild weather.</li><li>Adaptive elasticity for all-day comfort and flawless fit.</li><li>Run-resistant micro-weave for lasting durability.</li></ul><p></p>",
+            "metafield_variables": "",
+            "page": "",
+            "icon": "leather"
+          }
+        },
+        "feature_icons_VEKFdJ": {
+          "type": "feature_icons",
+          "settings": {
+            "metafield": "",
+            "layout_select": "column",
+            "show_icons_label": true,
+            "items_per_row_desktop": 2,
+            "icon_size_desktop": 48,
+            "size_text": 100,
+            "items_per_row": 2,
+            "icon_size_mobile": 40,
+            "size_text_mobile": 100
+          }
+        },
+        "separator_gDwzxi": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#ffffff",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "feature_tags_ktxUht",
+        "share_buttons_QJQBWK",
+        "separator_reBrRK",
+        "price",
+        "dd5cf19e-afbd-4294-a8c3-4a0a19669079",
+        "text_LQ6bM9",
+        "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e",
+        "product_variations_7LBAAU",
+        "variant_picker_7mHC3V",
+        "information_popup_pw9mqt",
+        "separator_xgqTJM",
+        "buy_buttons",
+        "description",
+        "collapsible_tab_Q7UFgL",
+        "collapsible_tab_KatCG8",
+        "feature_icons_VEKFdJ",
+        "separator_gDwzxi"
+      ],
+      "settings": {
+        "enable_sticky_buy_button": true,
+        "full-width-enabled": false,
+        "desktop-media-size": "normal",
+        "desktop-layout": "carousel-vertical",
+        "desktop-image-ratio": "portrait",
+        "enable_video_looping": true,
+        "enable-preselected-variant": true,
+        "enable-image-zoom": true,
+        "mobile-image": "small",
+        "text_color": "#2b2b2b",
+        "background_color": "#ffffff",
+        "margin-top": 8,
+        "margin-bottom": 8
+      }
+    },
+    "3aeb6d9a447ae5270dc8": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "features_banner_wiKkaQ": {
+      "type": "features-banner",
+      "blocks": {
+        "image_P4yL64": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "select_icon": "bag",
+            "heading": "Free Shipping over $60 On AU",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_m7jjzm": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "select_icon": "user",
+            "heading": "24-Hour Comfort Guarantee",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_AkKWrq": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "select_icon": "search",
+            "heading": "Anti-Snag Technology",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_P4yL64",
+        "image_m7jjzm",
+        "image_AkKWrq"
+      ],
+      "settings": {
+        "heading": "",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 52,
+        "icon_layout": "center",
+        "columns_desktop": "3",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "#ffffff",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "#e6dfd5",
+        "background_color": "#2b2b2b",
+        "margin-top": 24,
+        "margin-bottom": 24
+      }
+    },
+    "multicolumn_njFRzi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Q7GfxN": {
+          "type": "column",
+          "settings": {
+            "heading": "Sagging again",
+            "heading_disable_on_mobile": false,
+            "text": "<p>No woman should be pulling up her tights all day.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-problem3.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-problem3.jpg"
+          }
+        },
+        "column_dfbQq3": {
+          "type": "column",
+          "settings": {
+            "heading": "Can’t breathe in them",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Tights shouldn’t dig into your thighs or ruin your comfort</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-problem2.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-problem2.jpg"
+          }
+        },
+        "column_zRTRqK": {
+          "type": "column",
+          "settings": {
+            "heading": "One snag, outfit ruined",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Your dressed up for them - then your tights failed your</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-problem1.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-problem1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "column_Q7GfxN",
+        "column_dfbQq3",
+        "column_zRTRqK"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "heading": "01 ｜ Why We Rethought Tights",
+        "swipe_on_mobile": true,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 80,
+        "size_heading_mobile": 80,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "image_with_text_Jzp8ia": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_i9XFXA": {
+          "type": "heading",
+          "settings": {
+            "heading": "High-waist design that stays in place — smooth, supportive, and breathable all day.",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_F4MxPT": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>High-Waist Support</li><li>Control Top Design</li><li>Hip Coverage</li><li>No Marks Just Comfor</li></ul>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_i9XFXA",
+        "text_F4MxPT"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "title": "02 ｜ Comfort Starts at the Top",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "section-color-body-text": "rgba(0,0,0,0)",
+        "section-color-overlay": "#faf8f6",
+        "section-color-overlay-opacity": 0,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "desktop_image": "shopify://shop_images/pc-no1-product-nude-controltop.jpg",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_image": "shopify://shop_images/m-no1-product-nude-controltop.jpg",
+        "mobile_text_horizontal_position": "left",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "multicolumn_XpYCQR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NKJKdY": {
+          "type": "column",
+          "settings": {
+            "heading": "Crafted with Italian Tech",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Precision knitting perfected in Italy’s finest mills.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-machine1.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-machine1.jpg"
+          }
+        },
+        "column_6e7JaA": {
+          "type": "column",
+          "settings": {
+            "heading": "Run-Resistant Weave",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Delicate micro-knit structure designed to resist snags and ladders.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-machine2.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-machine2.jpg"
+          }
+        },
+        "column_MGpbNY": {
+          "type": "column",
+          "settings": {
+            "heading": "Four-Way Reinforced Weaving",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Advanced interlock knit for strength, stretch, and shape retention.</p><p></p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-machine3.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-machine3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "column_NKJKdY",
+        "column_6e7JaA",
+        "column_MGpbNY"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "heading": "03 ｜ Crafted the Right Way",
+        "swipe_on_mobile": true,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 80,
+        "size_heading_mobile": 80,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "multicolumn_P8rNPH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_WcWJ9n": {
+          "type": "column",
+          "settings": {
+            "heading": "High-Stretch Core Blend",
+            "heading_disable_on_mobile": false,
+            "text": "<p>42% Spandex for ultimate flexibility and shape retention.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-material1.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-material1.jpg"
+          }
+        },
+        "column_T7mxbP": {
+          "type": "column",
+          "settings": {
+            "heading": "Air-Flow Micro Weave",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Microscopic knit allows air to circulate for lasting comfort.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-material2.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-material2.jpg"
+          }
+        },
+        "column_8zNCzb": {
+          "type": "column",
+          "settings": {
+            "heading": "Tighter weave, smoother touch",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Ultra-fine yarns knitted with 900-needle accuracy for a smoother, denser finish.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-material3.jpg",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-material3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "column_WcWJ9n",
+        "column_T7mxbP",
+        "column_8zNCzb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "heading": "04 ｜ It All Begins with Better Yarn",
+        "swipe_on_mobile": true,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 80,
+        "size_heading_mobile": 80,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "collage_zqQLnk": {
+      "type": "collage",
+      "blocks": {
+        "image_WhzUBy": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "desktop_image": "shopify://shop_images/pc-no1-product-nude-show2.jpg",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-show3.jpg",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 100
+          }
+        },
+        "image_NL4CJn": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-show2.jpg",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 100
+          }
+        },
+        "image_w8EbbF": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/m-no1-product-nude-show1.jpg",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "rgba(0,0,0,0)",
+            "color-overlay-opacity": 100
+          }
+        }
+      },
+      "block_order": [
+        "image_WhzUBy",
+        "image_NL4CJn",
+        "image_w8EbbF"
+      ],
+      "name": "t:sections.collage.settings.presets.name",
+      "settings": {
+        "heading": "05 ｜ Effortless on the Body",
+        "full-width-enabled": false,
+        "desktop_layout": "row",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "rich_text_JLmDma": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9H3YHy": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Eros Stands Apart",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading_9H3YHy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "custom_liquid_Bf444n": {
+      "type": "custom-liquid",
+      "name": "comparison",
+      "settings": {
+        "custom_liquid": "<section class=\"eros-compare\">\n  <style>\n    .eros-compare{\n      --table-max: 1000px;      /* 表格最大宽度 */\n      --fs: 16px;              /* PC 字号 */\n      --fs-sm: 12px;           /* 移动端字号 */\n      --pad-y: 12px;           /* 行间距（上下内边距） */\n      --pad-x: 14px;           /* 左右内边距 */\n      --pad-y-sm: 8px;\n      --pad-x-sm: 8px;\n      --row-alt: #F5F2EB;      /* ✅ 斑马纹底色（关闭可改为 transparent） */\n      --chip-bg: #E9E6E4;      /* 标签底色 */\n      --good:#10b981; --bad:#ef4444; --warn:#f59e0b;\n      --text:#111827;\n    }\n\n    .eros-compare{\n      font-family:system-ui,-apple-system,\"Segoe UI\",Roboto,Arial;\n      color:var(--text);\n    }\n    .eros-compare .table-wrap{\n      max-width:var(--table-max);\n      margin:0 auto;\n      overflow-x:auto;\n    }\n    .eros-compare table{\n      width:100%;\n      border-collapse:collapse;\n    }\n    .eros-compare th,.eros-compare td{\n      padding:var(--pad-y) var(--pad-x);\n      font-size:var(--fs);\n      text-align:left;\n      line-height:1.5;\n      border:0;\n      white-space:nowrap;\n    }\n    .eros-compare thead th{font-weight:700}\n    .eros-compare .feat{font-weight:600}\n    .eros-compare tbody tr:nth-child(odd){\n      background:var(--row-alt);  /* ✅ 控制斑马纹色 */\n    }\n\n    /* 标签样式 */\n    .chip{\n      display:inline-flex;\n      align-items:center;\n      gap:6px;\n      padding:5px 9px;\n      border-radius:999px;\n      background:var(--chip-bg);\n      font-size:0.85em;\n    }\n    .chip i{font-style:normal}\n    .ok i{color:var(--good)}\n    .bad i{color:var(--bad)}\n    .warn i{color:var(--warn)}\n    .value{font-weight:600}\n\n    /* 移动端字体、间距缩小 */\n    @media (max-width: 750px){\n      .eros-compare th,.eros-compare td{\n        font-size:var(--fs-sm);\n        padding:var(--pad-y-sm) var(--pad-x-sm);\n        white-space:normal;\n      }\n    }\n  </style>\n\n  <div class=\"table-wrap\">\n    <table>\n      <thead>\n        <tr>\n          <th>Feature</th>\n          <th>Low-End</th>\n          <th>Eros Lingerie</th>\n          <th>High-End</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td class=\"feat\">Waist Stay</td>\n          <td><span class=\"chip bad\"><i>❌</i> Slips</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Perfect</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Good</span></td>\n        </tr>\n        <tr>\n          <td class=\"feat\">Control Top</td>\n          <td><span class=\"chip bad\"><i>❌</i> None</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Smooth</span></td>\n          <td><span class=\"chip warn\"><i>⚠️</i> Firm</span></td>\n        </tr>\n        <tr>\n          <td class=\"feat\">Comfort</td>\n          <td><span class=\"chip bad\"><i>❌</i> Rough</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Silky</span></td>\n          <td><span class=\"chip warn\"><i>⚠️</i> Heavy</span></td>\n        </tr>\n        <tr>\n          <td class=\"feat\">Elasticity</td>\n          <td><span class=\"chip bad\"><i>❌</i> Weak</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Superior</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Good</span></td>\n        </tr>\n        <tr>\n          <td class=\"feat\">Durability</td>\n          <td><span class=\"chip bad\"><i>❌</i> Fragile</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Resistant</span></td>\n          <td><span class=\"chip warn\"><i>⚠️</i> Thick</span></td>\n        </tr>\n        <tr>\n          <td class=\"feat\">Finish</td>\n          <td><span class=\"chip bad\"><i>❌</i> Dull</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Versatile</span></td>\n          <td><span class=\"chip ok\"><i>✅</i> Glossy</span></td>\n        </tr>\n        <tr>\n          <td class=\"feat value\">Value</td>\n          <td class=\"value\">AUD $15</td>\n          <td class=\"value\">AUD $25</td>\n          <td class=\"value\">AUD $60</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</section>"
+      }
+    },
+    "features_banner_ahktVM": {
+      "type": "features-banner",
+      "blocks": {
+        "image_QwDQV6": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/icon-care-1.png",
+            "select_icon": "user",
+            "heading": "Heat",
+            "text": "<p>Sterilized for Hygiene</p>",
+            "link": "#"
+          }
+        },
+        "image_hP4JBe": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/icon-care-2.png",
+            "select_icon": "bag",
+            "heading": "Skin",
+            "text": "<p>Dermatologically Tested</p>",
+            "link": "#"
+          }
+        },
+        "image_B8WBgc": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/icon-care-3.png",
+            "select_icon": "bag",
+            "heading": "Thread",
+            "text": "<p>Free Precision</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_QwDQV6",
+        "image_hP4JBe",
+        "image_B8WBgc"
+      ],
+      "name": "Icon with links",
+      "settings": {
+        "heading": "Our Promise to You",
+        "size_heading_mobile": 100,
+        "size_heading": 80,
+        "icon_width_mobile": 36,
+        "icon_width_desktop": 48,
+        "icon_layout": "left",
+        "columns_desktop": "3",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "rgba(0,0,0,0)",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "image_banner_HFArfV": {
+      "type": "image-banner",
+      "name": "size",
+      "settings": {
+        "heading": "Find Your Perfect Fit",
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "desktop_image": "shopify://shop_images/pc-size.jpg",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/m-size.jpg",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "color-heading": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "text-container-color": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "testimonial_video_reels_8YEA9C": {
+      "type": "testimonial-video-reels",
+      "blocks": {
+        "video_mwq8H9": {
+          "type": "video",
+          "settings": {
+            "video_hosted": "shopify://files/videos/Y02786.mp4",
+            "rating": "5",
+            "testimonial": "<p>\"This is exactly what I needed. It exceeded my expectations in every way.\"</p>",
+            "author": "John Doe"
+          }
+        },
+        "video_J7eRcL": {
+          "type": "video",
+          "settings": {
+            "rating": "4.5",
+            "testimonial": "<p>\"This is exactly what I needed. It exceeded my expectations in every way.\"</p>",
+            "author": "John Doe"
+          }
+        },
+        "video_cpb9aA": {
+          "type": "video",
+          "settings": {
+            "rating": "4.5",
+            "testimonial": "<p>\"This is exactly what I needed. It exceeded my expectations in every way.\"</p>",
+            "author": "John Doe"
+          }
+        },
+        "video_cFNKjF": {
+          "type": "video",
+          "settings": {
+            "rating": "4.5",
+            "testimonial": "<p>\"This is exactly what I needed. It exceeded my expectations in every way.\"</p>",
+            "author": "John Doe"
+          }
+        },
+        "video_AQBFka": {
+          "type": "video",
+          "settings": {
+            "rating": "4.5",
+            "testimonial": "<p>\"This is exactly what I needed. It exceeded my expectations in every way.\"</p>",
+            "author": "John Doe"
+          }
+        }
+      },
+      "block_order": [
+        "video_mwq8H9",
+        "video_J7eRcL",
+        "video_cpb9aA",
+        "video_cFNKjF",
+        "video_AQBFka"
+      ],
+      "name": "t:sections.testimonial-video-reels.name",
+      "settings": {
+        "heading": "Testimonial video reels",
+        "video_button": false,
+        "text_alignment": "center",
+        "text_style": "body",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    },
+    "17553557861ba2a1f6": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_kjWDyw": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "eros-no-1-10d-tight-nude"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_kjWDyw"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "3aeb6d9a447ae5270dc8",
+    "features_banner_wiKkaQ",
+    "multicolumn_njFRzi",
+    "image_with_text_Jzp8ia",
+    "multicolumn_XpYCQR",
+    "multicolumn_P8rNPH",
+    "collage_zqQLnk",
+    "rich_text_JLmDma",
+    "custom_liquid_Bf444n",
+    "features_banner_ahktVM",
+    "image_banner_HFArfV",
+    "testimonial_video_reels_8YEA9C",
+    "17553557861ba2a1f6"
+  ]
+}
