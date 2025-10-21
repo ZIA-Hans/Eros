@@ -78,6 +78,125 @@
   padding-right: 0;
   display: none;
 }
+/* 移动端缩略图显示 */
+@media (max-width: 899px) {
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: calc(var(--gap, 8px) * 1);
+    width: 100%;
+  }
+  
+  /* 移动端缩略图容器布局 */
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--gap, 8px) * 1);
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* 移动端箭头导航 */
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .mobile-thumbs-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .mobile-thumbs-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .mobile-thumbs-nav--prev {
+    left: calc(var(--gap, 8px) * 1);
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .mobile-thumbs-nav--next {
+    right: calc(var(--gap, 8px) * 1);
+    transform: translateY(-50%) scaleX(-1);
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .mobile-thumbs-nav svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .mobile-thumbs-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  /* 移动端缩略图样式优化 */
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-slide {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
+    position: relative; /* 确保::before伪元素能正确定位 */
+  }
+  
+  /* 禁用移动端缩略图的::before伪元素 */
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-slide::before {
+    display: none !important;
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-slide.swiper-slide-thumb-active {
+    opacity: 0.7;
+    border: 2px solid var(--color-accent, #000);
+  }
+  
+  /* 确保移动端活动状态的::before伪元素也被禁用 */
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-slide.swiper-slide-thumb-active::before {
+    display: none !important;
+  }
+  
+  /* 隐藏移动端缩略图的导航按钮 */
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-button-next,
+  .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-button-prev {
+    display: none;
+  }
+}
 @media (min-width: 900px) {
   .wt-product__gallery .wt-slider__container--thumbs {
     display: block;

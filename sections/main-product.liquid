@@ -614,9 +614,9 @@
           <div class="swiper-button-prev wt-slider__nav-btn wt-slider__nav-prev wt-slider__nav-prev--basic">
             {% render 'icons', id: 'arrow-left' %}
           </div>
-          <div class="swiper-scrollbar wt-slider__scrollbar wt-slider__scrollbar--featured"></div>
+          {% comment %} <div class="swiper-scrollbar wt-slider__scrollbar wt-slider__scrollbar--featured"></div> {% endcomment %}
 
-          <div class="swiper-pagination"></div>
+          {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
         {% endif %}
 
         <script data-swiper-configuration type="text/json">
@@ -664,6 +664,7 @@
                   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
                     class="wt-product__thumbnail-video"
                   {% endif %}
+                  style="width: 100%;"
                 >
                 <img
                   src="{{ media.preview_image | image_url: width: 300 }}"

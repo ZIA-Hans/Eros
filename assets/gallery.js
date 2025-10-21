@@ -214,30 +214,164 @@ if (!customElements.get("gallery-section")) {
           this.updateSwiperAutoHeight(this.gallerySwiper);
         });
 
-        switch (this.configuration.desktopLayout) {
-          case "carousel-vertical":
-          case "carousel-horizontal":
-            this.initializeCarouselGallery();
-            break;
-          case "masonry":
-            window.addEventListener(
-              "resize",
-              function () {
-                this.handleMassonry();
-              }.bind(this),
-            );
-            this.handleMassonry();
-            break;
-          case "collage":
-            window.addEventListener(
-              "resize",
-              function () {
-                this.handleCollage();
-              }.bind(this),
-            );
-            this.handleCollage();
-            break;
+        // 移动端特殊处理：显示缩略图
+        if (this.matchResolution() === "mobile") {
+          this.initializeMobileGallery();
+        } else {
+          // PC端保持原有逻辑
+          switch (this.configuration.desktopLayout) {
+            case "carousel-vertical":
+            case "carousel-horizontal":
+              this.initializeCarouselGallery();
+              break;
+            case "masonry":
+              window.addEventListener(
+                "resize",
+                function () {
+                  this.handleMassonry();
+                }.bind(this),
+              );
+              this.handleMassonry();
+              break;
+            case "collage":
+              window.addEventListener(
+                "resize",
+                function () {
+                  this.handleCollage();
+                }.bind(this),
+              );
+              this.handleCollage();
+              break;
+          }
         }
+      }
+
+      // 移动端专用初始化方法
+      initializeMobileGallery() {
+        // 检查缩略图容器是否存在
+        if (!this.elements.thumbs) {
+          console.warn("移动端缩略图容器 [data-thumbs] 未找到");
+          return;
+        }
+
+        // 显示移动端缩略图
+        this.elements.thumbs.style.display = "flex";
+        this.elements.thumbs.classList.add("mobile-thumbs-visible");
+
+        // 添加移动端箭头导航
+        this.addMobileThumbsNavigation();
+
+        if (this.thumbsSwiper == null) {
+          this.decorateSwiper(
+            this.elements.thumbs,
+            "wt-slider__container--thumbs",
+          );
+          this.thumbsSwiper = this.swiperThumbsInitilize();
+        }
+        this.decorateSwiper(this.elements.gallery);
+        this.swiperGalleryInitilize(this.thumbsSwiper);
+
+        const disableTouchSlide =
+          this.elements.gallery.querySelector(".disable-touch");
+        if (disableTouchSlide) {
+          disableTouchSlide.classList.add("swiper-no-swiping");
+        }
+      }
+
+      // 添加移动端缩略图箭头导航
+      addMobileThumbsNavigation() {
+        // 检查是否已经添加了导航
+        if (this.elements.thumbs.querySelector('.mobile-thumbs-nav')) {
+          return;
+        }
+
+        console.log('添加移动端缩略图导航按钮');
+
+        // 左箭头
+        const prevButton = document.createElement('button');
+        prevButton.className = 'mobile-thumbs-nav mobile-thumbs-nav--prev';
+        prevButton.setAttribute('type', 'button');
+        prevButton.setAttribute('aria-label', 'Previous thumbnails');
+        prevButton.innerHTML = `
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.336 0C3.288 0 0 3.28 0 7.336C0 11.392 3.288 14.672 7.336 14.672C11.384 14.672 14.672 11.384 14.672 7.336C14.672 3.288 11.392 0 7.336 0ZM9.528 10.968C9.776 11.216 9.776 11.624 9.528 11.872C9.28 12.12 8.872 12.12 8.624 11.872L4.664 7.92C4.536 7.792 4.48 7.632 4.48 7.464C4.48 7.304 4.544 7.136 4.664 7.008L8.624 3.048C8.872 2.8 9.28 2.8 9.528 3.048C9.776 3.296 9.776 3.704 9.528 3.952L6.016 7.464L9.528 10.968Z" fill="#3C2F2F"/>
+          </svg>
+        `;
+
+        // 右箭头
+        const nextButton = document.createElement('button');
+        nextButton.className = 'mobile-thumbs-nav mobile-thumbs-nav--next';
+        nextButton.setAttribute('type', 'button');
+        nextButton.setAttribute('aria-label', 'Next thumbnails');
+        nextButton.innerHTML = `
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.336 0C3.288 0 0 3.28 0 7.336C0 11.392 3.288 14.672 7.336 14.672C11.384 14.672 14.672 11.384 14.672 7.336C14.672 3.288 11.392 0 7.336 0ZM9.528 10.968C9.776 11.216 9.776 11.624 9.528 11.872C9.28 12.12 8.872 12.12 8.624 11.872L4.664 7.92C4.536 7.792 4.48 7.632 4.48 7.464C4.48 7.304 4.544 7.136 4.664 7.008L8.624 3.048C8.872 2.8 9.28 2.8 9.528 3.048C9.776 3.296 9.776 3.704 9.528 3.952L6.016 7.464L9.528 10.968Z" fill="#3C2F2F"/>
+          </svg>
+        `;
+
+        // 添加按钮到容器
+        this.elements.thumbs.appendChild(prevButton);
+        this.elements.thumbs.appendChild(nextButton);
+
+        console.log('导航按钮已添加:', {
+          prevButton: prevButton,
+          nextButton: nextButton,
+          container: this.elements.thumbs
+        });
+
+        // 添加点击事件
+        prevButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('点击左箭头');
+          this.scrollMobileThumbs('prev');
+        });
+
+        nextButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('点击右箭头');
+          this.scrollMobileThumbs('next');
+        });
+
+        // 初始状态检查
+        setTimeout(() => {
+          this.updateMobileThumbsNavState();
+        }, 100);
+      }
+
+      // 滚动移动端缩略图
+      scrollMobileThumbs(direction) {
+        const wrapper = this.elements.thumbs.querySelector('.swiper-wrapper');
+        if (!wrapper) return;
+
+        const scrollAmount = 200; // 每次滚动的距离
+        const currentScroll = wrapper.scrollLeft;
+        const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+        if (direction === 'prev') {
+          wrapper.scrollLeft = Math.max(0, currentScroll - scrollAmount);
+        } else {
+          wrapper.scrollLeft = Math.min(maxScroll, currentScroll + scrollAmount);
+        }
+
+        // 更新按钮状态
+        setTimeout(() => this.updateMobileThumbsNavState(), 100);
+      }
+
+      // 更新移动端缩略图导航按钮状态
+      updateMobileThumbsNavState() {
+        const wrapper = this.elements.thumbs.querySelector('.swiper-wrapper');
+        const prevButton = this.elements.thumbs.querySelector('.mobile-thumbs-nav--prev');
+        const nextButton = this.elements.thumbs.querySelector('.mobile-thumbs-nav--next');
+
+        if (!wrapper || !prevButton || !nextButton) return;
+
+        const currentScroll = wrapper.scrollLeft;
+        const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+        prevButton.disabled = currentScroll <= 0;
+        nextButton.disabled = currentScroll >= maxScroll;
       }
 
       initializeCarouselGallery() {
@@ -290,13 +424,36 @@ if (!customElements.get("gallery-section")) {
 
       swiperThumbsInitilize() {
         let autoHeightEnabled = window.innerWidth <= 900;
-        this.thumbs_configuration = {
-          ...this.thumbs_configuration,
-          autoHeight: autoHeightEnabled,
-        };
+        
+        // 移动端缩略图配置
+        const isMobile = this.matchResolution() === "mobile";
+        let thumbsConfig = { ...this.thumbs_configuration };
+        
+        if (isMobile) {
+          // 移动端使用简单的水平布局，不使用滑动
+          thumbsConfig = {
+            ...thumbsConfig,
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            freeMode: true,
+            allowTouchMove: true,
+            direction: 'horizontal',
+            autoHeight: false,
+            // 禁用移动端的导航按钮
+            navigation: false,
+            pagination: false,
+            scrollbar: false,
+          };
+        } else {
+          thumbsConfig = {
+            ...thumbsConfig,
+            autoHeight: autoHeightEnabled,
+          };
+        }
+        
         const swiper = new Swiper(
           this.elements.thumbs,
-          this.thumbs_configuration,
+          thumbsConfig,
         );
         return swiper;
       }
@@ -305,10 +462,19 @@ if (!customElements.get("gallery-section")) {
         if (this.thumbsSwiper != null) {
           this.thumbsSwiper.destroy();
           this.thumbsSwiper = null;
-          this.undecorateSwiper(
-            this.elements.thumbs,
-            "wt-slider__container--thumbs",
-          );
+          if (this.elements.thumbs) {
+            this.undecorateSwiper(
+              this.elements.thumbs,
+              "wt-slider__container--thumbs",
+            );
+            // 移除移动端缩略图显示类
+            this.elements.thumbs.classList.remove("mobile-thumbs-visible");
+            this.elements.thumbs.style.display = "";
+            
+            // 清理移动端导航按钮
+            const navButtons = this.elements.thumbs.querySelectorAll('.mobile-thumbs-nav');
+            navButtons.forEach(button => button.remove());
+          }
         }
         if (this.gallerySwiper != null) {
           this.gallerySwiper.destroy();
