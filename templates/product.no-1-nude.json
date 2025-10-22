@@ -28,7 +28,7 @@
           "settings": {
             "brand": "",
             "size_text": 120,
-            "size_text_mobile": 180
+            "size_text_mobile": 140
           }
         },
         "feature_tags_ktxUht": {
@@ -51,15 +51,6 @@
             "social_pinterest_link": true,
             "social_whatsapp_link": true,
             "mail_link": false
-          }
-        },
-        "separator_reBrRK": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 8
           }
         },
         "price": {
@@ -209,7 +200,6 @@
         "title",
         "feature_tags_ktxUht",
         "share_buttons_QJQBWK",
-        "separator_reBrRK",
         "price",
         "dd5cf19e-afbd-4294-a8c3-4a0a19669079",
         "text_LQ6bM9",

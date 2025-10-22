@@ -63,11 +63,13 @@
     margin-left: calc(var(--gap, 8px) * -2);
     margin-right: calc(var(--gap, 8px) * -2);
     overflow: hidden;
+    margin-bottom: unset;
   }
   [mobile-image-size=small] .wt-product__gallery [data-gallery] {
     margin-left: calc(var(--gap, 8px) * 2);
     margin-right: calc(var(--gap, 8px) * 2);
     overflow: visible;
+    padding-bottom: unset;
   }
 }
 .wt-product__gallery .wt-slider__container {
