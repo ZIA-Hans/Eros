@@ -644,6 +644,36 @@ if (!customElements.get("gallery-section")) {
         document.dispatchEvent(galleryEvent);
       }
 
+      // 检测最后一张素材是否为视频
+      isLastMediaVideo() {
+        if (!this.elements || !this.elements.gallerySlides || this.elements.gallerySlides.length === 0) {
+          return false;
+        }
+        
+        const lastSlide = this.elements.gallerySlides[this.elements.gallerySlides.length - 1];
+        const videoElement = lastSlide.querySelector("video");
+        return videoElement !== null;
+      }
+
+      // 获取最后一张视频素材
+      getLastVideoSlide() {
+        if (!this.elements || !this.elements.gallerySlides || this.elements.gallerySlides.length === 0) {
+          return null;
+        }
+        
+        const lastSlide = this.elements.gallerySlides[this.elements.gallerySlides.length - 1];
+        const videoElement = lastSlide.querySelector("video");
+        
+        if (videoElement) {
+          return {
+            gallerySlide: lastSlide.cloneNode(true),
+            thumbsSlide: this.elements.thumbsSlides[this.elements.thumbsSlides.length - 1].cloneNode(true)
+          };
+        }
+        
+        return null;
+      }
+
       filterSlides(options, featured_media_id, matchAll = true, callback) {
         if (!this.elements) return;
         const originalGallerySlides = Array.from(
@@ -679,6 +709,24 @@ if (!customElements.get("gallery-section")) {
             
             filteredGallerySlides = originalGallerySlides.slice(startIndex, endIndex);
             filteredThumbsSlides = originalThumbsSlides.slice(startIndex, endIndex);
+            
+            // 检查最后一张素材是否为视频，如果是则添加到筛选结果中
+            if (this.isLastMediaVideo()) {
+              const lastVideoSlide = this.getLastVideoSlide();
+              if (lastVideoSlide) {
+                // 确保视频不在已选择的5张图片中
+                const lastVideoMediaId = lastVideoSlide.gallerySlide.querySelector("video")?.getAttribute("data-media-id");
+                const isVideoAlreadyIncluded = filteredGallerySlides.some(slide => {
+                  const slideMediaId = slide.querySelector("video")?.getAttribute("data-media-id");
+                  return slideMediaId === lastVideoMediaId;
+                });
+                
+                if (!isVideoAlreadyIncluded) {
+                  filteredGallerySlides.push(lastVideoSlide.gallerySlide);
+                  filteredThumbsSlides.push(lastVideoSlide.thumbsSlide);
+                }
+              }
+            }
           } else {
             // 如果找不到主图，显示全部图片
             filteredGallerySlides = [...originalGallerySlides];

@@ -6258,10 +6258,11 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 }
 .wt-product__thumbnail-video__icon {
   position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 16px;
-  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
   background-color: var(--color-background);
   border-radius: var(--border-radius-button);
   display: flex;
@@ -6269,8 +6270,8 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
   justify-content: center;
 }
 .wt-product__thumbnail-video__icon svg {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
 }
 .wt-product__thumbnail-video__gallery-video-icon {
   position: absolute;
