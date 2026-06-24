@@ -14123,4 +14123,112 @@ main#root > .wt-featured-nav {
 .wt-product__option-wrapper:has(.wt-product__option-promotion) {
   margin-top: 18px;
 }
+
+/* ============================================================
+   功能6: 产品页样式微调 (迁移自 Eros commit 5046b90)
+   作为覆盖样式追加, CSS 层叠下后定义优先
+   如与 XT 默认样式冲突, 可整块删除或微调
+   ============================================================ */
+
+/* 价格样式 */
+.price__regular .price-item--regular {
+  color: #2B2B2B;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+@media screen and (max-width: 749px) {
+  .price__regular .price-item--regular {
+    font-size: 25px;
+  }
+}
+
+/* 折叠触发器 / 分隔线 */
+.wt-collapse__trigger span {
+  color: #92918F;
+}
+.wt-separator__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.wt-separator__wrapper .wt-separator__line {
+  width: calc(100% - var(--gap, 8px) * 2.5);
+  color: #2B2B2B;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+
+/* 选项标题 / 尺寸表链接 */
+.wt-product__option__title,
+.wt-product__option__title .wt-product__size-chat {
+  font-family: PingFang SC;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.wt-product__option__title .value {
+  font-family: Inter;
+  font-weight: 400;
+  margin-left: 4px;
+}
+.wt-product__size-chat {
+  background-color: unset;
+  border: unset;
+  padding: unset;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.wt-product__size-chat:hover {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: inherit;
+  transform: none;
+  box-shadow: none;
+  opacity: 1;
+}
+
+/* swatches / tiles 选中态 */
+.wt-product__option__body--swatches .f-swatch__list__link.active a::before {
+  border-color: #3C2F2F;
+}
+.wt-product__option__body--swatches input:checked + label::before,
+.wt-product__option__body--tiles input:checked + label::before {
+  border-color: #3C2F2F;
+}
+.wt-product__option__body--tiles input:checked + label {
+  background-color: #E6DFD5;
+}
+@media screen and (max-width: 749px) {
+  .wt-product__option__body--swatches label::before,
+  .wt-product__option__body--swatches a::before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+  }
+  .wt-product__option__body--swatches .f-swatch__list__item {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 数量计数器 */
+.wt-product__add-to-cart_form form:has(quantity-counter) .counter .js-counter-decrease {
+  background-color: #F3F6F8;
+  border-radius: 6px 0 0 6px;
+  color: #000000;
+  font-family: "PingFang SC";
+  margin-right: 4px;
+}
+.wt-product__add-to-cart_form form:has(quantity-counter) .counter .js-counter-increase {
+  background-color: #F3F6F8;
+  border-radius: 0 6px 6px 0;
+  color: #000000;
+  font-family: "PingFang SC";
+  margin-left: 4px;
+}
+.wt-product__add-to-cart_form form:has(quantity-counter) .counter .js-counter-quantity {
+  font-family: "PingFang SC";
+  border-radius: 4px;
+  font-size: 16px;
+}
 /*# sourceMappingURL=main.css.map */
