@@ -14088,4 +14088,18 @@ main#root > .wt-featured-nav {
 .rte .shopify_subscriptions_app_policy {
   margin-top: 0.5em;
 }
+.wt-product__product-tip {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  background-color: #F3EFEA;
+  border-radius: 4px;
+}
+.wt-product__product-tip > span {
+  font-family: PingFang SC;
+  font-size: 14px;
+  color: rgba(43, 43, 43, 0.6);
+}
 /*# sourceMappingURL=main.css.map */
