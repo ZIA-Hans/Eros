@@ -660,6 +660,48 @@ if (!customElements.get("gallery-section")) {
         this.undecorateCollage(this.elements.gallery, "masonry");
       }
 
+      // 检查最后一张素材是否为视频
+      isLastMediaVideo() {
+        if (
+          !this.elements ||
+          !this.elements.gallerySlides ||
+          this.elements.gallerySlides.length === 0
+        ) {
+          return false;
+        }
+
+        const lastSlide =
+          this.elements.gallerySlides[this.elements.gallerySlides.length - 1];
+        const videoElement = lastSlide.querySelector("video");
+        return videoElement !== null;
+      }
+
+      // 获取最后一张视频素材
+      getLastVideoSlide() {
+        if (
+          !this.elements ||
+          !this.elements.gallerySlides ||
+          this.elements.gallerySlides.length === 0
+        ) {
+          return null;
+        }
+
+        const lastSlide =
+          this.elements.gallerySlides[this.elements.gallerySlides.length - 1];
+        const videoElement = lastSlide.querySelector("video");
+
+        if (videoElement) {
+          return {
+            gallerySlide: lastSlide.cloneNode(true),
+            thumbsSlide: this.elements.thumbsSlides[
+              this.elements.thumbsSlides.length - 1
+            ].cloneNode(true),
+          };
+        }
+
+        return null;
+      }
+
       sortSlides(slides, featured_media_id) {
         // Find the index of the slide with featured_media_id
         const featuredIndex = slides.findIndex((slide) => {
@@ -759,33 +801,68 @@ if (!customElements.get("gallery-section")) {
 
         const getMediaId = (item) => item?.dataset?.mediaId;
 
-        let filteredGallerySlides = this.filterSlidesByOptions(
-          originalGallerySlides,
-          options,
-          featured_media_id,
-          matchAll,
-        );
-        let filteredThumbsSlides = this.filterSlidesByOptions(
-          originalThumbsSlides,
-          options,
-          featured_media_id,
-          matchAll,
-        );
+        let filteredGallerySlides, filteredThumbsSlides;
 
-        if (filteredGallerySlides.length === 0) {
+        // 如果没有选中变体，显示全部图片
+        if (!featured_media_id) {
           filteredGallerySlides = [...originalGallerySlides];
           filteredThumbsSlides = [...originalThumbsSlides];
-        }
+        } else {
+          // 如果有选中变体，基于主图位置显示5张连续图片
+          const featuredIndex = originalGallerySlides.findIndex((slide) => {
+            const mediaId = slide.querySelector("img")
+              ? Number(
+                  slide.querySelector("img").getAttribute("data-media-id"),
+                )
+              : null;
+            return mediaId === Number(featured_media_id);
+          });
 
-        if (featured_media_id) {
-          filteredGallerySlides = this.sortSlides(
-            filteredGallerySlides,
-            featured_media_id,
-          );
-          filteredThumbsSlides = this.sortSlides(
-            filteredThumbsSlides,
-            featured_media_id,
-          );
+          if (featuredIndex > -1) {
+            // 从主图位置开始取5张图片
+            const startIndex = featuredIndex;
+            const endIndex = Math.min(
+              startIndex + 5,
+              originalGallerySlides.length,
+            );
+
+            filteredGallerySlides = originalGallerySlides.slice(
+              startIndex,
+              endIndex,
+            );
+            filteredThumbsSlides = originalThumbsSlides.slice(
+              startIndex,
+              endIndex,
+            );
+
+            // 检查最后一张素材是否为视频，如果是则添加到筛选结果中
+            if (this.isLastMediaVideo()) {
+              const lastVideoSlide = this.getLastVideoSlide();
+              if (lastVideoSlide) {
+                // 确保视频不在已选择的5张图片中
+                const lastVideoMediaId = lastVideoSlide.gallerySlide
+                  .querySelector("video")
+                  ?.getAttribute("data-media-id");
+                const isVideoAlreadyIncluded = filteredGallerySlides.some(
+                  (slide) => {
+                    const slideMediaId = slide
+                      .querySelector("video")
+                      ?.getAttribute("data-media-id");
+                    return slideMediaId === lastVideoMediaId;
+                  },
+                );
+
+                if (!isVideoAlreadyIncluded) {
+                  filteredGallerySlides.push(lastVideoSlide.gallerySlide);
+                  filteredThumbsSlides.push(lastVideoSlide.thumbsSlide);
+                }
+              }
+            }
+          } else {
+            // 如果找不到主图，显示全部图片
+            filteredGallerySlides = [...originalGallerySlides];
+            filteredThumbsSlides = [...originalThumbsSlides];
+          }
         }
 
         const renderedSlidesChanged =
@@ -873,15 +950,13 @@ if (!customElements.get("gallery-section")) {
           }
         }
 
-        if (featured_media_id) {
-          this.setActiveMedia(featured_media_id, true);
-        } else {
-          this.setActiveMedia(
-            filteredGallerySlides[0]
-              ?.querySelector("img")
-              ?.getAttribute("data-media-id"),
-            true,
-          );
+        // 设置第一张图片为活动状态
+        const firstSlideMediaId = filteredGallerySlides[0]
+          ?.querySelector("img")
+          ?.getAttribute("data-media-id");
+
+        if (firstSlideMediaId) {
+          this.setActiveMedia(firstSlideMediaId, true);
         }
         this.gallerySwiper?.update();
 
