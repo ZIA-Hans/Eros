@@ -1977,7 +1977,7 @@
                               </button>
                           {% endif %}
 
-                          <div class="wt-product__option__body wt-product__option__body--{{ options_body_class }}{% if options_body_class == 'drawer' %} {{ option.name | downcase }} {% endif %}">
+                          <div class="wt-product__option-wrapper wt-product__option__body wt-product__option__body--{{ options_body_class }}{% if options_body_class == 'drawer' %} {{ option.name | downcase }} {% endif %}">
                             {% if options_body_class == 'drawer' %}
                               <div class="drawer__list-nav">
                                 <div class="drawer__list-nav__title">{{ option.name }}:</div>
@@ -2038,6 +2038,22 @@
                                           >
                                             <span>{{ value }}</span>
                                           </label>
+
+                                          {% comment %} 检查是否需要显示促销信息 (SKU promotion) {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                         {%- when 'button' -%}
                                           <label
                                             tabindex="0"
