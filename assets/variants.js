@@ -262,9 +262,10 @@ if (!customElements.get("variant-options")) {
           if (!selectedOption) return;
 
           // .value may be pre-filled by Liquid for SSR; we overwrite for client state
-          fieldset.querySelector(
-            ".wt-product__option__title .value",
-          ).innerHTML = selectedOption;
+          // ! 不展示option的Value
+          // fieldset.querySelector(
+          //   ".wt-product__option__title .value",
+          // ).innerHTML = selectedOption;
           const dropdownSpan = fieldset.querySelector(
             ".wt-product__option__dropdown span",
           );

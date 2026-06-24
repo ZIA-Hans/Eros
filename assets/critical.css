@@ -1950,8 +1950,8 @@ body:not(.search-overlay-on) .wt-header--opacity.wt-header--v3 .wt-header__searc
   padding-right: calc(var(--gap, 8px) * 2);
   margin-left: auto;
   margin-right: auto;
-  padding-top: calc(var(--gap, 8px) * 1.75);
-  padding-bottom: calc(var(--gap, 8px) * 1.75);
+  padding-top: calc(var(--gap, 8px) * 1.5);
+  padding-bottom: calc(var(--gap, 8px) * 1.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4094,7 +4094,7 @@ body.shoppable-image-on #PBarNextFrameWrapper {
   display: inline-block;
   width: var(--size-icon);
   height: var(--size-icon);
-  fill: currentColor;
+  /* fill: currentColor; */
 }
 @media (min-width: 600px) {
   .svg-icon {
