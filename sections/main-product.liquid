@@ -1162,8 +1162,8 @@
               "direction": "{{ thumbnails_direction }}",
               "spaceBetween": 8,
               {% if desktop_layout == 'carousel-vertical' %}
-                  "slidesPerView": {% if section.settings.desktop-image-ratio == 'portrait' %} 7 {% else %} 6 {% endif %},
-                  "slidesPerGroup": {% if section.settings.desktop-image-ratio == 'portrait' %} 5 {% else %} 4 {% endif %},
+                  "slidesPerView": 5,
+                  "slidesPerGroup": 4,
               {%  else %}
                   "slidesPerView": "auto",
                   "slidesPerGroup": 4,
