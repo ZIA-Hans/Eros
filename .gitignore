@@ -1,0 +1,9 @@
+# Shopify CLI working directory (local cache, metafields, theme session)
+.shopify/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
