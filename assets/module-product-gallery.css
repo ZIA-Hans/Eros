@@ -856,8 +856,8 @@ html {
 
   /* 移动端缩略图样式优化 */
   .wt-product__gallery .wt-slider__container--thumbs.mobile-thumbs-visible .swiper-slide {
-    width: 40px !important;
-    height: 40px !important;
+    width: 40px;
+    height: 40px;
     border-radius: var(--border-radius);
     overflow: hidden;
     cursor: pointer;
