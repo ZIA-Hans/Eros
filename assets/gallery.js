@@ -810,10 +810,8 @@ if (!customElements.get("gallery-section")) {
         } else {
           // 如果有选中变体，基于主图位置显示5张连续图片
           const featuredIndex = originalGallerySlides.findIndex((slide) => {
-            const mediaId = slide.querySelector("img")
-              ? Number(
-                  slide.querySelector("img").getAttribute("data-media-id"),
-                )
+            const mediaId = slide?.dataset?.mediaId
+              ? Number(slide.dataset.mediaId)
               : null;
             return mediaId === Number(featured_media_id);
           });
@@ -841,15 +839,9 @@ if (!customElements.get("gallery-section")) {
               if (lastVideoSlide) {
                 // 确保视频不在已选择的5张图片中
                 const lastVideoMediaId = lastVideoSlide.gallerySlide
-                  .querySelector("video")
-                  ?.getAttribute("data-media-id");
+                  ?.dataset?.mediaId;
                 const isVideoAlreadyIncluded = filteredGallerySlides.some(
-                  (slide) => {
-                    const slideMediaId = slide
-                      .querySelector("video")
-                      ?.getAttribute("data-media-id");
-                    return slideMediaId === lastVideoMediaId;
-                  },
+                  (slide) => slide?.dataset?.mediaId === lastVideoMediaId,
                 );
 
                 if (!isVideoAlreadyIncluded) {
