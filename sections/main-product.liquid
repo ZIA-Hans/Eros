@@ -2062,6 +2062,22 @@
                                           >
                                             {{ value }}
                                           </label>
+
+                                          {% comment %} 检查是否需要显示促销信息 (SKU promotion) {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                         {%- when 'variant_picture' -%}
                                           <label
                                             tabindex="0"
@@ -2074,6 +2090,22 @@
                                               swatch_search_color: value
                                             %}
                                           </label>
+
+                                          {% comment %} 检查是否需要显示促销信息 (SKU promotion) {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                         {%- when 'color_swatch' -%}
                                           {%- assign swatches_config = settings.swatches_config
                                             | newline_to_br
@@ -2089,6 +2121,22 @@
                                               style="{% render 'color-swatch-style', swatches_config: swatches_config, value: value %}"
                                             ></div>
                                           </label>
+
+                                          {% comment %} 检查是否需要显示促销信息 (SKU promotion) {% endcomment %}
+                                          {% if product.metafields.custom.sku_promotion.value %}
+                                            {% assign promotion_obj = product.metafields.custom.sku_promotion.value %}
+                                            {% if promotion_obj.apply_option.value %}
+                                              {% assign apply_option_values = promotion_obj.apply_option.value %}
+                                              {% for apply_value in apply_option_values %}
+                                                {% if apply_value == value %}
+                                                  <div class="wt-product__option-promotion">
+                                                    {{ promotion_obj.title.value | default: 'save more' }}
+                                                  </div>
+                                                  {% break %}
+                                                {% endif %}
+                                              {% endfor %}
+                                            {% endif %}
+                                          {% endif %}
                                       {% endcase %}
                                     </li>
                                   {%- endfor -%}
