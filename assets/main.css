@@ -14231,4 +14231,25 @@ main#root > .wt-featured-nav {
   border-radius: 4px;
   font-size: 16px;
 }
+
+/* Add to cart 按钮 + 数量框 (迁移自 Eros) */
+.wt-product__add-to-cart_form .js-add-to-cart {
+  background: #E6DFD5;
+  color: #000000;
+  border-color: transparent;
+  flex-grow: 2;
+  width: auto;
+  text-transform: uppercase;
+  font-family: "PingFang SC";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* 数量框移除外边框 (Eros 定制: 注释掉 border) */
+.counter-wrapper {
+  /* border: 1px solid var(--color-input-border); */
+  position: relative;
+  border-radius: var(--border-radius-button);
+  background-color: var(--color-input-background);
+}
 /*# sourceMappingURL=main.css.map */
