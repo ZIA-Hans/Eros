@@ -14227,6 +14227,7 @@ main#root > .wt-featured-nav {
   margin-left: 4px;
 }
 .wt-product__add-to-cart_form form:has(quantity-counter) .counter .js-counter-quantity {
+  background-color: #F3F6F8;
   font-family: "PingFang SC";
   border-radius: 4px;
   font-size: 16px;
