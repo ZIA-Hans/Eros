@@ -1912,7 +1912,7 @@
                         <div class="js wt-product__option">
                           <div class="wt-product__option__wrapper">
                             <div id="{{ option.name }}-option-label" class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-                              <span class="label">{{ option.name }}: </span> <strong class="value">{{ option.selected_value }}</strong>
+                              <span class="label">{{ option.name }} </span>
                             </div>
                             {% assign variant_name = block.settings.variant_name | downcase %}
                             {% assign option_name = option.name | downcase %}
