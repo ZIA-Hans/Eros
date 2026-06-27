@@ -4094,7 +4094,7 @@ body.shoppable-image-on #PBarNextFrameWrapper {
   display: inline-block;
   width: var(--size-icon);
   height: var(--size-icon);
-  /* fill: currentColor; */
+  fill: currentColor;
 }
 @media (min-width: 600px) {
   .svg-icon {
