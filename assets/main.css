@@ -14196,6 +14196,7 @@ main#root > .wt-featured-nav {
 }
 .wt-product__option__body--tiles input:checked + label {
   background-color: #A65D4A;
+  border: none;
   color: #FFF;
   font-family: Arial;
   font-size: 14px;
