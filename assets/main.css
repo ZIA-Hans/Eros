@@ -14196,6 +14196,13 @@ main#root > .wt-featured-nav {
 }
 .wt-product__option__body--tiles input:checked + label {
   background-color: #A65D4A;
+  color: #FFF;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.28px;
 }
 @media screen and (max-width: 749px) {
   .wt-product__option__body--swatches label::before,
