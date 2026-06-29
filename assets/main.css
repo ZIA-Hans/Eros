@@ -14195,7 +14195,7 @@ main#root > .wt-featured-nav {
   border-color: #3C2F2F;
 }
 .wt-product__option__body--tiles input:checked + label {
-  background-color: #E6DFD5;
+  background-color: #A65D4A;
 }
 @media screen and (max-width: 749px) {
   .wt-product__option__body--swatches label::before,
@@ -14235,8 +14235,8 @@ main#root > .wt-featured-nav {
 
 /* Add to cart 按钮 + 数量框 (迁移自 Eros) */
 .wt-product__add-to-cart_form .js-add-to-cart {
-  background: #E6DFD5;
-  color: #000000;
+  background: #A65D4A;
+  color: #ffffff;
   border-color: transparent;
   flex-grow: 2;
   width: auto;
