@@ -52,4 +52,19 @@
   --xt-title-font-size: var(--xt-font-size-title);
   --xt-title-line-height: 140%;
   --xt-title-letter-spacing: -0.32px;
+
+  /* 价格 - 划线价(原价) */
+  --xt-price-compare-color: rgba(43, 43, 43, 0.50);
+  --xt-price-compare-font-family: "PingFang SC";
+  --xt-price-compare-font-size: 16px;
+  --xt-price-compare-letter-spacing: -0.32px;
+
+  /* 价格 - 售价(现价) */
+  --xt-price-sale-color: var(--xt-color-text-primary);
+  --xt-price-sale-font-family: Inter;
+  --xt-price-sale-font-size: 25px;
+  --xt-price-sale-letter-spacing: -0.5px;
+
+  /* 价格间距 */
+  --xt-price-gap: 10px;
 }

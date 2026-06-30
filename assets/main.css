@@ -14137,6 +14137,38 @@ main#root > .wt-featured-nav {
   letter-spacing: -1px;
 }
 
+/* 价格 sale 容器: 一行分布 + 垂直居中 + 划线价在前售价在后 */
+.price__sale.visible {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: var(--xt-price-gap, 10px);
+  justify-content: flex-start;
+}
+
+/* 售价(现价) */
+.price__sale.visible .price-item--sale {
+  color: var(--xt-price-sale-color, #2B2B2B);
+  font-family: var(--xt-price-sale-font-family, Inter);
+  font-size: var(--xt-price-sale-font-size, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: var(--xt-price-sale-letter-spacing, -0.5px);
+}
+
+/* 划线价(原价) */
+.price__sale.visible .price-item--regular {
+  color: var(--xt-price-compare-color, rgba(43, 43, 43, 0.5));
+  font-family: var(--xt-price-compare-font-family, "PingFang SC");
+  font-size: var(--xt-price-compare-font-size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: var(--xt-price-compare-letter-spacing, -0.32px);
+  text-decoration: line-through;
+}
+
 /* 商品标题样式 */
 .wt-product__name {
   color: var(--xt-title-color, #2B2B2B);
