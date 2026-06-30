@@ -14132,7 +14132,7 @@ main#root > .wt-featured-nav {
 
 /* 价格样式 */
 .price__regular .price-item--regular {
-  color: #2B2B2B;
+  color: var(--xt-color-text-primary, #2B2B2B);
   font-size: 30px;
   letter-spacing: -1px;
 }
@@ -14152,7 +14152,7 @@ main#root > .wt-featured-nav {
 }
 .wt-separator__wrapper .wt-separator__line {
   width: calc(100% - var(--gap, 8px) * 2.5);
-  color: #2B2B2B;
+  color: var(--xt-color-text-primary, #2B2B2B);
   line-height: 1.4;
   letter-spacing: -0.2px;
 }
@@ -14197,7 +14197,7 @@ main#root > .wt-featured-nav {
   display: none;
 }
 .wt-product__option__body--tiles input:checked + label {
-  background-color: #A65D4A;
+  background-color: var(--xt-selected-bg, #A65D4A);
   color: #FFF;
   font-family: Arial;
   font-size: 14px;
@@ -14244,8 +14244,8 @@ main#root > .wt-featured-nav {
 
 /* Add to cart 按钮 + 数量框 (迁移自 Eros) */
 .wt-product__add-to-cart_form .js-add-to-cart {
-  background: #A65D4A;
-  color: #FFF;
+  background: var(--xt-button-bg, #A65D4A);
+  color: var(--xt-button-text, #FFF);
   border-color: transparent;
   flex-grow: 2;
   width: auto;
