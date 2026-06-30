@@ -14190,9 +14190,11 @@ main#root > .wt-featured-nav {
 .wt-product__option__body--swatches .f-swatch__list__link.active a::before {
   border-color: #3C2F2F;
 }
-.wt-product__option__body--swatches input:checked + label::before,
-.wt-product__option__body--tiles input:checked + label::before {
+.wt-product__option__body--swatches input:checked + label::before {
   border-color: #3C2F2F;
+}
+.wt-product__option__body--tiles input:checked + label::before {
+  display: none;
 }
 .wt-product__option__body--tiles input:checked + label {
   background-color: #A65D4A;
