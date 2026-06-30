@@ -1,0 +1,738 @@
+{% doc %}
+  @prompt
+    Create a custom Shopify section called “Product Grade”.
+    
+    This section displays a product rating overview with a centered heading and 4 product attributes.
+    
+    Layout:
+    - Centered section
+    - Compact width on mobile
+    - Heading centered at top with optional info icon
+    - 4 rating items in a 2x2 grid on mobile
+    - On desktop keep 2 columns or expand to 4 columns
+    
+    Each rating item includes:
+    - Title
+    - Horizontal rounded rating bar
+    - Circular marker based on a value (0–100)
+    - Small label below
+    
+    Default items:
+    - Warmth / 20 / Cool
+    - Durability / 26 / Delicate
+    - Finish / 85 / Glossy
+    - Sheerness / 51 / Sheer
+    
+    Blocks:
+    Each block should allow:
+    - Title
+    - Value (0–100)
+    - Label
+    - Show/hide
+    
+    Section settings:
+    - Heading text
+    - Show/hide info icon
+    - Text color
+    - Bar color
+    - Marker color
+    - Background color
+    - Padding
+    
+    Style:
+    - Minimal and clean
+    - Soft neutral colors
+    - Rounded bars
+    - Small lightweight labels
+    - Responsive on mobile
+    - Keep the layout compact and centered, 这个info的icon长这个样子，另外我需要做成点击之后可以出现弹窗，弹窗我可以增加页面, 按钮的样式请参考红色框里面的格式包裹info icon以及 下面等级格子的标记样式, 增加info icon可以导入图片样式, Layout:
+    - Outer section centered on page.
+    - Inner container max width around 345px on mobile.
+    - Heading centered at top.
+    - Heading row includes editable heading text and optional info icon.
+    - Rating items displayed in a 2 column x 2 row grid on mobile.
+    - Grid gap should be about 25px horizontally and 15px vertically.
+    - Each rating bar should be around 160px wide on mobile, 8px tall, fully rounded.
+    - Marker should be about 18px, circular, warm brown/red, and positioned according to the rating value.
+    Style:
+    - Use Arial or system sans-serif.
+    - Main text color #2B2B2B.
+    - Heading and grade titles should be 16px.
+    - Small labels should be 10px and lighter, around 50% opacity.
+    - Keep the design minimal, clean, and close to the Figma reference.
+    - Do not use external libraries.
+    - Include all Liquid, schema, CSS, and any needed lightweight JavaScript inside one Shopify section file.
+    - The section should be responsive and should not overflow on mobile.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-grade-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_mobile }}px 15px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-product-grade-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_desktop }}px 40px;
+    }
+  }
+
+  .ai-product-grade-container-{{ ai_gen_id }} {
+    max-width: 345px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-product-grade-container-{{ ai_gen_id }} {
+      max-width: 800px;
+    }
+  }
+
+  .ai-product-grade-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .ai-product-grade-heading-{{ ai_gen_id }} {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B2B2B;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-product-grade-heading-{{ ai_gen_id }} {
+      font-size: 28px;
+    }
+  }
+
+  .ai-product-grade-info-button-{{ ai_gen_id }} {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .ai-product-grade-info-button-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ai-product-grade-info-icon-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-product-grade-info-default-{{ ai_gen_id }} {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #2B2B2B;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-product-grade-info-default-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6px;
+    background-color: #2B2B2B;
+    top: 8px;
+  }
+
+  .ai-product-grade-info-default-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #2B2B2B;
+    top: 4px;
+    border-radius: 50%;
+  }
+
+  .ai-product-grade-modal-overlay-{{ ai_gen_id }} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .ai-product-grade-modal-overlay-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .ai-product-grade-modal-{{ ai_gen_id }} {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #ffffff;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .ai-product-grade-modal-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .ai-product-grade-modal-header-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .ai-product-grade-modal-title-{{ ai_gen_id }} {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin: 0;
+  }
+
+  .ai-product-grade-modal-close-{{ ai_gen_id }} {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    padding: 0;
+  }
+
+  .ai-product-grade-modal-close-{{ ai_gen_id }}:hover {
+    background-color: #f5f5f5;
+  }
+
+  .ai-product-grade-modal-body-{{ ai_gen_id }} {
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    color: #2b2b2b;
+  }
+
+  .ai-product-grade-modal-body-{{ ai_gen_id }} h1,
+  .ai-product-grade-modal-body-{{ ai_gen_id }} h2,
+  .ai-product-grade-modal-body-{{ ai_gen_id }} h3,
+  .ai-product-grade-modal-body-{{ ai_gen_id }} h4,
+  .ai-product-grade-modal-body-{{ ai_gen_id }} h5,
+  .ai-product-grade-modal-body-{{ ai_gen_id }} h6 {
+    margin-top: 0;
+  }
+
+  .ai-product-grade-modal-body-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-product-grade-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 15px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-product-grade-grid-{{ ai_gen_id }} {
+      {% if block.settings.desktop_columns == '4' %}
+        grid-template-columns: repeat(4, 1fr);
+      {% else %}
+        grid-template-columns: 1fr 1fr;
+      {% endif %}
+      column-gap: 32px;
+      row-gap: 24px;
+    }
+  }
+
+  .ai-product-grade-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ai-product-grade-item-title-{{ ai_gen_id }} {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B2B2B;
+    text-align: center;
+  }
+
+  .ai-product-grade-bar-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
+    height: 8px;
+    background-color: {{ block.settings.bar_color }};
+    border-radius: 20px;
+    overflow: visible;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-product-grade-bar-wrapper-{{ ai_gen_id }} {
+      max-width: 100%;
+    }
+  }
+
+  .ai-product-grade-marker-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background-color: {{ block.settings.marker_color }};
+    border: 2px solid {{ block.settings.background_color }};
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-product-grade-label-{{ ai_gen_id }} {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #2B2B2B;
+    opacity: 0.5;
+    text-align: center;
+    font-weight: 400;
+  }
+{% endstyle %}
+
+<product-grade-{{ ai_gen_id }} class="ai-product-grade-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-product-grade-container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <div class="ai-product-grade-header-{{ ai_gen_id }}">
+        <h2 class="ai-product-grade-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+        {% if block.settings.show_info_icon %}
+          <button 
+            class="ai-product-grade-info-button-{{ ai_gen_id }}"
+            aria-label="More information"
+            data-modal-trigger
+          >
+            {% if block.settings.info_icon != blank %}
+              <img 
+                src="{{ block.settings.info_icon | image_url: width: 40 }}" 
+                alt="Info"
+                class="ai-product-grade-info-icon-{{ ai_gen_id }}"
+                width="20"
+                height="20"
+                loading="lazy"
+              >
+            {% else %}
+              <span class="ai-product-grade-info-default-{{ ai_gen_id }}"></span>
+            {% endif %}
+          </button>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-product-grade-grid-{{ ai_gen_id }}">
+      {% if block.settings.show_item_1 %}
+        <div class="ai-product-grade-item-{{ ai_gen_id }}">
+          <div class="ai-product-grade-item-title-{{ ai_gen_id }}">
+            {{ block.settings.title_1 }}
+          </div>
+          <div class="ai-product-grade-bar-wrapper-{{ ai_gen_id }}">
+            <div 
+              class="ai-product-grade-marker-{{ ai_gen_id }}"
+              style="left: {{ block.settings.value_1 }}%;"
+            ></div>
+          </div>
+          <div class="ai-product-grade-label-{{ ai_gen_id }}">
+            {{ block.settings.label_1 }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_item_2 %}
+        <div class="ai-product-grade-item-{{ ai_gen_id }}">
+          <div class="ai-product-grade-item-title-{{ ai_gen_id }}">
+            {{ block.settings.title_2 }}
+          </div>
+          <div class="ai-product-grade-bar-wrapper-{{ ai_gen_id }}">
+            <div 
+              class="ai-product-grade-marker-{{ ai_gen_id }}"
+              style="left: {{ block.settings.value_2 }}%;"
+            ></div>
+          </div>
+          <div class="ai-product-grade-label-{{ ai_gen_id }}">
+            {{ block.settings.label_2 }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_item_3 %}
+        <div class="ai-product-grade-item-{{ ai_gen_id }}">
+          <div class="ai-product-grade-item-title-{{ ai_gen_id }}">
+            {{ block.settings.title_3 }}
+          </div>
+          <div class="ai-product-grade-bar-wrapper-{{ ai_gen_id }}">
+            <div 
+              class="ai-product-grade-marker-{{ ai_gen_id }}"
+              style="left: {{ block.settings.value_3 }}%;"
+            ></div>
+          </div>
+          <div class="ai-product-grade-label-{{ ai_gen_id }}">
+            {{ block.settings.label_3 }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_item_4 %}
+        <div class="ai-product-grade-item-{{ ai_gen_id }}">
+          <div class="ai-product-grade-item-title-{{ ai_gen_id }}">
+            {{ block.settings.title_4 }}
+          </div>
+          <div class="ai-product-grade-bar-wrapper-{{ ai_gen_id }}">
+            <div 
+              class="ai-product-grade-marker-{{ ai_gen_id }}"
+              style="left: {{ block.settings.value_4 }}%;"
+            ></div>
+          </div>
+          <div class="ai-product-grade-label-{{ ai_gen_id }}">
+            {{ block.settings.label_4 }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if block.settings.show_info_icon and block.settings.info_page != blank %}
+    <div class="ai-product-grade-modal-overlay-{{ ai_gen_id }}" data-modal-overlay></div>
+    <div class="ai-product-grade-modal-{{ ai_gen_id }}" data-modal>
+      <div class="ai-product-grade-modal-header-{{ ai_gen_id }}">
+        <h3 class="ai-product-grade-modal-title-{{ ai_gen_id }}">{{ block.settings.info_page.title }}</h3>
+        <button 
+          class="ai-product-grade-modal-close-{{ ai_gen_id }}"
+          aria-label="Close"
+          data-modal-close
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ai-product-grade-modal-body-{{ ai_gen_id }}">
+        {{ block.settings.info_page.content }}
+      </div>
+    </div>
+  {% endif %}
+</product-grade-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ProductGrade{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.modalTrigger = this.querySelector('[data-modal-trigger]');
+        this.modal = this.querySelector('[data-modal]');
+        this.modalOverlay = this.querySelector('[data-modal-overlay]');
+        this.modalClose = this.querySelector('[data-modal-close]');
+      }
+
+      connectedCallback() {
+        if (this.modalTrigger && this.modal && this.modalOverlay) {
+          this.setupEventListeners();
+        }
+      }
+
+      setupEventListeners() {
+        this.modalTrigger.addEventListener('click', () => this.openModal());
+        this.modalClose.addEventListener('click', () => this.closeModal());
+        this.modalOverlay.addEventListener('click', () => this.closeModal());
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && this.modal.classList.contains('active')) {
+            this.closeModal();
+          }
+        });
+      }
+
+      openModal() {
+        this.modal.classList.add('active');
+        this.modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      closeModal() {
+        this.modal.classList.remove('active');
+        this.modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    customElements.define('product-grade-{{ ai_gen_id }}', ProductGrade{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Product grade",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Product Grade"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_info_icon",
+      "label": "Show info icon",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "info_icon",
+      "label": "Info icon image"
+    },
+    {
+      "type": "page",
+      "id": "info_page",
+      "label": "Info page"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "desktop_columns",
+      "label": "Desktop columns",
+      "options": [
+        {
+          "value": "2",
+          "label": "2 columns"
+        },
+        {
+          "value": "4",
+          "label": "4 columns"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "header",
+      "content": "Item 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_1",
+      "label": "Show item",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Warmth"
+    },
+    {
+      "type": "range",
+      "id": "value_1",
+      "label": "Value",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label",
+      "default": "Cool"
+    },
+    {
+      "type": "header",
+      "content": "Item 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_2",
+      "label": "Show item",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Durability"
+    },
+    {
+      "type": "range",
+      "id": "value_2",
+      "label": "Value",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 26
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label",
+      "default": "Delicate"
+    },
+    {
+      "type": "header",
+      "content": "Item 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_3",
+      "label": "Show item",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title",
+      "default": "Finish"
+    },
+    {
+      "type": "range",
+      "id": "value_3",
+      "label": "Value",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 85
+    },
+    {
+      "type": "text",
+      "id": "label_3",
+      "label": "Label",
+      "default": "Glossy"
+    },
+    {
+      "type": "header",
+      "content": "Item 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_4",
+      "label": "Show item",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title",
+      "default": "Sheerness"
+    },
+    {
+      "type": "range",
+      "id": "value_4",
+      "label": "Value",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 51
+    },
+    {
+      "type": "text",
+      "id": "label_4",
+      "label": "Label",
+      "default": "Sheer"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bar_color",
+      "label": "Bar",
+      "default": "#e7e7e7"
+    },
+    {
+      "type": "color",
+      "id": "marker_color",
+      "label": "Marker",
+      "default": "#b3877b"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Mobile padding",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Desktop padding",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product grade"
+    }
+  ]
+}
+{% endschema %}
