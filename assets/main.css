@@ -14136,6 +14136,17 @@ main#root > .wt-featured-nav {
   font-size: 30px;
   letter-spacing: -1px;
 }
+
+/* 商品标题样式 */
+.wt-product__name {
+  color: var(--xt-title-color, #2B2B2B);
+  font-family: var(--xt-font-family, Arial);
+  font-size: var(--xt-title-font-size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--xt-title-line-height, 140%);
+  letter-spacing: var(--xt-title-letter-spacing, -0.32px);
+}
 @media screen and (max-width: 749px) {
   .price__regular .price-item--regular {
     font-size: 25px;

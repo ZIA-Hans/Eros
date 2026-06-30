@@ -30,6 +30,9 @@
   /* 内容字号 */
   --xt-font-size-content: 14px;
 
+  /* 标题字号 */
+  --xt-font-size-title: 16px;
+
   /* ========== 派生语义变量 (基于 token 派生, 便于选购区引用) ========== */
 
   /* 选中态: 棕底 + 白字 */
@@ -43,4 +46,10 @@
   /* 选项标题文字 */
   --xt-option-title-color: var(--xt-color-text-primary);
   --xt-option-secondary-color: var(--xt-color-text-secondary);
+
+  /* 商品标题 */
+  --xt-title-color: var(--xt-color-text-primary);
+  --xt-title-font-size: var(--xt-font-size-title);
+  --xt-title-line-height: 140%;
+  --xt-title-letter-spacing: -0.32px;
 }
