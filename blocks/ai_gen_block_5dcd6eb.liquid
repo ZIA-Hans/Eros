@@ -1,0 +1,621 @@
+{% doc %}
+  @prompt
+    请创建一个 Shopify Online Store 2.0 自定义 Section，名称为 Main Benefits Icons。
+    
+    请参考我的 Figma 设计稿，实现一个简洁、现代、轻量的「三个核心卖点 Icon」组件。
+    
+    布局要求
+    
+    * 组件整体居中显示。
+    * 顶部显示一个居中的标题。
+    * 标题下方显示一排 3 个卖点 Icon。
+    * 每个 Icon 下方显示一段说明文字。
+    * 移动端和 PC 端都保持 一排三个，不要换行，也不要做成轮播。
+    * 整个组件不要铺满屏幕，保持合适的最大宽度，居中展示。
+    
+    Section 设置
+    
+    请支持以下后台可编辑内容：
+    
+    * 标题文字
+    * 标题字号（移动端 / PC 端）
+    * 标题颜色
+    * 标题与 Icon 区域之间的间距
+    * 组件最大宽度
+    * 上下 Padding（移动端 / PC 端）
+    * 背景颜色
+    * Icon 大小（移动端 / PC 端）
+    * Icon 之间的间距（移动端 / PC 端）
+    * Icon 与文字之间的间距
+    * 文字字号（移动端 / PC 端）
+    * 文字颜色
+    
+    Block 设置
+    
+    使用 Blocks，每个 Block 代表一个 Benefit Item。
+    
+    默认创建 3 个 Block，最多允许 3 个。
+    
+    每个 Block 支持：
+    
+    * 上传 Icon（SVG、PNG、JPG）
+    * Icon Alt 文本
+    * Icon 下方说明文字（支持多行）
+    * 可选跳转链接
+    * 显示 / 隐藏开关
+    
+    移动端要求
+    
+    * 始终保持一排三个 Item。
+    * 每个 Item 等宽排列。
+    * Icon 使用 contain 显示，不能裁切。
+    * 文字居中，可自动换行。
+    * 左右保留适当安全边距。
+    * 整体视觉尽量接近 Figma。
+    
+    PC 端要求
+    
+    * 保持一排三个。
+    * 相比移动端等比例放大。
+    * 保持整体居中，不要拉满整屏。
+    * 风格简洁、现代、有高级感。
+    
+    样式要求
+    
+    * 使用 Shopify Liquid、HTML、CSS 和少量 JavaScript。
+    * 不依赖任何外部库。
+    * 不使用 Tailwind。
+    * 输出完整的 Shopify Section 文件，可直接放入 sections 文件夹使用。
+    * CSS 使用 Section ID 做作用域，避免影响其他页面。
+    * 整体需要响应式，不允许移动端横向溢出。
+    
+    默认内容
+    
+    标题：
+    MAIN BENEFITS
+    
+    三个默认卖点：
+    
+    * Seamless Comfort
+    * Sculpted Control-top
+    * Powered by Soflume Tech
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .main-benefits-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_mobile }}px 20px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .main-benefits-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_desktop }}px 40px;
+    }
+  }
+
+  .main-benefits-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .main-benefits-title-{{ ai_gen_id }} {
+    text-align: center;
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size_mobile }}px;
+    margin: 0 0 {{ block.settings.title_spacing }}px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .main-benefits-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size_desktop }}px;
+    }
+  }
+
+  .main-benefits-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.icon_gap_mobile }}px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .main-benefits-grid-{{ ai_gen_id }} {
+      gap: {{ block.settings.icon_gap_desktop }}px;
+    }
+  }
+
+  .main-benefits-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-benefits-icon-wrapper-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size_mobile }}px;
+    height: {{ block.settings.icon_size_mobile }}px;
+    margin-bottom: {{ block.settings.icon_text_spacing }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .main-benefits-icon-wrapper-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size_desktop }}px;
+      height: {{ block.settings.icon_size_desktop }}px;
+    }
+  }
+
+  .main-benefits-icon-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .main-benefits-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size_mobile }}px;
+    line-height: 1.4;
+    margin: 0;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .main-benefits-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_desktop }}px;
+    }
+  }
+
+  .main-benefits-link-{{ ai_gen_id }} {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .main-benefits-link-{{ ai_gen_id }}:hover .main-benefits-text-{{ ai_gen_id }} {
+    opacity: 0.8;
+  }
+
+  .main-benefits-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 10px;
+  }
+{% endstyle %}
+
+<div class="main-benefits-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="main-benefits-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank %}
+      <h2 class="main-benefits-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+    {% endif %}
+
+    <div class="main-benefits-grid-{{ ai_gen_id }}">
+      {% if block.settings.benefit_1_enabled %}
+        <div class="main-benefits-item-{{ ai_gen_id }}">
+          {% if block.settings.benefit_1_link != blank %}
+            <a href="{{ block.settings.benefit_1_link }}" class="main-benefits-link-{{ ai_gen_id }}">
+              <div class="main-benefits-icon-wrapper-{{ ai_gen_id }}">
+                {% if block.settings.benefit_1_icon != blank %}
+                  <img
+                    src="{{ block.settings.benefit_1_icon | image_url: width: 200 }}"
+                    alt="{{ block.settings.benefit_1_icon_alt | escape }}"
+                    class="main-benefits-icon-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  >
+                {% else %}
+                  <div class="main-benefits-placeholder-{{ ai_gen_id }}">Icon</div>
+                {% endif %}
+              </div>
+              {% if block.settings.benefit_1_text != blank %}
+                <p class="main-benefits-text-{{ ai_gen_id }}">{{ block.settings.benefit_1_text }}</p>
+              {% endif %}
+            </a>
+          {% else %}
+            <div class="main-benefits-icon-wrapper-{{ ai_gen_id }}">
+              {% if block.settings.benefit_1_icon != blank %}
+                <img
+                  src="{{ block.settings.benefit_1_icon | image_url: width: 200 }}"
+                  alt="{{ block.settings.benefit_1_icon_alt | escape }}"
+                  class="main-benefits-icon-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="200"
+                  height="200"
+                >
+              {% else %}
+                <div class="main-benefits-placeholder-{{ ai_gen_id }}">Icon</div>
+              {% endif %}
+            </div>
+            {% if block.settings.benefit_1_text != blank %}
+              <p class="main-benefits-text-{{ ai_gen_id }}">{{ block.settings.benefit_1_text }}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.benefit_2_enabled %}
+        <div class="main-benefits-item-{{ ai_gen_id }}">
+          {% if block.settings.benefit_2_link != blank %}
+            <a href="{{ block.settings.benefit_2_link }}" class="main-benefits-link-{{ ai_gen_id }}">
+              <div class="main-benefits-icon-wrapper-{{ ai_gen_id }}">
+                {% if block.settings.benefit_2_icon != blank %}
+                  <img
+                    src="{{ block.settings.benefit_2_icon | image_url: width: 200 }}"
+                    alt="{{ block.settings.benefit_2_icon_alt | escape }}"
+                    class="main-benefits-icon-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  >
+                {% else %}
+                  <div class="main-benefits-placeholder-{{ ai_gen_id }}">Icon</div>
+                {% endif %}
+              </div>
+              {% if block.settings.benefit_2_text != blank %}
+                <p class="main-benefits-text-{{ ai_gen_id }}">{{ block.settings.benefit_2_text }}</p>
+              {% endif %}
+            </a>
+          {% else %}
+            <div class="main-benefits-icon-wrapper-{{ ai_gen_id }}">
+              {% if block.settings.benefit_2_icon != blank %}
+                <img
+                  src="{{ block.settings.benefit_2_icon | image_url: width: 200 }}"
+                  alt="{{ block.settings.benefit_2_icon_alt | escape }}"
+                  class="main-benefits-icon-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="200"
+                  height="200"
+                >
+              {% else %}
+                <div class="main-benefits-placeholder-{{ ai_gen_id }}">Icon</div>
+              {% endif %}
+            </div>
+            {% if block.settings.benefit_2_text != blank %}
+              <p class="main-benefits-text-{{ ai_gen_id }}">{{ block.settings.benefit_2_text }}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.benefit_3_enabled %}
+        <div class="main-benefits-item-{{ ai_gen_id }}">
+          {% if block.settings.benefit_3_link != blank %}
+            <a href="{{ block.settings.benefit_3_link }}" class="main-benefits-link-{{ ai_gen_id }}">
+              <div class="main-benefits-icon-wrapper-{{ ai_gen_id }}">
+                {% if block.settings.benefit_3_icon != blank %}
+                  <img
+                    src="{{ block.settings.benefit_3_icon | image_url: width: 200 }}"
+                    alt="{{ block.settings.benefit_3_icon_alt | escape }}"
+                    class="main-benefits-icon-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  >
+                {% else %}
+                  <div class="main-benefits-placeholder-{{ ai_gen_id }}">Icon</div>
+                {% endif %}
+              </div>
+              {% if block.settings.benefit_3_text != blank %}
+                <p class="main-benefits-text-{{ ai_gen_id }}">{{ block.settings.benefit_3_text }}</p>
+              {% endif %}
+            </a>
+          {% else %}
+            <div class="main-benefits-icon-wrapper-{{ ai_gen_id }}">
+              {% if block.settings.benefit_3_icon != blank %}
+                <img
+                  src="{{ block.settings.benefit_3_icon | image_url: width: 200 }}"
+                  alt="{{ block.settings.benefit_3_icon_alt | escape }}"
+                  class="main-benefits-icon-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="200"
+                  height="200"
+                >
+              {% else %}
+                <div class="main-benefits-placeholder-{{ ai_gen_id }}">Icon</div>
+              {% endif %}
+            </div>
+            {% if block.settings.benefit_3_text != blank %}
+              <p class="main-benefits-text-{{ ai_gen_id }}">{{ block.settings.benefit_3_text }}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main benefits icons",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "MAIN BENEFITS"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title size (mobile)",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title size (desktop)",
+      "min": 16,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 26
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "Title spacing",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1000
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "label": "Padding (mobile)",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "label": "Padding (desktop)",
+      "min": 30,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Icons"
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "label": "Icon size (mobile)",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "icon_size_desktop",
+      "label": "Icon size (desktop)",
+      "min": 40,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "icon_gap_mobile",
+      "label": "Icon gap (mobile)",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "icon_gap_desktop",
+      "label": "Icon gap (desktop)",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "icon_text_spacing",
+      "label": "Icon to text spacing",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size (mobile)",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "label": "Text size (desktop)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_1_enabled",
+      "label": "Show benefit 1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "benefit_1_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_icon_alt",
+      "label": "Icon alt text",
+      "default": "Seamless comfort icon"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_text",
+      "label": "Text",
+      "default": "Seamless Comfort"
+    },
+    {
+      "type": "url",
+      "id": "benefit_1_link",
+      "label": "Link (optional)"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_2_enabled",
+      "label": "Show benefit 2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "benefit_2_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_icon_alt",
+      "label": "Icon alt text",
+      "default": "Sculpted control-top icon"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_text",
+      "label": "Text",
+      "default": "Sculpted Control-top"
+    },
+    {
+      "type": "url",
+      "id": "benefit_2_link",
+      "label": "Link (optional)"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_3_enabled",
+      "label": "Show benefit 3",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "benefit_3_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_icon_alt",
+      "label": "Icon alt text",
+      "default": "Soflume tech icon"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_text",
+      "label": "Text",
+      "default": "Powered by Soflume Tech"
+    },
+    {
+      "type": "url",
+      "id": "benefit_3_link",
+      "label": "Link (optional)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main benefits icons"
+    }
+  ]
+}
+{% endschema %}

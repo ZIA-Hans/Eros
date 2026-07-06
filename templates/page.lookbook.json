@@ -26,6 +26,218 @@
         "margin-bottom-mobile": 20
       }
     },
+    "faq_tabs_TQyUHr": {
+      "type": "faq-tabs",
+      "blocks": {
+        "faq_nhbaKB": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "How do I choose the right tights?",
+            "answer": "<p>Choose based on temperature and desired look.</p><p>Ultra sheer styles are best for hot weather and a barely-there look, while higher denier tights provide more coverage and warmth for cooler days.</p>",
+            "default_open": false
+          }
+        },
+        "faq_aqraTm": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Are these tights comfortable for all-day wear?",
+            "answer": "<p>Choose based on temperature and desired look.</p><p>Ultra sheer styles are best for hot weather and a barely-there look, while higher denier tights provide more coverage and warmth for cooler days.</p>",
+            "default_open": false
+          }
+        },
+        "faq_CxQTGp": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Will they snag easily?",
+            "answer": "<p>Choose based on temperature and desired look. Ultra sheer styles are best for hot weather and a barely-there look, while higher denier tights provide more coverage and warmth for cooler days.</p>",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_nhbaKB",
+        "faq_aqraTm",
+        "faq_CxQTGp"
+      ],
+      "name": "FAQ Tabs",
+      "settings": {
+        "heading": "GENERAL FAQS",
+        "heading_size_mobile": 16,
+        "heading_size_desktop": 18,
+        "heading_letter_spacing": -2,
+        "heading_weight": "400",
+        "heading_color": "#2b2b2b",
+        "heading_alignment": "center",
+        "heading_spacing": 30,
+        "show_tabs": false,
+        "default_tab": "tab_1",
+        "tab_1_label": "General",
+        "tab_2_label": "Product",
+        "tab_3_label": "Shipping",
+        "tab_4_label": "Returns",
+        "tab_size_mobile": 14,
+        "tab_size_desktop": 14,
+        "tab_letter_spacing": -2,
+        "tabs_spacing": 16,
+        "tab_gap": 8,
+        "tab_height": 34,
+        "tab_padding_x": 14,
+        "tab_radius": 12,
+        "tab_background": "#f8f8f8",
+        "tab_color": "#2b2b2b",
+        "tab_border_color": "#f8f8f8",
+        "tab_border_thickness": 1,
+        "active_tab_background": "#b7644e",
+        "active_tab_color": "#ffffff",
+        "active_tab_border_color": "#b7644e",
+        "section_background": "#ffffff",
+        "max_width": 1200,
+        "side_padding_mobile": 20,
+        "side_padding_desktop": 0,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "item_gap": 15,
+        "item_radius": 12,
+        "closed_item_height": 42,
+        "closed_background": "#f8f8f8",
+        "closed_border_color": "#f8f8f8",
+        "closed_border_thickness": 1,
+        "open_background": "#faeee5",
+        "open_border_color": "#e8beb0",
+        "item_padding_x": 10,
+        "item_padding_y": 10,
+        "title_icon_gap": 12,
+        "question_icon_gap": 6,
+        "show_question_icon": true,
+        "question_icon_text": "?",
+        "question_icon_size": 18,
+        "question_icon_text_size": 11,
+        "question_icon_background": "#d8b6ad",
+        "question_icon_color": "#6e4136",
+        "question_size_mobile": 14,
+        "question_size_desktop": 14,
+        "question_letter_spacing": -2,
+        "question_weight": "400",
+        "question_color": "#2b2b2b",
+        "chevron_color": "#2b2b2b",
+        "chevron_size": 12,
+        "answer_size_mobile": 12,
+        "answer_size_desktop": 12,
+        "answer_letter_spacing": -2,
+        "answer_line_height": 140,
+        "answer_color": "#6f6f6f",
+        "answer_padding_x": 10,
+        "answer_padding_bottom": 10,
+        "allow_multiple_open": true
+      }
+    },
+    "product_accordion_tabs_yxpC48": {
+      "type": "product-accordion-tabs",
+      "blocks": {
+        "item_jUCLVa": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "58% Polyamide, 42% Elastane",
+            "default_open": false,
+            "content": "<p>Ultra sheer styles are best for hot weather and a barely-there feel. </p>",
+            "image_position": "bottom",
+            "button_text": "",
+            "button_link": "",
+            "custom_liquid": ""
+          }
+        },
+        "item_8GKKzx": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Perfect Adaptive Fit",
+            "default_open": false,
+            "content": "<p>Add your product details here.</p>",
+            "image_position": "top",
+            "button_text": "",
+            "button_link": "",
+            "custom_liquid": ""
+          }
+        },
+        "item_werfM6": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Standard Delivery (AU Post)",
+            "default_open": false,
+            "content": "<p>Add your delivery details here.</p>",
+            "image_position": "top",
+            "button_text": "",
+            "button_link": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_jUCLVa",
+        "item_8GKKzx",
+        "item_werfM6"
+      ],
+      "custom_css": [],
+      "name": "Product Accordion Tabs",
+      "settings": {
+        "title": "Product Information",
+        "title_size_mobile": 20,
+        "title_size_desktop": 28,
+        "title_letter_spacing": -2,
+        "title_color": "#2b2b2b",
+        "title_alignment": "left",
+        "title_spacing": 10,
+        "section_background": "#ffffff",
+        "section_max_width": 1400,
+        "accordion_width_mode": "full",
+        "accordion_max_width": 1400,
+        "side_padding_mobile": 10,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "accordion_background": "#f9f5f3",
+        "accordion_radius": 12,
+        "content_padding_mobile": 20,
+        "content_padding_desktop": 32,
+        "accordion_title_size_mobile": 14,
+        "accordion_title_size_desktop": 16,
+        "accordion_title_letter_spacing": -2,
+        "accordion_title_color": "#2b2b2b",
+        "content_size_mobile": 12,
+        "content_size_desktop": 16,
+        "content_letter_spacing": -2,
+        "content_line_height": 140,
+        "content_color": "#2b2b2b",
+        "content_top_spacing": 6,
+        "item_spacing": 16,
+        "divider_color": "#e0d5cf",
+        "divider_thickness": 1,
+        "arrow_color": "#92918f",
+        "arrow_size": 20,
+        "media_spacing": 16,
+        "image_radius": 0,
+        "button_spacing": 16,
+        "button_size": 14,
+        "button_background": "#2b2b2b",
+        "button_color": "#ffffff",
+        "button_border_color": "#2b2b2b",
+        "button_radius": 0,
+        "custom_liquid_spacing": 16,
+        "allow_multiple_open": true
+      }
+    },
     "178280558771af7f9a": {
       "type": "_blocks",
       "blocks": {
@@ -52,17 +264,56 @@
             "title_4": "Sheerness",
             "value_4": 51,
             "label_4": "Sheer",
-            "bar_color": "#FAEEE5",
-            "marker_color": "#A65D4A",
+            "bar_color": "#faeee5",
+            "marker_color": "#a65d4a",
             "background_color": "#ffffff",
-            "padding_mobile": 32,
-            "padding_desktop": 32
+            "padding_mobile": 20,
+            "padding_desktop": 20
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_5dcd6eb_B43P7H": {
+          "type": "ai_gen_block_5dcd6eb",
+          "settings": {
+            "title": "MAIN BENEFITS",
+            "title_size_mobile": 16,
+            "title_size_desktop": 26,
+            "title_color": "#2b2b2b",
+            "title_spacing": 30,
+            "max_width": 1400,
+            "padding_mobile": 20,
+            "padding_desktop": 40,
+            "background_color": "#ffffff",
+            "icon_size_mobile": 40,
+            "icon_size_desktop": 70,
+            "icon_gap_mobile": 50,
+            "icon_gap_desktop": 40,
+            "icon_text_spacing": 6,
+            "text_size_mobile": 12,
+            "text_size_desktop": 18,
+            "text_color": "#2b2b2b",
+            "benefit_1_enabled": true,
+            "benefit_1_icon": "shopify://shop_images/3_99b3e192-b92b-4fa7-832c-dcffa161fd44.png",
+            "benefit_1_icon_alt": "Seamless comfort icon",
+            "benefit_1_text": "Seamless Comfort",
+            "benefit_1_link": "",
+            "benefit_2_enabled": true,
+            "benefit_2_icon": "shopify://shop_images/1_e82e70a7-32a9-4ce0-bd91-345241285d5a.png",
+            "benefit_2_icon_alt": "Sculpted control-top icon",
+            "benefit_2_text": "Sculpted Control-top",
+            "benefit_2_link": "",
+            "benefit_3_enabled": true,
+            "benefit_3_icon": "shopify://shop_images/2_23bee8e8-03e5-41b3-ac7a-1475990acb23.png",
+            "benefit_3_icon_alt": "Soflume tech icon",
+            "benefit_3_text": "Powered by Soflume Tech",
+            "benefit_3_link": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_16c62a3_3Kk7iw"
+        "ai_gen_block_16c62a3_3Kk7iw",
+        "ai_gen_block_5dcd6eb_B43P7H"
       ],
       "settings": {
         "section-margin": 0
@@ -71,6 +322,8 @@
   },
   "order": [
     "main",
+    "faq_tabs_TQyUHr",
+    "product_accordion_tabs_yxpC48",
     "178280558771af7f9a"
   ]
 }
