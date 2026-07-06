@@ -59,6 +59,16 @@
 
     {{ 'critical.css' | asset_url | stylesheet_tag }}
 
+    {%- comment -%} Shoelace Web Components (for display gallery drawer, etc.) — CDN autoloader {%- endcomment -%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    {%- comment -%} FOUC 修复：必须在 head 内联，确保 <sl-*> 解析前就生效（section CSS 异步加载来不及）{%- endcomment -%}
+    <style>
+      sl-drawer:not(:defined),
+      sl-dialog:not(:defined),
+      sl-button:not(:defined) { display: none; }
+    </style>
+
     <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
 
     <link rel="preload" href="{{ 'main.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">

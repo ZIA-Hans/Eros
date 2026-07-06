@@ -2672,13 +2672,25 @@
                     --custom-size: {{ block.settings.swatch_size }}px;
                   "
                 >
-                  <div class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-                    <span class="label">
-                      {% comment %} check if sorted_product_variations length > 0 {% endcomment %}
-                      {% if block.settings.option_name != empty and sorted_product_variations.size > 0 %}
-                        {{ block.settings.option_name }}: <strong class="value">{{ option_name }}</strong>
-                      {% endif %}
-                    </span>
+                  <div class="wt-product__option__wrapper">
+                    <div class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+                      <span class="label">
+                        {% comment %} check if sorted_product_variations length > 0 {% endcomment %}
+                        {% if block.settings.option_name != empty and sorted_product_variations.size > 0 %}
+                          {{ block.settings.option_name }}: <strong class="value">{{ option_name }}</strong>
+                        {% endif %}
+                      </span>
+                    </div>
+
+                    {% comment %} Display gallery (race × product → image set) popup {% endcomment %}
+                    {% if block.settings.enable_display_gallery %}
+                      {% render 'display-gallery-popup',
+                        id: block.id,
+                        button_label: block.settings.display_button_label,
+                        button_icon: block.settings.display_button_icon,
+                        shopify_attributes: block.shopify_attributes,
+                        product: product %}
+                    {% endif %}
                   </div>
 
                   <div class="wt-product__option__body wt-product__option__body--{{ options_body_class }}">
@@ -6080,6 +6092,38 @@
           "id": "products",
           "label": "Products",
           "info": "Select all variations including the current product, (Suggestion: use metafield to store product list when product template is going to be used for multiple products)"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.main-product.blocks.product_variations.settings.display_gallery.label",
+          "info": "t:sections.main-product.blocks.product_variations.settings.display_gallery.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_display_gallery",
+          "label": "t:sections.main-product.blocks.product_variations.settings.enable_display_gallery.label",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "display_button_label",
+          "label": "t:sections.main-product.blocks.product_variations.settings.display_button_label.label",
+          "default": "View display"
+        },
+        {
+          "type": "select",
+          "id": "display_button_icon",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label",
+          "options": [
+            {"value": "none", "label": "t:sections.global.select_icon.none.label"},
+            {"value": "check_mark", "label": "t:sections.global.select_icon.check_mark.label"},
+            {"value": "eye", "label": "t:sections.global.select_icon.eye.label"},
+            {"value": "ruler", "label": "t:sections.global.select_icon.ruler.label"},
+            {"value": "shirt", "label": "t:sections.global.select_icon.shirt.label"},
+            {"value": "star", "label": "t:sections.global.select_icon.star.label"},
+            {"value": "user", "label": "t:sections.global.select_icon.user.label"}
+          ],
+          "default": "none"
         }
       ]
     },

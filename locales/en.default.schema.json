@@ -4134,6 +4134,17 @@
               "options__3": {
                 "label": "Swatch / Image"
               }
+            },
+            "display_gallery": {
+              "label": "Display gallery popup",
+              "info": "Adds a button next to the option title that opens a popup showing an image gallery filtered by race and product. Configure the data via metaobjects (display_race, display_product, display_photo, display_set) and link them on the product via the custom.display_sets metafield."
+            },
+            "enable_display_gallery": {
+              "label": "Enable display gallery"
+            },
+            "display_button_label": {
+              "label": "Button text",
+              "info": "Text shown on the button that opens the display gallery popup."
             }
           }
         }

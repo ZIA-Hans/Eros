@@ -1,0 +1,103 @@
+{% comment %}
+  Display Gallery popup — "人种 × 光泽(商品) → 图片组" 弹窗。
+  使用 Shoelace <sl-drawer placement="bottom"> 实现底部弹出 sheet。
+  样式通过 ::part() 定制，scoped 不污染主题，不受 main.css 异步加载影响。
+
+  UI 三块（均在 drawer 内，由 display-gallery.js 渲染）：
+    1. 顶部：圆形人种头像 —— 来自 display_race {name, thumbnail}
+    2. 中部：2×2 图片网格 —— 来自 display_set.photos (display_photo list)
+    3. 底部：光泽按钮 —— 来自 display_product {title}
+
+  数据：product.metafields.custom.display_sets (list.metaobject_reference → display_set)
+  挂在 product_variations (Product siblings) block 标题行旁。
+
+  参数：id, button_label, button_icon, shopify_attributes, product
+{% endcomment %}
+
+{% if button_label != blank and product != blank %}
+
+  {% assign dg_sets = product.metafields.custom.display_sets.value %}
+
+  {% comment %} ============ 触发按钮（挂在标题行旁）============
+       点击调用 JS 打开 drawer。不用 modal-opener，因为 sl-drawer 有自己的 show()/hide()。
+  {% endcomment %}
+  <div class="wt-product__option__size-guide wt-display-gallery__entry">
+    <button
+      id="DisplayGalleryOpener-{{ id }}"
+      class="wt-product__button wt-product__link wt-display-gallery__trigger"
+      type="button"
+      data-display-open="{{ id }}"
+      {{ shopify_attributes }}
+    >
+      {% if button_icon != 'none' and button_icon != blank %}
+        <span class="wt-display-gallery__icon">{% render 'icons', id: button_icon %}</span>
+      {% endif %}
+      {{ button_label }}
+    </button>
+  </div>
+
+  {% comment %} ============ Shoelace 底部 drawer ============ {% endcomment %}
+  <sl-drawer
+    id="DisplayGalleryDrawer-{{ id }}"
+    placement="bottom"
+    class="wt-display-gallery-drawer"
+    label="{{ 'products.display_gallery.title' | t | default: 'Match your skin' }}"
+  >
+    {# —— 内容容器(JS 渲染头像/网格/按钮到这里)—— #}
+    <div class="wt-display-gallery" data-display-id="{{ id }}">
+
+      {# 1. 人种头像选择器 #}
+      <div
+        class="wt-display-gallery__races"
+        data-display-races
+        data-display-id="{{ id }}"
+      ></div>
+
+      {# 2. 图片网格 #}
+      <div
+        class="wt-display-gallery__grid"
+        data-display-grid
+        data-display-id="{{ id }}"
+      ></div>
+
+      {# 3. 光泽(商品)按钮组 #}
+      <div
+        class="wt-display-gallery__fabrics"
+        data-display-fabrics
+        data-display-id="{{ id }}"
+      ></div>
+
+      {# 空状态 #}
+      <p class="wt-display-gallery__empty" data-display-empty hidden>
+        {{ 'products.display_gallery.empty' | t | default: 'No images for this combination.' }}
+      </p>
+    </div>
+  </sl-drawer>
+
+  {% comment %} ============ 数据注入（JSON）============
+       结构：[{ race, raceThumb, product, photos:[{title, src}] }]
+       无数据时为空数组 []，JS 显示占位 UI。
+  {% endcomment %}
+  <script type="application/json" data-display-data="{{ id }}">
+    [
+      {%- for s in dg_sets -%}
+        {
+          "race": {{ s.race.value.name | json }},
+          "raceThumb": {{ s.race.value.thumbnail | image_url: width: 120 | json }},
+          "product": {{ s.product_label.value.title | json }},
+          "photos": [
+            {%- for p in s.photos.value -%}
+              {
+                "title": {{ p.title | json }},
+                "src": {{ p.image | image_url: width: 900 | json }}
+              }{%- unless forloop.last %},{% endunless -%}
+            {%- endfor -%}
+          ]
+        }{%- unless forloop.last %},{% endunless -%}
+      {%- endfor -%}
+    ]
+  </script>
+
+  <script src="{{ 'display-gallery.js' | asset_url }}" defer="defer"></script>
+
+{% endif %}
