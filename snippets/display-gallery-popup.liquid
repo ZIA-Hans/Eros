@@ -1,26 +1,18 @@
 {% comment %}
-  Display Gallery popup — "人种 × 光泽(商品) → 图片组" 弹窗。
-  使用 Shoelace <sl-drawer placement="bottom"> 实现底部弹出 sheet。
-  样式通过 ::part() 定制，scoped 不污染主题，不受 main.css 异步加载影响。
-
-  UI 三块（均在 drawer 内，由 display-gallery.js 渲染）：
-    1. 顶部：圆形人种头像 —— 来自 display_race {name, thumbnail}
-    2. 中部：2×2 图片网格 —— 来自 display_set.photos (display_photo list)
-    3. 底部：光泽按钮 —— 来自 display_product {title}
-
-  数据：product.metafields.custom.display_sets (list.metaobject_reference → display_set)
-  挂在 product_variations (Product siblings) block 标题行旁。
-
-  参数：id, button_label, button_icon, shopify_attributes, product
+  Skin popup — 人种 × 光泽 → 图片组。
+  移动端（≤1024px）：Shoelace <sl-drawer> 底部弹起 sheet。
+  PC 端（>1024px）：Shoelace <sl-dialog> 居中弹窗。
+  内容容器唯一一份，由 JS 按视口在 drawer↔dialog 之间搬移。
+  数据：product.metafields.custom.match_skin_popup → skin_compose_config
+  参数：id, button_label, shopify_attributes, product
 {% endcomment %}
 
 {% if button_label != blank and product != blank %}
 
-  {% assign dg_sets = product.metafields.custom.display_sets.value %}
+  {{ 'display-gallery.css' | asset_url | stylesheet_tag }}
 
-  {% comment %} ============ 触发按钮（挂在标题行旁）============
-       点击调用 JS 打开 drawer。不用 modal-opener，因为 sl-drawer 有自己的 show()/hide()。
-  {% endcomment %}
+  {% assign dg_sets = product.metafields.custom.match_skin_popup.value %}
+
   <div class="wt-product__option__size-guide wt-display-gallery__entry">
     <button
       id="DisplayGalleryOpener-{{ id }}"
@@ -29,68 +21,63 @@
       data-display-open="{{ id }}"
       {{ shopify_attributes }}
     >
-      {% if button_icon != 'none' and button_icon != blank %}
-        <span class="wt-display-gallery__icon">{% render 'icons', id: button_icon %}</span>
-      {% endif %}
+      <span class="wt-display-gallery__icon" aria-hidden="true">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.91015 6.82715C4.72069 6.82715 4.5664 6.67383 4.5664 6.4834V6.22168C4.55566 5.98926 4.58691 5.7832 4.6621 5.60352C4.73632 5.42383 4.88476 5.26172 5.10644 5.11816H5.09765C5.29101 4.96875 5.45409 4.83594 5.58691 4.71973C5.71972 4.60352 5.8164 4.50391 5.87694 4.4209C5.9873 4.27734 6.04882 4.08691 6.05956 3.84863C6.06542 3.70996 6.04101 3.58496 5.98925 3.4707C5.93847 3.36035 5.86523 3.25195 5.76952 3.14453C5.76366 3.13867 5.7578 3.13184 5.75194 3.12598C5.54882 2.92773 5.28905 2.82813 4.97265 2.82813C4.66894 2.82813 4.41991 2.94824 4.22655 3.18945C4.07714 3.375 3.97753 3.63965 3.92675 3.98438C3.90038 4.16699 3.73241 4.29492 3.5498 4.27441C3.36034 4.25293 3.22362 4.08203 3.24706 3.89258C3.2705 3.70313 3.31054 3.52832 3.36816 3.36719C3.45898 3.11328 3.58202 2.89844 3.7373 2.72461C3.89257 2.55078 4.07519 2.41797 4.28515 2.32617C4.49511 2.23535 4.7246 2.18945 4.97362 2.18945C5.49901 2.18945 5.9248 2.34473 6.25097 2.6543C6.58788 2.97461 6.75683 3.37305 6.75683 3.84863C6.75683 4.02539 6.73339 4.19043 6.68652 4.3418C6.63964 4.49414 6.57714 4.63086 6.49999 4.75195C6.41698 4.87891 6.29491 5.01758 6.13476 5.16699C5.9746 5.31641 5.77538 5.47363 5.53808 5.63965C5.42773 5.7168 5.35546 5.79297 5.32226 5.86816C5.28905 5.94238 5.27245 6.05762 5.27245 6.21289V6.4834C5.27245 6.67285 5.11913 6.82715 4.9287 6.82715H4.91015Z" fill="currentColor"/>
+          <path d="M4.57031 7.53906C4.57031 7.6323 4.60735 7.72172 4.67328 7.78765C4.73921 7.85359 4.82863 7.89062 4.92188 7.89062C5.01512 7.89062 5.10454 7.85359 5.17047 7.78765C5.2364 7.72172 5.27344 7.6323 5.27344 7.53906C5.27344 7.44582 5.2364 7.3564 5.17047 7.29047C5.10454 7.22454 5.01512 7.1875 4.92188 7.1875C4.82863 7.1875 4.73921 7.22454 4.67328 7.29047C4.60735 7.3564 4.57031 7.44582 4.57031 7.53906Z" fill="currentColor"/>
+        </svg>
+      </span>
       {{ button_label }}
     </button>
   </div>
 
-  {% comment %} ============ Shoelace 底部 drawer ============ {% endcomment %}
   <sl-drawer
     id="DisplayGalleryDrawer-{{ id }}"
     placement="bottom"
     class="wt-display-gallery-drawer"
-    label="{{ 'products.display_gallery.title' | t | default: 'Match your skin' }}"
+    label="Match your skin"
   >
-    {# —— 内容容器(JS 渲染头像/网格/按钮到这里)—— #}
-    <div class="wt-display-gallery" data-display-id="{{ id }}">
-
-      {# 1. 人种头像选择器 #}
+    <div class="wt-display-gallery" data-display-id="{{ id }}" data-display-slot="drawer">
       <div
         class="wt-display-gallery__races"
         data-display-races
         data-display-id="{{ id }}"
       ></div>
 
-      {# 2. 图片网格 #}
       <div
         class="wt-display-gallery__grid"
         data-display-grid
         data-display-id="{{ id }}"
       ></div>
 
-      {# 3. 光泽(商品)按钮组 #}
       <div
         class="wt-display-gallery__fabrics"
         data-display-fabrics
         data-display-id="{{ id }}"
       ></div>
 
-      {# 空状态 #}
-      <p class="wt-display-gallery__empty" data-display-empty hidden>
-        {{ 'products.display_gallery.empty' | t | default: 'No images for this combination.' }}
-      </p>
+      <p class="wt-display-gallery__empty" data-display-empty hidden>No images for this combination.</p>
     </div>
   </sl-drawer>
 
-  {% comment %} ============ 数据注入（JSON）============
-       结构：[{ race, raceThumb, product, photos:[{title, src}] }]
-       无数据时为空数组 []，JS 显示占位 UI。
-  {% endcomment %}
+  {% comment %} PC 端居中 Dialog（>1024px），内容与 drawer 共用，由 JS 搬移 {% endcomment %}
+  <sl-dialog
+    id="DisplayGalleryDialog-{{ id }}"
+    class="wt-display-gallery-dialog"
+    label="Match your skin"
+  ></sl-dialog>
+
   <script type="application/json" data-display-data="{{ id }}">
     [
       {%- for s in dg_sets -%}
         {
-          "race": {{ s.race.value.name | json }},
-          "raceThumb": {{ s.race.value.thumbnail | image_url: width: 120 | json }},
-          "product": {{ s.product_label.value.title | json }},
+          "race": {{ s.skin.value.name | json }},
+          "raceThumb": {{ s.skin.value.src | image_url: width: 120 | json }},
+          "product": {{ s.fabric.value.name | json }},
           "photos": [
             {%- for p in s.photos.value -%}
-              {
-                "title": {{ p.title | json }},
-                "src": {{ p.image | image_url: width: 900 | json }}
-              }{%- unless forloop.last %},{% endunless -%}
+              {{ p | image_url: width: 900 | json }}
+            {%- unless forloop.last %},{% endunless -%}
             {%- endfor -%}
           ]
         }{%- unless forloop.last %},{% endunless -%}

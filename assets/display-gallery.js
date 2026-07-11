@@ -1,17 +1,6 @@
 /**
- * Display Gallery — 人种 × 光泽(商品) → 图片组 联动渲染。
- *
- * UI 三块（均在弹窗内，由本 JS 渲染）：
- *   [data-display-races]    人种头像选择器（圆形头像，点击切换）
- *   [data-display-grid]     2×2 图片网格
- *   [data-display-fabrics]  光泽(商品)按钮组（点击切换）
- *
+ * Skin popup — 人种 × 光泽 → 图片组 联动渲染。
  * 数据来自 <script type="application/json" data-display-data="ID">
- *   [{ race, raceThumb, product, photos:[{title, src}] }]
- *
- * 交互：点人种头像 / 点光泽按钮 → 按 (race, product) 过滤出对应图片组 → 渲染网格。
- *
- * 无数据时显示占位 UI（4 个占位头像 + 2 个占位光泽按钮 + 占位格子），便于样式验证。
  */
 (function () {
   "use strict";
@@ -52,12 +41,7 @@
       { name: "D", thumb: "" },
     ],
     products: ["Glossy", "Sheer Glow"],
-    photos: [
-      { title: "black" },
-      { title: "flesh" },
-      { title: "white" },
-      { title: "grey" },
-    ],
+    photos: ["", "", "", ""],
   };
 
   function renderRaces(container, races, current, onPick) {
@@ -66,14 +50,17 @@
         var name = typeof r === "string" ? r : r.name;
         var thumb = typeof r === "string" ? "" : r.thumb;
         var active = name === current ? " is-active" : "";
-        var inner = thumb
+        var imgEl = thumb
           ? '<img src="' + escapeHtml(thumb) + '" alt="' + escapeHtml(name) + '" />'
-          : '<span class="wt-display-gallery__race-placeholder">' + escapeHtml(name) + "</span>";
+          : '<span class="wt-display-gallery__race-placeholder"></span>';
         return (
-          '<button type="button" class="wt-display-gallery__race' + active + '" data-race="' +
+          '<div class="wt-display-gallery__race-item' + active + '">' +
+          '<button type="button" class="wt-display-gallery__race" data-race="' +
           escapeHtml(name) + '" aria-label="' + escapeHtml(name) + '">' +
-          inner +
-          "</button>"
+          imgEl +
+          "</button>" +
+          '<span class="wt-display-gallery__race-name">' + escapeHtml(name) + "</span>" +
+          "</div>"
         );
       })
       .join("");
@@ -103,21 +90,28 @@
 
   function renderGrid(grid, emptyEl, photos) {
     if (!photos || photos.length === 0) {
-      grid.innerHTML = "";
-      if (emptyEl) emptyEl.hidden = false;
+      // 无匹配组合：在网格区域内居中展示缺省文案
+      grid.classList.add("is-empty");
+      grid.innerHTML =
+        '<div class="wt-display-gallery__empty">' +
+        (emptyEl ? escapeHtml(emptyEl.textContent.trim()) : "No images for this combination.") +
+        "</div>";
       return;
     }
-    if (emptyEl) emptyEl.hidden = true;
+    grid.classList.remove("is-empty");
+    // photos 现在是字符串 URL 数组（无 title）
     grid.innerHTML = photos
-      .map(function (p) {
-        var safeTitle = escapeHtml(p.title || "");
-        var img = p.src
-          ? '<img class="wt-display-gallery__img" src="' + escapeHtml(p.src) + '" alt="' + safeTitle + '" loading="lazy" />'
-          : '<div class="wt-display-gallery__img wt-display-gallery__img--placeholder"></div>';
+      .map(function (src) {
+        if (!src) {
+          return (
+            '<figure class="wt-display-gallery__cell">' +
+            '<div class="wt-display-gallery__img wt-display-gallery__img--placeholder"></div>' +
+            "</figure>"
+          );
+        }
         return (
           '<figure class="wt-display-gallery__cell">' +
-          img +
-          (p.title ? '<figcaption class="wt-display-gallery__caption">' + safeTitle + "</figcaption>" : "") +
+          '<img class="wt-display-gallery__img" src="' + escapeHtml(src) + '" alt="" loading="lazy" />' +
           "</figure>"
         );
       })
@@ -137,6 +131,7 @@
     if (!Array.isArray(data)) data = [];
 
     var drawer = document.getElementById("DisplayGalleryDrawer-" + id);
+    var dialog = document.getElementById("DisplayGalleryDialog-" + id);
     if (!drawer) {
       dataEl.setAttribute("data-display-init", "true");
       return;
@@ -151,21 +146,34 @@
       return;
     }
 
-    // 绑定触发按钮：点击打开 drawer
+    // 内容容器（唯一一份）：默认在 drawer 里，按视口在 drawer↔dialog 之间搬移。
+    // 节点上的事件监听随搬移保留，所以交互不受影响。
+    var contentEl = drawer.querySelector("[data-display-slot]");
+
+    var mqMobile = window.matchMedia("(max-width: 1024px)");
+
+    // 把内容搬到对应容器（移动端 drawer / PC 端 dialog）
+    function placeContent() {
+      var host = !mqMobile.matches && dialog ? dialog : drawer;
+      if (contentEl && contentEl.parentNode !== host) {
+        host.appendChild(contentEl);
+      }
+    }
+    placeContent();
+    window.addEventListener("resize", placeContent);
+
+    // 绑定触发按钮：按视口打开 drawer（移动）或 dialog（PC）
     var opener = document.getElementById("DisplayGalleryOpener-" + id);
     if (opener) {
       opener.addEventListener("click", function () {
-        if (drawer && typeof drawer.show === "function") drawer.show();
+        placeContent();
+        if (!mqMobile.matches && dialog && typeof dialog.show === "function") {
+          dialog.show();
+        } else if (drawer && typeof drawer.show === "function") {
+          drawer.show();
+        }
       });
     }
-
-    // 按视口设置 drawer 方向：≤1024px 底部弹起，>1024px 右侧滑出
-    function syncPlacement() {
-      var isMobile = window.matchMedia("(max-width: 1024px)").matches;
-      drawer.setAttribute("placement", isMobile ? "bottom" : "end");
-    }
-    syncPlacement();
-    window.addEventListener("resize", syncPlacement);
 
     var hasData = data.length > 0;
 
@@ -202,8 +210,9 @@
       var photos = set ? set.photos : hasData ? [] : PLACEHOLDER.photos;
       renderGrid(gridEl, emptyEl, photos);
       // 同步 active 态
-      racesEl.querySelectorAll("[data-race]").forEach(function (b) {
-        b.classList.toggle("is-active", b.getAttribute("data-race") === state.race);
+      racesEl.querySelectorAll(".wt-display-gallery__race-item").forEach(function (item) {
+        var btn = item.querySelector("[data-race]");
+        item.classList.toggle("is-active", btn && btn.getAttribute("data-race") === state.race);
       });
       fabricsEl.querySelectorAll("[data-fabric]").forEach(function (b) {
         b.classList.toggle("is-active", b.getAttribute("data-fabric") === state.product);
