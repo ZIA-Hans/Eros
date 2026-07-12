@@ -354,6 +354,7 @@
     {% when 'product_variations' %}
       [data-block-id="{{ block.id }}"] {
           --custom-size: {{ block.settings.swatch_size }}px;
+          margin-bottom: 16px;
         {% if block.settings.radius == 'custom' %}
           --custom-border-radius: {{ block.settings.border_radius }}px;
         {% endif %}

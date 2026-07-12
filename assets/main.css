@@ -7969,8 +7969,8 @@ body .wt-filter__close.wt-filter__close {
   background: linear-gradient(to bottom right, transparent calc(50% - 0.5px), var(--color-links-active) 50%, transparent calc(50% + 0.5px));
 }
 .f-button__list__link {
-  padding-left: calc(var(--gap, 8px) * 1);
-  padding-right: calc(var(--gap, 8px) * 1);
+  padding-left: calc(var(--gap, 8px) * 1.5);
+  padding-right: calc(var(--gap, 8px) * 1.5);
   display: flex;
   align-items: center;
   justify-content: center;
