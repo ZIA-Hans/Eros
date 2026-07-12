@@ -1,0 +1,615 @@
+{% liquid
+  assign section_id = section.id | replace: '_', '' | downcase
+  assign image_class = 'shop-category__image-' | append: section_id
+  assign placeholder_class = 'shop-category__placeholder-' | append: section_id
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.section_background }};
+  }
+
+  .shop-category-{{ section_id }} {
+    width: 100%;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  .shop-category-{{ section_id }} * {
+    box-sizing: border-box;
+  }
+
+  .shop-category__inner-{{ section_id }} {
+    width: 100%;
+    max-width: {% if section.settings.width_style == 'contained' %}{{ section.settings.mobile_max_width }}px{% else %}none{% endif %};
+    margin: 0 auto;
+    padding: 0 {{ section.settings.side_padding_mobile }}px;
+  }
+
+  .shop-category__heading-{{ section_id }} {
+    margin: 0 0 {{ section.settings.heading_spacing }}px;
+    color: {{ section.settings.heading_color }};
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: {{ section.settings.heading_letter_spacing | divided_by: 100.0 }}em;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .shop-category__grid-{{ section_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: {{ section.settings.gap }}px;
+  }
+
+  .shop-category__card-{{ section_id }} {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-width: 0;
+    border-radius: {{ section.settings.image_radius }}px;
+    background: #f6f6f6;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .shop-category__card-{{ section_id }}:hover,
+  .shop-category__card-{{ section_id }}:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .shop-category__card--wide-{{ section_id }} {
+    grid-column: 1 / -1;
+    aspect-ratio: {{ section.settings.wide_ratio }};
+  }
+
+  .shop-category__card--small-{{ section_id }} {
+    aspect-ratio: {{ section.settings.small_ratio }};
+  }
+
+  .shop-category__image-{{ section_id }},
+  .shop-category__placeholder-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: {{ section.settings.image_fit }};
+    object-position: center;
+  }
+
+  .shop-category__content-{{ section_id }} {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: {{ section.settings.text_gap }}px;
+    padding: {{ section.settings.text_padding_mobile }}px;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .shop-category__title-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.title_color }};
+    font-size: {{ section.settings.title_size_mobile }}px;
+    line-height: 1.35;
+    letter-spacing: {{ section.settings.title_letter_spacing | divided_by: 100.0 }}em;
+    font-weight: 700;
+    text-decoration: {% if section.settings.title_underline %}underline{% else %}none{% endif %};
+    text-underline-offset: 2px;
+  }
+
+  .shop-category__description-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.description_color }};
+    font-size: {{ section.settings.description_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: {{ section.settings.description_letter_spacing | divided_by: 100.0 }}em;
+  }
+
+  @media screen and (min-width: 750px) {
+    .shop-category-{{ section_id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+
+    .shop-category__inner-{{ section_id }} {
+      max-width: {% if section.settings.width_style == 'contained' %}{{ section.settings.desktop_max_width }}px{% else %}none{% endif %};
+      padding: 0 {{ section.settings.side_padding_desktop }}px;
+    }
+
+    .shop-category__heading-{{ section_id }} {
+      font-size: {{ section.settings.heading_size_desktop }}px;
+    }
+
+    .shop-category__content-{{ section_id }} {
+      padding: {{ section.settings.text_padding_desktop }}px;
+    }
+
+    .shop-category__title-{{ section_id }} {
+      font-size: {{ section.settings.title_size_desktop }}px;
+    }
+
+    .shop-category__description-{{ section_id }} {
+      font-size: {{ section.settings.description_size_desktop }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="shop-category-{{ section_id }}">
+  <div class="shop-category__inner-{{ section_id }}">
+    {% if section.settings.heading != blank %}
+      <h2 class="shop-category__heading-{{ section_id }}">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="shop-category__grid-{{ section_id }}">
+      <a class="shop-category__card-{{ section_id }} shop-category__card--wide-{{ section_id }}" href="{{ section.settings.link_1 | default: '#' }}">
+        {% if section.settings.image_1 != blank %}
+          {{ section.settings.image_1 | image_url: width: 1600 | image_tag: class: image_class, loading: 'lazy' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: placeholder_class }}
+        {% endif %}
+        <div class="shop-category__content-{{ section_id }}">
+          {% if section.settings.title_1 != blank %}
+            <p class="shop-category__title-{{ section_id }}">{{ section.settings.title_1 }}</p>
+          {% endif %}
+          {% if section.settings.description_1 != blank %}
+            <p class="shop-category__description-{{ section_id }}">{{ section.settings.description_1 }}</p>
+          {% endif %}
+        </div>
+      </a>
+
+      <a class="shop-category__card-{{ section_id }} shop-category__card--small-{{ section_id }}" href="{{ section.settings.link_2 | default: '#' }}">
+        {% if section.settings.image_2 != blank %}
+          {{ section.settings.image_2 | image_url: width: 900 | image_tag: class: image_class, loading: 'lazy' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: placeholder_class }}
+        {% endif %}
+        <div class="shop-category__content-{{ section_id }}">
+          {% if section.settings.title_2 != blank %}
+            <p class="shop-category__title-{{ section_id }}">{{ section.settings.title_2 }}</p>
+          {% endif %}
+          {% if section.settings.description_2 != blank %}
+            <p class="shop-category__description-{{ section_id }}">{{ section.settings.description_2 }}</p>
+          {% endif %}
+        </div>
+      </a>
+
+      <a class="shop-category__card-{{ section_id }} shop-category__card--small-{{ section_id }}" href="{{ section.settings.link_3 | default: '#' }}">
+        {% if section.settings.image_3 != blank %}
+          {{ section.settings.image_3 | image_url: width: 900 | image_tag: class: image_class, loading: 'lazy' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: placeholder_class }}
+        {% endif %}
+        <div class="shop-category__content-{{ section_id }}">
+          {% if section.settings.title_3 != blank %}
+            <p class="shop-category__title-{{ section_id }}">{{ section.settings.title_3 }}</p>
+          {% endif %}
+          {% if section.settings.description_3 != blank %}
+            <p class="shop-category__description-{{ section_id }}">{{ section.settings.description_3 }}</p>
+          {% endif %}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shop by Category",
+  "tag": "section",
+  "class": "section-shop-by-category",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size - mobile",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading size - desktop",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Heading letter spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "unit": "%",
+      "default": -2
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Heading bottom spacing",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Top category"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Tights"
+    },
+    {
+      "type": "text",
+      "id": "description_1",
+      "label": "Description",
+      "default": "Soft comfort for every night"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Bottom left category"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Sticky Bra"
+    },
+    {
+      "type": "text",
+      "id": "description_2",
+      "label": "Description",
+      "default": "Invisible support for every neckline"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Bottom right category"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title",
+      "default": "Pajamas"
+    },
+    {
+      "type": "text",
+      "id": "description_3",
+      "label": "Description",
+      "default": "Soft comfort for every night"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width_style",
+      "label": "Width style",
+      "options": [
+        { "value": "contained", "label": "Contained" },
+        { "value": "full", "label": "Full width" }
+      ],
+      "default": "contained"
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "label": "Mobile maximum width",
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "default": 380
+    },
+    {
+      "type": "range",
+      "id": "desktop_max_width",
+      "label": "Desktop maximum width",
+      "min": 400,
+      "max": 1400,
+      "step": 10,
+      "unit": "px",
+      "default": 760
+    },
+    {
+      "type": "select",
+      "id": "wide_ratio",
+      "label": "Top image ratio",
+      "options": [
+        { "value": "2 / 1", "label": "2:1" },
+        { "value": "16 / 9", "label": "16:9" },
+        { "value": "3 / 2", "label": "3:2" }
+      ],
+      "default": "2 / 1"
+    },
+    {
+      "type": "select",
+      "id": "small_ratio",
+      "label": "Bottom image ratio",
+      "options": [
+        { "value": "6 / 7", "label": "6:7" },
+        { "value": "4 / 5", "label": "4:5" },
+        { "value": "1 / 1", "label": "1:1" }
+      ],
+      "default": "6 / 7"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image fit",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Image gap",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title size - mobile",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title size - desktop",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "title_letter_spacing",
+      "label": "Title letter spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "unit": "%",
+      "default": -2
+    },
+    {
+      "type": "checkbox",
+      "id": "title_underline",
+      "label": "Underline title",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "label": "Description size - mobile",
+      "min": 8,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "description_size_desktop",
+      "label": "Description size - desktop",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_letter_spacing",
+      "label": "Description letter spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "unit": "%",
+      "default": -2
+    },
+    {
+      "type": "range",
+      "id": "text_gap",
+      "label": "Title/description gap",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "text_padding_mobile",
+      "label": "Text bottom padding - mobile",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_padding_desktop",
+      "label": "Text bottom padding - desktop",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "side_padding_mobile",
+      "label": "Side padding - mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "side_padding_desktop",
+      "label": "Side padding - desktop",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Category"
+    }
+  ]
+}
+{% endschema %}

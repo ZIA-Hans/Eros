@@ -1,0 +1,576 @@
+{% liquid
+  assign section_id = section.id | replace: '_', '' | downcase
+  assign image_1_class = 'pair-comparison__image-' | append: section_id
+  assign image_2_class = 'pair-comparison__image-' | append: section_id
+  assign placeholder_class = 'pair-comparison__placeholder-' | append: section_id
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.section_background }};
+    overflow-x: hidden;
+  }
+
+  .pair-comparison-{{ section_id }} {
+    width: 100%;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  .pair-comparison-{{ section_id }} * {
+    box-sizing: border-box;
+  }
+
+  .pair-comparison__inner-{{ section_id }} {
+    width: 100%;
+    max-width: {% if section.settings.width_style == 'contained' %}{{ section.settings.mobile_max_width }}px{% else %}none{% endif %};
+    margin: 0 auto;
+    padding: 0 {{ section.settings.side_padding_mobile }}px;
+  }
+
+  .pair-comparison__grid-{{ section_id }} {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: {{ section.settings.gap_mobile }}px;
+    width: 100%;
+  }
+
+  .pair-comparison__card-{{ section_id }} {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    aspect-ratio: {{ section.settings.image_ratio }};
+    border-radius: {{ section.settings.image_radius }}px;
+    background: #f6f6f6;
+  }
+
+  .pair-comparison__image-{{ section_id }},
+  .pair-comparison__placeholder-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: {{ section.settings.image_fit }};
+    object-position: center;
+  }
+
+  .pair-comparison__content-{{ section_id }} {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: {{ section.settings.text_padding_mobile }}px;
+    pointer-events: none;
+  }
+
+  .pair-comparison__brand-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.brand_color }};
+    font-size: {{ section.settings.brand_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: {{ section.settings.brand_letter_spacing | divided_by: 100.0 }}em;
+    text-transform: {{ section.settings.brand_text_transform }};
+  }
+
+  .pair-comparison__bottom-{{ section_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.title_description_gap }}px;
+  }
+
+  .pair-comparison__title-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.title_color }};
+    font-size: {{ section.settings.title_size_mobile }}px;
+    line-height: 1.12;
+    letter-spacing: {{ section.settings.title_letter_spacing | divided_by: 100.0 }}em;
+    font-weight: {{ section.settings.title_weight }};
+  }
+
+  .pair-comparison__description-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.description_color }};
+    font-size: {{ section.settings.description_size_mobile }}px;
+    line-height: 1.35;
+    letter-spacing: {{ section.settings.description_letter_spacing | divided_by: 100.0 }}em;
+  }
+
+  @media screen and (min-width: 750px) {
+    .pair-comparison-{{ section_id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+
+    .pair-comparison__inner-{{ section_id }} {
+      max-width: {% if section.settings.width_style == 'contained' %}{{ section.settings.desktop_max_width }}px{% else %}none{% endif %};
+      padding: 0 {{ section.settings.side_padding_desktop }}px;
+    }
+
+    .pair-comparison__grid-{{ section_id }} {
+      gap: {{ section.settings.gap_desktop }}px;
+    }
+
+    .pair-comparison__content-{{ section_id }} {
+      padding: {{ section.settings.text_padding_desktop }}px;
+    }
+
+    .pair-comparison__brand-{{ section_id }} {
+      font-size: {{ section.settings.brand_size_desktop }}px;
+    }
+
+    .pair-comparison__title-{{ section_id }} {
+      font-size: {{ section.settings.title_size_desktop }}px;
+    }
+
+    .pair-comparison__description-{{ section_id }} {
+      font-size: {{ section.settings.description_size_desktop }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="pair-comparison-{{ section_id }}">
+  <div class="pair-comparison__inner-{{ section_id }}">
+    <div class="pair-comparison__grid-{{ section_id }}">
+      <div class="pair-comparison__card-{{ section_id }}">
+        {% if section.settings.image_1 != blank %}
+          {{ section.settings.image_1 | image_url: width: 1000 | image_tag: class: image_1_class, loading: 'lazy' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: placeholder_class }}
+        {% endif %}
+
+        <div class="pair-comparison__content-{{ section_id }}">
+          {% if section.settings.brand_1 != blank %}
+            <p class="pair-comparison__brand-{{ section_id }}">{{ section.settings.brand_1 }}</p>
+          {% endif %}
+
+          <div class="pair-comparison__bottom-{{ section_id }}">
+            {% if section.settings.title_1 != blank %}
+              <p class="pair-comparison__title-{{ section_id }}">{{ section.settings.title_1 }}</p>
+            {% endif %}
+
+            {% if section.settings.description_1 != blank %}
+              <p class="pair-comparison__description-{{ section_id }}">{{ section.settings.description_1 }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="pair-comparison__card-{{ section_id }}">
+        {% if section.settings.image_2 != blank %}
+          {{ section.settings.image_2 | image_url: width: 1000 | image_tag: class: image_2_class, loading: 'lazy' }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: placeholder_class }}
+        {% endif %}
+
+        <div class="pair-comparison__content-{{ section_id }}">
+          {% if section.settings.brand_2 != blank %}
+            <p class="pair-comparison__brand-{{ section_id }}">{{ section.settings.brand_2 }}</p>
+          {% endif %}
+
+          <div class="pair-comparison__bottom-{{ section_id }}">
+            {% if section.settings.title_2 != blank %}
+              <p class="pair-comparison__title-{{ section_id }}">{{ section.settings.title_2 }}</p>
+            {% endif %}
+
+            {% if section.settings.description_2 != blank %}
+              <p class="pair-comparison__description-{{ section_id }}">{{ section.settings.description_2 }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Pair Comparison",
+  "tag": "section",
+  "class": "section-pair-comparison",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Left image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Right image"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "4 / 5", "label": "Portrait" },
+        { "value": "3 / 4", "label": "Tall portrait" },
+        { "value": "16 / 9", "label": "Landscape" }
+      ],
+      "default": "1 / 1"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image fit",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Left card"
+    },
+    {
+      "type": "text",
+      "id": "brand_1",
+      "label": "Brand label",
+      "default": "Sofneu"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "900-Needle Knit"
+    },
+    {
+      "type": "text",
+      "id": "description_1",
+      "label": "Description",
+      "default": "Finer • Smoother • More Durable"
+    },
+    {
+      "type": "header",
+      "content": "Right card"
+    },
+    {
+      "type": "text",
+      "id": "brand_2",
+      "label": "Brand label",
+      "default": "Others"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "350-Needle Knit"
+    },
+    {
+      "type": "text",
+      "id": "description_2",
+      "label": "Description",
+      "default": "Rougher • Less Smooth • Less Durable"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width_style",
+      "label": "Width style",
+      "options": [
+        { "value": "contained", "label": "Contained" },
+        { "value": "full", "label": "Full width" }
+      ],
+      "default": "contained"
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "label": "Mobile maximum width",
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "default": 350
+    },
+    {
+      "type": "range",
+      "id": "desktop_max_width",
+      "label": "Desktop maximum width",
+      "min": 400,
+      "max": 1400,
+      "step": 10,
+      "unit": "px",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "Gap - mobile",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "label": "Gap - desktop",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_padding_mobile",
+      "label": "Text padding - mobile",
+      "min": 4,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "text_padding_desktop",
+      "label": "Text padding - desktop",
+      "min": 6,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "title_description_gap",
+      "label": "Title/description gap",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "color",
+      "id": "brand_color",
+      "label": "Brand color",
+      "default": "#693227"
+    },
+    {
+      "type": "range",
+      "id": "brand_size_mobile",
+      "label": "Brand size - mobile",
+      "min": 8,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "brand_size_desktop",
+      "label": "Brand size - desktop",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "brand_letter_spacing",
+      "label": "Brand letter spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "unit": "%",
+      "default": -2
+    },
+    {
+      "type": "select",
+      "id": "brand_text_transform",
+      "label": "Brand text transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "capitalize", "label": "Capitalize" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title size - mobile",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title size - desktop",
+      "min": 12,
+      "max": 52,
+      "step": 1,
+      "unit": "px",
+      "default": 26
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "title_letter_spacing",
+      "label": "Title letter spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "unit": "%",
+      "default": -2
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#6f6f6f"
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "label": "Description size - mobile",
+      "min": 8,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 9
+    },
+    {
+      "type": "range",
+      "id": "description_size_desktop",
+      "label": "Description size - desktop",
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "description_letter_spacing",
+      "label": "Description letter spacing",
+      "min": -10,
+      "max": 20,
+      "step": 1,
+      "unit": "%",
+      "default": -2
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "side_padding_mobile",
+      "label": "Side padding - mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "side_padding_desktop",
+      "label": "Side padding - desktop",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pair Comparison"
+    }
+  ]
+}
+{% endschema %}
