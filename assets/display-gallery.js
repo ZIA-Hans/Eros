@@ -106,12 +106,14 @@
           return (
             '<figure class="wt-display-gallery__cell">' +
             '<div class="wt-display-gallery__img wt-display-gallery__img--placeholder"></div>' +
+            '<figcaption class="wt-display-gallery__caption">color</figcaption>' +
             "</figure>"
           );
         }
         return (
           '<figure class="wt-display-gallery__cell">' +
           '<img class="wt-display-gallery__img" src="' + escapeHtml(src) + '" alt="" loading="lazy" />' +
+          '<figcaption class="wt-display-gallery__caption">color</figcaption>' +
           "</figure>"
         );
       })

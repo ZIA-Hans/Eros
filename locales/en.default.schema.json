@@ -3436,6 +3436,20 @@
             "variant_name": {
               "label": "Variant name",
               "info": "Enter the variant option name for assigning the size guide to display in the proper row."
+            },
+            "skin_popup": {
+              "label": "Match your skin popup",
+              "info": "Adds a button next to the matched option (e.g. Color) that opens a popup showing skin-tone display images. Configure data via the custom.match_skin_popup metafield."
+            },
+            "enable_skin_popup": {
+              "label": "Enable match your skin popup"
+            },
+            "skin_variant_name": {
+              "label": "Option name",
+              "info": "Enter the option name where the skin popup button should appear. Example: 'Color'."
+            },
+            "skin_button_label": {
+              "label": "Button text"
             }
           }
         },
@@ -4134,17 +4148,6 @@
               "options__3": {
                 "label": "Swatch / Image"
               }
-            },
-            "display_gallery": {
-              "label": "Display gallery popup",
-              "info": "Adds a button next to the option title that opens a popup showing an image gallery filtered by race and product. Configure the data via metaobjects (display_race, display_product, display_photo, display_set) and link them on the product via the custom.display_sets metafield."
-            },
-            "enable_display_gallery": {
-              "label": "Enable display gallery"
-            },
-            "display_button_label": {
-              "label": "Button text",
-              "info": "Text shown on the button that opens the display gallery popup."
             }
           }
         }

@@ -1923,6 +1923,17 @@
                                 {% render 'popup', product: product, id: block.id, shopify_attributes: block.shopify_attributes, size_icon: block.settings.size_icon, size_link: block.settings.size_link, size_page: block.settings.size_page, size_content: block.settings.size_content, metafield_name: block.settings.metafield, enable-striped-rows: block.settings.enable-striped-rows %}
                               </div>
                             {% endif %}
+                            {% comment %} Match your skin popup（仿 size guide，用独立字段匹配 option 行）{% endcomment %}
+                            {% if block.settings.enable_skin_popup %}
+                              {% assign skin_variant_name = block.settings.skin_variant_name | downcase %}
+                              {% if skin_variant_name == option_name %}
+                                {% render 'display-gallery-popup',
+                                  id: block.id,
+                                  button_label: block.settings.skin_button_label,
+                                  shopify_attributes: block.shopify_attributes,
+                                  product: product %}
+                              {% endif %}
+                            {% endif %}
                           </div>
                           {% assign options_body_class = 'tiles' %}
                           {% assign option_name_downcase = option.name | downcase %}
@@ -2683,14 +2694,7 @@
                       </span>
                     </div>
 
-                    {% comment %} Display gallery (race × product → image set) popup {% endcomment %}
-                    {% if block.settings.enable_display_gallery %}
-                      {% render 'display-gallery-popup',
-                        id: block.id,
-                        button_label: block.settings.display_button_label,
-                        shopify_attributes: block.shopify_attributes,
-                        product: product %}
-                    {% endif %}
+                    {% comment %} Display gallery (race × product → image set) popup — 迁移至 variant_picker block {% endcomment %}
                   </div>
 
                   <div class="wt-product__option__body wt-product__option__body--{{ options_body_class }}">
@@ -4987,6 +4991,30 @@
           "label": "t:sections.main-product.blocks.variant_picker.settings.striped_rows.label",
           "info": "t:sections.main-product.blocks.variant_picker.settings.striped_rows.info",
           "default": true
+        },
+        {
+          "type": "header",
+          "content": "t:sections.main-product.blocks.variant_picker.settings.skin_popup.label",
+          "info": "t:sections.main-product.blocks.variant_picker.settings.skin_popup.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_skin_popup",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.enable_skin_popup.label",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "skin_variant_name",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.skin_variant_name.label",
+          "info": "t:sections.main-product.blocks.variant_picker.settings.skin_variant_name.info",
+          "default": "Color"
+        },
+        {
+          "type": "text",
+          "id": "skin_button_label",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.skin_button_label.label",
+          "default": "Match your skin"
         }
       ]
     },
@@ -6092,23 +6120,6 @@
           "id": "products",
           "label": "Products",
           "info": "Select all variations including the current product, (Suggestion: use metafield to store product list when product template is going to be used for multiple products)"
-        },
-        {
-          "type": "header",
-          "content": "t:sections.main-product.blocks.product_variations.settings.display_gallery.label",
-          "info": "t:sections.main-product.blocks.product_variations.settings.display_gallery.info"
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_display_gallery",
-          "label": "t:sections.main-product.blocks.product_variations.settings.enable_display_gallery.label",
-          "default": false
-        },
-        {
-          "type": "text",
-          "id": "display_button_label",
-          "label": "t:sections.main-product.blocks.product_variations.settings.display_button_label.label",
-          "default": "View display"
         }
       ]
     },
