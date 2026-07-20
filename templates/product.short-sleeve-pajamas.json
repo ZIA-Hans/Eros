@@ -1,0 +1,782 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": true,
+        "text_color": "#ffffff",
+        "background_color": "#f29f00",
+        "margin-top": 12,
+        "margin-bottom": 12,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "brand": "",
+            "enable_vendor_link": false,
+            "size_text": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_included": true,
+            "show_shipping_policy": true,
+            "size_text": 140,
+            "size_text_mobile": 140
+          }
+        },
+        "product_variations_7LBAAU": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "Color",
+            "picker_type": "swatch",
+            "swatch_size": 36,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "custom.tab",
+            "products": [
+              "eros-no-2-20d-tight-beige",
+              "eros-no-2-20d-tight-black"
+            ],
+            "enable_display_gallery": false,
+            "display_button_label": "View display"
+          }
+        },
+        "variant_picker_7mHC3V": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "hide_unavailable_options": false,
+            "unavailable_style": "line_through",
+            "color_swatch_names": "",
+            "variant_picture_swatch_names": "",
+            "thumb_size": 60,
+            "radius": "default",
+            "border_radius": 15,
+            "dropdown_swatch_names": "",
+            "margin-top": 0,
+            "margin-bottom": 8,
+            "size_icon": "check_mark",
+            "size_link": "",
+            "variant_name": "",
+            "size_content": "",
+            "metafield": "",
+            "enable-striped-rows": true
+          }
+        },
+        "information_popup_pw9mqt": {
+          "type": "information_popup",
+          "disabled": true,
+          "settings": {
+            "size_icon": "ruler",
+            "size_link": "Size Chart",
+            "size_content": "eross-story",
+            "metafield": "",
+            "enable-striped-rows": true
+          }
+        },
+        "separator_xgqTJM": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 4
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_qty_selector": true,
+            "full_width_add_to_cart": false,
+            "custom_add_to_cart_label": "",
+            "text_color": "#ffffff",
+            "background_color": "#151515",
+            "text_color_hover": "",
+            "background_color_hover": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "product_variations_7LBAAU",
+        "variant_picker_7mHC3V",
+        "information_popup_pw9mqt",
+        "separator_xgqTJM",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_buy_button": true,
+        "sticky_button_visibility": "mobile",
+        "sticky_button_type": "sticky",
+        "sticky_button_select": "secondary",
+        "sticky_bg_opacity": 100,
+        "sticky_bg_blur": 0,
+        "sticky_shadow": false,
+        "sticky_button_show_image": "yes",
+        "sticky_button_product_info": "title_and_price",
+        "full-width-enabled": false,
+        "desktop-media-size": "normal",
+        "desktop-layout": "carousel-vertical",
+        "desktop-image-ratio": "portrait",
+        "enable_video_looping": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "enable-preselected-variant": true,
+        "enable-image-zoom": true,
+        "mobile-image": "small",
+        "show-thumbnails-mobile": false,
+        "text_color": "#2b2b2b",
+        "background_color": "#ffffff",
+        "pdp_nav_icon_bg_color": "#ffffff",
+        "pdp_nav_icon_bg_opacity": 80,
+        "pdp_nav_icon_color": "",
+        "margin-top": 8,
+        "margin-bottom": 8,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "blocks_X9QmkE": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5dcd6eb_Kdg7Nq": {
+          "type": "ai_gen_block_5dcd6eb",
+          "name": "Main benefits icons",
+          "settings": {
+            "title": "Main Benefits",
+            "title_size_mobile": 16,
+            "title_size_desktop": 36,
+            "title_color": "#2b2b2b",
+            "title_spacing": 30,
+            "max_width": 800,
+            "padding_mobile": 20,
+            "padding_desktop": 40,
+            "background_color": "#ffffff",
+            "icon_size_mobile": 40,
+            "icon_size_desktop": 80,
+            "icon_gap_mobile": 20,
+            "icon_gap_desktop": 40,
+            "icon_text_spacing": 12,
+            "text_size_mobile": 12,
+            "text_size_desktop": 14,
+            "text_color": "#2b2b2b",
+            "benefit_1_enabled": true,
+            "benefit_1_icon": "shopify://shop_images/Premium_TENCEL_Modal.svg",
+            "benefit_1_icon_alt": "TENCEL™ Modal icon",
+            "benefit_1_text": "TENCEL™ Modal",
+            "benefit_1_link": "",
+            "benefit_2_enabled": true,
+            "benefit_2_icon": "shopify://shop_images/Adaptive_Skin_Comfort.svg",
+            "benefit_2_icon_alt": "Adaptive Skin Comfort icon",
+            "benefit_2_text": "Adaptive Skin Comfort",
+            "benefit_2_link": "",
+            "benefit_3_enabled": true,
+            "benefit_3_icon": "shopify://shop_images/Anti-Pilling_Finish.svg",
+            "benefit_3_icon_alt": "Anti-Pilling Finish icon",
+            "benefit_3_text": "Anti-Pilling Finish",
+            "benefit_3_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5dcd6eb_Kdg7Nq"
+      ],
+      "name": "Product grade",
+      "settings": {
+        "section-margin": 0
+      }
+    },
+    "product_accordion_tabs_VWMA9q": {
+      "type": "product-accordion-tabs",
+      "blocks": {
+        "item_YcRheF": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "62% Polyamide, 38% Elastane",
+            "default_open": false,
+            "content": "<p>The perfect balance of sheer coverage and everyday durability. Crafted with 38% elastane for adaptive stretch and a secure, second-skin fit.</p>",
+            "image_position": "top",
+            "button_text": "",
+            "button_link": "",
+            "custom_liquid": ""
+          }
+        },
+        "item_dYfiNH": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "30-Day Guarantee & Replacement",
+            "default_open": false,
+            "content": "<p>If your tights arrive with a quality issue or are damaged during normal wear within 30 days, we’ll provide a free replacement to make it right.</p><p><a href=\"/pages/return-policy\" title=\"Return Policy\"><em><strong>Click here to visit our Return Policy</strong></em></a></p>",
+            "image_position": "top",
+            "button_text": "",
+            "button_link": "",
+            "custom_liquid": ""
+          }
+        },
+        "item_iWAzC8": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Fast & Reliable Delivery",
+            "default_open": false,
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over $59.99.</p><p><em><strong>Click here to visit our Shipping Policy.</strong></em></p>",
+            "image_position": "top",
+            "button_text": "",
+            "button_link": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_YcRheF",
+        "item_dYfiNH",
+        "item_iWAzC8"
+      ],
+      "name": "Product Accordion Tabs",
+      "settings": {
+        "title": "Product Information",
+        "title_size_mobile": 16,
+        "title_size_desktop": 36,
+        "title_letter_spacing": 0,
+        "title_color": "#2b2b2b",
+        "title_alignment": "center",
+        "title_spacing": 24,
+        "section_background": "#ffffff",
+        "section_max_width": 800,
+        "accordion_width_mode": "container",
+        "accordion_max_width": 800,
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "accordion_background": "#f9f5f3",
+        "accordion_radius": 0,
+        "content_padding_mobile": 10,
+        "content_padding_desktop": 20,
+        "accordion_title_size_mobile": 14,
+        "accordion_title_size_desktop": 16,
+        "accordion_title_letter_spacing": -2,
+        "accordion_title_color": "#2b2b2b",
+        "content_size_mobile": 12,
+        "content_size_desktop": 14,
+        "content_letter_spacing": 0,
+        "content_line_height": 140,
+        "content_color": "#2b2b2b",
+        "content_top_spacing": 14,
+        "item_spacing": 16,
+        "divider_color": "#e0d5cf",
+        "divider_thickness": 1,
+        "arrow_color": "#2b2b2b",
+        "arrow_size": 20,
+        "media_spacing": 16,
+        "image_radius": 0,
+        "button_spacing": 16,
+        "button_size": 14,
+        "button_background": "#2b2b2b",
+        "button_color": "#ffffff",
+        "button_border_color": "#2b2b2b",
+        "button_radius": 0,
+        "custom_liquid_spacing": 10,
+        "allow_multiple_open": false
+      }
+    },
+    "rich_text_wpnHRD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3JyNKt": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Custom Yarn Blend",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_3JyNKt"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2B2B2B",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10,
+        "compact_size": true
+      }
+    },
+    "text_overlay_9AbVzy": {
+      "type": "text-overlay",
+      "blocks": {
+        "text_PxEtfk": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "text": "<p>1:1 Premium Fabric Blending</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 14,
+            "desktop_size": 16,
+            "animation": "none"
+          }
+        },
+        "text_HJHdhA": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "text": "<p>Tencel Modal Skin-friendly Texture</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 14,
+            "desktop_size": 16,
+            "animation": "none"
+          }
+        },
+        "text_8Nir6j": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "text": "<p>Combed Cotton Shaping Support</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 14,
+            "desktop_size": 16,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_PxEtfk",
+        "text_HJHdhA",
+        "text_8Nir6j"
+      ],
+      "name": "Text Overlay",
+      "settings": {
+        "image_size_mode": "auto",
+        "mobile_image_height": 420,
+        "desktop_image_height": 800,
+        "image_fit": "contain",
+        "image_radius": 12,
+        "width_style": "contained",
+        "mobile_max_width": 420,
+        "desktop_max_width": 1280,
+        "desktop_layout": "image_left",
+        "desktop_image_width": "50",
+        "desktop_gap": 40,
+        "mobile_content_gap": 16,
+        "mobile_content_layout": "overlay",
+        "mobile_overlay_x": 50,
+        "mobile_overlay_y": 85,
+        "mobile_overlay_safe_padding": 16,
+        "content_alignment": "center",
+        "content_text_align": "center",
+        "content_gap": 12,
+        "mobile_content_max_width": 420,
+        "desktop_content_max_width": 800,
+        "icon_text_gap": 10,
+        "button_height": 42,
+        "button_padding_x": 20,
+        "button_radius": 0,
+        "button_text_size": 14,
+        "primary_button_background": "#2b2b2b",
+        "primary_button_color": "#ffffff",
+        "outline_button_color": "#2b2b2b",
+        "text_link_color": "#2b2b2b",
+        "section_background": "#ffffff",
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40
+      }
+    },
+    "text_overlay_pPWpUC": {
+      "type": "text-overlay",
+      "blocks": {
+        "heading_nBtyTT": {
+          "type": "heading",
+          "settings": {
+            "show_block": true,
+            "heading": "<p>Powered by Austrian TENCEL™ Modal</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 16,
+            "desktop_size": 36,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nBtyTT"
+      ],
+      "name": "Text Overlay",
+      "settings": {
+        "image_size_mode": "auto",
+        "mobile_image_height": 420,
+        "desktop_image_height": 800,
+        "image_fit": "contain",
+        "image_radius": 12,
+        "width_style": "contained",
+        "mobile_max_width": 420,
+        "desktop_max_width": 1280,
+        "desktop_layout": "content_left",
+        "desktop_image_width": "50",
+        "desktop_gap": 40,
+        "mobile_content_gap": 16,
+        "mobile_content_layout": "overlay",
+        "mobile_overlay_x": 50,
+        "mobile_overlay_y": 50,
+        "mobile_overlay_safe_padding": 16,
+        "content_alignment": "center",
+        "content_text_align": "center",
+        "content_gap": 12,
+        "mobile_content_max_width": 420,
+        "desktop_content_max_width": 800,
+        "icon_text_gap": 10,
+        "button_height": 42,
+        "button_padding_x": 20,
+        "button_radius": 0,
+        "button_text_size": 14,
+        "primary_button_background": "#2b2b2b",
+        "primary_button_color": "#ffffff",
+        "outline_button_color": "#2b2b2b",
+        "text_link_color": "#2b2b2b",
+        "section_background": "#ffffff",
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40
+      }
+    },
+    "grid_view_wCynBd": {
+      "type": "grid-view",
+      "blocks": {
+        "image_L9YTKi": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Wash-Ready Performance",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Resists wrinkles and maintains its shape",
+            "text_disable_on_mobile": true,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        },
+        "image_KYpUm7": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Gentle Skin Finish",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Soft and comfortable against your skin",
+            "text_disable_on_mobile": true,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_L9YTKi",
+        "image_KYpUm7"
+      ],
+      "name": "t:sections.grid-view.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Thoughtful Care, Lasting Comfort",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": true,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
+        "spacing_mobile": "16",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 40,
+        "margin-bottom": 40,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "grid_view_h8yryQ": {
+      "type": "grid-view",
+      "blocks": {
+        "image_DmQQEq": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Signature Flared Silhouette",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Enhances your natural proportions.",
+            "text_disable_on_mobile": true,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        },
+        "image_VzP6Fc": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "3D Tailored Structure",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Creates a refined, structured look.",
+            "text_disable_on_mobile": true,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_DmQQEq",
+        "image_VzP6Fc"
+      ],
+      "name": "t:sections.grid-view.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Designed for a Flattering Shape",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": true,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
+        "spacing_mobile": "16",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 40,
+        "margin-bottom": 40,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "collage_z9HLJy": {
+      "type": "collage",
+      "blocks": {
+        "image_aYGXRy": {
+          "type": "image",
+          "settings": {
+            "heading": "Luxury Natural Mother-of-pearl Button",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 100
+          }
+        },
+        "image_nPeeem": {
+          "type": "image",
+          "settings": {
+            "heading": "Adjustable Comfort Waist",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 100
+          }
+        },
+        "image_eVU3Bb": {
+          "type": "image",
+          "settings": {
+            "heading": "Contrast Binding Detail",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 100
+          }
+        }
+      },
+      "block_order": [
+        "image_aYGXRy",
+        "image_nPeeem",
+        "image_eVU3Bb"
+      ],
+      "name": "t:sections.collage.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Attention to Every Detail",
+        "heading_richtext": "<h2>Collage</h2>",
+        "full-width-enabled": false,
+        "desktop_layout": "row",
+        "spacing_desktop": "16",
+        "spacing_mobile": "16",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "blocks_X9QmkE",
+    "product_accordion_tabs_VWMA9q",
+    "rich_text_wpnHRD",
+    "text_overlay_9AbVzy",
+    "text_overlay_pPWpUC",
+    "grid_view_wCynBd",
+    "grid_view_h8yryQ",
+    "collage_z9HLJy"
+  ]
+}
