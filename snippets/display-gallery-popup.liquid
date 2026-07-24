@@ -4,6 +4,7 @@
   PC 端（>1024px）：Shoelace <sl-dialog> 居中弹窗。
   内容容器唯一一份，由 JS 按视口在 drawer↔dialog 之间搬移。
   数据：product.metafields.custom.match_skin_popup → skin_compose_config
+        skin_compose_config.photos → list.metaobject_reference → photo (含 name + image)
   参数：id, button_label, shopify_attributes, product
 {% endcomment %}
 
@@ -76,8 +77,10 @@
           "product": {{ s.fabric.value.name | json }},
           "photos": [
             {%- for p in s.photos.value -%}
-              {{ p | image_url: width: 900 | json }}
-            {%- unless forloop.last %},{% endunless -%}
+              {
+                "name": {{ p.name | json }},
+                "src": {{ p.src | image_url: width: 900 | json }}
+              }{%- unless forloop.last %},{% endunless -%}
             {%- endfor -%}
           ]
         }{%- unless forloop.last %},{% endunless -%}

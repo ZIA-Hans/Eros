@@ -64,13 +64,17 @@
 
 /* —— Shoelace dialog（仅 PC 端 >1024px）居中弹窗 —— */
 .wt-display-gallery-dialog::part(panel) {
-  width: 420px;
-  max-width: 420px;
+  width: 800px;
+  max-width: 800px;
+  height: 600px;
+  max-height: 600px;
   margin: auto;
   border-radius: 16px;
 }
 .wt-display-gallery-dialog::part(body) {
   padding-top: 8px;
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
 }
@@ -151,7 +155,7 @@
   letter-spacing: -0.28px;
 }
 
-/* —— 2. 图片网格（2×2，宽度平分，图片按比例缩小适配）—— */
+/* —— 2. 图片网格（2×2 填满；>4 张时保持单元格大小，纵向滚动）—— */
 .wt-display-gallery__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -162,6 +166,13 @@
   flex: 1;
   min-height: 0;
   align-content: stretch;
+}
+/* >4 张：行高固定为 2×2 单格大小（网格高度的一半），超出纵向滚动 */
+.wt-display-gallery__grid.is-scrollable {
+  grid-template-rows: none;
+  grid-auto-rows: calc(50% - 15px); /* 单格高 = (网格高 − 一个row-gap) / 2 */
+  overflow-y: auto;
+  align-content: start;
 }
 /* 无匹配组合：网格变单列，缺省文案居中 */
 .wt-display-gallery__grid.is-empty {
@@ -194,22 +205,38 @@
   flex-shrink: 0;
 }
 
-/* PC 端（>1024px）：图片横向平铺（flex 一行），宽度按比例收缩 */
+/* PC 端（>1024px）：单行横向排布，一屏 4 张，超出横向滚动 + snap */
 @media (min-width: 1025px) {
   .wt-display-gallery__grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    grid-template-columns: none;
+    grid-template-rows: none;
     column-gap: 12px;
-    row-gap: 30px;
+    row-gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    align-content: stretch;
+  }
+  /* 纵向滚动的 class 在 PC 端不生效（PC 用横向） */
+  .wt-display-gallery__grid.is-scrollable {
+    grid-template-rows: none;
+    grid-auto-rows: none;
+    overflow-y: hidden;
+    align-content: stretch;
   }
   .wt-display-gallery__grid.is-empty {
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-items: initial;
+    justify-items: center;
+    overflow-x: visible;
   }
   .wt-display-gallery__cell {
-    flex: 1 1 0;
+    flex: 1 0 calc(25% - 9px); /* 一屏 4 张，扣除 gap 影响 */
     min-width: 0;
+    scroll-snap-align: start;
   }
 }
 

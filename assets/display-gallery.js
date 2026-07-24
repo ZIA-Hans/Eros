@@ -32,18 +32,6 @@
     return out;
   }
 
-  // 占位数据：无 metaobject 数据时用，方便验证 UI
-  var PLACEHOLDER = {
-    races: [
-      { name: "A", thumb: "" },
-      { name: "B", thumb: "" },
-      { name: "C", thumb: "" },
-      { name: "D", thumb: "" },
-    ],
-    products: ["Glossy", "Sheer Glow"],
-    photos: ["", "", "", ""],
-  };
-
   function renderRaces(container, races, current, onPick) {
     container.innerHTML = races
       .map(function (r) {
@@ -99,21 +87,26 @@
       return;
     }
     grid.classList.remove("is-empty");
-    // photos 现在是字符串 URL 数组（无 title）
+    // >4 张时切换为滚动模式（保持 2×2 单元格大小，纵向滚动）
+    grid.classList.toggle("is-scrollable", photos.length > 4);
+    // photos 为对象数组：[{ name, src }]
     grid.innerHTML = photos
-      .map(function (src) {
+      .map(function (photo) {
+        // 兼容字符串或对象两种写法
+        var src = typeof photo === "string" ? photo : (photo && photo.src) || "";
+        var name = typeof photo === "string" ? "" : (photo && photo.name) || "";
         if (!src) {
           return (
             '<figure class="wt-display-gallery__cell">' +
             '<div class="wt-display-gallery__img wt-display-gallery__img--placeholder"></div>' +
-            '<figcaption class="wt-display-gallery__caption">color</figcaption>' +
+            '<figcaption class="wt-display-gallery__caption">' + escapeHtml(name) + '</figcaption>' +
             "</figure>"
           );
         }
         return (
           '<figure class="wt-display-gallery__cell">' +
-          '<img class="wt-display-gallery__img" src="' + escapeHtml(src) + '" alt="" loading="lazy" />' +
-          '<figcaption class="wt-display-gallery__caption">color</figcaption>' +
+          '<img class="wt-display-gallery__img" src="' + escapeHtml(src) + '" alt="' + escapeHtml(name) + '" loading="lazy" />' +
+          '<figcaption class="wt-display-gallery__caption">' + escapeHtml(name) + '</figcaption>' +
           "</figure>"
         );
       })
@@ -179,8 +172,9 @@
 
     var hasData = data.length > 0;
 
-    // 提取人种 / 光泽(商品) 列表
-    var races, products;
+    // 提取人种 / 光泽(商品) 列表；无数据时为空数组（展示缺省内容）
+    var races = [];
+    var products = [];
     if (hasData) {
       var raceMap = {};
       data.forEach(function (d) {
@@ -196,9 +190,6 @@
           return d.product;
         })
       );
-    } else {
-      races = PLACEHOLDER.races;
-      products = PLACEHOLDER.products;
     }
 
     var state = { race: races[0] ? (races[0].name || races[0]) : "", product: products[0] || "" };
@@ -209,7 +200,7 @@
             return d.race === state.race && d.product === state.product;
           })
         : null;
-      var photos = set ? set.photos : hasData ? [] : PLACEHOLDER.photos;
+      var photos = set ? set.photos : [];
       renderGrid(gridEl, emptyEl, photos);
       // 同步 active 态
       racesEl.querySelectorAll(".wt-display-gallery__race-item").forEach(function (item) {
