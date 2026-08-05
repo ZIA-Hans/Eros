@@ -78,7 +78,10 @@
             "variant_name": "",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "information_popup_pw9mqt": {
@@ -184,19 +187,19 @@
             "text_size_desktop": 14,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
-            "benefit_1_icon": "shopify://shop_images/Premium_TENCEL_Modal.svg",
-            "benefit_1_icon_alt": "TENCEL™ Modal icon",
-            "benefit_1_text": "TENCEL™ Modal",
+            "benefit_1_icon": "shopify://shop_images/Replaceable_Adhesive_Pads.svg",
+            "benefit_1_icon_alt": "Replaceable Adhesive Pads icon",
+            "benefit_1_text": "Replaceable Adhesive Pads",
             "benefit_1_link": "",
             "benefit_2_enabled": true,
-            "benefit_2_icon": "shopify://shop_images/Adaptive_Skin_Comfort.svg",
-            "benefit_2_icon_alt": "Adaptive Skin Comfort icon",
-            "benefit_2_text": "Adaptive Skin Comfort",
+            "benefit_2_icon": "shopify://shop_images/Made_for_Travel.svg",
+            "benefit_2_icon_alt": "Made for Travel icon",
+            "benefit_2_text": "Made for Travel",
             "benefit_2_link": "",
             "benefit_3_enabled": true,
-            "benefit_3_icon": "shopify://shop_images/Anti-Pilling_Finish.svg",
-            "benefit_3_icon_alt": "Anti-Pilling Finish icon",
-            "benefit_3_text": "Anti-Pilling Finish",
+            "benefit_3_icon": "shopify://shop_images/Naturally_Rounded_Shape.svg",
+            "benefit_3_icon_alt": "Naturally Rounded Shape icon",
+            "benefit_3_text": "Naturally Rounded Shape",
             "benefit_3_link": ""
           },
           "blocks": {}
@@ -315,7 +318,7 @@
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "Custom Yarn Blend",
+            "heading": "Ready Wherever You Go",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 100,
@@ -333,7 +336,7 @@
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
         "full-width-enabled": false,
-        "color-body-text": "#2B2B2B",
+        "color-body-text": "rgba(0,0,0,0)",
         "background_color": "",
         "background_gradient": "",
         "margin-top": 20,
@@ -347,47 +350,21 @@
     "text_overlay_9AbVzy": {
       "type": "text-overlay",
       "blocks": {
-        "text_PxEtfk": {
-          "type": "text",
+        "heading_HTXxfm": {
+          "type": "heading",
           "settings": {
             "show_block": true,
-            "text": "<p>1:1 Premium Fabric Blending</p>",
+            "heading": "<p>Travel Essential</p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 16,
-            "animation": "none"
-          }
-        },
-        "text_HJHdhA": {
-          "type": "text",
-          "settings": {
-            "show_block": true,
-            "text": "<p>Tencel Modal Skin-friendly Texture</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 16,
-            "animation": "none"
-          }
-        },
-        "text_8Nir6j": {
-          "type": "text",
-          "settings": {
-            "show_block": true,
-            "text": "<p>Combed Cotton Shaping Support</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 16,
+            "mobile_size": 16,
+            "desktop_size": 36,
             "animation": "none"
           }
         }
       },
       "block_order": [
-        "text_PxEtfk",
-        "text_HJHdhA",
-        "text_8Nir6j"
+        "heading_HTXxfm"
       ],
       "name": "Text Overlay",
       "settings": {
@@ -405,7 +382,7 @@
         "mobile_content_gap": 16,
         "mobile_content_layout": "overlay",
         "mobile_overlay_x": 50,
-        "mobile_overlay_y": 85,
+        "mobile_overlay_y": 50,
         "mobile_overlay_safe_padding": 16,
         "content_alignment": "center",
         "content_text_align": "center",
@@ -437,7 +414,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p>Powered by Austrian TENCEL™ Modal</p>",
+            "heading": "<p>Replaceable Adhesive</p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -504,12 +481,12 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Wash-Ready Performance",
+            "heading": "Skin-Friendly Adhesive",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Resists wrinkles and maintains its shape",
-            "text_disable_on_mobile": true,
+            "text": "Gentle on skin with reliable all-day hold.",
+            "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
             "button_disable_on_mobile": false,
@@ -535,12 +512,12 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Gentle Skin Finish",
+            "heading": "Washable & Reusable",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Soft and comfortable against your skin",
-            "text_disable_on_mobile": true,
+            "text": "Designed to maintain adhesion after repeated use.",
+            "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
             "button_disable_on_mobile": false,
@@ -563,7 +540,7 @@
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Thoughtful Care, Lasting Comfort",
+        "title": "Long-Lasting Wear",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": true,
         "full-width-enabled": false,
@@ -579,10 +556,10 @@
         "margin-bottom-mobile": 10
       }
     },
-    "grid_view_h8yryQ": {
+    "grid_view_nKwkMT": {
       "type": "grid-view",
       "blocks": {
-        "image_DmQQEq": {
+        "image_BrqAJn": {
           "type": "image",
           "settings": {
             "subheading": "",
@@ -593,12 +570,12 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Signature Flared Silhouette",
+            "heading": "Rounded Cup Design",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Enhances your natural proportions.",
-            "text_disable_on_mobile": true,
+            "text": "Creates a natural, fuller silhouette",
+            "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
             "button_disable_on_mobile": false,
@@ -613,7 +590,7 @@
             "mobile_text_horizontal_position": "left"
           }
         },
-        "image_VzP6Fc": {
+        "image_WyXVAN": {
           "type": "image",
           "settings": {
             "subheading": "",
@@ -624,12 +601,12 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "3D Tailored Structure",
+            "heading": "Ultra-Thin Edge",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Creates a refined, structured look.",
-            "text_disable_on_mobile": true,
+            "text": "Disappears under clothing",
+            "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
             "button_disable_on_mobile": false,
@@ -646,13 +623,13 @@
         }
       },
       "block_order": [
-        "image_DmQQEq",
-        "image_VzP6Fc"
+        "image_BrqAJn",
+        "image_WyXVAN"
       ],
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Designed for a Flattering Shape",
+        "title": "Designed to Disappear",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": true,
         "full-width-enabled": false,
@@ -664,104 +641,109 @@
         "margin-top": 40,
         "margin-bottom": 40,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 10
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 0
       }
     },
-    "collage_z9HLJy": {
-      "type": "collage",
+    "grid_view_cCPAKE": {
+      "type": "grid-view",
       "blocks": {
-        "image_aYGXRy": {
+        "image_VDP6r9": {
           "type": "image",
           "settings": {
-            "heading": "Luxury Natural Mother-of-pearl Button",
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
             "text": "",
             "text_disable_on_mobile": false,
-            "text_style": "body",
             "button_select": "primary",
             "button_label": "",
             "button_disable_on_mobile": false,
             "button_link": "",
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center",
+            "button_link_in_new_window": false,
             "color-body-text": "",
             "color-overlay": "",
-            "color-overlay-opacity": 100
-          }
-        },
-        "image_nPeeem": {
-          "type": "image",
-          "settings": {
-            "heading": "Adjustable Comfort Waist",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
+            "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center",
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 100
-          }
-        },
-        "image_eVU3Bb": {
-          "type": "image",
-          "settings": {
-            "heading": "Contrast Binding Detail",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center",
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 100
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
           }
         }
       },
       "block_order": [
-        "image_aYGXRy",
-        "image_nPeeem",
-        "image_eVU3Bb"
+        "image_VDP6r9"
       ],
-      "name": "t:sections.collage.settings.presets.name",
+      "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "Attention to Every Detail",
-        "heading_richtext": "<h2>Collage</h2>",
+        "title": "Invisible Comfort",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": true,
         "full-width-enabled": false,
-        "desktop_layout": "row",
-        "spacing_desktop": "16",
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
+        "margin-top": 40,
+        "margin-bottom": 40,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 0
+      }
+    },
+    "pair_comparison_XqiQLD": {
+      "type": "pair-comparison",
+      "name": "Pair Comparison",
+      "settings": {
+        "image_ratio": "1 / 1",
+        "image_fit": "cover",
+        "image_radius": 12,
+        "brand_1": "Without",
+        "title_1": "",
+        "description_1": "",
+        "brand_2": "With",
+        "title_2": "",
+        "description_2": "",
+        "width_style": "full",
+        "mobile_max_width": 420,
+        "desktop_max_width": 1240,
+        "gap_mobile": 12,
+        "gap_desktop": 24,
+        "text_padding_mobile": 10,
+        "text_padding_desktop": 18,
+        "title_description_gap": 4,
+        "brand_color": "#693227",
+        "brand_size_mobile": 15,
+        "brand_size_desktop": 22,
+        "brand_letter_spacing": -2,
+        "brand_text_transform": "none",
+        "title_color": "#2b2b2b",
+        "title_size_mobile": 16,
+        "title_size_desktop": 26,
+        "title_weight": "700",
+        "title_letter_spacing": -2,
+        "description_color": "#6f6f6f",
+        "description_size_mobile": 9,
+        "description_size_desktop": 14,
+        "description_letter_spacing": -2,
+        "section_background": "#ffffff",
+        "side_padding_mobile": 20,
+        "side_padding_desktop": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 40
       }
     }
   },
@@ -774,7 +756,8 @@
     "text_overlay_9AbVzy",
     "text_overlay_pPWpUC",
     "grid_view_wCynBd",
-    "grid_view_h8yryQ",
-    "collage_z9HLJy"
+    "grid_view_nKwkMT",
+    "grid_view_cCPAKE",
+    "pair_comparison_XqiQLD"
   ]
 }

@@ -56,9 +56,7 @@
             "products": [
               "eros-no-2-20d-tight-beige",
               "eros-no-2-20d-tight-black"
-            ],
-            "enable_display_gallery": false,
-            "display_button_label": "View display"
+            ]
           }
         },
         "variant_picker_7mHC3V": {
@@ -80,7 +78,10 @@
             "variant_name": "",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "information_popup_pw9mqt": {
@@ -186,19 +187,19 @@
             "text_size_desktop": 14,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
-            "benefit_1_icon": "shopify://shop_images/Double_Sided_Adhesive.svg",
-            "benefit_1_icon_alt": "Double Sided Adhesive icon",
-            "benefit_1_text": "Double Sided Adhesive",
+            "benefit_1_icon": "shopify://shop_images/Feather_of_Velvet.svg",
+            "benefit_1_icon_alt": "Ultra-Light 10g icon",
+            "benefit_1_text": "Ultra-Light 10g",
             "benefit_1_link": "",
             "benefit_2_enabled": true,
-            "benefit_2_icon": "shopify://shop_images/Secure_All_Day_Hold.svg",
+            "benefit_2_icon": "shopify://shop_images/Breathable_Comfort.svg",
             "benefit_2_icon_alt": "Secure All Day Hold icon",
             "benefit_2_text": "Secure All Day Hold",
             "benefit_2_link": "",
             "benefit_3_enabled": true,
-            "benefit_3_icon": "shopify://shop_images/Sweat_Water_Resistant.svg",
-            "benefit_3_icon_alt": "Sweat Water Resistant con",
-            "benefit_3_text": "Sweat Water Resistant",
+            "benefit_3_icon": "shopify://shop_images/Seamless_Invisible.svg",
+            "benefit_3_icon_alt": "Seamless Invisible icon",
+            "benefit_3_text": "Seamless Invisible",
             "benefit_3_link": ""
           },
           "blocks": {}

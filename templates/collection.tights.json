@@ -1,0 +1,731 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": false,
+        "text_color": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 16,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_placeholder_image": true,
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 260,
+        "mobile_fixed_height": 260,
+        "full-width-enabled": true,
+        "size_heading": 180,
+        "size_heading_mobile": 230,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 12,
+        "margin-bottom": 12,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "title": {
+      "type": "main-collection-title",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": false,
+        "show_collection_description": true,
+        "desktop_text_horizontal_position": "center",
+        "size_heading": 500,
+        "size_heading_mobile": 140,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#ff9900",
+        "margin-top": 32,
+        "margin-bottom": 16,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "separator_frYThK": {
+      "type": "separator",
+      "disabled": true,
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Separator</h2>",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#000000",
+        "color-body-text": "",
+        "color-section-background": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 12,
+        "columns_mobile": "2",
+        "columns_desktop": "4",
+        "spacing_desktop": "16",
+        "full-width-enabled": true,
+        "spacing_mobile": "16",
+        "image_ratio": "portrait",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": true,
+        "enable_product_url_within_collection": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "text_alignment": "left",
+        "toolbar_style": "buttons",
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "filter_position": "drawer",
+        "open_first_filter": false,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_banner_QNznE6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_J6L6bU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sofneu Tights",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 180
+          }
+        },
+        "subheading_Cr6n9r": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Tights for Everyday Moment",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": true,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 0.8,
+            "size_text_desktop": 100,
+            "size_text_mobile": 110
+          }
+        }
+      },
+      "block_order": [
+        "heading_J6L6bU",
+        "subheading_Cr6n9r"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/08162268.jpg",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 0,
+        "color-body-text": "{{ settings.colors.background }}",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 20,
+        "lcp_optimize": true
+      }
+    },
+    "category_guide_carousel_rAV7Ek": {
+      "type": "category-guide-carousel",
+      "blocks": {
+        "card_ynqUiy": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "name": "Ultra Sheer (10D)",
+            "temperature": "25–35°C",
+            "feeling": "Almost invisible",
+            "link": ""
+          }
+        },
+        "card_Qx8t9L": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "name": "Sheer (20D)",
+            "temperature": "20–30°C",
+            "feeling": "Light sheer",
+            "link": ""
+          }
+        },
+        "card_rrdtV3": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "name": "Semi-Opaque (40D)",
+            "temperature": "15–25°C",
+            "feeling": "Light opaque",
+            "link": ""
+          }
+        },
+        "card_yWMPqH": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "name": "Opaque (80D)",
+            "temperature": "-5–15°C",
+            "feeling": "Opaque",
+            "link": ""
+          }
+        },
+        "card_BVzyjj": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "name": "Fleece (200D)",
+            "temperature": "-10–5°C",
+            "feeling": "Opaque Extra warm",
+            "link": ""
+          }
+        },
+        "card_piE7Km": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "name": "Patterned",
+            "temperature": "10–25°C",
+            "feeling": "Chic essentials",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_ynqUiy",
+        "card_Qx8t9L",
+        "card_rrdtV3",
+        "card_yWMPqH",
+        "card_BVzyjj",
+        "card_piE7Km"
+      ],
+      "name": "Category Guide Carousel",
+      "settings": {
+        "title": "Shop by Sheerness",
+        "section_background": "#ffffff",
+        "card_background": "#f8f8f8",
+        "title_color": "#2b2b2b",
+        "card_title_color": "#2b2b2b",
+        "card_text_color": "#6f6f6f",
+        "icon_color": "#6f6f6f",
+        "divider_color": "#ece8e0",
+        "title_size_mobile": 16,
+        "title_size_desktop": 24,
+        "mobile_max_width": 350,
+        "mobile_side_padding": 14,
+        "desktop_max_width": 1400,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 48,
+        "padding_bottom_desktop": 48
+      }
+    },
+    "rich_text_zM47mb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_knqBJK": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": true,
+            "heading": "Not Sure Which One to Choose?",
+            "heading_richtext": "<p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\">Not Sure Which One to Choose?</a></p>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_knqBJK"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "#faeee5",
+        "background_gradient": "",
+        "margin-top": 24,
+        "margin-bottom": 24,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 12,
+        "margin-bottom-mobile": 12,
+        "compact_size": true
+      }
+    },
+    "feature_text_image_LEkWNX": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "thickness": "Ultra Sheer (10D)",
+        "weather": "Summer / Hot Days",
+        "content_title": "No. series powered by Soflume™",
+        "content": "<p>A proprietary knitting innovation, exclusive to Sofneu</p><p>Engineered for next-level comfort — ultra-light, soft, and barely there like a second skin</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64
+      }
+    },
+    "feature_text_image_b3rxpW": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "thickness": "Sheer (20D)",
+        "weather": "Work / Everyday",
+        "content_title": "No. series powered by Soflume™",
+        "content": "<p>A proprietary knitting innovation, exclusive to Sofneu</p><p>Engineered for everyday comfort — light, smooth, and naturally sheer for all-day wear</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64
+      }
+    },
+    "feature_text_image_CXdbKc": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "thickness": "Semi-Opaque (40D)",
+        "weather": "Everyday / Casual",
+        "content_title": "Finished with a soft, velvet-like and smoother look",
+        "content": "<p>Shaping waistband for a flattering silhouette</p><p>Seamless gusset for all-day comfort</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64
+      }
+    },
+    "feature_text_image_x6bMet": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "thickness": "Opaque (80D)",
+        "weather": "Chilly Days / Fall Looks",
+        "content_title": "Crafted with a dense, velvet-like finish look",
+        "content": "<p>Shaping waistband for a more structured silhouette</p><p>Seamless gusset for lasting comfort</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64
+      }
+    },
+    "feature_text_image_7i3mka": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "thickness": "Opaque (200D)",
+        "weather": "Freezing Days / Outdoor Winter",
+        "content_title": "Sheer glow finish with a natural, skin-like look, even in freezing temperatures.",
+        "content": "<p>Maximum warmth with a soft, cozy feel</p><p>Plush fleece lining for maximum warmth and comfort</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64
+      }
+    },
+    "feature_text_image_HEDFYG": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "thickness": "Patterned",
+        "weather": "Spring / Autumn",
+        "content_title": "Designed for Style to complement different looks",
+        "content": "<p>A sheer base keeps the look light and balanced</p><p>Engineered for clarity, each pattern looks polished and sharp</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64
+      }
+    },
+    "faq_tabs_mKhqgV": {
+      "type": "faq-tabs",
+      "blocks": {
+        "faq_hHRt6R": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "How do I choose the right tights thickness?",
+            "answer": "<p>Choose based on your desired coverage, warmth, and occasion. Ultra Sheer (10D) offers a barely-there feel for warm days, Sheer (20D) balances elegance and everyday wear, Semi-Opaque (40D) provides more coverage with a refined matte finish, and Opaque (80D+) delivers extra warmth for colder weather.</p>",
+            "default_open": false
+          }
+        },
+        "faq_mr4c73": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "What is the difference between Ultra Sheer, Sheer, Semi-Opaque, and Opaque tights?",
+            "answer": "<p>The main difference is coverage, warmth, and durability. Lower denier styles feel lighter and more invisible, while higher denier styles provide more coverage, warmth, and everyday durability.</p>",
+            "default_open": false
+          }
+        },
+        "faq_EHwrKc": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Which tights are best for everyday wear?",
+            "answer": "<p>For everyday wear, we recommend 20D–40D tights. They offer the ideal balance of comfort, coverage, and durability for work, daily outfits, and versatile styling.</p>",
+            "default_open": false
+          }
+        },
+        "faq_m9jhTq": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "How do I choose my tights size?",
+            "answer": "<p>Choose your size based on your height and weight using our size guide. If you are between sizes, we recommend choosing the larger size for a more comfortable fit and easier movement.</p>",
+            "default_open": false
+          }
+        },
+        "faq_dEJEbe": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Will tights stay in place while wearing?",
+            "answer": "<p>Yes. Our adaptive stretch and thoughtfully designed waistband help create a secure, second-skin fit that moves naturally with your body.</p>",
+            "default_open": false
+          }
+        },
+        "faq_9PXL8n": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Are tights comfortable for all-day wear?",
+            "answer": "<p>Yes. Sofneu tights are designed with soft, flexible yarns and a comfortable waistband to provide lightweight comfort from morning to night.</p>",
+            "default_open": false
+          }
+        },
+        "faq_faphMC": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Will sheer tights snag easily?",
+            "answer": "<p>Ultra Sheer tights are naturally delicate due to their fine yarns. For improved durability, choose 20D or above and follow proper care instructions for longer wear.</p>",
+            "default_open": false
+          }
+        },
+        "faq_xLMWTg": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "How should I wash and care for my tights?",
+            "answer": "<p>We recommend hand washing or using a laundry bag on a gentle cycle. Avoid sharp objects and high heat to help maintain softness and elasticity.</p>",
+            "default_open": false
+          }
+        },
+        "faq_qPG6R8": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "How long do Sofneu tights typically last?",
+            "answer": "<p>With proper care, Sofneu tights are designed for repeated wear. Higher denier styles like 40D and above offer enhanced durability for everyday use.</p>",
+            "default_open": false
+          }
+        },
+        "faq_UPennz": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_4",
+            "question": "What makes Sofneu tights different?",
+            "answer": "<p>Sofneu combines premium yarns, high-density knitting, and thoughtful design to create tights that feel softer, fit better, and deliver refined comfort.</p>",
+            "default_open": false
+          }
+        },
+        "faq_LXBWe3": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_4",
+            "question": "What is Soflume™ technology?",
+            "answer": "<p>Soflume™ is our signature yarn innovation designed for an ultra-soft, lightweight feel with exceptional stretch and a smooth second-skin sensation.</p>",
+            "default_open": false
+          }
+        },
+        "faq_QpeBR8": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_4",
+            "question": "What is 900-Needle Knit technology?",
+            "answer": "<p>Our 900-Needle Knit technology creates a finer, smoother fabric structure compared with standard knitting, delivering enhanced softness, refined texture, and improved durability.</p>",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_hHRt6R",
+        "faq_mr4c73",
+        "faq_EHwrKc",
+        "faq_m9jhTq",
+        "faq_dEJEbe",
+        "faq_9PXL8n",
+        "faq_faphMC",
+        "faq_xLMWTg",
+        "faq_qPG6R8",
+        "faq_UPennz",
+        "faq_LXBWe3",
+        "faq_QpeBR8"
+      ],
+      "name": "FAQ Tabs",
+      "settings": {
+        "heading": "GENERAL FAQS",
+        "heading_size_mobile": 16,
+        "heading_size_desktop": 18,
+        "heading_letter_spacing": -2,
+        "heading_weight": "400",
+        "heading_color": "#2b2b2b",
+        "heading_alignment": "center",
+        "heading_spacing": 16,
+        "show_tabs": true,
+        "default_tab": "tab_1",
+        "tab_1_label": "Choose",
+        "tab_2_label": "Fit",
+        "tab_3_label": "Care",
+        "tab_4_label": "Tech",
+        "tab_size_mobile": 14,
+        "tab_size_desktop": 28,
+        "tab_letter_spacing": -2,
+        "tabs_spacing": 20,
+        "tab_gap": 10,
+        "tab_height": 30,
+        "tab_padding_x": 14,
+        "tab_radius": 12,
+        "tab_background": "#f8f8f8",
+        "tab_color": "#2b2b2b",
+        "tab_border_color": "#f8f8f8",
+        "tab_border_thickness": 1,
+        "active_tab_background": "#b7644e",
+        "active_tab_color": "#ffffff",
+        "active_tab_border_color": "#b7644e",
+        "section_background": "#ffffff",
+        "max_width": 800,
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "item_gap": 15,
+        "item_radius": 12,
+        "closed_item_height": 42,
+        "closed_background": "#f8f8f8",
+        "closed_border_color": "#f8f8f8",
+        "closed_border_thickness": 1,
+        "open_background": "#faeee5",
+        "open_border_color": "#e8beb0",
+        "item_padding_x": 10,
+        "item_padding_y": 10,
+        "title_icon_gap": 12,
+        "question_icon_gap": 6,
+        "show_question_icon": true,
+        "question_icon_text": "?",
+        "question_icon_size": 16,
+        "question_icon_text_size": 11,
+        "question_icon_background": "#d8b6ad",
+        "question_icon_color": "#6e4136",
+        "question_size_mobile": 14,
+        "question_size_desktop": 14,
+        "question_letter_spacing": -2,
+        "question_weight": "400",
+        "question_color": "#2b2b2b",
+        "chevron_color": "#2b2b2b",
+        "chevron_size": 12,
+        "answer_size_mobile": 12,
+        "answer_size_desktop": 12,
+        "answer_letter_spacing": -2,
+        "answer_line_height": 140,
+        "answer_color": "#6f6f6f",
+        "answer_padding_x": 10,
+        "answer_padding_bottom": 10,
+        "allow_multiple_open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "banner",
+    "title",
+    "separator_frYThK",
+    "product-grid",
+    "image_banner_QNznE6",
+    "category_guide_carousel_rAV7Ek",
+    "rich_text_zM47mb",
+    "feature_text_image_LEkWNX",
+    "feature_text_image_b3rxpW",
+    "feature_text_image_CXdbKc",
+    "feature_text_image_x6bMet",
+    "feature_text_image_7i3mka",
+    "feature_text_image_HEDFYG",
+    "faq_tabs_mKhqgV"
+  ]
+}
