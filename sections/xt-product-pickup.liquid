@@ -1005,6 +1005,10 @@
   }
   .xt-quick-add-drawer__content .xt-quantity-bundle__label {
     font-size: calc(var(--font-base-size, 14px) - 2px);
+    color: rgba(43, 43, 43, 1);
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__label {
+    color: rgba(255, 255, 255, 1);
   }
   {%- comment -%} 价格区：折前价（左，划线灰色）+ 折后价（右，深色）横排 {%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__prices {
@@ -1035,7 +1039,8 @@
   }
   {%- comment -%} 选中态：背景色 #A65D4A；未选中：灰色背景 rgba(210,210,210,1) {%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__btn {
-    background: rgba(210, 210, 210, 1);
+    background: #fff;
+    border: 1px solid #D2D2D2;
   }
   .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__btn {
     background: #A65D4A;
