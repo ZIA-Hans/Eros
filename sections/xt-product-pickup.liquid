@@ -173,17 +173,12 @@
         return '$' + (cents / 100).toFixed(2);
       }
 
-      // 计算套装折后总价（单件价 × 件数，再按折扣类型扣减）
+      // 计算套装折后总价（单件价 × 件数，再按百分比折扣扣减）
+      // discount_value 直接就是百分比折扣值，如 20 = 打8折（减20%）
       function calcBundlePrice(unitPriceCents, bundle) {
         const subtotal = unitPriceCents * bundle.quantity;
         if (!bundle.discount_value) return subtotal;
-        if (bundle.discount_type === 'percentage') {
-          return Math.round(subtotal * (1 - bundle.discount_value / 100));
-        }
-        if (bundle.discount_type === 'fixed_amount') {
-          return Math.max(0, subtotal - bundle.discount_value * 100);
-        }
-        return subtotal;
+        return Math.round(subtotal * (1 - bundle.discount_value / 100));
       }
 
       // 组装选项列表：1 Pair（常驻）+ 各套装配置

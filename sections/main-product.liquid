@@ -3360,7 +3360,6 @@
           {
             "quantity": {{ bundle.quantity.value | default: 1 }},
             "label": {{ bundle.label.value | json }},
-            "discount_type": {{ bundle.discount_type.value | json }},
             "discount_value": {{ bundle.discount_value.value | default: 0 }}
           }
         {%- endfor -%}]
