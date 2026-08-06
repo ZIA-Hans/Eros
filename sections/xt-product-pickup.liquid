@@ -47,57 +47,6 @@
               enable_vendor_link: false,
               show_video: false
             %}
-
-            {%- comment -%} ========== 独立 Color Swatch（不依赖全局配置）========== {%- endcomment -%}
-            {%- assign color_option = null -%}
-            {%- assign color_option_index = 0 -%}
-            {%- for option in prod.options_with_values -%}
-              {%- assign option_name_lower = option.name | downcase -%}
-              {%- if option_name_lower contains 'color' or option_name_lower contains 'colour' or option_name_lower contains '颜色' -%}
-                {%- assign color_option = option -%}
-                {%- assign color_option_index = forloop.index -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endfor -%}
-
-            {%- if color_option and color_option.values.size > 0 -%}
-              <div class="xt-color-swatches">
-                {%- for value in color_option.values -%}
-                  {%- comment -%} 找这个颜色值对应的第一个 variant {%- endcomment -%}
-                  {%- assign swatch_variant = null -%}
-                  {%- for variant in prod.variants -%}
-                    {%- if color_option_index == 1 and variant.option1 == value -%}
-                      {%- assign swatch_variant = variant -%}
-                      {%- break -%}
-                    {%- elsif color_option_index == 2 and variant.option2 == value -%}
-                      {%- assign swatch_variant = variant -%}
-                      {%- break -%}
-                    {%- elsif color_option_index == 3 and variant.option3 == value -%}
-                      {%- assign swatch_variant = variant -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-
-                  {%- if swatch_variant -%}
-                    <a 
-                      href="{{ prod.url }}?variant={{ swatch_variant.id }}"
-                      class="xt-color-swatch {% unless swatch_variant.available %}unavailable{% endunless %}"
-                      title="{{ value }}"
-                      style="
-                        {%- if value.swatch.color -%}
-                          background-color: {{ value.swatch.color }};
-                        {%- elsif value.swatch.image -%}
-                          background-image: url({{ value.swatch.image | image_url: width: 48 }});
-                          background-size: cover;
-                        {%- else -%}
-                          background-color: #e0e0e0;
-                        {%- endif -%}
-                      "
-                    ></a>
-                  {%- endif -%}
-                {%- endfor -%}
-              </div>
-            {%- endif -%}
           {%- else -%}
             <div class="xt-product-pickup__placeholder">
               <p>在 Theme Editor 选择商品</p>
