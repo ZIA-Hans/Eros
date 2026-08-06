@@ -1020,7 +1020,7 @@
     font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.18px;
-    color: #2B2B2B;
+    color: rgba(43, 43, 43, 1);
   }
   {%- comment -%} 折前价（划线，左侧）{%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__price--compare {
@@ -1040,6 +1040,11 @@
   .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__btn {
     background: #A65D4A;
     border-color: #A65D4A;
+  }
+  {%- comment -%} 选中态：折后价 + 折前价字色变白（因为背景是 #A65D4A）{%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__price,
+  .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__price--compare {
+    color: rgba(255, 255, 255, 1);
   }
   .xt-quick-add-drawer__content .wt-product__feature-tags {
     margin: 16px 0;
