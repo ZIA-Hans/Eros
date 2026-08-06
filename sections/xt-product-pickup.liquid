@@ -1006,27 +1006,40 @@
   .xt-quick-add-drawer__content .xt-quantity-bundle__label {
     font-size: calc(var(--font-base-size, 14px) - 2px);
   }
-  {%- comment -%} 价格区：折前价（左，划线）+ 折后价（右）横排 {%- endcomment -%}
+  {%- comment -%} 价格区：折前价（左，划线灰色）+ 折后价（右，深色）横排 {%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__prices {
     display: flex;
     align-items: baseline;
     gap: 4px;
   }
+  {%- comment -%} 折后价（实价，右侧）{%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__price {
     font-size: 9px;
     font-family: "PingFang SC", Arial, sans-serif;
-    font-weight: 400;
+    font-style: normal;
+    font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.18px;
     color: #2B2B2B;
   }
+  {%- comment -%} 折前价（划线，左侧）{%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__price--compare {
-    text-decoration: line-through;
+    font-size: 9px;
+    font-family: "PingFang SC", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.18px;
     color: rgba(43, 43, 43, 0.70);
+    text-decoration: line-through;
   }
-  {%- comment -%} 选中态：复用主题 option 选中边框色 {%- endcomment -%}
+  {%- comment -%} 选中态：背景色 #A65D4A；未选中：灰色背景 rgba(210,210,210,1) {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__btn {
+    background: rgba(210, 210, 210, 1);
+  }
   .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__btn {
-    border-color: var(--color-input-border-active, #2B2B2B);
+    background: #A65D4A;
+    border-color: #A65D4A;
   }
   .xt-quick-add-drawer__content .wt-product__feature-tags {
     margin: 16px 0;
