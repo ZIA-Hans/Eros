@@ -3349,6 +3349,24 @@
       </div>
     </section>
 
+    {%- comment -%} Quantity 套装配置数据块（供 Quick-Add 抽屉 fetch 解析）
+    数据来源：product.metafields.custom.quantity_bundle（list of metaobject）
+    没有配置时不输出，抽屉端据此判断是否展示套装栏目 {%- endcomment -%}
+    {%- if product.metafields.custom.quantity_bundle.value -%}
+      <script type="application/json" data-quantity-bundle>
+        {%- assign bundle_list = product.metafields.custom.quantity_bundle.value -%}
+        [{%- for bundle in bundle_list -%}
+          {%- unless forloop.first -%},{%- endunless -%}
+          {
+            "quantity": {{ bundle.quantity.value | default: 1 }},
+            "label": {{ bundle.label.value | json }},
+            "discount_type": {{ bundle.discount_type.value | json }},
+            "discount_value": {{ bundle.discount_value.value | default: 0 }}
+          }
+        {%- endfor -%}]
+      </script>
+    {%- endif -%}
+
     {% if section.settings.enable_sticky_buy_button %}
       <sticky-buy-button class="wt-product__sticky-buy 
         {% if section.settings.sticky_button_type == 'floating' %} wt-product__floating-buy {% endif %} 
