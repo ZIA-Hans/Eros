@@ -166,6 +166,111 @@
       viewAllContainer.classList.remove('hidden');
     }
 
+    // 插入"Quantity"模拟 option：1 Pair（默认选中，显示当前价格）+ 3 Pairs（点击直接加 3 件跳转 /cart）
+    function injectQuantityBundle(productMain) {
+      const form = productMain.querySelector('form[data-type="add-to-cart-form"]');
+      if (!form) return;
+      const buttonWrapper = form.querySelector('.wt-product__add-to-cart_form--wrapper');
+      if (!buttonWrapper) return;
+      if (form.querySelector('.xt-quantity-bundle')) return;
+
+      // 读取当前售价文本（从 price 元素摘取最终售价）
+      function readCurrentPrice() {
+        const quickSection = productMain
+          .querySelector('variant-options')
+          ?.getAttribute('data-section');
+        const priceEl = quickSection
+          ? productMain.querySelector(`#price-${quickSection}`)
+          : productMain.querySelector('.wt-product__price');
+        if (!priceEl) return '';
+        // 优先取售价（sale/final），兜底取常规价
+        const final =
+          priceEl.querySelector('.price-item--last') ||
+          priceEl.querySelector('.wt-product__price__final') ||
+          priceEl.querySelector('.price-item--regular');
+        return final ? final.textContent.trim() : '';
+      }
+
+      const bundle = document.createElement('div');
+      bundle.className = 'wt-product__option js xt-quantity-bundle';
+      bundle.innerHTML = `
+        <div class="wt-product__option__wrapper">
+          <div class="wt-product__option__title">Quantity</div>
+        </div>
+        <ul class="f-button__list xt-quantity-bundle__list">
+          <li class="f-button__list__item xt-quantity-bundle__item xt-quantity-bundle__item--selected">
+            <button type="button" class="f-button__list__link xt-quantity-bundle__btn" data-qty="1">
+              <span class="xt-quantity-bundle__label">1 Pair</span>
+              <span class="xt-quantity-bundle__price">${readCurrentPrice()}</span>
+            </button>
+          </li>
+          <li class="f-button__list__item xt-quantity-bundle__item">
+            <button type="button" class="f-button__list__link xt-quantity-bundle__btn" data-qty="3">
+              <span class="xt-quantity-bundle__label">3 Pairs</span>
+            </button>
+          </li>
+        </ul>
+      `;
+      form.insertBefore(bundle, buttonWrapper);
+
+      // 1 Pair（默认选中）切换选中态，不触发加购
+      const onePairBtn = bundle.querySelector('.xt-quantity-bundle__btn[data-qty="1"]');
+      onePairBtn?.addEventListener('click', () => {
+        bundle.querySelectorAll('.xt-quantity-bundle__item').forEach((li) =>
+          li.classList.remove('xt-quantity-bundle__item--selected'),
+        );
+        onePairBtn.closest('.xt-quantity-bundle__item').classList.add('xt-quantity-bundle__item--selected');
+      });
+
+      // 3 Pairs：原生表单提交加 3 件，跳转 /cart（绕过 product-form.js 的 AJAX）
+      bundle.querySelector('.xt-quantity-bundle__btn[data-qty="3"]').addEventListener('click', () => {
+        const variantIdInput = form.querySelector('input[name="id"]');
+        if (!variantIdInput || !variantIdInput.value) return;
+
+        const tempForm = document.createElement('form');
+        tempForm.method = 'POST';
+        tempForm.action = `${window.Shopify?.routes?.root || '/'}cart/add`;
+        tempForm.style.display = 'none';
+
+        const idInput = document.createElement('input');
+        idInput.type = 'hidden';
+        idInput.name = 'id';
+        idInput.value = variantIdInput.value;
+        tempForm.appendChild(idInput);
+
+        const qtyInput = document.createElement('input');
+        qtyInput.type = 'hidden';
+        qtyInput.name = 'quantity';
+        qtyInput.value = '3';
+        tempForm.appendChild(qtyInput);
+
+        const redirectInput = document.createElement('input');
+        redirectInput.type = 'hidden';
+        redirectInput.name = 'return_to';
+        redirectInput.value = '/cart';
+        tempForm.appendChild(redirectInput);
+
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+      });
+
+      // 监听价格元素变化，实时同步 1 Pair 下方显示的当前售价
+      // variants.js 切换变体时会把新价格 innerHTML 写入 #price-xxx
+      const quickSection = productMain
+        .querySelector('variant-options')
+        ?.getAttribute('data-section');
+      const priceEl = quickSection
+        ? productMain.querySelector(`#price-${quickSection}`)
+        : null;
+      if (priceEl) {
+        const priceLabel = bundle.querySelector('.xt-quantity-bundle__price');
+        const priceObserver = new MutationObserver(() => {
+          priceLabel.textContent = readCurrentPrice();
+        });
+        priceObserver.observe(priceEl, { childList: true, subtree: true, characterData: true });
+      }
+    }
+
     function closeDrawer() {
       currentAbortController?.abort();
       drawer.hide();
@@ -352,6 +457,9 @@
           wtProductWrapper.appendChild(productMain);
           contentEl.appendChild(wtProductWrapper);
           showViewAllDetails(productUrl);
+
+          // 插入"Quantity"模拟 option + "3 Pairs"快捷加购按钮（加购后跳转 /cart）
+          injectQuantityBundle(productMain);
 
           // 初始化变体选择器（如果主题用自定义元素承载变体切换逻辑）
           if (variantOptions && typeof variantOptions.initialize === 'function') {
@@ -784,6 +892,9 @@
   .xt-quick-add-drawer__content .product__tax.caption.rte {
     margin-bottom: 0;
   }
+  .xt-quick-add-drawer__content .wt-product__options {
+    margin-top: 15px;
+  }
   .xt-quick-add-drawer__content .wt-product__option .wt-product__option__dropdown {
     margin-bottom: 0;
   }
@@ -795,6 +906,38 @@
   }
   .xt-quick-add-drawer__content .wt-product__add-to-cart_form.main-product__buy-buttons--container {
     margin-top: 16px;
+  }
+  {%- comment -%} Quantity 模拟 option + 3 Pairs 快捷加购按钮 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__btn {
+    width: auto;
+    min-width: 5rem;
+    height: auto;
+    min-height: 3rem;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.3;
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__label {
+    font-size: calc(var(--font-base-size, 14px) - 2px);
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__price {
+    font-size: calc(var(--font-base-size, 14px) - 2px);
+    opacity: 0.7;
+  }
+  {%- comment -%} 选中态：复用主题 option 选中边框色 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__btn {
+    border-color: var(--color-input-border-active, #2B2B2B);
   }
   .xt-quick-add-drawer__content .wt-product__feature-tags {
     margin: 16px 0;
