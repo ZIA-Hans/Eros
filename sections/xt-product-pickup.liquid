@@ -7,13 +7,11 @@
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-{%- comment -%} sl_drawer 模式的抽屉用主题 Swiper 做多图画廊，需加载 swiper.css + slider.js {%- endcomment -%}
-{%- if section.settings.drawer_style == 'sl_drawer' -%}
-  {{ 'swiper.css' | asset_url | stylesheet_tag }}
-  <script type="module" src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
+{%- comment -%} 移动端 Quick-Add 用底部 Drawer + 多图轮播，需加载 swiper.css + slider.js {%- endcomment -%}
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+<script type="module" src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
-<div class="xt-product-pickup" data-section-id="{{ section.id }}" data-drawer-style="{{ section.settings.drawer_style }}">
+<div class="xt-product-pickup" data-section-id="{{ section.id }}">
 
   {%- if section.settings.title != blank -%}
     <div class="xt-product-pickup__header">
@@ -114,27 +112,26 @@
     </div>
   {%- endif -%}
 
-  {%- if section.settings.drawer_style == 'sl_drawer' -%}
-    <sl-drawer id="xt-quick-add-drawer-{{ section.id }}" class="xt-quick-add-drawer" placement="bottom" label="Quick Add" no-header>
-      <div class="xt-quick-add-drawer__header">
-        <span class="xt-quick-add-drawer__title">Quick Add</span>
-        <div class="xt-quick-add-drawer__close" role="button" tabindex="0" aria-label="{{ 'aria-label.close-button' | t }}">
-          {% render 'icons', id: 'close' %}
-        </div>
+  {%- comment -%} 移动端 Quick-Add 底部 Drawer（PC 走主题原生侧边栏，由 JS 按 innerWidth 判定）{%- endcomment -%}
+  <sl-drawer id="xt-quick-add-drawer-{{ section.id }}" class="xt-quick-add-drawer" placement="bottom" label="Quick Add" no-header>
+    <div class="xt-quick-add-drawer__header">
+      <span class="xt-quick-add-drawer__title">Quick Add</span>
+      <div class="xt-quick-add-drawer__close" role="button" tabindex="0" aria-label="{{ 'aria-label.close-button' | t }}">
+        {% render 'icons', id: 'close' %}
       </div>
-      <div class="xt-quick-add-drawer__loader">{% render 'loader' %}</div>
-      <div class="xt-quick-add-drawer__content"></div>
-      <div class="xt-quick-add-drawer__view-all-container hidden">
-        <a href="#">
-          <span>{{ 'general.quick_add.view_all_details' | t }}</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-            <path d="M5.65479 0.0600586C9.51861 -0.152443 12.5106 2.91321 12.1147 6.78467C11.8286 9.58123 9.47831 11.8998 6.67529 12.1294C2.61645 12.4617 -0.667983 8.81874 0.186035 4.80322C0.723795 2.27506 3.05394 0.203058 5.65479 0.0600586ZM5.93311 0.419434C1.71437 0.54172 -0.971454 5.17125 1.15674 8.87744C2.95093 12.0014 7.21461 12.7812 9.9126 10.3198C13.6075 6.94832 11.4901 0.778133 6.53857 0.431152V0.430176L5.93311 0.419434Z" fill="#2B2B2B" stroke="#2B2B2B" stroke-width="0.1"/>
-            <path d="M6.57642 4.09937C6.78668 4.55143 7.19224 4.9223 7.59985 5.21655C8.14374 5.60917 8.75446 5.87481 9.42114 5.97144L9.46606 5.97827L9.46313 6.02417L9.44751 6.26636L9.44458 6.3103L9.39966 6.31323C8.90265 6.34052 8.39092 6.5501 7.95435 6.79663C7.39704 7.11145 6.83775 7.57009 6.57153 8.1521L6.55786 8.1814H6.21704L6.22583 8.12378C6.2686 7.85002 6.45121 7.60098 6.61646 7.40308C6.94688 7.00716 7.38575 6.70314 7.82446 6.45093L7.82642 6.44897H7.82739L8.08521 6.32007H2.82935V5.94507H8.11548L7.61157 5.67358L7.60767 5.67163V5.67065C7.19056 5.40511 6.71252 5.00233 6.43091 4.58862C6.34397 4.46085 6.24692 4.31378 6.22583 4.14038L6.21899 4.08765L6.27271 4.08472L6.52856 4.07104L6.56274 4.06909L6.57642 4.09937Z" fill="#2B2B2B" stroke="white" stroke-width="0.1"/>
-          </svg>
-        </a>
-      </div>
-    </sl-drawer>
-  {%- endif -%}
+    </div>
+    <div class="xt-quick-add-drawer__loader">{% render 'loader' %}</div>
+    <div class="xt-quick-add-drawer__content"></div>
+    <div class="xt-quick-add-drawer__view-all-container hidden">
+      <a href="#">
+        <span>{{ 'general.quick_add.view_all_details' | t }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+          <path d="M5.65479 0.0600586C9.51861 -0.152443 12.5106 2.91321 12.1147 6.78467C11.8286 9.58123 9.47831 11.8998 6.67529 12.1294C2.61645 12.4617 -0.667983 8.81874 0.186035 4.80322C0.723795 2.27506 3.05394 0.203058 5.65479 0.0600586ZM5.93311 0.419434C1.71437 0.54172 -0.971454 5.17125 1.15674 8.87744C2.95093 12.0014 7.21461 12.7812 9.9126 10.3198C13.6075 6.94832 11.4901 0.778133 6.53857 0.431152V0.430176L5.93311 0.419434Z" fill="#2B2B2B" stroke="#2B2B2B" stroke-width="0.1"/>
+          <path d="M6.57642 4.09937C6.78668 4.55143 7.19224 4.9223 7.59985 5.21655C8.14374 5.60917 8.75446 5.87481 9.42114 5.97144L9.46606 5.97827L9.46313 6.02417L9.44751 6.26636L9.44458 6.3103L9.39966 6.31323C8.90265 6.34052 8.39092 6.5501 7.95435 6.79663C7.39704 7.11145 6.83775 7.57009 6.57153 8.1521L6.55786 8.1814H6.21704L6.22583 8.12378C6.2686 7.85002 6.45121 7.60098 6.61646 7.40308C6.94688 7.00716 7.38575 6.70314 7.82446 6.45093L7.82642 6.44897H7.82739L8.08521 6.32007H2.82935V5.94507H8.11548L7.61157 5.67358L7.60767 5.67163V5.67065C7.19056 5.40511 6.71252 5.00233 6.43091 4.58862C6.34397 4.46085 6.24692 4.31378 6.22583 4.14038L6.21899 4.08765L6.27271 4.08472L6.52856 4.07104L6.56274 4.06909L6.57642 4.09937Z" fill="#2B2B2B" stroke="white" stroke-width="0.1"/>
+        </svg>
+      </a>
+    </div>
+  </sl-drawer>
 
 </div>
 
@@ -143,10 +140,12 @@
   function init() {
     const section = document.querySelector('.xt-product-pickup[data-section-id="{{ section.id }}"]');
     if (!section) return;
-    if (section.getAttribute('data-drawer-style') !== 'sl_drawer') return;
 
     const drawer = document.getElementById('xt-quick-add-drawer-{{ section.id }}');
     if (!drawer) return;
+
+    // 移动端走底部 Drawer，PC 走主题原生侧边栏（与主题 quick-add.js 的 768 断点一致）
+    const isMobile = () => window.innerWidth < 768;
 
     const contentEl = drawer.querySelector('.xt-quick-add-drawer__content');
     const loaderEl = drawer.querySelector('.xt-quick-add-drawer__loader');
@@ -400,12 +399,14 @@
         });
     }
 
-    // 捕获阶段拦截，抢在主题 <quick-add> 的点击处理器之前触发
+    // 捕获阶段拦截，抢在主题 <quick-add> 的点击处理器之前触发（仅移动端）
+    // PC 端不拦截，放行给主题原生 quick-add.js 的侧边栏
     section.addEventListener(
       'click',
       function (e) {
         const button = e.target.closest('.xt-product-pickup__item quick-add button');
         if (!button) return;
+        if (!isMobile()) return; // PC 走原生侧边栏，不拦截
 
         e.preventDefault();
         e.stopImmediatePropagation();
@@ -680,7 +681,7 @@
   .xt-quick-add-drawer__header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     padding: 14px 16px;
   }
@@ -902,17 +903,6 @@
         { "value": "hover_desktop", "label": "悬停时显示" }
       ],
       "default": "below_product"
-    },
-    {
-      "type": "select",
-      "id": "drawer_style",
-      "label": "Quick-Add 弹层样式",
-      "info": "选择「组件库 Drawer」时，点击 Quick-Add 会用底部 sl-drawer 展示商详，不影响主题其他位置的 quick-add",
-      "options": [
-        { "value": "theme_default", "label": "主题默认（侧边抽屉）" },
-        { "value": "sl_drawer", "label": "组件库 Drawer（底部弹层）" }
-      ],
-      "default": "theme_default"
     }
   ],
   "blocks": [
