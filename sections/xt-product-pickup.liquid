@@ -197,22 +197,32 @@
       (bundleConfigs || []).forEach((bundle, idx) => {
         if (!bundle.quantity || bundle.quantity <= 1) return; // 件数≤1 跳过（和单件重复）
         const label = bundle.label || `${bundle.quantity} Pairs`;
+        let badgeHtml = '';
         let priceHtml = '';
         if (unitPrice != null) {
           const bundlePrice = calcBundlePrice(unitPrice, bundle);
           const originalPrice = unitPrice * bundle.quantity;
-          if (bundlePrice < originalPrice) {
-            // 有折扣：显示折后价 + 划线原价
+          if (bundle.discount_value && bundlePrice < originalPrice) {
+            // 有折扣：顶部促销徽章（省下的金额 + Free shipping）
+            const savedAmount = originalPrice - bundlePrice;
+            badgeHtml = `<span class="xt-quantity-bundle__badge">${formatMoney(savedAmount)} Off  Free shipping</span>`;
+            // 价格区：折前价（左，划线）+ 折后价（右）
             priceHtml = `
-              <span class="xt-quantity-bundle__price">${formatMoney(bundlePrice)}</span>
-              <span class="xt-quantity-bundle__price xt-quantity-bundle__price--compare">${formatMoney(originalPrice)}</span>`;
+              <div class="xt-quantity-bundle__prices">
+                <span class="xt-quantity-bundle__price--compare">${formatMoney(originalPrice)}</span>
+                <span class="xt-quantity-bundle__price">${formatMoney(bundlePrice)}</span>
+              </div>`;
           } else {
-            priceHtml = `<span class="xt-quantity-bundle__price">${formatMoney(bundlePrice)}</span>`;
+            priceHtml = `
+              <div class="xt-quantity-bundle__prices">
+                <span class="xt-quantity-bundle__price">${formatMoney(bundlePrice)}</span>
+              </div>`;
           }
         }
         optionsHtml.push(`
           <li class="f-button__list__item xt-quantity-bundle__item">
             <button type="button" class="f-button__list__link xt-quantity-bundle__btn" data-qty="${bundle.quantity}" data-bundle-idx="${idx}">
+              ${badgeHtml}
               <span class="xt-quantity-bundle__label">${label}</span>
               ${priceHtml}
             </button>
@@ -285,22 +295,27 @@
         const priceObserver = new MutationObserver(() => {
           const newUnitPrice = readCurrentPriceAmount();
           // 更新 1 Pair 价格
-          const onePairPrice = bundle.querySelector('.xt-quantity-bundle__item--selected[data-qty="1"] .xt-quantity-bundle__price, .xt-quantity-bundle__item[data-qty="1"] .xt-quantity-bundle__price');
+          const onePairBtn = bundle.querySelector('.xt-quantity-bundle__btn[data-qty="1"]');
+          const onePairPrice = onePairBtn?.querySelector('.xt-quantity-bundle__price');
           if (onePairPrice) onePairPrice.textContent = readCurrentPriceText();
-          // 更新各套装价格
+          // 更新各套装价格（折后价 + 划线原价 + 徽章省下金额）
           if (newUnitPrice != null) {
             (bundleConfigs || []).forEach((b, idx) => {
               if (b.quantity <= 1) return;
               const btn = bundle.querySelector(`[data-bundle-idx="${idx}"]`);
               if (!btn) return;
-              const priceEls = btn.querySelectorAll('.xt-quantity-bundle__price');
               const bundlePrice = calcBundlePrice(newUnitPrice, b);
               const originalPrice = newUnitPrice * b.quantity;
-              if (priceEls.length >= 2) {
-                priceEls[0].textContent = formatMoney(bundlePrice);
-                priceEls[1].textContent = formatMoney(originalPrice);
-              } else if (priceEls.length === 1) {
-                priceEls[0].textContent = formatMoney(bundlePrice);
+              // 折后价
+              const priceEl = btn.querySelector('.xt-quantity-bundle__price:not(.xt-quantity-bundle__price--compare)');
+              if (priceEl) priceEl.textContent = formatMoney(bundlePrice);
+              // 划线原价
+              const compareEl = btn.querySelector('.xt-quantity-bundle__price--compare');
+              if (compareEl) compareEl.textContent = formatMoney(originalPrice);
+              // 徽章（省下金额）
+              const badgeEl = btn.querySelector('.xt-quantity-bundle__badge');
+              if (badgeEl && bundlePrice < originalPrice) {
+                badgeEl.textContent = `${formatMoney(originalPrice - bundlePrice)} Off  Free shipping`;
               }
             });
           }
@@ -976,17 +991,38 @@
     flex-direction: column;
     gap: 2px;
     line-height: 1.3;
+    position: relative;
+  }
+  {%- comment -%} 促销徽章：顶部常驻（$X Off Free shipping）{%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__badge {
+    color: #A65D4A;
+    font-family: "PingFang SC", Arial, sans-serif;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.18px;
   }
   .xt-quick-add-drawer__content .xt-quantity-bundle__label {
     font-size: calc(var(--font-base-size, 14px) - 2px);
   }
+  {%- comment -%} 价格区：折前价（左，划线）+ 折后价（右）横排 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__prices {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
   .xt-quick-add-drawer__content .xt-quantity-bundle__price {
-    font-size: calc(var(--font-base-size, 14px) - 2px);
-    opacity: 0.7;
+    font-size: 9px;
+    font-family: "PingFang SC", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.18px;
+    color: #2B2B2B;
   }
   .xt-quick-add-drawer__content .xt-quantity-bundle__price--compare {
     text-decoration: line-through;
-    opacity: 0.4;
+    color: rgba(43, 43, 43, 0.70);
   }
   {%- comment -%} 选中态：复用主题 option 选中边框色 {%- endcomment -%}
   .xt-quick-add-drawer__content .xt-quantity-bundle__item--selected .xt-quantity-bundle__btn {
