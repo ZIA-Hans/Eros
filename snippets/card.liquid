@@ -308,7 +308,7 @@
         </div>
       {% elsif product and collection_list != true %}
         <div class="card__price">
-          {% render 'price', product: product, show_compare_at_price: true, price_class: '' %}
+          {% render 'price', product: product, use_variant: true, show_compare_at_price: true, price_class: '' %}
         </div>
       {% endif %}
 
