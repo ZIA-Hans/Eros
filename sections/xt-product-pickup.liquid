@@ -161,7 +161,9 @@
           priceEl.querySelector('.price-item--last') ||
           priceEl.querySelector('.wt-product__price__final') ||
           priceEl.querySelector('.price-item--regular');
-        return final ? final.textContent.trim() : '';
+        if (!final) return '';
+        // 去掉 Shopify price.liquid 在 product.price_varies 时加的 "From" 前缀
+        return final.textContent.trim().replace(/^from\s+/i, '');
       }
 
       // 用 Shopify 货币格式化（cents → 带符号文本）
@@ -891,7 +893,6 @@
   .xt-quick-add-drawer__content {
     padding: 16px;
     padding-bottom: 0;
-    max-height: 100vh;
     overflow-y: auto;
   }
   {%- comment -%} 商品图 + 详情布局（对齐主题 .wt__quick-buy 的 wt-product__details 排版）{%- endcomment -%}
