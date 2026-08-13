@@ -6,56 +6,26 @@
     </div>
     {% endif %}
     <div class="wt-product__page">
-    <modal-opener
-        class="wt-product__opener no-js-hidden quick-add-hidden"
-        data-modal="#PopupModal-{{ id }}"
-        {{ shopify_attributes }}
-    >
-        <button
-        aria-label="{{ size_link | default: size_page.title }}"
-        id="ProductPopup-{{ id }}"
-        class="wt-product__button wt-product__link"
+    <button
+        id="SizeGuideBtn-{{ id }}"
+        class="wt-product__opener wt-product__button wt-product__link no-js-hidden quick-add-hidden"
         type="button"
         aria-haspopup="dialog"
-        >
+        data-size-guide-open="{{ id }}"
+        {{ shopify_attributes }}
+    >
         {{ size_link | default: size_page.title }}
-        </button>
-    </modal-opener>
+    </button>
     </div>
 </div>
 
-<modal-dialog
-    id="PopupModal-{{ id }}"
-    class="wt-product__modal"
+<sl-dialog
+    id="SizeGuideDialog-{{ id }}"
+    class="wt-product__size-guide-dialog"
+    label="{{ size_content.title | default: size_link | escape }}"
     {{ shopify_attributes }}
 >
-    <div
-    role="dialog"
-    aria-label="{{ size_link }}"
-    aria-modal="true"
-    class="wt-product__modal--content"
-    tabindex="-1"
-    >
-    <div class="wt-product__modal-top">
-        <div
-        id="ModalClose-{{ id }}"
-        role="button"
-        class="wt-product__modal--toggle"
-        aria-label="{{ 'accessibility.close' | t }}"
-        >
-        {% render 'icons',
-            id: 'close',
-            icon_id: 'wt-announcement__close',
-            icon_class: 'wt-announcement__close'
-        %}
-        </div>
-    </div>
     <div class="wt-product__modal--content-info rte">
-        {% if size_content != empty %}
-        <p class="headline__title">{{ size_content.title }}</p>
-        {% else %}
-        <p class="headline__title">{{ size_link }}</p>
-        {% endif %}
         {% assign metafield = metafield_name | strip | split: '.' %}
         {% assign metafield_namespace = metafield | first | strip %}
         {% assign metafield_key = metafield | last | strip %}
@@ -85,6 +55,6 @@
         {{ size_content.content }}
         {% endif %}
     </div>
-    </div>
-</modal-dialog>
+</sl-dialog>
+
 {% endif %}

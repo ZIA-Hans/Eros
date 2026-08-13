@@ -1,2 +1,56 @@
+/* ============================================================
+   Size Guide —— Shoelace <sl-dialog> 适配
+   原 .wt-product__modal--content-info 是为 <modal-dialog> 设计的
+   （height:100% / overflow-y:scroll / padding），
+   sl-dialog 的 body 自带滚动与 padding，这里重置避免双重滚动 / 双倍间距。
+   ============================================================ */
 
-    
+/* 尺码表通常较宽，给 sl-dialog 一个更宽松的默认尺寸（移动端仍自适应） */
+.wt-product__size-guide-dialog {
+  --width: min(92vw, 720px);
+}
+
+/* sl-dialog header 自带标题（label 属性）+ 关闭按钮，body 顶部间距收紧 */
+.wt-product__size-guide-dialog::part(body) {
+  padding-top: 0;
+}
+
+/* 标题：变大、加粗、居中 */
+/* header 设为 relative + 居中布局；关闭按钮脱离 flex 流绝对定位到右侧，
+   让标题真正占据水平中心。即使 ::part(close-button) 在个别版本失效，
+   title 仍因 justify-content: center 大致居中，属于渐进增强。 */
+.wt-product__size-guide-dialog::part(header) {
+  position: relative;
+  justify-content: center;
+}
+
+.wt-product__size-guide-dialog::part(title) {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.wt-product__size-guide-dialog::part(close-button) {
+  position: absolute;
+  top: 50%;
+  right: var(--sl-spacing-medium, 16px);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 600px) {
+  .wt-product__size-guide-dialog::part(title) {
+    font-size: 1.7rem;
+  }
+}
+
+/* 重置内容容器：交给 sl-dialog body 负责滚动与 padding */
+.wt-product__size-guide-dialog .wt-product__modal--content-info {
+  height: auto;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* size-table 斑马纹、wrapper 横向滚动 保持 main.css 原规则不变 */

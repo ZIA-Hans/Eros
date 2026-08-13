@@ -145,7 +145,7 @@
             <button type="button" class="f-button__list__link xt-quantity-bundle__btn" data-qty="${bundle.quantity}" data-bundle-idx="${idx}">
               ${saveHtml}
               <span class="xt-quantity-bundle__bottom">
-                <span class="xt-quantity-bundle__qty">${bundle.quantity} items</span>
+                <span class="xt-quantity-bundle__qty">${bundle.label || (bundle.quantity + ' items')}</span>
                 <span class="xt-quantity-bundle__cart">${cartIconSvg}</span>
               </span>
             </button>
