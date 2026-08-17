@@ -583,6 +583,16 @@
         "enable_discount_progress_bar": {
           "label": "Abilita barra di avanzamento sconti"
         },
+        "discount_bar_calculation_basis": {
+          "label": "Base di calcolo",
+          "info": "Prezzo: i traguardi si sbloccano in base all'importo del carrello. Quantità: i traguardi si sbloccano in base al numero totale di articoli nel carrello.",
+          "options__1": {
+            "label": "Importo del carrello"
+          },
+          "options__2": {
+            "label": "Quantità totale di articoli"
+          }
+        },
         "header__1": {
           "content": "Colori della barra degli sconti"
         },
@@ -620,8 +630,8 @@
           "label": "Abilita traguardo 1"
         },
         "discount_bar_milestone_1_threshold": {
-          "label": "Soglia (formato multivaluta)",
-          "info": "Imposta il valore come nella barra di spedizione gratuita: 50|USD:60|PLN:200"
+          "label": "Soglia",
+          "info": "Modalità prezzo: formato multivaluta come 50|USD:60|PLN:200. Modalità quantità: numero semplice di articoli, es. 3"
         },
         "discount_bar_milestone_1_label": {
           "label": "Etichetta del traguardo",
@@ -629,7 +639,7 @@
         },
         "discount_bar_milestone_1_message": {
           "label": "Messaggio di avanzamento",
-          "info": "Usa ||amount|| per l'importo rimanente e ||label|| per l'etichetta del traguardo. Es.: Spendi ||amount|| in più per ottenere ||label||!"
+          "info": "Usa ||amount|| per l'importo rimanente (modalità prezzo) o il numero di articoli rimanente (modalità quantità) e ||label|| per l'etichetta del traguardo. Es.: Spendi ||amount|| in più per ottenere ||label||! / Aggiungi ||amount|| articoli in più per ottenere ||label||!"
         },
         "discount_bar_milestone_1_icon_type": {
           "label": "Icona del traguardo",
@@ -656,8 +666,8 @@
           "label": "Abilita traguardo 2"
         },
         "discount_bar_milestone_2_threshold": {
-          "label": "Soglia (formato multivaluta)",
-          "info": "Imposta il valore come nella barra di spedizione gratuita: 100|USD:120|PLN:400"
+          "label": "Soglia",
+          "info": "Modalità prezzo: formato multivaluta come 100|USD:120|PLN:400. Modalità quantità: numero semplice di articoli, es. 5"
         },
         "discount_bar_milestone_2_label": {
           "label": "Etichetta del traguardo",
@@ -665,7 +675,7 @@
         },
         "discount_bar_milestone_2_message": {
           "label": "Messaggio di avanzamento",
-          "info": "Usa ||amount|| per l'importo rimanente e ||label|| per l'etichetta del traguardo. Es.: Spendi ||amount|| in più per ottenere ||label||!"
+          "info": "Usa ||amount|| per l'importo rimanente (modalità prezzo) o il numero di articoli rimanente (modalità quantità) e ||label|| per l'etichetta del traguardo. Es.: Spendi ||amount|| in più per ottenere ||label||! / Aggiungi ||amount|| articoli in più per ottenere ||label||!"
         },
         "discount_bar_milestone_2_icon_type": {
           "label": "Icona del traguardo",
@@ -692,8 +702,8 @@
           "label": "Abilita traguardo 3"
         },
         "discount_bar_milestone_3_threshold": {
-          "label": "Soglia (formato multivaluta)",
-          "info": "Imposta il valore come nella barra di spedizione gratuita: 150|USD:180|PLN:600"
+          "label": "Soglia",
+          "info": "Modalità prezzo: formato multivaluta come 150|USD:180|PLN:600. Modalità quantità: numero semplice di articoli, es. 8"
         },
         "discount_bar_milestone_3_label": {
           "label": "Etichetta del traguardo",
@@ -701,7 +711,7 @@
         },
         "discount_bar_milestone_3_message": {
           "label": "Messaggio di avanzamento",
-          "info": "Usa ||amount|| per l'importo rimanente e ||label|| per l'etichetta del traguardo. Es.: Spendi ||amount|| in più per ottenere ||label||!"
+          "info": "Usa ||amount|| per l'importo rimanente (modalità prezzo) o il numero di articoli rimanente (modalità quantità) e ||label|| per l'etichetta del traguardo. Es.: Spendi ||amount|| in più per ottenere ||label||! / Aggiungi ||amount|| articoli in più per ottenere ||label||!"
         },
         "discount_bar_milestone_3_icon_type": {
           "label": "Icona del traguardo",

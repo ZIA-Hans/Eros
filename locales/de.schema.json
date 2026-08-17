@@ -592,6 +592,16 @@
         "enable_discount_progress_bar": {
           "label": "Rabattfortschrittsleiste aktivieren"
         },
+        "discount_bar_calculation_basis": {
+          "label": "Berechnungsgrundlage",
+          "info": "Preis: Meilensteine werden nach dem Warenkorbwert erreicht. Menge: Meilensteine werden nach der Gesamtanzahl aller Artikel im Warenkorb erreicht.",
+          "options__1": {
+            "label": "Warenkorbwert"
+          },
+          "options__2": {
+            "label": "Gesamtmenge aller Artikel"
+          }
+        },
         "header__1": {
           "content": "Farben der Rabattleiste"
         },
@@ -629,8 +639,8 @@
           "label": "Meilenstein 1 aktivieren"
         },
         "discount_bar_milestone_1_threshold": {
-          "label": "Schwelle (Mehrwährungsformat)",
-          "info": "Wert wie in der Gratisversandleiste festlegen: 50|USD:60|PLN:200"
+          "label": "Schwelle",
+          "info": "Preis-Modus: Mehrwährungsformat wie 50|USD:60|PLN:200. Mengen-Modus: einfache Gesamtanzahl der Artikel, z. B. 3"
         },
         "discount_bar_milestone_1_label": {
           "label": "Meilenstein-Beschriftung",
@@ -638,7 +648,7 @@
         },
         "discount_bar_milestone_1_message": {
           "label": "Fortschrittsnachricht",
-          "info": "Verwenden Sie ||amount|| für den verbleibenden Betrag und ||label|| für die Meilenstein-Beschriftung. Z. B.: Geben Sie ||amount|| mehr aus, um ||label|| zu erhalten!"
+          "info": "Verwenden Sie ||amount|| für den verbleibenden Betrag (Preis-Modus) oder die verbleibende Artikelanzahl (Mengen-Modus) und ||label|| für die Meilenstein-Beschriftung. Z. B.: Geben Sie ||amount|| mehr aus, um ||label|| zu erhalten! / Fügen Sie ||amount|| weitere Artikel hinzu, um ||label|| zu erhalten!"
         },
         "discount_bar_milestone_1_icon_type": {
           "label": "Meilenstein-Symbol",
@@ -665,8 +675,8 @@
           "label": "Meilenstein 2 aktivieren"
         },
         "discount_bar_milestone_2_threshold": {
-          "label": "Schwelle (Mehrwährungsformat)",
-          "info": "Wert wie in der Gratisversandleiste festlegen: 100|USD:120|PLN:400"
+          "label": "Schwelle",
+          "info": "Preis-Modus: Mehrwährungsformat wie 100|USD:120|PLN:400. Mengen-Modus: einfache Gesamtanzahl der Artikel, z. B. 5"
         },
         "discount_bar_milestone_2_label": {
           "label": "Meilenstein-Beschriftung",
@@ -674,7 +684,7 @@
         },
         "discount_bar_milestone_2_message": {
           "label": "Fortschrittsnachricht",
-          "info": "Verwenden Sie ||amount|| für den verbleibenden Betrag und ||label|| für die Meilenstein-Beschriftung. Z. B.: Geben Sie ||amount|| mehr aus, um ||label|| zu erhalten!"
+          "info": "Verwenden Sie ||amount|| für den verbleibenden Betrag (Preis-Modus) oder die verbleibende Artikelanzahl (Mengen-Modus) und ||label|| für die Meilenstein-Beschriftung. Z. B.: Geben Sie ||amount|| mehr aus, um ||label|| zu erhalten! / Fügen Sie ||amount|| weitere Artikel hinzu, um ||label|| zu erhalten!"
         },
         "discount_bar_milestone_2_icon_type": {
           "label": "Meilenstein-Symbol",
@@ -701,8 +711,8 @@
           "label": "Meilenstein 3 aktivieren"
         },
         "discount_bar_milestone_3_threshold": {
-          "label": "Schwelle (Mehrwährungsformat)",
-          "info": "Wert wie in der Gratisversandleiste festlegen: 150|USD:180|PLN:600"
+          "label": "Schwelle",
+          "info": "Preis-Modus: Mehrwährungsformat wie 150|USD:180|PLN:600. Mengen-Modus: einfache Gesamtanzahl der Artikel, z. B. 8"
         },
         "discount_bar_milestone_3_label": {
           "label": "Meilenstein-Beschriftung",
@@ -710,7 +720,7 @@
         },
         "discount_bar_milestone_3_message": {
           "label": "Fortschrittsnachricht",
-          "info": "Verwenden Sie ||amount|| für den verbleibenden Betrag und ||label|| für die Meilenstein-Beschriftung. Z. B.: Geben Sie ||amount|| mehr aus, um ||label|| zu erhalten!"
+          "info": "Verwenden Sie ||amount|| für den verbleibenden Betrag (Preis-Modus) oder die verbleibende Artikelanzahl (Mengen-Modus) und ||label|| für die Meilenstein-Beschriftung. Z. B.: Geben Sie ||amount|| mehr aus, um ||label|| zu erhalten! / Fügen Sie ||amount|| weitere Artikel hinzu, um ||label|| zu erhalten!"
         },
         "discount_bar_milestone_3_icon_type": {
           "label": "Meilenstein-Symbol",

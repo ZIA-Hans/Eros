@@ -592,6 +592,16 @@
         "enable_discount_progress_bar": {
           "label": "Activar barra de progreso de descuentos"
         },
+        "discount_bar_calculation_basis": {
+          "label": "Base de cálculo",
+          "info": "Precio: los hitos se desbloquean según el importe del carrito. Cantidad: los hitos se desbloquean según el número total de artículos del carrito.",
+          "options__1": {
+            "label": "Importe del carrito"
+          },
+          "options__2": {
+            "label": "Cantidad total de artículos"
+          }
+        },
         "header__1": {
           "content": "Colores de la barra de descuentos"
         },
@@ -629,8 +639,8 @@
           "label": "Activar hito 1"
         },
         "discount_bar_milestone_1_threshold": {
-          "label": "Umbral (formato multimoneda)",
-          "info": "Define el valor como en la barra de envío gratis: 50|USD:60|PLN:200"
+          "label": "Umbral",
+          "info": "Modo precio: formato multimoneda como 50|USD:60|PLN:200. Modo cantidad: número simple de artículos, p. ej. 3"
         },
         "discount_bar_milestone_1_label": {
           "label": "Etiqueta del hito",
@@ -638,7 +648,7 @@
         },
         "discount_bar_milestone_1_message": {
           "label": "Mensaje de progreso",
-          "info": "Usa ||amount|| para el importe restante y ||label|| para la etiqueta del hito. Ej.: ¡Gasta ||amount|| más para obtener ||label||!"
+          "info": "Usa ||amount|| para el importe restante (modo precio) o la cantidad de artículos restante (modo cantidad) y ||label|| para la etiqueta del hito. Ej.: ¡Gasta ||amount|| más para obtener ||label||! / ¡Añade ||amount|| artículos más para obtener ||label||!"
         },
         "discount_bar_milestone_1_icon_type": {
           "label": "Icono del hito",
@@ -665,8 +675,8 @@
           "label": "Activar hito 2"
         },
         "discount_bar_milestone_2_threshold": {
-          "label": "Umbral (formato multimoneda)",
-          "info": "Define el valor como en la barra de envío gratis: 100|USD:120|PLN:400"
+          "label": "Umbral",
+          "info": "Modo precio: formato multimoneda como 100|USD:120|PLN:400. Modo cantidad: número simple de artículos, p. ej. 5"
         },
         "discount_bar_milestone_2_label": {
           "label": "Etiqueta del hito",
@@ -674,7 +684,7 @@
         },
         "discount_bar_milestone_2_message": {
           "label": "Mensaje de progreso",
-          "info": "Usa ||amount|| para el importe restante y ||label|| para la etiqueta del hito. Ej.: ¡Gasta ||amount|| más para obtener ||label||!"
+          "info": "Usa ||amount|| para el importe restante (modo precio) o la cantidad de artículos restante (modo cantidad) y ||label|| para la etiqueta del hito. Ej.: ¡Gasta ||amount|| más para obtener ||label||! / ¡Añade ||amount|| artículos más para obtener ||label||!"
         },
         "discount_bar_milestone_2_icon_type": {
           "label": "Icono del hito",
@@ -701,8 +711,8 @@
           "label": "Activar hito 3"
         },
         "discount_bar_milestone_3_threshold": {
-          "label": "Umbral (formato multimoneda)",
-          "info": "Define el valor como en la barra de envío gratis: 150|USD:180|PLN:600"
+          "label": "Umbral",
+          "info": "Modo precio: formato multimoneda como 150|USD:180|PLN:600. Modo cantidad: número simple de artículos, p. ej. 8"
         },
         "discount_bar_milestone_3_label": {
           "label": "Etiqueta del hito",
@@ -710,7 +720,7 @@
         },
         "discount_bar_milestone_3_message": {
           "label": "Mensaje de progreso",
-          "info": "Usa ||amount|| para el importe restante y ||label|| para la etiqueta del hito. Ej.: ¡Gasta ||amount|| más para obtener ||label||!"
+          "info": "Usa ||amount|| para el importe restante (modo precio) o la cantidad de artículos restante (modo cantidad) y ||label|| para la etiqueta del hito. Ej.: ¡Gasta ||amount|| más para obtener ||label||! / ¡Añade ||amount|| artículos más para obtener ||label||!"
         },
         "discount_bar_milestone_3_icon_type": {
           "label": "Icono del hito",

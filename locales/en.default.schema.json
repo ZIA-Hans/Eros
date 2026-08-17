@@ -624,6 +624,16 @@
         "enable_discount_progress_bar": {
           "label": "Enable discount progress bar"
         },
+        "discount_bar_calculation_basis": {
+          "label": "Calculation basis",
+          "info": "Price: milestones unlock by cart amount. Quantity: milestones unlock by the total number of items in the cart (all quantities counted).",
+          "options__1": {
+            "label": "Cart price"
+          },
+          "options__2": {
+            "label": "Total item quantity"
+          }
+        },
         "header__1": {
           "content": "Discount bar colors"
         },
@@ -661,8 +671,8 @@
           "label": "Enable milestone 1"
         },
         "discount_bar_milestone_1_threshold": {
-          "label": "Threshold (multicurrency format)",
-          "info": "Set value like free shipping bar: 50|USD:60|PLN:200"
+          "label": "Threshold",
+          "info": "Price mode: multicurrency format like 50|USD:60|PLN:200. Quantity mode: plain number of items, e.g. 3"
         },
         "discount_bar_milestone_1_label": {
           "label": "Milestone label",
@@ -670,7 +680,7 @@
         },
         "discount_bar_milestone_1_message": {
           "label": "Progress message",
-          "info": "Use ||amount|| for remaining amount, ||label|| for milestone label. E.g. Spend ||amount|| more for ||label||!"
+          "info": "Use ||amount|| for the remaining amount (price mode) or remaining item count (quantity mode), ||label|| for milestone label. E.g. Spend ||amount|| more for ||label||! / Add ||amount|| more items for ||label||!"
         },
         "discount_bar_milestone_1_icon_type": {
           "label": "Milestone icon",
@@ -697,8 +707,8 @@
           "label": "Enable milestone 2"
         },
         "discount_bar_milestone_2_threshold": {
-          "label": "Threshold (multicurrency format)",
-          "info": "Set value like free shipping bar: 100|USD:120|PLN:400"
+          "label": "Threshold",
+          "info": "Price mode: multicurrency format like 100|USD:120|PLN:400. Quantity mode: plain number of items, e.g. 5"
         },
         "discount_bar_milestone_2_label": {
           "label": "Milestone label",
@@ -706,7 +716,7 @@
         },
         "discount_bar_milestone_2_message": {
           "label": "Progress message",
-          "info": "Use ||amount|| for remaining amount, ||label|| for milestone label. E.g. Spend ||amount|| more for ||label||!"
+          "info": "Use ||amount|| for the remaining amount (price mode) or remaining item count (quantity mode), ||label|| for milestone label. E.g. Spend ||amount|| more for ||label||! / Add ||amount|| more items for ||label||!"
         },
         "discount_bar_milestone_2_icon_type": {
           "label": "Milestone icon",
@@ -733,8 +743,8 @@
           "label": "Enable milestone 3"
         },
         "discount_bar_milestone_3_threshold": {
-          "label": "Threshold (multicurrency format)",
-          "info": "Set value like free shipping bar: 150|USD:180|PLN:600"
+          "label": "Threshold",
+          "info": "Price mode: multicurrency format like 150|USD:180|PLN:600. Quantity mode: plain number of items, e.g. 8"
         },
         "discount_bar_milestone_3_label": {
           "label": "Milestone label",
@@ -742,7 +752,7 @@
         },
         "discount_bar_milestone_3_message": {
           "label": "Progress message",
-          "info": "Use ||amount|| for remaining amount, ||label|| for milestone label. E.g. Spend ||amount|| more for ||label||!"
+          "info": "Use ||amount|| for the remaining amount (price mode) or remaining item count (quantity mode), ||label|| for milestone label. E.g. Spend ||amount|| more for ||label||! / Add ||amount|| more items for ||label||!"
         },
         "discount_bar_milestone_3_icon_type": {
           "label": "Milestone icon",

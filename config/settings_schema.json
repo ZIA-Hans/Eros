@@ -1156,6 +1156,18 @@
         "label": "t:settings_schema.cart_discount_progress_bar.settings.enable_discount_progress_bar.label"
       },
       {
+        "type": "select",
+        "id": "discount_bar_calculation_basis",
+        "visible_if": "{{ settings.enable_discount_progress_bar }}",
+        "label": "t:settings_schema.cart_discount_progress_bar.settings.discount_bar_calculation_basis.label",
+        "info": "t:settings_schema.cart_discount_progress_bar.settings.discount_bar_calculation_basis.info",
+        "default": "price",
+        "options": [
+          { "value": "price", "label": "t:settings_schema.cart_discount_progress_bar.settings.discount_bar_calculation_basis.options__1.label" },
+          { "value": "quantity", "label": "t:settings_schema.cart_discount_progress_bar.settings.discount_bar_calculation_basis.options__2.label" }
+        ]
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.cart_discount_progress_bar.settings.header__1.content",
         "visible_if": "{{ settings.enable_discount_progress_bar }}"

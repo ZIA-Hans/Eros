@@ -592,6 +592,16 @@
         "enable_discount_progress_bar": {
           "label": "Activer la barre de progression des remises"
         },
+        "discount_bar_calculation_basis": {
+          "label": "Base de calcul",
+          "info": "Prix : les jalons sont atteints selon le montant du panier. Quantité : les jalons sont atteints selon le nombre total d'articles dans le panier.",
+          "options__1": {
+            "label": "Montant du panier"
+          },
+          "options__2": {
+            "label": "Quantité totale d'articles"
+          }
+        },
         "header__1": {
           "content": "Couleurs de la barre de remise"
         },
@@ -629,8 +639,8 @@
           "label": "Activer le jalon 1"
         },
         "discount_bar_milestone_1_threshold": {
-          "label": "Seuil (format multidevise)",
-          "info": "Définissez la valeur comme pour la barre de livraison gratuite : 50|USD:60|PLN:200"
+          "label": "Seuil",
+          "info": "Mode prix : format multidevise comme 50|USD:60|PLN:200. Mode quantité : nombre simple d'articles, p. ex. 3"
         },
         "discount_bar_milestone_1_label": {
           "label": "Étiquette du jalon",
@@ -638,7 +648,7 @@
         },
         "discount_bar_milestone_1_message": {
           "label": "Message de progression",
-          "info": "Utilisez ||amount|| pour le montant restant, ||label|| pour l'étiquette du jalon. Ex. : Dépensez ||amount|| de plus pour obtenir ||label|| !"
+          "info": "Utilisez ||amount|| pour le montant restant (mode prix) ou le nombre d'articles restant (mode quantité), ||label|| pour l'étiquette du jalon. Ex. : Dépensez ||amount|| de plus pour obtenir ||label|| ! / Ajoutez ||amount|| articles de plus pour obtenir ||label|| !"
         },
         "discount_bar_milestone_1_icon_type": {
           "label": "Icône du jalon",
@@ -665,8 +675,8 @@
           "label": "Activer le jalon 2"
         },
         "discount_bar_milestone_2_threshold": {
-          "label": "Seuil (format multidevise)",
-          "info": "Définissez la valeur comme pour la barre de livraison gratuite : 100|USD:120|PLN:400"
+          "label": "Seuil",
+          "info": "Mode prix : format multidevise comme 100|USD:120|PLN:400. Mode quantité : nombre simple d'articles, p. ex. 5"
         },
         "discount_bar_milestone_2_label": {
           "label": "Étiquette du jalon",
@@ -674,7 +684,7 @@
         },
         "discount_bar_milestone_2_message": {
           "label": "Message de progression",
-          "info": "Utilisez ||amount|| pour le montant restant, ||label|| pour l'étiquette du jalon. Ex. : Dépensez ||amount|| de plus pour obtenir ||label|| !"
+          "info": "Utilisez ||amount|| pour le montant restant (mode prix) ou le nombre d'articles restant (mode quantité), ||label|| pour l'étiquette du jalon. Ex. : Dépensez ||amount|| de plus pour obtenir ||label|| ! / Ajoutez ||amount|| articles de plus pour obtenir ||label|| !"
         },
         "discount_bar_milestone_2_icon_type": {
           "label": "Icône du jalon",
@@ -701,8 +711,8 @@
           "label": "Activer le jalon 3"
         },
         "discount_bar_milestone_3_threshold": {
-          "label": "Seuil (format multidevise)",
-          "info": "Définissez la valeur comme pour la barre de livraison gratuite : 150|USD:180|PLN:600"
+          "label": "Seuil",
+          "info": "Mode prix : format multidevise comme 150|USD:180|PLN:600. Mode quantité : nombre simple d'articles, p. ex. 8"
         },
         "discount_bar_milestone_3_label": {
           "label": "Étiquette du jalon",
@@ -710,7 +720,7 @@
         },
         "discount_bar_milestone_3_message": {
           "label": "Message de progression",
-          "info": "Utilisez ||amount|| pour le montant restant, ||label|| pour l'étiquette du jalon. Ex. : Dépensez ||amount|| de plus pour obtenir ||label|| !"
+          "info": "Utilisez ||amount|| pour le montant restant (mode prix) ou le nombre d'articles restant (mode quantité), ||label|| pour l'étiquette du jalon. Ex. : Dépensez ||amount|| de plus pour obtenir ||label|| ! / Ajoutez ||amount|| articles de plus pour obtenir ||label|| !"
         },
         "discount_bar_milestone_3_icon_type": {
           "label": "Icône du jalon",

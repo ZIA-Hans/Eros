@@ -2,11 +2,16 @@
   Discount Progress Bar
   Renders a multi-milestone progress bar showing discount tier progress.
   Milestones must be configured in ascending threshold order (1 < 2 < 3).
+  Calculation basis (settings.discount_bar_calculation_basis):
+    - "price":    milestones unlock by cart amount, threshold supports multicurrency format (50|USD:60|PLN:200)
+    - "quantity": milestones unlock by total item count incl. quantities (cart.item_count), threshold is a plain integer (e.g. 3)
 {% endcomment %}
 
 {% if settings.enable_discount_progress_bar and cart != empty %}
 
-  {% comment %}--- Parse milestone thresholds with multicurrency support ---{% endcomment %}
+  {% assign calc_basis = settings.discount_bar_calculation_basis | default: 'price' %}
+
+  {% comment %}--- Parse milestone thresholds with multicurrency support (price mode only) ---{% endcomment %}
   {% assign current_currency = cart.currency.iso_code %}
 
   {% comment %}Milestone 1{% endcomment %}
@@ -14,18 +19,23 @@
   {% assign m1_threshold = 0 %}
   {% if m1_enabled %}
     {% assign raw_setting = settings.discount_bar_milestone_1_threshold | default: '0' %}
-    {% assign m1_threshold = raw_setting | split: '|' | first | strip | plus: 0 %}
-    {% assign threshold_parts = raw_setting | split: '|' %}
-    {% for threshold_part in threshold_parts %}
-      {% if threshold_part contains ':' %}
-        {% assign currency_pair = threshold_part | split: ':' %}
-        {% assign currency_code = currency_pair[0] | strip %}
-        {% if currency_code == current_currency %}
-          {% assign m1_threshold = currency_pair[1] | strip | plus: 0 %}
-          {% break %}
+    {% if calc_basis == 'quantity' %}
+      {% comment %}Quantity mode: threshold is a plain item count, currency-agnostic{% endcomment %}
+      {% assign m1_threshold = raw_setting | strip | plus: 0 %}
+    {% else %}
+      {% assign m1_threshold = raw_setting | split: '|' | first | strip | plus: 0 %}
+      {% assign threshold_parts = raw_setting | split: '|' %}
+      {% for threshold_part in threshold_parts %}
+        {% if threshold_part contains ':' %}
+          {% assign currency_pair = threshold_part | split: ':' %}
+          {% assign currency_code = currency_pair[0] | strip %}
+          {% if currency_code == current_currency %}
+            {% assign m1_threshold = currency_pair[1] | strip | plus: 0 %}
+            {% break %}
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
     {% if m1_threshold <= 0 %}
       {% assign m1_enabled = false %}
     {% endif %}
@@ -36,18 +46,23 @@
   {% assign m2_threshold = 0 %}
   {% if m2_enabled %}
     {% assign raw_setting = settings.discount_bar_milestone_2_threshold | default: '0' %}
-    {% assign m2_threshold = raw_setting | split: '|' | first | strip | plus: 0 %}
-    {% assign threshold_parts = raw_setting | split: '|' %}
-    {% for threshold_part in threshold_parts %}
-      {% if threshold_part contains ':' %}
-        {% assign currency_pair = threshold_part | split: ':' %}
-        {% assign currency_code = currency_pair[0] | strip %}
-        {% if currency_code == current_currency %}
-          {% assign m2_threshold = currency_pair[1] | strip | plus: 0 %}
-          {% break %}
+    {% if calc_basis == 'quantity' %}
+      {% comment %}Quantity mode: threshold is a plain item count, currency-agnostic{% endcomment %}
+      {% assign m2_threshold = raw_setting | strip | plus: 0 %}
+    {% else %}
+      {% assign m2_threshold = raw_setting | split: '|' | first | strip | plus: 0 %}
+      {% assign threshold_parts = raw_setting | split: '|' %}
+      {% for threshold_part in threshold_parts %}
+        {% if threshold_part contains ':' %}
+          {% assign currency_pair = threshold_part | split: ':' %}
+          {% assign currency_code = currency_pair[0] | strip %}
+          {% if currency_code == current_currency %}
+            {% assign m2_threshold = currency_pair[1] | strip | plus: 0 %}
+            {% break %}
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
     {% if m2_threshold <= 0 %}
       {% assign m2_enabled = false %}
     {% endif %}
@@ -58,18 +73,23 @@
   {% assign m3_threshold = 0 %}
   {% if m3_enabled %}
     {% assign raw_setting = settings.discount_bar_milestone_3_threshold | default: '0' %}
-    {% assign m3_threshold = raw_setting | split: '|' | first | strip | plus: 0 %}
-    {% assign threshold_parts = raw_setting | split: '|' %}
-    {% for threshold_part in threshold_parts %}
-      {% if threshold_part contains ':' %}
-        {% assign currency_pair = threshold_part | split: ':' %}
-        {% assign currency_code = currency_pair[0] | strip %}
-        {% if currency_code == current_currency %}
-          {% assign m3_threshold = currency_pair[1] | strip | plus: 0 %}
-          {% break %}
+    {% if calc_basis == 'quantity' %}
+      {% comment %}Quantity mode: threshold is a plain item count, currency-agnostic{% endcomment %}
+      {% assign m3_threshold = raw_setting | strip | plus: 0 %}
+    {% else %}
+      {% assign m3_threshold = raw_setting | split: '|' | first | strip | plus: 0 %}
+      {% assign threshold_parts = raw_setting | split: '|' %}
+      {% for threshold_part in threshold_parts %}
+        {% if threshold_part contains ':' %}
+          {% assign currency_pair = threshold_part | split: ':' %}
+          {% assign currency_code = currency_pair[0] | strip %}
+          {% if currency_code == current_currency %}
+            {% assign m3_threshold = currency_pair[1] | strip | plus: 0 %}
+            {% break %}
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
     {% if m3_threshold <= 0 %}
       {% assign m3_enabled = false %}
     {% endif %}
@@ -95,8 +115,12 @@
       {% assign w2 = 100.0 %}
     {% endif %}
 
-    {% comment %}--- Cart value in base units (e.g. 49.99) ---{% endcomment %}
-    {% assign cart_value = cart.original_total_price | divided_by: 100.0 %}
+    {% comment %}--- Cart value: price (base units) or total item count ---{% endcomment %}
+    {% if calc_basis == 'quantity' %}
+      {% assign cart_value = cart.item_count %}
+    {% else %}
+      {% assign cart_value = cart.original_total_price | divided_by: 100.0 %}
+    {% endif %}
 
     {% comment %}--- Build ordered thresholds string for progress calculation ---{% endcomment %}
     {% assign ordered_thresholds = '' %}
@@ -193,8 +217,13 @@
     {% endif %}
 
     {% comment %}--- Format remaining amount and replace tokens ---{% endcomment %}
-    {% assign remaining_with_currency = remaining_amount | times: 100 | money %}
-    {% assign message_text = active_message | replace: '||amount||', remaining_with_currency | replace: '||label||', active_milestone_label %}
+    {% if calc_basis == 'quantity' %}
+      {% comment %}Quantity mode: ||amount|| is a plain item count{% endcomment %}
+      {% assign remaining_display = remaining_amount %}
+    {% else %}
+      {% assign remaining_display = remaining_amount | times: 100 | money %}
+    {% endif %}
+    {% assign message_text = active_message | replace: '||amount||', remaining_display | replace: '||label||', active_milestone_label %}
 
     {%- comment -%}
       --- Resolve colors with transparency guards ---
