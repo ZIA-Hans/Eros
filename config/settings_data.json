@@ -22,7 +22,7 @@
     "color-border": "#2b2b2b",
     "color-action-text": "#ffffff",
     "color-action-background": "#fc7e7e",
-    "color-header-text": "#ffffff",
+    "color-header-text": "#2B2B2B",
     "color-header-background": "#ffffff",
     "color-menu-text": "#ffffff",
     "color-menu-background": "#2b2b2b",
@@ -96,12 +96,15 @@
     "social_instagram_link": "https://www.instagram.com/eroslingerie.official",
     "social_tiktok_link": "https://www.tiktok.com/@eroslingerie.official",
     "social_youtube_link": "https://www.youtube.com/@eroslingerie.official",
-    "enable_color_swatch": false,
+    "enable_color_swatch": true,
     "enable_color_swatch_in_filters": false,
     "enable_round_color_swatches": true,
+    "enable_product_variations": false,
+    "badges-uppercase": "none",
     "custom-badge-1-text": "#151515",
     "custom-badge-1-background": "#e3f2e6",
-    "custom-badge-1-input": "New",
+    "custom-badge-1-input": "",
+    "custom-badge-2-input": "",
     "animations": true,
     "disabled_animations_on_mobile": false,
     "content_for_index": [],
@@ -110,14 +113,6 @@
         "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {}
-      },
-      "8962992520437913685": {
-        "type": "shopify://apps/yotpo-loyalty-rewards/blocks/loader-app-embed-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-        "disabled": true,
-        "settings": {
-          "inject_modules_loader": true,
-          "inject_sdk_loader": true
-        }
       },
       "14339172867238703359": {
         "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_tab/eb7dfd7d-db44-4334-bc49-c893b51b36cf",

@@ -102,9 +102,7 @@
             "products": [
               "eros-no-1-10d-tight-nude",
               "eros-no-1-10d-tight-black"
-            ],
-            "enable_display_gallery": true,
-            "display_button_label": "match your skin"
+            ]
           }
         },
         "variant_picker_7mHC3V": {
@@ -126,7 +124,10 @@
             "variant_name": "",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "information_popup_pw9mqt": {
@@ -294,7 +295,7 @@
         "show-thumbnails-mobile": false,
         "text_color": "#2b2b2b",
         "background_color": "#ffffff",
-        "pdp_nav_icon_bg_color": "#ffffff",
+        "pdp_nav_icon_bg_color": "{{ settings.colors.primary }}",
         "pdp_nav_icon_bg_opacity": 80,
         "pdp_nav_icon_color": "",
         "margin-top": 8,

@@ -46,6 +46,7 @@
         },
         "product_variations_7LBAAU": {
           "type": "product_variations",
+          "disabled": true,
           "settings": {
             "option_name": "Color",
             "picker_type": "swatch",
@@ -78,7 +79,10 @@
             "variant_name": "",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "information_popup_pw9mqt": {
