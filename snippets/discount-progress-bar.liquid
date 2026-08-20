@@ -219,7 +219,7 @@
     {% comment %}--- Format remaining amount and replace tokens ---{% endcomment %}
     {% if calc_basis == 'quantity' %}
       {% comment %}Quantity mode: ||amount|| is a plain item count{% endcomment %}
-      {% assign remaining_display = remaining_amount %}
+      {% assign remaining_display = remaining_amount | round %}
     {% else %}
       {% assign remaining_display = remaining_amount | times: 100 | money %}
     {% endif %}
