@@ -74,22 +74,14 @@
             "margin-top": 0,
             "margin-bottom": 8,
             "size_icon": "check_mark",
-            "size_link": "",
-            "variant_name": "",
-            "size_content": "",
+            "size_link": "Size Guide",
+            "variant_name": "Size",
+            "size_content": "fabric-sticky-bra-size-guide",
             "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "information_popup_pw9mqt": {
-          "type": "information_popup",
-          "disabled": true,
-          "settings": {
-            "size_icon": "ruler",
-            "size_link": "Size Chart",
-            "size_content": "eross-story",
-            "metafield": "",
-            "enable-striped-rows": true
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "separator_xgqTJM": {
@@ -121,7 +113,6 @@
         "price",
         "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
-        "information_popup_pw9mqt",
         "separator_xgqTJM",
         "buy_buttons"
       ],

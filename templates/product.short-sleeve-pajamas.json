@@ -35,6 +35,19 @@
             "size_text_mobile": 100
           }
         },
+        "product_variations_dUJHfz": {
+          "type": "product_variations",
+          "disabled": true,
+          "settings": {
+            "option_name": "",
+            "picker_type": "button",
+            "swatch_size": 40,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "",
+            "products": []
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -42,21 +55,6 @@
             "show_shipping_policy": true,
             "size_text": 140,
             "size_text_mobile": 140
-          }
-        },
-        "product_variations_7LBAAU": {
-          "type": "product_variations",
-          "settings": {
-            "option_name": "Color",
-            "picker_type": "swatch",
-            "swatch_size": 36,
-            "radius": "default",
-            "border_radius": 0,
-            "option_value_metafield": "custom.tab",
-            "products": [
-              "eros-no-2-20d-tight-beige",
-              "eros-no-2-20d-tight-black"
-            ]
           }
         },
         "variant_picker_7mHC3V": {
@@ -71,34 +69,17 @@
             "radius": "default",
             "border_radius": 15,
             "dropdown_swatch_names": "",
-            "margin-top": 0,
+            "margin-top": 8,
             "margin-bottom": 8,
-            "size_icon": "check_mark",
-            "size_link": "",
-            "variant_name": "",
+            "size_icon": "ruler",
+            "size_link": "Size Guide",
+            "variant_name": "Size",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "information_popup_pw9mqt": {
-          "type": "information_popup",
-          "disabled": true,
-          "settings": {
-            "size_icon": "ruler",
-            "size_link": "Size Chart",
-            "size_content": "eross-story",
-            "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "separator_xgqTJM": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 4
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "buy_buttons": {
@@ -110,19 +91,17 @@
             "full_width_add_to_cart": false,
             "custom_add_to_cart_label": "",
             "text_color": "#ffffff",
-            "background_color": "#151515",
-            "text_color_hover": "",
-            "background_color_hover": ""
+            "background_color": "#956052",
+            "text_color_hover": "{{ settings.colors.background }}",
+            "background_color_hover": "#75463c"
           }
         }
       },
       "block_order": [
         "title",
+        "product_variations_dUJHfz",
         "price",
-        "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
-        "information_popup_pw9mqt",
-        "separator_xgqTJM",
         "buy_buttons"
       ],
       "settings": {
@@ -180,8 +159,8 @@
             "icon_gap_mobile": 20,
             "icon_gap_desktop": 40,
             "icon_text_spacing": 12,
-            "text_size_mobile": 12,
-            "text_size_desktop": 14,
+            "text_size_mobile": 14,
+            "text_size_desktop": 16,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
             "benefit_1_icon": "shopify://shop_images/Premium_TENCEL_Modal.svg",
@@ -217,9 +196,9 @@
           "type": "item",
           "settings": {
             "show_item": true,
-            "title": "62% Polyamide, 38% Elastane",
+            "title": "46.5% TENCEL™ Modal, 46.5% Cotton, 7% Elastane",
             "default_open": false,
-            "content": "<p>The perfect balance of sheer coverage and everyday durability. Crafted with 38% elastane for adaptive stretch and a secure, second-skin fit.</p>",
+            "content": "<p>A short sleeve pajama set crafted from TENCEL™ Modal and cotton for exceptional softness, breathable comfort and a beautifully structured silhouette.</p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -232,7 +211,7 @@
             "show_item": true,
             "title": "30-Day Guarantee & Replacement",
             "default_open": false,
-            "content": "<p>If your tights arrive with a quality issue or are damaged during normal wear within 30 days, we’ll provide a free replacement to make it right.</p><p><a href=\"/pages/return-policy\" title=\"Return Policy\"><em><strong>Click here to visit our Return Policy</strong></em></a></p>",
+            "content": "<p>If your items arrive with a quality issue or are damaged during normal wear within 30 days, we’ll provide a free replacement to make it right.</p><p><a href=\"/pages/return-policy\" title=\"Return Policy\"><em><strong>Click here to visit our Return Policy</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -245,7 +224,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over $59.99.</p><p><em><strong>Click here to visit our Shipping Policy.</strong></em></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy</strong></em></a><em><strong>.</strong></em></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -273,10 +252,10 @@
         "accordion_max_width": 800,
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
         "accordion_background": "#f9f5f3",
         "accordion_radius": 0,
         "content_padding_mobile": 10,
@@ -308,192 +287,71 @@
         "allow_multiple_open": false
       }
     },
-    "rich_text_wpnHRD": {
-      "type": "rich-text",
+    "features_banner_ThHHi7": {
+      "type": "features-banner",
       "blocks": {
-        "heading_3JyNKt": {
-          "type": "heading",
+        "image_6T466M": {
+          "type": "image",
           "settings": {
-            "advanced_heading": false,
-            "heading": "Custom Yarn Blend",
-            "heading_richtext": "<h2>Your headline here</h2>",
-            "disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "heading_richtext_color": "",
-            "heading_richtext_gradient": ""
+            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "select_icon": "bag",
+            "heading": "Free Delivery on A$59",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_WytYkN": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "select_icon": "user",
+            "heading": "30-Day Free Returns",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_LbCUBa": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "select_icon": "search",
+            "heading": "Easy Size Exchange",
+            "text": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_3JyNKt"
+        "image_6T466M",
+        "image_WytYkN",
+        "image_LbCUBa"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "section_width": "regular",
-        "desktop_text_horizontal_position": "center",
-        "full-width-enabled": false,
-        "color-body-text": "#2B2B2B",
-        "background_color": "",
-        "background_gradient": "",
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 52,
+        "icon_layout": "center",
+        "columns_desktop": "3",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "#ffffff",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "#ffffff",
+        "background_color": "#332f2d",
         "margin-top": 20,
         "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 10,
-        "compact_size": true
+        "margin-bottom-mobile": 10
       }
     },
-    "text_overlay_9AbVzy": {
-      "type": "text-overlay",
-      "blocks": {
-        "text_PxEtfk": {
-          "type": "text",
-          "settings": {
-            "show_block": true,
-            "text": "<p>1:1 Premium Fabric Blending</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 16,
-            "animation": "none"
-          }
-        },
-        "text_HJHdhA": {
-          "type": "text",
-          "settings": {
-            "show_block": true,
-            "text": "<p>Tencel Modal Skin-friendly Texture</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 16,
-            "animation": "none"
-          }
-        },
-        "text_8Nir6j": {
-          "type": "text",
-          "settings": {
-            "show_block": true,
-            "text": "<p>Combed Cotton Shaping Support</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 16,
-            "animation": "none"
-          }
-        }
-      },
-      "block_order": [
-        "text_PxEtfk",
-        "text_HJHdhA",
-        "text_8Nir6j"
-      ],
-      "name": "Text Overlay",
-      "settings": {
-        "image_size_mode": "auto",
-        "mobile_image_height": 420,
-        "desktop_image_height": 800,
-        "image_fit": "contain",
-        "image_radius": 12,
-        "width_style": "contained",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "image_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 40,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 50,
-        "mobile_overlay_y": 85,
-        "mobile_overlay_safe_padding": 16,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 420,
-        "desktop_content_max_width": 800,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 14,
-        "primary_button_background": "#2b2b2b",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#2b2b2b",
-        "text_link_color": "#2b2b2b",
-        "section_background": "#ffffff",
-        "side_padding_mobile": 14,
-        "side_padding_desktop": 20,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
-      }
-    },
-    "text_overlay_pPWpUC": {
-      "type": "text-overlay",
-      "blocks": {
-        "heading_nBtyTT": {
-          "type": "heading",
-          "settings": {
-            "show_block": true,
-            "heading": "<p>Powered by Austrian TENCEL™ Modal</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 16,
-            "desktop_size": 36,
-            "animation": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_nBtyTT"
-      ],
-      "name": "Text Overlay",
-      "settings": {
-        "image_size_mode": "auto",
-        "mobile_image_height": 420,
-        "desktop_image_height": 800,
-        "image_fit": "contain",
-        "image_radius": 12,
-        "width_style": "contained",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "content_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 40,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
-        "mobile_overlay_safe_padding": 16,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 420,
-        "desktop_content_max_width": 800,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 14,
-        "primary_button_background": "#2b2b2b",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#2b2b2b",
-        "text_link_color": "#2b2b2b",
-        "section_background": "#ffffff",
-        "side_padding_mobile": 14,
-        "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
-      }
-    },
-    "grid_view_wCynBd": {
+    "grid_view_caKhJf": {
       "type": "grid-view",
       "blocks": {
-        "image_L9YTKi": {
+        "image_wCkwd3": {
           "type": "image",
           "settings": {
             "subheading": "",
@@ -504,12 +362,12 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Wash-Ready Performance",
+            "heading": "",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Resists wrinkles and maintains its shape",
-            "text_disable_on_mobile": true,
+            "text": "",
+            "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
             "button_disable_on_mobile": false,
@@ -520,10 +378,70 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "mobile_image": "shopify://shop_images/pajam_fabric_1.webp",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
           }
         },
+        "image_mbUBeW": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/pajama_tencel.webp",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_wCkwd3",
+        "image_mbUBeW"
+      ],
+      "name": "t:sections.grid-view.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Austrian TENCEL™ Modal",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": false,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
+        "spacing_mobile": "16",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "grid_view_wCynBd": {
+      "type": "grid-view",
+      "blocks": {
         "image_KYpUm7": {
           "type": "image",
           "settings": {
@@ -535,7 +453,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Gentle Skin Finish",
+            "heading": "<strong>Gentle Skin Finish</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -551,14 +469,47 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/Notch_Collar.webp",
             "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_L9YTKi": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "<strong>Wash-Ready Performance</strong>",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Resists wrinkles and maintains its shape",
+            "text_disable_on_mobile": true,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/wash-ready.webp",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "center"
           }
         }
       },
       "block_order": [
-        "image_L9YTKi",
-        "image_KYpUm7"
+        "image_KYpUm7",
+        "image_L9YTKi"
       ],
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
@@ -567,15 +518,15 @@
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": true,
         "full-width-enabled": false,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
+        "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
     },
@@ -593,11 +544,11 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Signature Flared Silhouette",
+            "heading": "<strong>Skin-Friendly Softness</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Enhances your natural proportions.",
+            "text": "Hypoallergenic finish for a gentle feel against your skin.",
             "text_disable_on_mobile": true,
             "button_select": "primary",
             "button_label": "",
@@ -609,8 +560,9 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/short_softness.webp",
             "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "mobile_text_horizontal_position": "center"
           }
         },
         "image_VzP6Fc": {
@@ -624,11 +576,11 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "3D Tailored Structure",
+            "heading": "<strong>Breathable Summer</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Creates a refined, structured look.",
+            "text": "Lightweight, moisture-wicking fibers keep you cool and comfortable in warm weather.",
             "text_disable_on_mobile": true,
             "button_select": "primary",
             "button_label": "",
@@ -640,8 +592,9 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/short_comfort.webp",
             "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "mobile_text_horizontal_position": "center"
           }
         }
       },
@@ -652,116 +605,180 @@
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Designed for a Flattering Shape",
+        "title": "Designed for Everyday Comfort",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": true,
         "full-width-enabled": false,
         "image_ratio": "adapt",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
-        "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 10
-      }
-    },
-    "collage_z9HLJy": {
-      "type": "collage",
-      "blocks": {
-        "image_aYGXRy": {
-          "type": "image",
-          "settings": {
-            "heading": "Luxury Natural Mother-of-pearl Button",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center",
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 100
-          }
-        },
-        "image_nPeeem": {
-          "type": "image",
-          "settings": {
-            "heading": "Adjustable Comfort Waist",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center",
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 100
-          }
-        },
-        "image_eVU3Bb": {
-          "type": "image",
-          "settings": {
-            "heading": "Contrast Binding Detail",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center",
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 100
-          }
-        }
-      },
-      "block_order": [
-        "image_aYGXRy",
-        "image_nPeeem",
-        "image_eVU3Bb"
-      ],
-      "name": "t:sections.collage.settings.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "heading": "Attention to Every Detail",
-        "heading_richtext": "<h2>Collage</h2>",
-        "full-width-enabled": false,
-        "desktop_layout": "row",
-        "spacing_desktop": "16",
-        "spacing_mobile": "16",
-        "color-body-text": "",
+        "color-body-text": "#2b2b2b",
         "background_color": "",
         "margin-top": 20,
         "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 10
+      }
+    },
+    "rich_text_X4j76U": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XKmMfT": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Attention to Every Detail",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_XKmMfT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 0,
+        "compact_size": false
+      }
+    },
+    "grid_view_M9qFdd": {
+      "type": "grid-view",
+      "blocks": {
+        "image_YqBeDT": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "<strong>Mother-of-pearl Button</strong>",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/pearl.webp",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_kENQXc": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "<strong>Contrast Binding Detail</strong>",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/binding.webp",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_kdEnxW": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "<strong>Adjustable Comfort Waist</strong>",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/stitching.webp",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_YqBeDT",
+        "image_kENQXc",
+        "image_kdEnxW"
+      ],
+      "name": "t:sections.grid-view.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": true,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
+        "spacing_mobile": "16",
+        "color-body-text": "{{ settings.colors.background }}",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
       }
     }
   },
@@ -770,11 +787,11 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "rich_text_wpnHRD",
-    "text_overlay_9AbVzy",
-    "text_overlay_pPWpUC",
+    "features_banner_ThHHi7",
+    "grid_view_caKhJf",
     "grid_view_wCynBd",
     "grid_view_h8yryQ",
-    "collage_z9HLJy"
+    "rich_text_X4j76U",
+    "grid_view_M9qFdd"
   ]
 }

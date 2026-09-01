@@ -1,0 +1,171 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_banner_qWimfP": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 800,
+        "mobile_fixed_height": 420,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/sale_banner.png",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "{{ settings.colors.background }}",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "#e31515",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "lcp_optimize": false
+      }
+    },
+    "blocks_mWhMxY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5dcd6eb_NUKLHw": {
+          "type": "ai_gen_block_5dcd6eb",
+          "settings": {
+            "title": "SALE WITH CONFIDENCE",
+            "title_size_mobile": 18,
+            "title_size_desktop": 26,
+            "title_color": "#2b2b2b",
+            "title_spacing": 30,
+            "max_width": 1000,
+            "padding_mobile": 20,
+            "padding_desktop": 40,
+            "background_color": "#ffffff",
+            "icon_size_mobile": 50,
+            "icon_size_desktop": 70,
+            "icon_gap_mobile": 20,
+            "icon_gap_desktop": 40,
+            "icon_text_spacing": 12,
+            "text_size_mobile": 12,
+            "text_size_desktop": 14,
+            "text_color": "#2b2b2b",
+            "benefit_1_enabled": true,
+            "benefit_1_icon": "shopify://shop_images/Advance_fleece_insulation.svg",
+            "benefit_1_icon_alt": "Same Quality icon",
+            "benefit_1_text": "Same Quality",
+            "benefit_1_link": "",
+            "benefit_2_enabled": true,
+            "benefit_2_icon": "shopify://shop_images/quick_support.svg",
+            "benefit_2_icon_alt": "30-Day Guarantee icon",
+            "benefit_2_text": "30-Day Promise",
+            "benefit_2_link": "",
+            "benefit_3_enabled": true,
+            "benefit_3_icon": "shopify://shop_images/fast-shipping.svg",
+            "benefit_3_icon_alt": "Limited Stock icon",
+            "benefit_3_text": "Limited Stock",
+            "benefit_3_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5dcd6eb_NUKLHw"
+      ],
+      "name": "Main benefits icons",
+      "settings": {
+        "section-margin": 0
+      }
+    },
+    "xt_product_pickup_EjfpcE": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_ktGgVV": {
+          "type": "product",
+          "settings": {
+            "product": "eros-no-1-10d-tight-black"
+          }
+        },
+        "product_Qd8a7d": {
+          "type": "product",
+          "settings": {
+            "product": "eros-no-1-10d-tight-nude"
+          }
+        },
+        "product_i84zLn": {
+          "type": "product",
+          "settings": {
+            "product": "eros-20d-line-tights"
+          }
+        },
+        "product_Ea3UJW": {
+          "type": "product",
+          "settings": {
+            "product": "eros-30d-dot-tights"
+          }
+        },
+        "product_zekTaT": {
+          "type": "product",
+          "settings": {
+            "product": "eros-30d-ring-tights"
+          }
+        }
+      },
+      "block_order": [
+        "product_ktGgVV",
+        "product_Qd8a7d",
+        "product_i84zLn",
+        "product_Ea3UJW",
+        "product_zekTaT"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "Last Chance to Shop Eros",
+        "subtitle": "More pairs. More savings",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_qWimfP",
+    "blocks_mWhMxY",
+    "xt_product_pickup_EjfpcE"
+  ]
+}

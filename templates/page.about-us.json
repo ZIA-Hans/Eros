@@ -26,245 +26,185 @@
         "margin-bottom-mobile": 20
       }
     },
-    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45": {
-      "type": "background-video",
+    "image_banner_yyYQF8": {
+      "type": "image-banner",
       "blocks": {
-        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1": {
+        "heading_PFyxAx": {
           "type": "heading",
           "settings": {
-            "heading": "Made to feel good",
-            "disable_on_mobile": false,
-            "size_heading": 200,
-            "size_heading_mobile": 180
-          }
-        },
-        "heading_67HHNx": {
-          "type": "heading",
-          "settings": {
-            "heading": "More than looking good",
+            "heading": "Elegance should feel effortless",
             "disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100
           }
+        },
+        "text_7HyYMG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Refined essentials designed for softness, comfort, and quiet confidence</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
         }
       },
       "block_order": [
-        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1",
-        "heading_67HHNx"
+        "heading_PFyxAx",
+        "text_7HyYMG"
       ],
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
         "advanced_heading": false,
         "heading": "",
-        "heading_richtext": "",
+        "heading_richtext": "<h2>Image banner</h2>",
         "full-width-enabled": true,
         "container_max_width": 0,
-        "video_hosted": "shopify://files/videos/1020-860 banner.mp4",
-        "mobile_video_hosted": "shopify://files/videos/product intro.mp4",
-        "autoplay": true,
-        "video_controls": false,
-        "video_custom_play_controls": true,
-        "video_custom_mute_controls": true,
-        "video_url": "",
-        "original_ratio": "original_ratio",
-        "desktop_fixed_height": 520,
-        "mobile_fixed_height": 380,
-        "color-body-heading": "rgba(0,0,0,0)",
-        "color-overlay": "rgba(0,0,0,0)",
-        "color-overlay-opacity": 100,
-        "color-body-text": "#ffffff",
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 380,
+        "mobile_fixed_height": 600,
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/aboutus_banner.png",
         "mobile_text_vertical_position": "center",
         "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
         "margin-top": 0,
         "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "shop_by_category_JG76be": {
-      "type": "shop-by-category",
-      "name": "Shop by Category",
-      "settings": {
-        "heading": "Shop by Category",
-        "heading_color": "#2b2b2b",
-        "heading_size_mobile": 16,
-        "heading_size_desktop": 36,
-        "heading_letter_spacing": -2,
-        "heading_spacing": 30,
-        "image_1": "shopify://shop_images/08162275.jpg",
-        "title_1": "Tights",
-        "description_1": "Soft comfort for every night",
-        "link_1": "",
-        "image_2": "shopify://shop_images/No2-Glossy-beige-product-2.jpg",
-        "title_2": "Sticky Bra",
-        "description_2": "Invisible support for every neckline",
-        "link_2": "",
-        "image_3": "shopify://shop_images/Eros_30D_Dot_Tights-2.jpg",
-        "title_3": "Pajamas",
-        "description_3": "Soft comfort for every night",
-        "link_3": "",
-        "width_style": "full",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "wide_ratio": "2 / 1",
-        "small_ratio": "6 / 7",
-        "image_fit": "cover",
-        "image_radius": 0,
-        "gap": 0,
-        "title_color": "#ffffff",
-        "title_size_mobile": 16,
-        "title_size_desktop": 36,
-        "title_letter_spacing": -2,
-        "title_underline": true,
-        "description_color": "#ffffff",
-        "description_size_mobile": 10,
-        "description_size_desktop": 14,
-        "description_letter_spacing": -2,
-        "text_gap": 10,
-        "text_padding_mobile": 15,
-        "text_padding_desktop": 30,
-        "section_background": "#ffffff",
-        "side_padding_mobile": 0,
-        "side_padding_desktop": 0,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
-      }
-    },
-    "rich_text_YkHCE8": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_zgxFxn": {
-          "type": "heading",
-          "settings": {
-            "advanced_heading": false,
-            "heading": "Redefining comfort for women",
-            "heading_richtext": "<h2>Your headline here</h2>",
-            "disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "heading_richtext_color": "",
-            "heading_richtext_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_zgxFxn"
-      ],
-      "name": "t:sections.rich-text.presets.name__3",
-      "settings": {
-        "section_width": "regular",
-        "desktop_text_horizontal_position": "center",
-        "full-width-enabled": false,
-        "color-body-text": "#2b2b2b",
-        "background_color": "",
-        "background_gradient": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 10,
+        "margin-top-mobile": 0,
         "margin-bottom-mobile": 10,
-        "compact_size": true
+        "lcp_optimize": false
       }
     },
-    "text_overlay_P6YCMG": {
-      "type": "text-overlay",
+    "image_with_text_BGTEgy": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_6c4JB3": {
-          "type": "heading",
+        "subheading_aWxjAG": {
+          "type": "subheading",
           "settings": {
-            "show_block": true,
-            "heading": "<p>We believe what sits close to your skin</p>",
-            "color": "#ffffff",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 16,
-            "desktop_size": 36,
-            "animation": "none"
+            "subheading": "Intimate wear didn’t",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
           }
         },
-        "text_QDGzKf": {
+        "text_JEQDMR": {
           "type": "text",
           "settings": {
-            "show_block": true,
-            "text": "<p>should feel effortless from morning to night</p>",
-            "color": "#ffffff",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 14,
-            "desktop_size": 28,
-            "animation": "none"
-          }
-        },
-        "button_hgnddR": {
-          "type": "button",
-          "settings": {
-            "show_block": true,
-            "label": "ABOUT SOFNEU",
-            "link": "",
-            "style": "text",
-            "desktop_text_color": "#2b2b2b",
-            "desktop_border_color": "#2b2b2b",
-            "animation": "none"
+            "text": "<p>As women embraced a more refined and effortless way of living, intimatewear remained overly restrictive, overly performative, and disconnected from how women actually want to feel.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
           }
         }
       },
       "block_order": [
-        "heading_6c4JB3",
-        "text_QDGzKf",
-        "button_hgnddR"
+        "subheading_aWxjAG",
+        "text_JEQDMR"
       ],
-      "name": "Text Overlay",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "mobile_image": "shopify://shop_images/No2-Glossy-beige-product-4.jpg",
-        "image_size_mode": "custom",
-        "mobile_image_height": 400,
-        "desktop_image_height": 800,
-        "image_fit": "cover",
-        "image_radius": 0,
-        "width_style": "full",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "image_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 100,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 100,
-        "mobile_overlay_y": 90,
-        "mobile_overlay_safe_padding": 0,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 320,
-        "desktop_content_max_width": 640,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 16,
-        "primary_button_background": "#ffffff",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#ffffff",
-        "text_link_color": "#ffffff",
-        "section_background": "#ffffff",
-        "side_padding_mobile": 0,
-        "side_padding_desktop": 0,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "advanced_heading": false,
+        "title": "Modern dressing became softer",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/m-no1-product-nude-problem2.jpg",
+        "mobile_text_horizontal_position": "left",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
       }
     },
-    "rich_text_icNFQG": {
+    "image_with_text_LrzCEt": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_ijXt3z": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Softness made essential",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "text_UxEMaL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sofneu creates refined essentials designed to move naturally with the body — soft, effortless layers that sit gently between you and the world</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_ijXt3z",
+        "text_UxEMaL"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Designed as a second skin",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/m-elasity.jpg",
+        "mobile_text_horizontal_position": "left",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "rich_text_3QWLT9": {
       "type": "rich-text",
       "blocks": {
-        "heading_4gryLA": {
+        "heading_mRiprP": {
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "Engineered to make comfort",
+            "heading": "Softness is a form of confidence",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 100,
@@ -272,199 +212,291 @@
             "heading_richtext_color": "",
             "heading_richtext_gradient": ""
           }
+        },
+        "text_tXhPE3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Less adjusting. </p><p>Less overthinking.</p><p>Just feeling naturally put together.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
         }
       },
       "block_order": [
-        "heading_4gryLA"
+        "heading_mRiprP",
+        "text_tXhPE3"
       ],
       "name": "t:sections.rich-text.presets.name__3",
       "settings": {
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
         "full-width-enabled": false,
-        "color-body-text": "#2b2b2b",
+        "color-body-text": "",
         "background_color": "",
         "background_gradient": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": true,
-        "margin-top-mobile": 10,
-        "margin-bottom-mobile": 10,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
         "compact_size": true
       }
     },
-    "text_overlay_jV6X8T": {
-      "type": "text-overlay",
-      "blocks": {
-        "heading_UaMyQp": {
-          "type": "heading",
-          "settings": {
-            "show_block": true,
-            "heading": "<p>SOFLUME™ SHEER</p><p>SOFTNESS MADE TO LAST</p>",
-            "color": "#ffffff",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 20,
-            "desktop_size": 36,
-            "animation": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UaMyQp"
-      ],
-      "name": "Text Overlay",
+    "pair_comparison_f7jRdh": {
+      "type": "pair-comparison",
+      "name": "Pair Comparison",
       "settings": {
-        "mobile_image": "shopify://shop_images/No2-Glossy-black-product-1.jpg",
-        "image_size_mode": "custom",
-        "mobile_image_height": 290,
-        "desktop_image_height": 520,
+        "image_1": "shopify://shop_images/outside.webp",
+        "image_2": "shopify://shop_images/inhouse.webp",
+        "image_ratio": "1 / 1",
         "image_fit": "cover",
-        "image_radius": 0,
-        "width_style": "full",
+        "image_radius": 12,
+        "brand_1": "",
+        "title_1": "",
+        "description_1": "",
+        "brand_2": "",
+        "title_2": "",
+        "description_2": "",
+        "width_style": "contained",
         "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "content_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 40,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
-        "mobile_overlay_safe_padding": 16,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 420,
-        "desktop_content_max_width": 800,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 14,
-        "primary_button_background": "#2b2b2b",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#2b2b2b",
-        "text_link_color": "#2b2b2b",
+        "desktop_max_width": 800,
+        "gap_mobile": 12,
+        "gap_desktop": 24,
+        "text_padding_mobile": 10,
+        "text_padding_desktop": 18,
+        "title_description_gap": 4,
+        "brand_color": "#693227",
+        "brand_size_mobile": 15,
+        "brand_size_desktop": 22,
+        "brand_letter_spacing": -2,
+        "brand_text_transform": "none",
+        "title_color": "#2b2b2b",
+        "title_size_mobile": 16,
+        "title_size_desktop": 26,
+        "title_weight": "700",
+        "title_letter_spacing": -2,
+        "description_color": "#6f6f6f",
+        "description_size_mobile": 9,
+        "description_size_desktop": 14,
+        "description_letter_spacing": -2,
         "section_background": "#ffffff",
-        "side_padding_mobile": 0,
-        "side_padding_desktop": 0,
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 0,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
-    "text_overlay_mWgUAY": {
-      "type": "text-overlay",
+    "rich_text_wBKJBy": {
+      "type": "rich-text",
       "blocks": {
-        "heading_eX7YgY": {
+        "heading_rQr6gU": {
           "type": "heading",
           "settings": {
-            "show_block": true,
-            "heading": "<p>ONE OUTFIT</p><p>MANY SOLUTIONS</p>",
-            "color": "#ffffff",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 20,
-            "desktop_size": 36,
-            "animation": "none"
+            "advanced_heading": false,
+            "heading": "Designed for natural wearability",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_n6U4Nm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Sofneu piece is refined through movement, layering, texture, and long wear comfort</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
           }
         }
       },
       "block_order": [
-        "heading_eX7YgY"
+        "heading_rQr6gU",
+        "text_n6U4Nm"
       ],
-      "name": "Text Overlay",
+      "name": "t:sections.rich-text.presets.name__3",
       "settings": {
-        "mobile_image": "shopify://shop_images/No2-Glossy-black-product-1.jpg",
-        "image_size_mode": "custom",
-        "mobile_image_height": 290,
-        "desktop_image_height": 520,
-        "image_fit": "cover",
-        "image_radius": 0,
-        "width_style": "full",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "image_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 40,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
-        "mobile_overlay_safe_padding": 16,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 420,
-        "desktop_content_max_width": 800,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 14,
-        "primary_button_background": "#2b2b2b",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#2b2b2b",
-        "text_link_color": "#2b2b2b",
-        "section_background": "#ffffff",
-        "side_padding_mobile": 0,
-        "side_padding_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": true
       }
     },
-    "sofneu_carousel_nGDwGa": {
+    "pair_comparison_njYid7": {
+      "type": "pair-comparison",
+      "name": "Pair Comparison",
+      "settings": {
+        "image_1": "shopify://shop_images/design_tights.webp",
+        "image_2": "shopify://shop_images/desgin_pajams.webp",
+        "image_ratio": "1 / 1",
+        "image_fit": "cover",
+        "image_radius": 12,
+        "brand_1": "",
+        "title_1": "",
+        "description_1": "",
+        "brand_2": "",
+        "title_2": "",
+        "description_2": "",
+        "width_style": "contained",
+        "mobile_max_width": 420,
+        "desktop_max_width": 800,
+        "gap_mobile": 12,
+        "gap_desktop": 24,
+        "text_padding_mobile": 10,
+        "text_padding_desktop": 18,
+        "title_description_gap": 4,
+        "brand_color": "#693227",
+        "brand_size_mobile": 15,
+        "brand_size_desktop": 22,
+        "brand_letter_spacing": -2,
+        "brand_text_transform": "none",
+        "title_color": "#2b2b2b",
+        "title_size_mobile": 16,
+        "title_size_desktop": 26,
+        "title_weight": "700",
+        "title_letter_spacing": -2,
+        "description_color": "#6f6f6f",
+        "description_size_mobile": 9,
+        "description_size_desktop": 14,
+        "description_letter_spacing": -2,
+        "section_background": "#ffffff",
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "sofneu_carousel_FCRYND": {
       "type": "sofneu-carousel",
       "blocks": {
-        "item_nBRf9R": {
+        "item_rhYXfB": {
           "type": "item",
           "settings": {
             "show_item": true,
-            "title": "The first choice wasn't particularly",
-            "text": "<p>The first choice wasn't particularly impressive, but after using it, I found it to be truly amazing. It's fantastic, and I will recommend it to my friends</p>",
-            "product_name": "No.1 Glossy Control Top Tights",
-            "image": "shopify://shop_images/sylvie-with-tights.webp",
-            "avatar": "shopify://shop_images/sylvie-with-tights.png",
-            "author": "Lisa",
+            "title": "Beautiful tights",
+            "text": "<p>Best tights ever. Comfy and sheer enough to look not like thick tights</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/onge-with-tights.webp",
+            "second_image": "shopify://shop_images/onge-with-tights-1.webp",
+            "avatar": "shopify://shop_images/onge-with-tights_icon_3a17dc3c-d2fe-406e-9391-f01de05768a8.webp",
+            "author": "Onge",
             "show_rating": true,
             "rating": 5
           }
         },
-        "item_PCiNAY": {
+        "item_hxbCMp": {
           "type": "item",
           "settings": {
             "show_item": true,
-            "title": "The first choice wasn't particularly",
-            "text": "<p>The first choice wasn't particularly impressive, but after using it, I found it to be truly amazing. It's fantastic, and I will recommend it to my friends</p>",
-            "product_name": "No.1 Glossy Control Top Tights",
-            "author": "Lisa",
+            "title": "The best tights I have",
+            "text": "<p>The best tights I have ever worn. So comfortable and feel nice on. Highly recommend！</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/sylvie-with-tights-1.webp",
+            "second_image": "shopify://shop_images/sylvie-with-tights_d72ac285-8c85-4374-968f-dc83cf904d0e.webp",
+            "avatar": "shopify://shop_images/sylvie-with-tights_icon_f84adf2f-c6b3-4a93-9cbd-405918e6f6d8.webp",
+            "author": "Sylvie",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_JPgXnK": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Amazing product and customer service!",
+            "text": "<p>Thank you for great communication</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/elena-with-tights.webp",
+            "second_image": "shopify://shop_images/elena-with-tights-1.webp",
+            "avatar": "shopify://shop_images/elena-with-tights_icon_75bb939b-d942-4f31-98d2-008d177bea7d.webp",
+            "author": "Elena",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_pGk3nD": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Love these tights A+ Resilient",
+            "text": "<p>They feel incredibly light on the body, almost like a second skin, while still holding everything nicely. </p>",
+            "product_name": "No.2 Sheer tights",
+            "image": "shopify://shop_images/sandi-with-tights-1.webp",
+            "second_image": "shopify://shop_images/sandi-with-tights.webp",
+            "avatar": "shopify://shop_images/sandi-with-tights_icon_29990966-52ea-414d-b814-bc5fe52a8b1d.webp",
+            "author": "Sandi",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_3BWd4U": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Winter staple for corporate women",
+            "text": "<p>Winter staple for corporate women</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/mal-with-tights-1.webp",
+            "second_image": "shopify://shop_images/mal-with-tights.webp",
+            "avatar": "shopify://shop_images/mal-with-tights_icon_b0a54b27-804e-4085-b815-619a89e43690.webp",
+            "author": "Mallisa",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_8GF97z": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "They’re great!! They’re super light",
+            "text": "<p>yet don’t break! I love that it comes with gloves to put the tights on, and the sheer is incredible!! I’m so happy with them!</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/andrea-with-tights.webp",
+            "second_image": "shopify://shop_images/andrea-with-tights-1.webp",
+            "avatar": "shopify://shop_images/andrea-with-tights_icon_bb55a745-a50b-4ce0-b720-086cf34c94d1.webp",
+            "author": "Andrea",
             "show_rating": true,
             "rating": 5
           }
         }
       },
       "block_order": [
-        "item_nBRf9R",
-        "item_PCiNAY"
+        "item_rhYXfB",
+        "item_hxbCMp",
+        "item_JPgXnK",
+        "item_pGk3nD",
+        "item_3BWd4U",
+        "item_8GF97z"
       ],
       "name": "Sofneu Carousel",
       "settings": {
-        "eyebrow": "Don’t just take our word for it",
-        "heading": "See why women love Sofneu",
+        "eyebrow": "Shaped by the women who wear us",
+        "heading": "",
         "show_review_summary": true,
         "review_label": "Product Reviews",
         "review_score": "4.9",
         "show_badge": true,
-        "badge_icon": "shopify://shop_images/1_a9516455-1ab6-4e4b-85f2-ce7988358e5d.png",
+        "badge_icon": "shopify://shop_images/google.png",
         "badge_text": "Google Top Quality Store",
         "show_quote_mark": true,
-        "show_button": true,
+        "show_button": false,
         "button_text": "Read All Reviews",
         "button_link": "",
-        "section_background": "#faeee5",
-        "card_background": "#ffffff",
+        "section_background": "{{ settings.colors.background }}",
+        "card_background": "#f7f2ed",
         "text_color": "#2b2b2b",
         "heading_color": "#2b2b2b",
         "accent_color": "#b3877b",
@@ -476,9 +508,9 @@
         "button_background": "#a65d4a",
         "button_color": "#ffffff",
         "eyebrow_size_mobile": 16,
-        "eyebrow_size_desktop": 18,
+        "eyebrow_size_desktop": 32,
         "heading_size_mobile": 13,
-        "heading_size_desktop": 42,
+        "heading_size_desktop": 20,
         "mobile_max_width": 420,
         "desktop_max_width": 1280,
         "desktop_button_width": 320,
@@ -488,140 +520,111 @@
         "padding_right_mobile": 16,
         "padding_top_desktop": 40,
         "padding_bottom_desktop": 40,
-        "padding_left_desktop": 40,
-        "padding_right_desktop": 40
+        "padding_left_desktop": 32,
+        "padding_right_desktop": 32
       }
     },
-    "1784086620ddf76ceb": {
-      "type": "apps",
+    "multicolumn_D33mfA": {
+      "type": "multicolumn",
       "blocks": {
-        "gsc_instagram_feed_instafeed_RRx4PL": {
-          "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+        "column_C7q7dq": {
+          "type": "column",
           "settings": {
-            "widget_id": "GSC-sbpKzKfojEhjyfJ"
-          }
-        }
-      },
-      "block_order": [
-        "gsc_instagram_feed_instafeed_RRx4PL"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "blocks_yaiWnB": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5dcd6eb_JeEkBx": {
-          "type": "ai_gen_block_5dcd6eb",
-          "settings": {
-            "title": "",
-            "title_size_mobile": 18,
-            "title_size_desktop": 26,
-            "title_color": "#2b2b2b",
-            "title_spacing": 30,
-            "max_width": 1000,
-            "padding_mobile": 20,
-            "padding_desktop": 40,
-            "background_color": "#ffffff",
-            "icon_size_mobile": 50,
-            "icon_size_desktop": 70,
-            "icon_gap_mobile": 20,
-            "icon_gap_desktop": 40,
-            "icon_text_spacing": 12,
-            "text_size_mobile": 12,
-            "text_size_desktop": 14,
-            "text_color": "#2b2b2b",
-            "benefit_1_enabled": true,
-            "benefit_1_icon": "shopify://shop_images/East-return.svg",
-            "benefit_1_icon_alt": "30-Days Easy Returns icon",
-            "benefit_1_text": "30-Days Easy Returns",
-            "benefit_1_link": "",
-            "benefit_2_enabled": true,
-            "benefit_2_icon": "shopify://shop_images/fast-shipping.svg",
-            "benefit_2_icon_alt": "Shipping icon",
-            "benefit_2_text": "Fast Shipping From Sydney",
-            "benefit_2_link": "",
-            "benefit_3_enabled": true,
-            "benefit_3_icon": "shopify://shop_images/quick_support.svg",
-            "benefit_3_icon_alt": "Customer Support icon",
-            "benefit_3_text": "Quick Customer Support",
-            "benefit_3_link": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5dcd6eb_JeEkBx"
-      ],
-      "name": "Main benefits icons",
-      "settings": {
-        "section-margin": 0
-      }
-    },
-    "media_spotlight_Ubeghx": {
-      "type": "media-spotlight",
-      "blocks": {
-        "media_item_TKGQPk": {
-          "type": "media_item",
-          "settings": {
-            "show_item": true,
-            "media_name": "VOGUE",
-            "quote": "“BOOMBA inserts are a musthave\nfor brides!”"
+            "heading": "Refined calmness",
+            "heading_disable_on_mobile": false,
+            "text": "<p><em>Work, without the stiffness</em></p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "mobile_image": "shopify://shop_images/work.webp",
+            "out-background-color": "",
+            "out-text-color": ""
           }
         },
-        "media_item_AXbDXh": {
-          "type": "media_item",
+        "column_YtXgHQ": {
+          "type": "column",
           "settings": {
-            "show_item": true,
-            "media_name": "ELLE",
-            "quote": "A modern essential for\nconfident styling."
+            "heading": "Quiet Poise",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Presence, without performance</p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "mobile_image": "shopify://shop_images/show.webp",
+            "out-background-color": "",
+            "out-text-color": ""
+          }
+        },
+        "column_fJkMkf": {
+          "type": "column",
+          "settings": {
+            "heading": "lived-in femininity",
+            "heading_disable_on_mobile": false,
+            "text": "<p><em>Softness, without trying</em></p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "mobile_image": "shopify://shop_images/hangout.webp",
+            "out-background-color": "",
+            "out-text-color": ""
           }
         }
       },
       "block_order": [
-        "media_item_TKGQPk",
-        "media_item_AXbDXh"
+        "column_C7q7dq",
+        "column_YtXgHQ",
+        "column_fJkMkf"
       ],
-      "name": "Media Spotlight",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "heading": "Recognized by leading publications",
-        "subheading": "A modern approach to intimate essentials",
-        "button_text": "In the Spotlight",
-        "button_link": "",
-        "heading_color": "#2b2b2b",
-        "subheading_color": "#2b2b2b",
-        "heading_size_mobile": 16,
-        "heading_size_desktop": 24,
-        "subheading_size_mobile": 13,
-        "subheading_size_desktop": 18,
-        "button_background": "#a65d4a",
-        "button_color": "#ffffff",
-        "section_background": "#f7f3ec",
-        "mobile_max_width": 345,
-        "desktop_max_width": 560,
-        "desktop_button_width": 520,
-        "panel_padding_mobile": 0,
-        "panel_padding_desktop": 0,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "advanced_heading": false,
+        "heading": "Quiet refinement, lived differently",
+        "heading_richtext": "<h2>Multicolumn</h2>",
+        "enable_stack_products": false,
+        "full-width-enabled": false,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "number_of_column_desktop": 3,
+        "spacing_desktop": "16",
+        "number_of_column_mobile": "1",
+        "spacing_mobile": "16",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
       }
     }
   },
   "order": [
     "main",
-    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45",
-    "shop_by_category_JG76be",
-    "rich_text_YkHCE8",
-    "text_overlay_P6YCMG",
-    "rich_text_icNFQG",
-    "text_overlay_jV6X8T",
-    "text_overlay_mWgUAY",
-    "sofneu_carousel_nGDwGa",
-    "1784086620ddf76ceb",
-    "blocks_yaiWnB",
-    "media_spotlight_Ubeghx"
+    "image_banner_yyYQF8",
+    "image_with_text_BGTEgy",
+    "image_with_text_LrzCEt",
+    "rich_text_3QWLT9",
+    "pair_comparison_f7jRdh",
+    "rich_text_wBKJBy",
+    "pair_comparison_njYid7",
+    "sofneu_carousel_FCRYND",
+    "multicolumn_D33mfA"
   ]
 }

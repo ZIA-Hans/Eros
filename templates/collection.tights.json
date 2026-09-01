@@ -158,12 +158,13 @@
         "heading_richtext": "<h2>Image banner</h2>",
         "full-width-enabled": true,
         "container_max_width": 0,
-        "slide_height": "fixed_height",
+        "slide_height": "adapt_to_first_image",
         "desktop_fixed_height": 320,
         "mobile_fixed_height": 460,
+        "desktop_image": "shopify://shop_images/collection_tight_banner_pc.png",
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
-        "mobile_image": "shopify://shop_images/08162268.jpg",
+        "mobile_image": "shopify://shop_images/collection_tight_banner_m.png",
         "mobile_text_vertical_position": "center",
         "mobile_text_horizontal_position": "center",
         "out_hero_mobile": false,
@@ -343,6 +344,29 @@
         "padding_bottom_desktop": 64
       }
     },
+    "xt_product_pickup_R7fdGr": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_zhDrip": {
+          "type": "product",
+          "settings": {
+            "product": "no1-10d-control-top-sheer-tights"
+          }
+        }
+      },
+      "block_order": [
+        "product_zhDrip"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
     "feature_text_image_b3rxpW": {
       "type": "feature-text-image",
       "name": "Feature Text Image",
@@ -372,6 +396,36 @@
         "padding_bottom_mobile": 20,
         "padding_top_desktop": 64,
         "padding_bottom_desktop": 64
+      }
+    },
+    "xt_product_pickup_GrmmqG": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_FEGJaQ": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_L3zpTV": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_FEGJaQ",
+        "product_L3zpTV"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
       }
     },
     "feature_text_image_CXdbKc": {
@@ -405,6 +459,29 @@
         "padding_bottom_desktop": 64
       }
     },
+    "xt_product_pickup_KwTQHb": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_HH6U4D": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_HH6U4D"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
     "feature_text_image_x6bMet": {
       "type": "feature-text-image",
       "name": "Feature Text Image",
@@ -434,6 +511,29 @@
         "padding_bottom_mobile": 20,
         "padding_top_desktop": 64,
         "padding_bottom_desktop": 64
+      }
+    },
+    "xt_product_pickup_4drBqf": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_QRzgfb": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_QRzgfb"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "精选商品",
+        "subtitle": "点击商品快速选购",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
       }
     },
     "feature_text_image_7i3mka": {
@@ -467,6 +567,29 @@
         "padding_bottom_desktop": 64
       }
     },
+    "xt_product_pickup_fhAam4": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_HHwFRx": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_HHwFRx"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
     "feature_text_image_HEDFYG": {
       "type": "feature-text-image",
       "name": "Feature Text Image",
@@ -496,6 +619,29 @@
         "padding_bottom_mobile": 20,
         "padding_top_desktop": 64,
         "padding_bottom_desktop": 64
+      }
+    },
+    "xt_product_pickup_MPPdrX": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_6FN8fQ": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_6FN8fQ"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
       }
     },
     "faq_tabs_mKhqgV": {
@@ -653,7 +799,7 @@
         "tab_3_label": "Care",
         "tab_4_label": "Tech",
         "tab_size_mobile": 14,
-        "tab_size_desktop": 28,
+        "tab_size_desktop": 16,
         "tab_letter_spacing": -2,
         "tabs_spacing": 20,
         "tab_gap": 10,
@@ -721,11 +867,17 @@
     "category_guide_carousel_rAV7Ek",
     "rich_text_zM47mb",
     "feature_text_image_LEkWNX",
+    "xt_product_pickup_R7fdGr",
     "feature_text_image_b3rxpW",
+    "xt_product_pickup_GrmmqG",
     "feature_text_image_CXdbKc",
+    "xt_product_pickup_KwTQHb",
     "feature_text_image_x6bMet",
+    "xt_product_pickup_4drBqf",
     "feature_text_image_7i3mka",
+    "xt_product_pickup_fhAam4",
     "feature_text_image_HEDFYG",
+    "xt_product_pickup_MPPdrX",
     "faq_tabs_mKhqgV"
   ]
 }

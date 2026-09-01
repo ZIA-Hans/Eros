@@ -44,21 +44,6 @@
             "size_text_mobile": 140
           }
         },
-        "product_variations_7LBAAU": {
-          "type": "product_variations",
-          "settings": {
-            "option_name": "Color",
-            "picker_type": "swatch",
-            "swatch_size": 36,
-            "radius": "default",
-            "border_radius": 0,
-            "option_value_metafield": "custom.tab",
-            "products": [
-              "eros-no-2-20d-tight-beige",
-              "eros-no-2-20d-tight-black"
-            ]
-          }
-        },
         "variant_picker_7mHC3V": {
           "type": "variant_picker",
           "settings": {
@@ -78,27 +63,10 @@
             "variant_name": "",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "information_popup_pw9mqt": {
-          "type": "information_popup",
-          "disabled": true,
-          "settings": {
-            "size_icon": "ruler",
-            "size_link": "Size Chart",
-            "size_content": "eross-story",
-            "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "separator_xgqTJM": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 4
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "buy_buttons": {
@@ -110,19 +78,16 @@
             "full_width_add_to_cart": false,
             "custom_add_to_cart_label": "",
             "text_color": "#ffffff",
-            "background_color": "#151515",
+            "background_color": "#956052",
             "text_color_hover": "",
-            "background_color_hover": ""
+            "background_color_hover": "#75463C"
           }
         }
       },
       "block_order": [
         "title",
         "price",
-        "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
-        "information_popup_pw9mqt",
-        "separator_xgqTJM",
         "buy_buttons"
       ],
       "settings": {
@@ -211,8 +176,8 @@
             "icon_gap_mobile": 20,
             "icon_gap_desktop": 40,
             "icon_text_spacing": 12,
-            "text_size_mobile": 12,
-            "text_size_desktop": 14,
+            "text_size_mobile": 14,
+            "text_size_desktop": 16,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
             "benefit_1_icon": "shopify://shop_images/Feather_of_Velvet.svg",
@@ -249,9 +214,9 @@
           "type": "item",
           "settings": {
             "show_item": true,
-            "title": "62% Polyamide, 38% Elastane",
+            "title": "91% Polyamide, 9% Spandex",
             "default_open": false,
-            "content": "<p>The perfect balance of sheer coverage and everyday durability. Crafted with 38% elastane for adaptive stretch and a secure, second-skin fit.</p>",
+            "content": "<p>Premium 80D opaque tights with a velvet-soft matte finish, LYCRA® stretch and a sculpting control top for lasting comfort and refined coverage.</p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -277,7 +242,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over $59.99.</p><p><em><strong>Click here to visit our Shipping Policy.</strong></em></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -305,10 +270,10 @@
         "accordion_max_width": 800,
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
         "accordion_background": "#f9f5f3",
         "accordion_radius": 0,
         "content_padding_mobile": 10,
@@ -340,6 +305,67 @@
         "allow_multiple_open": false
       }
     },
+    "features_banner_m4Y7Bg": {
+      "type": "features-banner",
+      "blocks": {
+        "image_mkr3kg": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "select_icon": "bag",
+            "heading": "Free Delivery on A$59",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_wQzpNF": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "select_icon": "user",
+            "heading": "30-Day Free Returns",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_EKqUjq": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "select_icon": "search",
+            "heading": "Anti-Snag Warranty",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mkr3kg",
+        "image_wQzpNF",
+        "image_EKqUjq"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 52,
+        "icon_layout": "center",
+        "columns_desktop": "3",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "#ffffff",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "#ffffff",
+        "background_color": "#332f2d",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
     "rich_text_EPKFJy": {
       "type": "rich-text",
       "blocks": {
@@ -365,13 +391,13 @@
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
         "full-width-enabled": false,
-        "color-body-text": "#2B2B2B",
+        "color-body-text": "#2b2b2b",
         "background_color": "",
         "background_gradient": "",
         "margin-top": 20,
-        "margin-bottom": 12,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
+        "margin-top-mobile": 10,
         "margin-bottom-mobile": 10,
         "compact_size": true
       }
@@ -383,7 +409,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p>Inspired by Yoga Leggings</p>",
+            "heading": "<p><strong>Inspired by Yoga Leggings</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -462,10 +488,10 @@
         "section_background": "#ffffff",
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "text_overlay_pPWpUC": {
@@ -475,7 +501,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p>Flexible Stretch That Moves With You</p>",
+            "heading": "<p><strong>Flexible Stretch That Moves With You</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -522,10 +548,10 @@
         "section_background": "#ffffff",
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "grid_view_wCynBd": {
@@ -542,7 +568,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Flexible Fit, Every Step",
+            "heading": "<strong>Flexible Fit, Every Step</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -573,7 +599,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Smooth Comfort, Seamless Feel",
+            "heading": "<strong>Smooth Comfort, Seamless Feel</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -610,10 +636,10 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
+        "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
     },
@@ -631,7 +657,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Double 6 Nylon  and LYCRA Elastane",
+            "heading": "<strong>Double 6 Nylon  and LYCRA Elastane</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -660,18 +686,18 @@
         "advanced_heading": false,
         "title": "Premium Materials",
         "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "full-width-enabled": false,
         "image_ratio": "adapt",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 0
+        "margin-bottom-mobile": 10
       }
     },
     "text_overlay_qcmFHm": {
@@ -681,7 +707,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p>Sofneu Velvet, Made to Last</p>",
+            "heading": "<p><strong>Sofneu Velvet, Made to Last</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -776,10 +802,10 @@
         "section_background": "#ffffff",
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "rich_text_XpJW9J": {
@@ -810,9 +836,9 @@
         "color-body-text": "",
         "background_color": "",
         "background_gradient": "",
-        "margin-top": 20,
-        "margin-bottom": 12,
-        "show_mobile_spacing": true,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 10,
         "compact_size": false
@@ -854,12 +880,12 @@
         "description_size_desktop": 14,
         "description_letter_spacing": -2,
         "section_background": "#ffffff",
-        "side_padding_mobile": 20,
+        "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     }
   },
@@ -868,6 +894,7 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
+    "features_banner_m4Y7Bg",
     "rich_text_EPKFJy",
     "text_overlay_9AbVzy",
     "text_overlay_pPWpUC",

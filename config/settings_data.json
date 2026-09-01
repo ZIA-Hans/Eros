@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "favicon": "shopify://shop_images/Eroslogo.png",
+    "favicon": "shopify://shop_images/Sofneu_favicon.jpg",
     "layout-width": 1400,
     "radius": 14,
     "button-radius": 10,
@@ -138,6 +138,7 @@
     "enable_color_swatch": true,
     "enable_color_swatch_in_filters": false,
     "enable_round_color_swatches": true,
+    "swatches_config": "Midnight Black:#252424\nCocoa Brown:#9B735E\nNatural Nude:#E5CFA9\nLight Nude:#EDEAE0\nIvory White:#EFEFE8\nSlate Blue:#252B36\nSheer Black:#252424#E5CFA9",
     "enable_product_variations": false,
     "badges-uppercase": "none",
     "custom-badge-1-text": "#151515",

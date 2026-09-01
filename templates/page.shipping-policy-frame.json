@@ -1,1 +1,513 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"compact-size-enabled":true,"size_heading":140,"size_heading_mobile":100,"color-body-text":"rgba(0,0,0,0)","color-bg-overlay":"rgba(0,0,0,0)","color-overlay-opacity":100,"margin-top":40,"margin-bottom":0}},"rich_text_wnKE9f":{"type":"rich-text","blocks":{"heading_VHqgQr":{"type":"heading","settings":{"heading":"Return & Refund Policy","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}}},"block_order":["heading_VHqgQr"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"image_banner_LKJ8LF":{"type":"image-banner","name":"t:sections.image-banner.presets.name","settings":{"heading":"","full-width-enabled":false,"slide_height":"fixed_height","desktop_fixed_height":320,"mobile_fixed_height":200,"desktop_image":"shopify:\/\/shop_images\/08162677.jpg","desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","color-heading":"rgba(0,0,0,0)","section-color-overlay":"rgba(0,0,0,0)","section-color-overlay-opacity":100,"color-body-text":"rgba(0,0,0,0)","text-container-color":"rgba(0,0,0,0)","color-overlay-opacity":100,"margin-top":0,"margin-bottom":0}},"rich_text_gEWDbr":{"type":"rich-text","blocks":{"heading_b7wcTa":{"type":"heading","settings":{"heading":"Delivering Country","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"text_kYhD8p":{"type":"text","settings":{"text":"<p>Our website (www.eroslingiere.com.au) delivers exclusively to Australia and New Zealand Just now.<\/p>","disable_on_mobile":false}}},"block_order":["heading_b7wcTa","text_kYhD8p"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"rgba(0,0,0,0)","background_color":"rgba(0,0,0,0)","margin-top":20,"margin-bottom":20}},"rich_text_hHmejP":{"type":"rich-text","blocks":{"heading_hbPdMy":{"type":"heading","settings":{"heading":"Australia Delivery Information","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"text_tDNfJQ":{"type":"text","disabled":true,"settings":{"text":"<p>Please find below the estimated shipping times from the table. <\/p>","disable_on_mobile":false}}},"block_order":["heading_hbPdMy","text_tDNfJQ"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"custom_liquid_3CE9GM":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<style>\n.delivery-table {\n  width: 90%;                   \/* 相对屏幕宽度 *\/\n  max-width: 1200px;            \/* 最大宽度，避免超宽 *\/\n  margin: 20px auto;            \/* 上下间距 + 自动居中 *\/\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n\/* hover 效果 *\/\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n\/* 移动端：卡片样式 *\/\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n<\/style>\n\n<table class=\"delivery-table\">\n  <thead>\n    <tr>\n      <th>Service<\/th>\n      <th>Delivered<\/th>\n      <th>Cost<\/th>\n      <th>Free if you spend<\/th>\n    <\/tr>\n  <\/thead>\n  <tbody>\n    <tr>\n      <td data-label=\"Service\">Standard delivery (AU Post)<\/td>\n      <td data-label=\"Delivered\">2–5 Working days<\/td>\n      <td data-label=\"Cost\">$9.99<\/td>\n      <td data-label=\"Free if you spend\">$59.99<\/td>\n    <\/tr>\n    <tr>\n      <td data-label=\"Service\">Express delivery (Express Post)<\/td>\n      <td data-label=\"Delivered\">1–4 Working days<\/td>\n      <td data-label=\"Cost\">$19.99<\/td>\n      <td data-label=\"Free if you spend\">N\/A<\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>"}},"rich_text_R39zXU":{"type":"rich-text","blocks":{"heading_dXnjWC":{"type":"heading","settings":{"heading":"NewZealand Delivery Information","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"text_N6J7my":{"type":"text","disabled":true,"settings":{"text":"<p>Please find below the estimated shipping times from the table. <\/p>","disable_on_mobile":false}}},"block_order":["heading_dXnjWC","text_N6J7my"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"custom_liquid_Wa778E":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<style>\n.delivery-table {\n  width: 100%;\n  max-width: 900px;       \/* 最大宽度，防止全屏铺满 *\/\n  margin: 20px auto;      \/* 自动居中 *\/\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n\/* 表格整体居中 *\/\n.delivery-wrapper {\n  display: flex;\n  justify-content: center;  \/* 水平居中 *\/\n  width: 100%;\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n\/* hover 效果 *\/\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n\/* 移动端：卡片样式 *\/\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n<\/style>\n\n<div class=\"delivery-wrapper\">\n  <table class=\"delivery-table\">\n    <thead>\n      <tr>\n        <th>Service<\/th>\n        <th>Delivered<\/th>\n        <th>Cost<\/th>\n        <th>Free if you spend<\/th>\n      <\/tr>\n    <\/thead>\n    <tbody>\n      <tr>\n        <td data-label=\"Service\">Standard delivery (AU\/NZ Post)<\/td>\n        <td data-label=\"Delivered\">4–5 Working days<\/td>\n        <td data-label=\"Cost\">$12.99<\/td>\n        <td data-label=\"Free if you spend\">$59.99<\/td>\n      <\/tr>\n  \n    <\/tbody>\n  <\/table>\n<\/div>"}},"rich_text_KUGfkd":{"type":"rich-text","blocks":{"heading_WifTUJ":{"type":"heading","settings":{"heading":"Frequently Asked Questioned","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}}},"block_order":["heading_WifTUJ"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","color-body-text":"#2b2b2b","background_color":"#ffffff","margin-top":0,"margin-bottom":0}},"collapsible_menu_tMPhmg":{"type":"collapsible_menu","blocks":{"collapsible_tab_BDq6cJ":{"type":"collapsible_tab","settings":{"heading":"How long does it take to prepare and process an order?","content":"<p>We usually complete order processing within 48 hours.<\/p>","page":"","icon":"check_mark"}},"collapsible_tab_paFEXD":{"type":"collapsible_tab","settings":{"heading":"What Is the Delivery Service and Options?","content":"<p>We offer a number of delivery options. You can choose to have your order delivered to your home or work address. We do everything we can to ensure that your order is delivered complete and on time. However please note that during peak demand times (such as Christmas, Valentine's Day and Black Friday weekend) deliveries may take longer than expected.<\/p><p>EROS currently uses AU Post and Express Post services to ship to Australia, with standard and express shipping options available.<br\/><br\/><\/p>","page":"","icon":"check_mark"}},"collapsible_tab_wWeFhm":{"type":"collapsible_tab","settings":{"heading":"Delivery Packaging","content":"<p>Your order (single product) will be delivered in a plastic package with EROS logo and the outermost waterproof packaging.<\/p><p>Your order (three or more products) will be delivered in a plastic package with EROS logo, case box and the outermost waterproof packaging; In addition, you will be provided with pantyhose gloves to satisfy your better wearing and taking off experience and machine washable bags for delicate washing of products.<br\/><br\/><\/p>","page":"","icon":"check_mark"}},"collapsible_tab_ThxWTb":{"type":"collapsible_tab","settings":{"heading":"Tracking","content":"<p><strong>For maximum peace of mind, all standard orders are shipped with tracking.<\/strong><br\/><br\/>You will receive a tracking code in your shipping confirmation email, allowing you to monitor your parcel on the courier’s website.<\/p><p><strong>Please note:<\/strong> In the case of single-item replacements (e.g., a pair of tights sent as a complimentary reshipment), we may use an envelope delivery method to your original address. This option does not include tracking, so please keep an eye on your mailbox.<br\/><br\/><\/p>","page":"","icon":"check_mark"}},"collapsible_tab_fb6Nah":{"type":"collapsible_tab","settings":{"heading":"What If Your Order Dosen't Arrive When You Expect?","content":"<p>If your delivery is more than 3 working days overdue, please contact us. <\/p><p>We will then do everything we can to track down your order.<br\/><br\/><\/p>","page":"","icon":"check_mark"}}},"block_order":["collapsible_tab_BDq6cJ","collapsible_tab_paFEXD","collapsible_tab_wWeFhm","collapsible_tab_ThxWTb","collapsible_tab_fb6Nah"],"name":"t:sections.collapsible_menu.presets.name","settings":{"color-body-text":"#2b2b2b","background_color":"#ffffff","compact-size-enabled":true,"margin-top":20,"margin-bottom":20}}},"order":["main","rich_text_wnKE9f","image_banner_LKJ8LF","rich_text_gEWDbr","rich_text_hHmejP","custom_liquid_3CE9GM","rich_text_R39zXU","custom_liquid_Wa778E","rich_text_KUGfkd","collapsible_menu_tMPhmg"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_wnKE9f": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VHqgQr": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Shipping & Delivery",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_VHqgQr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "image_banner_LKJ8LF": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 600,
+        "mobile_fixed_height": 480,
+        "desktop_image": "shopify://shop_images/tights-1.png",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "text-container-color": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "lcp_optimize": false
+      }
+    },
+    "rich_text_gEWDbr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b7wcTa": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Where We Ship",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_kYhD8p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sofneu Australia currently ships to: <strong>Australia and New Zealand</strong></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_b7wcTa",
+        "text_kYhD8p"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "rich_text_hHmejP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hbPdMy": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Australia Delivery Information",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_hbPdMy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "custom_liquid_3CE9GM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.delivery-table {\n  width: 90%;                   /* 相对屏幕宽度 */\n  max-width: 1200px;            /* 最大宽度，避免超宽 */\n  margin: 20px auto;            /* 上下间距 + 自动居中 */\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n/* hover 效果 */\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n/* 移动端：卡片样式 */\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n</style>\n\n<table class=\"delivery-table\">\n  <thead>\n    <tr>\n      <th>Service</th>\n      <th>Delivered</th>\n      <th>Cost</th>\n      <th>Free if you spend</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td data-label=\"Service\">Standard delivery (AU Post)</td>\n      <td data-label=\"Delivered\">2–5 Working days</td>\n      <td data-label=\"Cost\">A$ 9.99</td>\n      <td data-label=\"Free if you spend\">A$ 59.99</td>\n    </tr>\n    <tr>\n      <td data-label=\"Service\">Express delivery (AU Express)</td>\n      <td data-label=\"Delivered\">1–4 Working days</td>\n      <td data-label=\"Cost\">A$ 19.99</td>\n      <td data-label=\"Free if you spend\">N/A</td>\n    </tr>\n  </tbody>\n</table>"
+      }
+    },
+    "rich_text_R39zXU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dXnjWC": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "NewZealand Delivery Information",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_N6J7my": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Please find below the estimated shipping times from the table. </p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dXnjWC",
+        "text_N6J7my"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "custom_liquid_Wa778E": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.delivery-table {\n  width: 100%;\n  max-width: 900px;       /* 最大宽度，防止全屏铺满 */\n  margin: 20px auto;      /* 自动居中 */\n  border-collapse: collapse;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n  background: #fff;\n  border-radius: 8px;\n  overflow: hidden;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.05);\n}\n\n/* 表格整体居中 */\n.delivery-wrapper {\n  display: flex;\n  justify-content: center;  /* 水平居中 */\n  width: 100%;\n}\n\n.delivery-table thead {\n  background-color: #2B2B2B;\n  color: #fff;\n}\n\n.delivery-table th,\n.delivery-table td {\n  padding: 12px 15px;\n  text-align: left;\n  border: 1px solid #ddd;\n}\n\n/* hover 效果 */\n.delivery-table tbody tr:hover {\n  background-color: #f9f9f9;\n}\n\n/* 移动端：卡片样式 */\n@media screen and (max-width: 768px) {\n  .delivery-table thead {\n    display: none;\n  }\n  .delivery-table, \n  .delivery-table tbody, \n  .delivery-table tr, \n  .delivery-table td {\n    display: block;\n    width: 100%;\n  }\n  .delivery-table tr {\n    margin-bottom: 15px;\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    padding: 10px;\n    background: #fff;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.05);\n  }\n  .delivery-table td {\n    text-align: right;\n    padding: 8px 10px;\n    position: relative;\n  }\n  .delivery-table td::before {\n    content: attr(data-label);\n    position: absolute;\n    left: 10px;\n    font-weight: bold;\n    text-align: left;\n  }\n}\n</style>\n\n<div class=\"delivery-wrapper\">\n  <table class=\"delivery-table\">\n    <thead>\n      <tr>\n        <th>Service</th>\n        <th>Delivered</th>\n        <th>Cost</th>\n        <th>Free if you spend</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td data-label=\"Service\">Standard delivery (AU Post)</td>\n        <td data-label=\"Delivered\">4–5 Working days</td>\n        <td data-label=\"Cost\">A$ 12.99</td>\n        <td data-label=\"Free if you spend\">A$ 59.99</td>\n      </tr>\n  \n    </tbody>\n  </table>\n</div>"
+      }
+    },
+    "rich_text_KUGfkd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WifTUJ": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Frequently Asked Questioned",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_WifTUJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "collapsible_menu_tMPhmg": {
+      "type": "collapsible_menu",
+      "blocks": {
+        "collapsible_tab_zmEBQp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Carriers",
+            "content": "<p>We use trusted delivery partners to ship Sofneu orders. The carrier used depends on the destination and shipping service selected:</p><ul><li><strong>Standard Shipping:</strong> AU Post or Aramex</li><li><strong>Express Shipping:</strong> AU Post Express</li><li><strong>New Zealand Shipping:</strong> AU  Post International</li></ul><p>For Standard Shipping within Australia, the carrier is selected by Sofneu based on the delivery location and available shipping services.</p><p>Tracking information will be provided once your order has been dispatched.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_nURMQc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Order Processing",
+            "content": "<p>Orders are typically processed and dispatched within <strong>1–2 business days</strong> after your order is successfully placed.</p><p>Orders placed on weekends or public holidays will generally begin processing on the next business day.</p><p>During peak periods, major promotions or public holidays, processing may occasionally take longer.</p><p>Once your order has been dispatched, you will receive a shipping confirmation email with tracking information where available.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_eFtrhU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "New Zealand Duties and Taxes",
+            "content": "<p>For most orders valued at <strong>NZ$1,000 or less</strong>, New Zealand Customs generally does not collect duty or GST from the customer at the border.</p><p>Taxes, duties, customs charges or other fees may apply in certain circumstances, including where applicable thresholds are exceeded or where required by New Zealand law.</p><p>Any taxes collected by Sofneu at checkout, where applicable, will be displayed as part of your order before payment.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_ThxWTb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Order Tracking",
+            "content": "<p>All standard customer orders are shipped with tracking.</p><p>Once your order has been dispatched, we will send a shipping confirmation email containing your tracking information.</p><p>Please allow some time after receiving your shipping confirmation for tracking information to become available or update in the carrier’s system.</p><p>Complimentary replacements may occasionally be sent using an alternative delivery service and may not include tracking. Where this applies, we will provide the available delivery information when your replacement is arranged.<br/><br/></p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_Re3KXP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery Estimates and Delays",
+            "content": "<p>We work with our delivery partners to get your order to you within the estimated delivery timeframe.</p><p>However, delivery estimates are not guaranteed and may be affected by circumstances such as:</p><ul><li>carrier delays;</li><li>severe weather;</li><li>public holidays;</li><li>peak shopping periods;</li><li>customs or border processing for New Zealand orders; or other events outside our reasonable control.</li></ul><p>If your order has not arrived by the estimated delivery date shown in your tracking information, please check the tracking status first.</p><p>If there has been no recent tracking update or you are concerned about your delivery, contact us at <strong>service@sofneu.com.au</strong> and we will help investigate your order.</p><p>Nothing in this section limits any rights you may have under applicable consumer law.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_BDq6cJ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Incorrect or Incomplete Shipping Addresses",
+            "content": "<p>Please ensure that your shipping address is complete and accurate before placing your order.</p><p>If you need to change your address, contact us at <strong>service@sofneu.com.au</strong> as soon as possible.</p><p><strong>Before dispatch:</strong><br/><br/>If your order has not yet been dispatched, we will make reasonable efforts to update the address at no additional cost to you.</p><p><strong>After dispatch:</strong><br/><br/>Once an order has been dispatched, we cannot guarantee that the delivery address can be changed. We may attempt to arrange a redirect, recall or return with the carrier where available.</p><p>If an address change requested after dispatch results in additional costs, including <strong>carrier interception or redirection fees, return shipping fees, redelivery fees, or other reasonable logistics costs</strong>, these costs will be the customer’s responsibility.</p><p>Where an order cannot be recovered or is lost as a direct result of an incorrect address provided by the customer or an address change requested after dispatch, the customer may also be responsible for the resulting product loss, to the extent permitted by applicable law.</p><p>Nothing in this section limits your rights under applicable consumer law.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_paFEXD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Lost Packages",
+            "content": "<p>If you believe your package has been lost in transit, please contact us at <strong>service@sofneu.com.au</strong> with your order number.</p><p>We may first investigate the delivery with the relevant carrier.</p><p>If the package is confirmed as lost, we will work with you to provide an appropriate resolution in accordance with applicable consumer law.<br/><br/></p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_wWeFhm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Packages Marked as Delivered or Awaiting Collection",
+            "content": "<p>Please monitor your tracking information after your order has been dispatched, as the carrier may provide important delivery updates.</p><p>If delivery cannot be completed, your package may be taken to a nearby <strong>Post Office, collection point or other designated location</strong> for collection. Please follow the instructions provided by the carrier and collect your package within the specified timeframe.</p><p>If your tracking shows that your package has been delivered but you cannot locate it, please first:</p><ul><li>check the delivery location and any safe-drop areas;</li><li>check with household members, neighbours, reception or building management where applicable; and</li><li>review the latest tracking information to see whether the package is awaiting collection.</li></ul><p>If you still cannot locate your package, please contact us at <strong>service@sofneu.com.au</strong> and we will assist you with the next steps.</p><p>If a package is returned to us because it was not collected within the carrier’s required timeframe, additional shipping charges may apply if you request redelivery.<br/><br/></p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_DCpf4K": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Damaged Packages",
+            "content": "<p>If your package arrives visibly damaged, please contact us as soon as reasonably possible.</p><p>Please provide:</p><ul><li>your order number;</li><li>a description of the issue; and photographs of the damaged packaging and affected products where reasonably possible.</li></ul><p>This will help us assess the issue and, where necessary, raise an enquiry with the delivery provider.</p><p>Your rights in relation to faulty or damaged products under applicable consumer law are not affected by this process.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_xz6daQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returned to Sender",
+            "content": "<p>A package may be returned to us if it cannot be delivered, including where the address is incorrect or incomplete, or the package is not collected within the carrier’s required timeframe.</p><p>If a package is returned because it was <strong>not collected within the required timeframe</strong>, the customer will be responsible for any <strong>return shipping costs and redelivery costs</strong> incurred.</p><p>If your package is returned to us, please contact <strong>service@sofneu.com.au</strong> and we will assist you with the available redelivery options.</p><p>Nothing in this section limits your rights under applicable consumer law.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_zmEBQp",
+        "collapsible_tab_nURMQc",
+        "collapsible_tab_eFtrhU",
+        "collapsible_tab_ThxWTb",
+        "collapsible_tab_Re3KXP",
+        "collapsible_tab_BDq6cJ",
+        "collapsible_tab_paFEXD",
+        "collapsible_tab_wWeFhm",
+        "collapsible_tab_DCpf4K",
+        "collapsible_tab_xz6daQ"
+      ],
+      "name": "t:sections.collapsible_menu.presets.name",
+      "settings": {
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "compact-size-enabled": true,
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_FADUW7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_q7HkD8": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Contact Us",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_3rNwiN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you have questions about shipping, tracking or the delivery of your order, </p><p>please contact:</p><p><strong>EROS INTIMATES PTY LTD</strong></p><p><strong>Trading as Sofneu</strong></p><p><strong>Email:</strong> service@sofneu.com.au</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_q7HkD8",
+        "text_3rNwiN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_wnKE9f",
+    "image_banner_LKJ8LF",
+    "rich_text_gEWDbr",
+    "rich_text_hHmejP",
+    "custom_liquid_3CE9GM",
+    "rich_text_R39zXU",
+    "custom_liquid_Wa778E",
+    "rich_text_KUGfkd",
+    "collapsible_menu_tMPhmg",
+    "rich_text_FADUW7"
+  ]
+}

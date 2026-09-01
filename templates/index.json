@@ -37,10 +37,10 @@
         "mobile_text_vertical_position": "center",
         "mobile_text_horizontal_position": "center",
         "margin-top": 0,
-        "margin-bottom": 40,
+        "margin-bottom": 0,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 0
       }
     },
     "shop_by_category_V9x7t9": {
@@ -53,12 +53,14 @@
         "heading_size_desktop": 36,
         "heading_letter_spacing": -2,
         "heading_spacing": 30,
+        "image_1": "shopify://shop_images/tights-1.webp",
         "title_1": "Tights",
         "description_1": "Soft comfort for every night",
         "link_1": "",
         "title_2": "Sticky Bra",
         "description_2": "Invisible support for every neckline",
         "link_2": "",
+        "image_3": "shopify://shop_images/pajama-1.webp",
         "title_3": "Pajamas",
         "description_3": "Soft comfort for every night",
         "link_3": "",
@@ -174,7 +176,7 @@
       ],
       "name": "Text Overlay",
       "settings": {
-        "mobile_image": "shopify://shop_images/08162481.jpg",
+        "mobile_image": "shopify://shop_images/comfot.webp",
         "image_size_mode": "custom",
         "mobile_image_height": 400,
         "desktop_image_height": 800,
@@ -244,6 +246,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/08162481.jpg",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
@@ -291,7 +294,7 @@
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": false,
         "full-width-enabled": true,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
@@ -515,36 +518,6 @@
       "settings": {
         "section-margin": 0
       }
-    },
-    "xt_product_pickup_3gCLAa": {
-      "type": "xt-product-pickup",
-      "blocks": {
-        "product_qGUXDp": {
-          "type": "product",
-          "settings": {
-            "product": "no1-10d-control-top-sheer-tights"
-          }
-        },
-        "product_Ggrtf7": {
-          "type": "product",
-          "settings": {
-            "product": "eros-no-1-10d-tight-black"
-          }
-        }
-      },
-      "block_order": [
-        "product_qGUXDp",
-        "product_Ggrtf7"
-      ],
-      "name": "XT 商品选购区",
-      "settings": {
-        "title": "精选商品",
-        "subtitle": "点击商品快速选购",
-        "image_ratio": "portrait",
-        "show_product_rating": true,
-        "enable_quick_add_button": true,
-        "quick_add_mode": "below_product"
-      }
     }
   },
   "order": [
@@ -555,7 +528,6 @@
     "grid_view_U9zziC",
     "sofneu_carousel_jNbMDz",
     "176206091863fc9a4b",
-    "blocks_PmQjMG",
-    "xt_product_pickup_3gCLAa"
+    "blocks_PmQjMG"
   ]
 }

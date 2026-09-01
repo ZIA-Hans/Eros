@@ -46,16 +46,17 @@
         },
         "product_variations_7LBAAU": {
           "type": "product_variations",
+          "disabled": true,
           "settings": {
-            "option_name": "Color",
-            "picker_type": "swatch",
+            "option_name": "",
+            "picker_type": "button",
             "swatch_size": 36,
             "radius": "default",
             "border_radius": 0,
             "option_value_metafield": "custom.tab",
             "products": [
-              "eros-no-2-20d-tight-beige",
-              "eros-no-2-20d-tight-black"
+              "no2-20d-control-top-sheer-tights",
+              "no2-20d-sheer-tights"
             ]
           }
         },
@@ -78,27 +79,10 @@
             "variant_name": "",
             "size_content": "",
             "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "information_popup_pw9mqt": {
-          "type": "information_popup",
-          "disabled": true,
-          "settings": {
-            "size_icon": "ruler",
-            "size_link": "Size Chart",
-            "size_content": "eross-story",
-            "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "separator_xgqTJM": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 4
+            "enable-striped-rows": true,
+            "enable_skin_popup": false,
+            "skin_variant_name": "Color",
+            "skin_button_label": "Match your skin"
           }
         },
         "buy_buttons": {
@@ -110,9 +94,9 @@
             "full_width_add_to_cart": false,
             "custom_add_to_cart_label": "",
             "text_color": "#ffffff",
-            "background_color": "#151515",
+            "background_color": "#956052",
             "text_color_hover": "",
-            "background_color_hover": ""
+            "background_color_hover": "#75463c"
           }
         }
       },
@@ -121,8 +105,6 @@
         "price",
         "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
-        "information_popup_pw9mqt",
-        "separator_xgqTJM",
         "buy_buttons"
       ],
       "settings": {
@@ -211,8 +193,8 @@
             "icon_gap_mobile": 20,
             "icon_gap_desktop": 40,
             "icon_text_spacing": 12,
-            "text_size_mobile": 12,
-            "text_size_desktop": 14,
+            "text_size_mobile": 14,
+            "text_size_desktop": 16,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
             "benefit_1_icon": "shopify://shop_images/Refined_Waistband-1.svg",
@@ -277,7 +259,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over $59.99.</p><p><em><strong>Click here to visit our Shipping Policy.</strong></em></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -305,10 +287,10 @@
         "accordion_max_width": 800,
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
         "accordion_background": "#f9f5f3",
         "accordion_radius": 0,
         "content_padding_mobile": 10,
@@ -340,6 +322,103 @@
         "allow_multiple_open": false
       }
     },
+    "features_banner_iygAT6": {
+      "type": "features-banner",
+      "blocks": {
+        "image_ecFDLT": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "select_icon": "bag",
+            "heading": "Free Delivery on A$59",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_bwGQyy": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "select_icon": "user",
+            "heading": "30-Day Free Returns",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_64gfcX": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "select_icon": "search",
+            "heading": "Anti-Snag Warranty",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ecFDLT",
+        "image_bwGQyy",
+        "image_64gfcX"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 52,
+        "icon_layout": "center",
+        "columns_desktop": "3",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "#ffffff",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "#ffffff",
+        "background_color": "#332f2d",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "rich_text_BUxrnt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Qm6m9k": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Comfort That Sits Just Right",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_Qm6m9k"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 0,
+        "compact_size": false
+      }
+    },
     "text_overlay_pPWpUC": {
       "type": "text-overlay",
       "blocks": {
@@ -347,7 +426,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p>Low-Rise. Effortless Comfort</p>",
+            "heading": "<p><strong>Low-Rise. Effortless Comfort</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -394,10 +473,10 @@
         "section_background": "#ffffff",
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "text_overlay_9AbVzy": {
@@ -407,7 +486,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p>Comfort-Fit Gusset</p>",
+            "heading": "<p><strong>Comfort-Fit Gusset</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -480,10 +559,10 @@
         "section_background": "#ffffff",
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "grid_view_wCynBd": {
@@ -500,7 +579,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Flexible Fit, Every Step",
+            "heading": "<strong>Flexible Fit, Every Step</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -531,7 +610,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Smooth Comfort, Seamless Feel",
+            "heading": "<strong>Smooth Comfort, Seamless Feel</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -568,10 +647,10 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
+        "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
     },
@@ -589,7 +668,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Bare Elastane Innovation",
+            "heading": "<strong>Bare Elastane Innovation</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -605,6 +684,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/soflume_tech.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -618,18 +698,18 @@
         "advanced_heading": false,
         "title": "Powered by Soflume™",
         "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "full-width-enabled": false,
         "image_ratio": "adapt",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 0
+        "margin-bottom-mobile": 10
       }
     },
     "before_and_after_EkW3rc": {
@@ -640,6 +720,8 @@
         "title": "",
         "heading_richtext": "<h2>Before and after</h2>",
         "layout": "image_first",
+        "before_image": "shopify://shop_images/glowchange-1.png",
+        "after_image": "shopify://shop_images/glowchange-2.png",
         "desktop-percentage-image-width": 50,
         "full-width-enabled": false,
         "slide_height": "adapt_to_first_image",
@@ -657,74 +739,65 @@
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
         "mobile_text_horizontal_position": "center",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 10
       }
     },
-    "grid_view_CDWQGg": {
-      "type": "grid-view",
+    "background_video_VAgDE4": {
+      "type": "background-video",
       "blocks": {
-        "image_bzcGbf": {
-          "type": "image",
+        "text_w9UXgQ": {
+          "type": "text",
           "settings": {
-            "subheading": "",
-            "subheading_disable_on_mobile": false,
-            "subheading_advanced_settings": false,
-            "subheading_text_style": "subtitle",
-            "text_uppercase": false,
-            "letter_spacing": 1,
-            "size_text_desktop": 100,
-            "size_text_mobile": 100,
-            "heading": "A refined balance of softness, sheerness, and durability.",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "text": "<p><strong>Italian Knitting Precision</strong></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
           }
         }
       },
       "block_order": [
-        "image_bzcGbf"
+        "text_w9UXgQ"
       ],
-      "name": "t:sections.grid-view.settings.presets.name",
+      "name": "t:sections.background-video.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Designed for Everyday Sheer Comfort",
-        "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": true,
+        "heading": "Designed for Everyday Comfort",
+        "heading_richtext": "<h2>Video hero</h2>",
         "full-width-enabled": false,
-        "image_ratio": "adapt",
-        "spacing_desktop": "24",
-        "spacing_mobile": "16",
+        "container_max_width": 0,
+        "mobile_video_hosted": "shopify://files/videos/solumeyarn.webm",
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "video_url": "",
+        "original_ratio": "original_ratio",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
         "color-body-text": "",
-        "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 0
+        "margin-bottom-mobile": 10
       }
     },
     "pair_comparison_htBBdW": {
       "type": "pair-comparison",
       "name": "Pair Comparison",
       "settings": {
+        "image_1": "shopify://shop_images/sofneusheerfabric.webp",
+        "image_2": "shopify://shop_images/otherssheerfabric.webp",
         "image_ratio": "1 / 1",
         "image_fit": "cover",
         "image_radius": 12,
@@ -757,12 +830,12 @@
         "description_size_desktop": 14,
         "description_letter_spacing": -2,
         "section_background": "#ffffff",
-        "side_padding_mobile": 20,
+        "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 40
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     }
   },
@@ -771,12 +844,14 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
+    "features_banner_iygAT6",
+    "rich_text_BUxrnt",
     "text_overlay_pPWpUC",
     "text_overlay_9AbVzy",
     "grid_view_wCynBd",
     "grid_view_rcbpWK",
     "before_and_after_EkW3rc",
-    "grid_view_CDWQGg",
+    "background_video_VAgDE4",
     "pair_comparison_htBBdW"
   ]
 }
