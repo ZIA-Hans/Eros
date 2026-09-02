@@ -1,0 +1,198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": false,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "margin-top": 40,
+        "margin-bottom": 40,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "advanced_heading": false,
+        "title": "Others also bought",
+        "heading_richtext": "<h2>Featured collection</h2>",
+        "disable_on_mobile": false,
+        "hide_empty_section": false,
+        "collection": "",
+        "product_list": [],
+        "products_to_show": 9,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 3,
+        "spacing_desktop": "16",
+        "make_products_full_width": false,
+        "number_of_column_mobile": 2.1,
+        "spacing_mobile": "16",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "enable_vendor_link": false,
+        "show_product_rating": true,
+        "enable_quick_add_button": false,
+        "quick_add_mode": "hover_desktop",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "xt_product_pickup_GBwJ8b": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_r4W8HG": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_Y6eKTy": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_y494Lg": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_3XRgqE": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_r4W8HG",
+        "product_Y6eKTy",
+        "product_y494Lg",
+        "product_3XRgqE"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "精选商品",
+        "subtitle": "点击商品快速选购",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "features_banner_xQXV6x": {
+      "type": "features-banner",
+      "blocks": {
+        "image_Gd8Xht": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "select_icon": "bag",
+            "heading": "Free Express Shipping Over $59",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_JAjHMQ": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "select_icon": "user",
+            "heading": "30-Day Money-Back Guarantee",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_yRLHHp": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "select_icon": "search",
+            "heading": "Safe & Secure Checkout",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Gd8Xht",
+        "image_JAjHMQ",
+        "image_yRLHHp"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 52,
+        "icon_layout": "center",
+        "columns_desktop": "3",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "#ffffff",
+        "color_background_icon": "rgba(0,0,0,0)",
+        "color_body_text": "#2b2b2b",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 0,
+        "margin-bottom": 24,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "featured-collection",
+    "xt_product_pickup_GBwJ8b",
+    "features_banner_xQXV6x"
+  ]
+}

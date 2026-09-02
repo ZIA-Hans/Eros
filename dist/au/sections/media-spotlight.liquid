@@ -1,0 +1,657 @@
+{% liquid
+  assign section_id = section.id | replace: '_', '' | downcase
+  assign visible_blocks = section.blocks | where: 'settings.show_item', true
+  assign icon_class = 'media-spotlight__logo-' | append: section_id
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.section_background }};
+  }
+
+  .media-spotlight-{{ section_id }} {
+    display: block;
+    width: 100%;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  .media-spotlight-{{ section_id }} * {
+    box-sizing: border-box;
+  }
+
+  .media-spotlight__inner-{{ section_id }} {
+    width: 100%;
+    max-width: {{ section.settings.mobile_max_width }}px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .media-spotlight__panel-{{ section_id }} {
+    width: 100%;
+    padding: {{ section.settings.panel_padding_mobile }}px;
+    background: transparent;
+  }
+
+  .media-spotlight__header-{{ section_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 241px;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .media-spotlight__heading-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.heading_color }};
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .media-spotlight__subheading-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.subheading_color }};
+    font-size: {{ section.settings.subheading_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .media-spotlight__stage-{{ section_id }} {
+    position: relative;
+    width: 100%;
+    min-height: 157px;
+    margin-bottom: 18px;
+  }
+
+  .media-spotlight__arrow-{{ section_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 999px;
+    background: transparent;
+    color: #2b2b2b;
+    cursor: pointer;
+    position: absolute;
+    top: 74px;
+    z-index: 3;
+  }
+
+  .media-spotlight__arrow-{{ section_id }}:hover,
+  .media-spotlight__arrow-{{ section_id }}:focus {
+    background: transparent;
+    color: #2b2b2b;
+    box-shadow: none;
+    opacity: 1;
+    outline: none;
+  }
+
+  .media-spotlight__arrow-{{ section_id }} svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .media-spotlight__arrow--prev-{{ section_id }} {
+    left: 24px;
+  }
+
+  .media-spotlight__arrow--next-{{ section_id }} {
+    right: 24px;
+  }
+
+  .media-spotlight__card-wrap-{{ section_id }} {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .media-spotlight__card-{{ section_id }} {
+    display: none;
+    position: relative;
+    width: 224px;
+    min-height: 157px;
+    margin: 0 auto;
+    padding-top: 28px;
+    text-align: center;
+  }
+
+  .media-spotlight__card-{{ section_id }}.is-active {
+    display: block;
+  }
+
+  .media-spotlight__card-box-{{ section_id }} {
+    min-height: 129px;
+    padding: 42px 25px 18px;
+    border-radius: 12px;
+    background: #ffffff;
+  }
+
+  .media-spotlight__logo-wrap-{{ section_id }} {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 999px;
+    background: #000000;
+    padding: 0;
+  }
+
+  .media-spotlight__logo-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .media-spotlight__logo-placeholder-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .media-spotlight__name-{{ section_id }} {
+    margin: 0 0 14px;
+    color: #2b2b2b;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .media-spotlight__quote-{{ section_id }} {
+    margin: 0;
+    color: #6f6f6f;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .media-spotlight__button-{{ section_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 36px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_color }};
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .media-spotlight__button-{{ section_id }}:hover,
+  .media-spotlight__button-{{ section_id }}:focus {
+    color: {{ section.settings.button_color }};
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .media-spotlight-{{ section_id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+
+    .media-spotlight__inner-{{ section_id }} {
+      max-width: {{ section.settings.desktop_max_width }}px;
+    }
+
+    .media-spotlight__panel-{{ section_id }} {
+      padding: {{ section.settings.panel_padding_desktop }}px;
+    }
+
+    .media-spotlight__header-{{ section_id }} {
+      max-width: 360px;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .media-spotlight__heading-{{ section_id }} {
+      font-size: {{ section.settings.heading_size_desktop }}px;
+    }
+
+    .media-spotlight__subheading-{{ section_id }} {
+      font-size: {{ section.settings.subheading_size_desktop }}px;
+    }
+
+    .media-spotlight__stage-{{ section_id }} {
+      min-height: 235px;
+      margin-bottom: 26px;
+    }
+
+    .media-spotlight__arrow-{{ section_id }} {
+      width: 42px;
+      height: 42px;
+      top: 112px;
+    }
+
+    .media-spotlight__arrow-{{ section_id }} svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .media-spotlight__arrow--prev-{{ section_id }} {
+      left: 64px;
+    }
+
+    .media-spotlight__arrow--next-{{ section_id }} {
+      right: 64px;
+    }
+
+    .media-spotlight__card-{{ section_id }} {
+      width: 336px;
+      min-height: 235px;
+      padding-top: 42px;
+    }
+
+    .media-spotlight__card-box-{{ section_id }} {
+      min-height: 193px;
+      padding: 64px 38px 27px;
+      border-radius: 18px;
+    }
+
+    .media-spotlight__logo-wrap-{{ section_id }} {
+      width: 84px;
+      height: 84px;
+    }
+
+    .media-spotlight__name-{{ section_id }} {
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+
+    .media-spotlight__quote-{{ section_id }} {
+      font-size: 18px;
+    }
+
+    .media-spotlight__button-{{ section_id }} {
+      width: min(100%, {{ section.settings.desktop_button_width }}px);
+      min-height: 54px;
+      font-size: 18px;
+    }
+  }
+{% endstyle %}
+
+<media-spotlight-{{ section_id }} class="media-spotlight-{{ section_id }}" data-media-spotlight>
+  <div class="media-spotlight__inner-{{ section_id }}">
+    <div class="media-spotlight__panel-{{ section_id }}">
+      <div class="media-spotlight__header-{{ section_id }}">
+        {% if section.settings.heading != blank %}
+          <h2 class="media-spotlight__heading-{{ section_id }}">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <p class="media-spotlight__subheading-{{ section_id }}">{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+
+      <div class="media-spotlight__stage-{{ section_id }}">
+        <button class="media-spotlight__arrow-{{ section_id }} media-spotlight__arrow--prev-{{ section_id }}" type="button" aria-label="Previous" data-media-prev>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M19 12H6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M11 7l-5 5 5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="media-spotlight__card-wrap-{{ section_id }}">
+          {% for block in section.blocks %}
+            {% if block.settings.show_item %}
+              <div
+                class="media-spotlight__card-{{ section_id }}{% if forloop.first %} is-active{% endif %}"
+                data-media-card
+                {{ block.shopify_attributes }}
+              >
+                <div class="media-spotlight__logo-wrap-{{ section_id }}">
+                  {% if block.settings.icon != blank %}
+                    {{ block.settings.icon | image_url: width: 240 | image_tag: class: icon_class, loading: 'lazy' }}
+                  {% else %}
+                    <span class="media-spotlight__logo-placeholder-{{ section_id }}">{{ block.settings.media_name | slice: 0, 8 }}</span>
+                  {% endif %}
+                </div>
+
+                <div class="media-spotlight__card-box-{{ section_id }}">
+                  {% if block.settings.media_name != blank %}
+                    <p class="media-spotlight__name-{{ section_id }}">{{ block.settings.media_name }}</p>
+                  {% endif %}
+
+                  {% if block.settings.quote != blank %}
+                    <p class="media-spotlight__quote-{{ section_id }}">{{ block.settings.quote | newline_to_br }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <button class="media-spotlight__arrow-{{ section_id }} media-spotlight__arrow--next-{{ section_id }}" type="button" aria-label="Next" data-media-next>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M13 7l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      {% if section.settings.button_text != blank %}
+        <a class="media-spotlight__button-{{ section_id }}" href="{{ section.settings.button_link | default: '#' }}">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</media-spotlight-{{ section_id }}>
+
+<script>
+  (() => {
+    const initMediaSpotlight = (root = document) => {
+      root.querySelectorAll('[data-media-spotlight]').forEach((section) => {
+        if (section.dataset.initialized === 'true') return;
+        section.dataset.initialized = 'true';
+
+        const cards = Array.from(section.querySelectorAll('[data-media-card]'));
+        const prev = section.querySelector('[data-media-prev]');
+        const next = section.querySelector('[data-media-next]');
+        let activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains('is-active')));
+
+        const showCard = (index) => {
+          if (!cards.length) return;
+          activeIndex = (index + cards.length) % cards.length;
+          cards.forEach((card, cardIndex) => {
+            card.classList.toggle('is-active', cardIndex === activeIndex);
+          });
+        };
+
+        if (cards.length <= 1) {
+          if (prev) prev.style.visibility = 'hidden';
+          if (next) next.style.visibility = 'hidden';
+          showCard(0);
+          return;
+        }
+
+        prev?.addEventListener('click', () => showCard(activeIndex - 1));
+        next?.addEventListener('click', () => showCard(activeIndex + 1));
+        showCard(activeIndex);
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => initMediaSpotlight());
+    document.addEventListener('shopify:section:load', (event) => initMediaSpotlight(event.target));
+    initMediaSpotlight();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Media Spotlight",
+  "tag": "section",
+  "class": "section-media-spotlight",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recognized by leading publications"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "A modern approach to intimate essentials"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "In the Spotlight"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Simple style"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size - mobile",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading size - desktop",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_mobile",
+      "label": "Subheading size - mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_desktop",
+      "label": "Subheading size - desktop",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#a65d4a"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#f7f3ec"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "label": "Mobile maximum width",
+      "min": 300,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "default": 345
+    },
+    {
+      "type": "range",
+      "id": "desktop_max_width",
+      "label": "Desktop maximum width",
+      "min": 500,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 560
+    },
+    {
+      "type": "range",
+      "id": "desktop_button_width",
+      "label": "Desktop button width",
+      "min": 240,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "default": 520
+    },
+    {
+      "type": "range",
+      "id": "panel_padding_mobile",
+      "label": "Inner padding - mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "panel_padding_desktop",
+      "label": "Inner padding - desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media_item",
+      "name": "Media item",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_item",
+          "label": "Show item",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Media icon"
+        },
+        {
+          "type": "text",
+          "id": "media_name",
+          "label": "Media name",
+          "default": "VOGUE"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Review",
+          "default": "“BOOMBA inserts are a musthave\nfor brides!”"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media Spotlight",
+      "blocks": [
+        {
+          "type": "media_item"
+        },
+        {
+          "type": "media_item",
+          "settings": {
+            "media_name": "ELLE",
+            "quote": "A modern essential for\nconfident styling."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

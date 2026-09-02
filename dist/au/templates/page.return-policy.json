@@ -1,0 +1,282 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_wnKE9f": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VHqgQr": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Return & Refund Policy",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_VHqgQr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "image_banner_LKJ8LF": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 480,
+        "mobile_fixed_height": 300,
+        "desktop_image": "shopify://shop_images/tights-1.png",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "text-container-color": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "lcp_optimize": false
+      }
+    },
+    "rich_text_hHmejP": {
+      "type": "rich-text",
+      "blocks": {
+        "text_KUKK9D": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We want you to love every Sofneu purchase. If something isn’t quite right, we’re here to help.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "text_KUKK9D"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "collapsible_menu_xxqAib": {
+      "type": "collapsible_menu",
+      "blocks": {
+        "collapsible_tab_H4iJKX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "30-Day Guarantee",
+            "content": "<p>We know tights can be delicate. If your Sofneu tights are damaged during normal wear within <strong>30 days of delivery</strong>, we’ll provide a <strong>one-time free replacement</strong>.</p><p>Simply contact us with your <strong>order number and a photo of the damage</strong>. You won’t normally need to return the damaged tights.</p><p><strong>Your replacement and replacement shipping are both free.</strong></p><p>The guarantee does not cover deliberate damage, improper use or care, lost products, or repeated claims after the one-time replacement has been used.<br/></p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_P4QAJi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returns & Exchanges",
+            "content": "<p>Changed your mind or ordered the wrong size, colour or product? </p><p>You can request a <strong>return or exchange within 30 days of delivery</strong>.</p><p><strong>Returns</strong></p><ul><li>You pay the return shipping cost.</li><li>We’ll refund the amount paid for eligible returned products.</li><li>Original shipping charges are non-refundable.</li></ul><p><strong>Exchanges</strong></p><ul><li>You pay the shipping costs both ways.</li><li>Any difference in product price will be charged or refunded accordingly.</li><li>Exchanges are subject to availability.</li></ul>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_xE69d4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return Conditions",
+            "content": "<p>For hygiene reasons, products must meet the following conditions for change-of-mind returns or exchanges:</p><ul><li><strong>Tights & Hosiery:</strong> unworn, unwashed, undamaged and in original packaging. Tried-on tights cannot be returned or exchanged.</li><li><strong>Adhesive Bras & Nipple Covers:</strong> unused, with protective film or hygiene protection intact.</li><li><strong>Sleepwear:</strong> may be tried on for fit, but must be unwashed, unworn beyond fitting, undamaged and have original tags attached.</li></ul><p>These conditions do not limit your rights in relation to faulty products under Australian Consumer Law.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_nr8AVz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Faulty, Incorrect or Missing Items",
+            "content": "<p>If your product is faulty, or we have sent you an incorrect item or missed an item from your order, please contact us with your <strong>order number and photos where applicable</strong>.</p><p>Where the issue is our responsibility, <strong>Sofneu will cover the applicable return and replacement shipping costs</strong>.</p><p>Faulty products will be handled in accordance with Australian Consumer Law. A remedy for a genuinely faulty product does not use your one-time 30-Day Guarantee.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_VNm3HA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Refunds",
+            "content": "<p>Approved refunds are returned to your <strong>original payment method</strong>.</p><p>For change-of-mind returns:</p><ul><li>refunds are based on the amount actually paid for the returned products;</li><li>original shipping charges are non-refundable; and</li><li>return shipping is paid by the customer.</li></ul><p>We generally process refunds within <strong>5–10 business days</strong> after receiving and inspecting your return. Your bank or payment provider may take additional time to show the refund in your account.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_H4iJKX",
+        "collapsible_tab_P4QAJi",
+        "collapsible_tab_xE69d4",
+        "collapsible_tab_nr8AVz",
+        "collapsible_tab_VNm3HA"
+      ],
+      "name": "t:sections.collapsible_menu.presets.name",
+      "settings": {
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "compact-size-enabled": true,
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_b9AwmR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_r8dxEH": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Contact Us",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_GN6dNn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To request a return, exchange, 30-Day Guarantee replacement, or report an order issue</p><p>Please contact:<br/><strong>service@sofneu.com.au</strong></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_r8dxEH",
+        "text_GN6dNn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_wnKE9f",
+    "image_banner_LKJ8LF",
+    "rich_text_hHmejP",
+    "collapsible_menu_xxqAib",
+    "rich_text_b9AwmR"
+  ]
+}

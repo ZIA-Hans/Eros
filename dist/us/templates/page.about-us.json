@@ -1,0 +1,630 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_banner_yyYQF8": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_PFyxAx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elegance should feel effortless",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_7HyYMG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Refined essentials designed for softness, comfort, and quiet confidence</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PFyxAx",
+        "text_7HyYMG"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 380,
+        "mobile_fixed_height": 600,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/aboutus_banner.png",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 10,
+        "lcp_optimize": false
+      }
+    },
+    "image_with_text_BGTEgy": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_aWxjAG": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Intimate wear didn’t",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "text_JEQDMR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As women embraced a more refined and effortless way of living, intimatewear remained overly restrictive, overly performative, and disconnected from how women actually want to feel.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_aWxjAG",
+        "text_JEQDMR"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Modern dressing became softer",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/m-no1-product-nude-problem2.jpg",
+        "mobile_text_horizontal_position": "left",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "image_with_text_LrzCEt": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_ijXt3z": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Softness made essential",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "text_UxEMaL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sofneu creates refined essentials designed to move naturally with the body — soft, effortless layers that sit gently between you and the world</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_ijXt3z",
+        "text_UxEMaL"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Designed as a second skin",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/m-elasity.jpg",
+        "mobile_text_horizontal_position": "left",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "rich_text_3QWLT9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mRiprP": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Softness is a form of confidence",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_tXhPE3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Less adjusting. </p><p>Less overthinking.</p><p>Just feeling naturally put together.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mRiprP",
+        "text_tXhPE3"
+      ],
+      "name": "t:sections.rich-text.presets.name__3",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": true
+      }
+    },
+    "pair_comparison_f7jRdh": {
+      "type": "pair-comparison",
+      "name": "Pair Comparison",
+      "settings": {
+        "image_1": "shopify://shop_images/outside.webp",
+        "image_2": "shopify://shop_images/inhouse.webp",
+        "image_ratio": "1 / 1",
+        "image_fit": "cover",
+        "image_radius": 12,
+        "brand_1": "",
+        "title_1": "",
+        "description_1": "",
+        "brand_2": "",
+        "title_2": "",
+        "description_2": "",
+        "width_style": "contained",
+        "mobile_max_width": 420,
+        "desktop_max_width": 800,
+        "gap_mobile": 12,
+        "gap_desktop": 24,
+        "text_padding_mobile": 10,
+        "text_padding_desktop": 18,
+        "title_description_gap": 4,
+        "brand_color": "#693227",
+        "brand_size_mobile": 15,
+        "brand_size_desktop": 22,
+        "brand_letter_spacing": -2,
+        "brand_text_transform": "none",
+        "title_color": "#2b2b2b",
+        "title_size_mobile": 16,
+        "title_size_desktop": 26,
+        "title_weight": "700",
+        "title_letter_spacing": -2,
+        "description_color": "#6f6f6f",
+        "description_size_mobile": 9,
+        "description_size_desktop": 14,
+        "description_letter_spacing": -2,
+        "section_background": "#ffffff",
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "rich_text_wBKJBy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rQr6gU": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Designed for natural wearability",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_n6U4Nm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Sofneu piece is refined through movement, layering, texture, and long wear comfort</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rQr6gU",
+        "text_n6U4Nm"
+      ],
+      "name": "t:sections.rich-text.presets.name__3",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": true
+      }
+    },
+    "pair_comparison_njYid7": {
+      "type": "pair-comparison",
+      "name": "Pair Comparison",
+      "settings": {
+        "image_1": "shopify://shop_images/design_tights.webp",
+        "image_2": "shopify://shop_images/desgin_pajams.webp",
+        "image_ratio": "1 / 1",
+        "image_fit": "cover",
+        "image_radius": 12,
+        "brand_1": "",
+        "title_1": "",
+        "description_1": "",
+        "brand_2": "",
+        "title_2": "",
+        "description_2": "",
+        "width_style": "contained",
+        "mobile_max_width": 420,
+        "desktop_max_width": 800,
+        "gap_mobile": 12,
+        "gap_desktop": 24,
+        "text_padding_mobile": 10,
+        "text_padding_desktop": 18,
+        "title_description_gap": 4,
+        "brand_color": "#693227",
+        "brand_size_mobile": 15,
+        "brand_size_desktop": 22,
+        "brand_letter_spacing": -2,
+        "brand_text_transform": "none",
+        "title_color": "#2b2b2b",
+        "title_size_mobile": 16,
+        "title_size_desktop": 26,
+        "title_weight": "700",
+        "title_letter_spacing": -2,
+        "description_color": "#6f6f6f",
+        "description_size_mobile": 9,
+        "description_size_desktop": 14,
+        "description_letter_spacing": -2,
+        "section_background": "#ffffff",
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "sofneu_carousel_FCRYND": {
+      "type": "sofneu-carousel",
+      "blocks": {
+        "item_rhYXfB": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Beautiful tights",
+            "text": "<p>Best tights ever. Comfy and sheer enough to look not like thick tights</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/onge-with-tights.webp",
+            "second_image": "shopify://shop_images/onge-with-tights-1.webp",
+            "avatar": "shopify://shop_images/onge-with-tights_icon_3a17dc3c-d2fe-406e-9391-f01de05768a8.webp",
+            "author": "Onge",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_hxbCMp": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "The best tights I have",
+            "text": "<p>The best tights I have ever worn. So comfortable and feel nice on. Highly recommend！</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/sylvie-with-tights-1.webp",
+            "second_image": "shopify://shop_images/sylvie-with-tights_d72ac285-8c85-4374-968f-dc83cf904d0e.webp",
+            "avatar": "shopify://shop_images/sylvie-with-tights_icon_f84adf2f-c6b3-4a93-9cbd-405918e6f6d8.webp",
+            "author": "Sylvie",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_JPgXnK": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Amazing product and customer service!",
+            "text": "<p>Thank you for great communication</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/elena-with-tights.webp",
+            "second_image": "shopify://shop_images/elena-with-tights-1.webp",
+            "avatar": "shopify://shop_images/elena-with-tights_icon_75bb939b-d942-4f31-98d2-008d177bea7d.webp",
+            "author": "Elena",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_pGk3nD": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Love these tights A+ Resilient",
+            "text": "<p>They feel incredibly light on the body, almost like a second skin, while still holding everything nicely. </p>",
+            "product_name": "No.2 Sheer tights",
+            "image": "shopify://shop_images/sandi-with-tights-1.webp",
+            "second_image": "shopify://shop_images/sandi-with-tights.webp",
+            "avatar": "shopify://shop_images/sandi-with-tights_icon_29990966-52ea-414d-b814-bc5fe52a8b1d.webp",
+            "author": "Sandi",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_3BWd4U": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Winter staple for corporate women",
+            "text": "<p>Winter staple for corporate women</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/mal-with-tights-1.webp",
+            "second_image": "shopify://shop_images/mal-with-tights.webp",
+            "avatar": "shopify://shop_images/mal-with-tights_icon_b0a54b27-804e-4085-b815-619a89e43690.webp",
+            "author": "Mallisa",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_8GF97z": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "They’re great!! They’re super light",
+            "text": "<p>yet don’t break! I love that it comes with gloves to put the tights on, and the sheer is incredible!! I’m so happy with them!</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/andrea-with-tights.webp",
+            "second_image": "shopify://shop_images/andrea-with-tights-1.webp",
+            "avatar": "shopify://shop_images/andrea-with-tights_icon_bb55a745-a50b-4ce0-b720-086cf34c94d1.webp",
+            "author": "Andrea",
+            "show_rating": true,
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "item_rhYXfB",
+        "item_hxbCMp",
+        "item_JPgXnK",
+        "item_pGk3nD",
+        "item_3BWd4U",
+        "item_8GF97z"
+      ],
+      "name": "Sofneu Carousel",
+      "settings": {
+        "eyebrow": "Shaped by the women who wear us",
+        "heading": "",
+        "show_review_summary": true,
+        "review_label": "Product Reviews",
+        "review_score": "4.9",
+        "show_badge": true,
+        "badge_icon": "shopify://shop_images/google.png",
+        "badge_text": "Google Top Quality Store",
+        "show_quote_mark": true,
+        "show_button": false,
+        "button_text": "Read All Reviews",
+        "button_link": "",
+        "section_background": "{{ settings.colors.background }}",
+        "card_background": "#f7f2ed",
+        "text_color": "#2b2b2b",
+        "heading_color": "#2b2b2b",
+        "accent_color": "#b3877b",
+        "card_title_color": "#2b2b2b",
+        "card_text_color": "#6f6f6f",
+        "star_background": "#faeee5",
+        "star_color": "#2b2b2b",
+        "arrow_color": "#2b2b2b",
+        "button_background": "#a65d4a",
+        "button_color": "#ffffff",
+        "eyebrow_size_mobile": 16,
+        "eyebrow_size_desktop": 32,
+        "heading_size_mobile": 13,
+        "heading_size_desktop": 20,
+        "mobile_max_width": 420,
+        "desktop_max_width": 1280,
+        "desktop_button_width": 320,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_left_mobile": 16,
+        "padding_right_mobile": 16,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "padding_left_desktop": 32,
+        "padding_right_desktop": 32
+      }
+    },
+    "multicolumn_D33mfA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_C7q7dq": {
+          "type": "column",
+          "settings": {
+            "heading": "Refined calmness",
+            "heading_disable_on_mobile": false,
+            "text": "<p><em>Work, without the stiffness</em></p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "mobile_image": "shopify://shop_images/work.webp",
+            "out-background-color": "",
+            "out-text-color": ""
+          }
+        },
+        "column_YtXgHQ": {
+          "type": "column",
+          "settings": {
+            "heading": "Quiet Poise",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Presence, without performance</p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "mobile_image": "shopify://shop_images/show.webp",
+            "out-background-color": "",
+            "out-text-color": ""
+          }
+        },
+        "column_fJkMkf": {
+          "type": "column",
+          "settings": {
+            "heading": "lived-in femininity",
+            "heading_disable_on_mobile": false,
+            "text": "<p><em>Softness, without trying</em></p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "mobile_image": "shopify://shop_images/hangout.webp",
+            "out-background-color": "",
+            "out-text-color": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_C7q7dq",
+        "column_YtXgHQ",
+        "column_fJkMkf"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Quiet refinement, lived differently",
+        "heading_richtext": "<h2>Multicolumn</h2>",
+        "enable_stack_products": false,
+        "full-width-enabled": false,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "number_of_column_desktop": 3,
+        "spacing_desktop": "16",
+        "number_of_column_mobile": "1",
+        "spacing_mobile": "16",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_yyYQF8",
+    "image_with_text_BGTEgy",
+    "image_with_text_LrzCEt",
+    "rich_text_3QWLT9",
+    "pair_comparison_f7jRdh",
+    "rich_text_wBKJBy",
+    "pair_comparison_njYid7",
+    "sofneu_carousel_FCRYND",
+    "multicolumn_D33mfA"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "xt-shopify-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Eros multi-country (AU/US) theme: shared code -> dist/<country> artifacts -> dev/push/pull",
+  "scripts": {
+    "build": "node scripts/sync.mjs build",
+    "build:us": "node scripts/sync.mjs build us",
+    "build:au": "node scripts/sync.mjs build au",
+    "dev:us": "node scripts/sync.mjs dev us",
+    "dev:au": "node scripts/sync.mjs dev au",
+    "push": "node scripts/sync.mjs push",
+    "push:us": "node scripts/sync.mjs push us",
+    "push:au": "node scripts/sync.mjs push au",
+    "pull:us": "node scripts/sync.mjs pull us",
+    "pull:au": "node scripts/sync.mjs pull au",
+    "pull": "node scripts/sync.mjs pull",
+    "capture:us": "node scripts/sync.mjs capture us",
+    "capture:au": "node scripts/sync.mjs capture au",
+    "store:list": "node scripts/sync.mjs list"
+  }
+}

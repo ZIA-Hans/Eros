@@ -1,0 +1,14 @@
+{
+  "stores": {
+    "au": {
+      "label": "Australia",
+      "domain": "a53a82-be.myshopify.com",
+      "themeId": "153564315787"
+    },
+    "us": {
+      "label": "United States",
+      "domain": "fpay3g-yr.myshopify.com",
+      "themeId": "156990406813"
+    }
+  }
+}

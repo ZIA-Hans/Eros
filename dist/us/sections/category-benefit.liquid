@@ -1,0 +1,639 @@
+{% liquid
+  assign section_id = section.id | replace: '_', '' | downcase
+  assign image_class = 'category-benefit__image-' | append: section_id
+  assign placeholder_class = 'category-benefit__placeholder-' | append: section_id
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.section_background }};
+  }
+
+  .category-benefit-{{ section_id }} {
+    display: block;
+    width: 100%;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    overflow: hidden;
+  }
+
+  .category-benefit-{{ section_id }} * {
+    box-sizing: border-box;
+  }
+
+  .category-benefit__inner-{{ section_id }} {
+    width: 100%;
+    max-width: {{ section.settings.mobile_max_width }}px;
+    margin: 0 auto;
+  }
+
+  .category-benefit__list-{{ section_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .category-benefit__item-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 27px;
+    width: 100%;
+  }
+
+  .category-benefit__media-link-{{ section_id }},
+  .category-benefit__media-{{ section_id }} {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 165px;
+    height: 206px;
+    flex: 0 0 165px;
+    overflow: hidden;
+    border-radius: 8px;
+    color: {{ section.settings.image_label_color }};
+    text-decoration: none;
+    background: #f6f2ec;
+  }
+
+  .category-benefit__media-link-{{ section_id }}:hover,
+  .category-benefit__media-link-{{ section_id }}:focus {
+    color: {{ section.settings.image_label_color }};
+    text-decoration: none;
+  }
+
+  .category-benefit__image-{{ section_id }},
+  .category-benefit__placeholder-{{ section_id }} {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: {{ section.settings.image_position }};
+  }
+
+  .category-benefit__placeholder-{{ section_id }} {
+    background: #f3f3f3;
+  }
+
+  .category-benefit__image-label-{{ section_id }} {
+    position: relative;
+    z-index: 1;
+    margin: 0 8px 12px;
+    color: {{ section.settings.image_label_color }};
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .category-benefit__benefits-{{ section_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    width: 145px;
+    flex: 0 0 145px;
+  }
+
+  .category-benefit__benefit-{{ section_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .category-benefit__benefit-title-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.benefit_title_color }};
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  .category-benefit__benefit-text-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.benefit_text_color }};
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  .category-benefit__button-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: {{ section.settings.button_width_mobile }}px;
+    min-height: 30px;
+    margin: 40px auto 0;
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_text_color }};
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .category-benefit__button-{{ section_id }}:hover,
+  .category-benefit__button-{{ section_id }}:focus {
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    opacity: 0.92;
+  }
+
+  @media screen and (min-width: 750px) {
+    .category-benefit-{{ section_id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+
+    .category-benefit__inner-{{ section_id }} {
+      max-width: {{ section.settings.desktop_max_width }}px;
+    }
+
+    .category-benefit__list-{{ section_id }} {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: {{ section.settings.desktop_item_gap }}px;
+    }
+
+    .category-benefit__item-{{ section_id }} {
+      width: 337px;
+      flex: 0 0 337px;
+      gap: 27px;
+    }
+
+    .category-benefit__button-{{ section_id }} {
+      width: {{ section.settings.button_width_desktop }}px;
+      min-height: 34px;
+      margin-top: 48px;
+    }
+  }
+{% endstyle %}
+
+<section class="category-benefit-{{ section_id }}">
+  <div class="category-benefit__inner-{{ section_id }}">
+    <div class="category-benefit__list-{{ section_id }}">
+      {% for index in (1..3) %}
+        {% liquid
+          assign image_key = 'image_' | append: index
+          assign link_key = 'link_' | append: index
+          assign label_key = 'label_' | append: index
+          assign b1_title_key = 'benefit_' | append: index | append: '_1_title'
+          assign b1_text_key = 'benefit_' | append: index | append: '_1_text'
+          assign b2_title_key = 'benefit_' | append: index | append: '_2_title'
+          assign b2_text_key = 'benefit_' | append: index | append: '_2_text'
+          assign b3_title_key = 'benefit_' | append: index | append: '_3_title'
+          assign b3_text_key = 'benefit_' | append: index | append: '_3_text'
+          assign card_image = section.settings[image_key]
+          assign card_link = section.settings[link_key]
+          assign card_label = section.settings[label_key]
+          assign benefit_1_title = section.settings[b1_title_key]
+          assign benefit_1_text = section.settings[b1_text_key]
+          assign benefit_2_title = section.settings[b2_title_key]
+          assign benefit_2_text = section.settings[b2_text_key]
+          assign benefit_3_title = section.settings[b3_title_key]
+          assign benefit_3_text = section.settings[b3_text_key]
+          assign media_tag = 'div'
+          if card_link != blank
+            assign media_tag = 'a'
+          endif
+        %}
+
+        <div class="category-benefit__item-{{ section_id }}">
+          <{{ media_tag }}
+            class="{% if card_link != blank %}category-benefit__media-link-{{ section_id }}{% else %}category-benefit__media-{{ section_id }}{% endif %}"
+            {% if card_link != blank %}href="{{ card_link }}"{% endif %}
+          >
+            {% if card_image != blank %}
+              {{ card_image | image_url: width: 520 | image_tag: class: image_class, loading: 'lazy' }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: placeholder_class }}
+            {% endif %}
+
+            {% if card_label != blank %}
+              <p class="category-benefit__image-label-{{ section_id }}">{{ card_label }}</p>
+            {% endif %}
+          </{{ media_tag }}>
+
+          <div class="category-benefit__benefits-{{ section_id }}">
+            {% if benefit_1_title != blank or benefit_1_text != blank %}
+              <div class="category-benefit__benefit-{{ section_id }}">
+                {% if benefit_1_title != blank %}
+                  <p class="category-benefit__benefit-title-{{ section_id }}">{{ benefit_1_title }}</p>
+                {% endif %}
+                {% if benefit_1_text != blank %}
+                  <p class="category-benefit__benefit-text-{{ section_id }}">{{ benefit_1_text | newline_to_br }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if benefit_2_title != blank or benefit_2_text != blank %}
+              <div class="category-benefit__benefit-{{ section_id }}">
+                {% if benefit_2_title != blank %}
+                  <p class="category-benefit__benefit-title-{{ section_id }}">{{ benefit_2_title }}</p>
+                {% endif %}
+                {% if benefit_2_text != blank %}
+                  <p class="category-benefit__benefit-text-{{ section_id }}">{{ benefit_2_text | newline_to_br }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if benefit_3_title != blank or benefit_3_text != blank %}
+              <div class="category-benefit__benefit-{{ section_id }}">
+                {% if benefit_3_title != blank %}
+                  <p class="category-benefit__benefit-title-{{ section_id }}">{{ benefit_3_title }}</p>
+                {% endif %}
+                {% if benefit_3_text != blank %}
+                  <p class="category-benefit__benefit-text-{{ section_id }}">{{ benefit_3_text | newline_to_br }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_button and section.settings.button_text != blank %}
+      <a class="category-benefit__button-{{ section_id }}" href="{{ section.settings.button_link | default: '#' }}">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Benefit",
+  "tag": "section",
+  "class": "section-category-benefit",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Image link"
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Image label",
+      "default": "Tights"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_1_title",
+      "label": "Benefit 1 title",
+      "default": "BareSpandex™"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_1_text",
+      "label": "Benefit 1 text",
+      "default": "Silky texture with\npremium soft gloss"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_2_title",
+      "label": "Benefit 2 title",
+      "default": "\"Nylon66 Yoga\"Controltop"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_2_text",
+      "label": "Benefit 2 text",
+      "default": "\"Nylon66 Yoga\" Controltop offers\ngentle tummy shaping"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_3_title",
+      "label": "Benefit 3 title",
+      "default": "3D-Fit"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_3_text",
+      "label": "Benefit 3 text",
+      "default": "Elastic design fits legs steadily"
+    },
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Image link"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Image label",
+      "default": "Sticky Bra"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_1_title",
+      "label": "Benefit 1 title",
+      "default": "MedicalSilicone"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_1_text",
+      "label": "Benefit 1 text",
+      "default": "Medical grade silicone\nskin-friendly for sensitive skin"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_2_title",
+      "label": "Benefit 2 title",
+      "default": "SafeAdhesive"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_2_text",
+      "label": "Benefit 2 text",
+      "default": "Mild adhesive, firm fit and easy\nresidue-free removal"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_3_title",
+      "label": "Benefit 3 title",
+      "default": "ErgonomicFit"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_3_text",
+      "label": "Benefit 3 text",
+      "default": "Ergonomic curve fits diverse\nbreast shapes"
+    },
+    {
+      "type": "header",
+      "content": "Card 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Image link"
+    },
+    {
+      "type": "text",
+      "id": "label_3",
+      "label": "Image label",
+      "default": "Pajamas"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_1_title",
+      "label": "Benefit 1 title",
+      "default": "BlendTencel"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_1_text",
+      "label": "Benefit 1 text",
+      "default": "1:1 fabric blend\nsilky and great draping"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_2_title",
+      "label": "Benefit 2 title",
+      "default": "ShapeHold"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_2_text",
+      "label": "Benefit 2 text",
+      "default": "Shaping craft keeps neat\nsilhouette all day"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_3_title",
+      "label": "Benefit 3 title",
+      "default": "SoftAirTech"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_3_text",
+      "label": "Benefit 3 text",
+      "default": "Breathable weave\nkeeps skin fresh and dry"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "General Knowledge"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#a65d4a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_width_mobile",
+      "label": "Button width - mobile",
+      "min": 120,
+      "max": 280,
+      "step": 4,
+      "unit": "px",
+      "default": 176
+    },
+    {
+      "type": "range",
+      "id": "button_width_desktop",
+      "label": "Button width - desktop",
+      "min": 140,
+      "max": 360,
+      "step": 4,
+      "unit": "px",
+      "default": 192
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "image_label_color",
+      "label": "Image label color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "benefit_title_color",
+      "label": "Benefit title color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "benefit_text_color",
+      "label": "Benefit text color",
+      "default": "#6f6f6f"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "top center",
+          "label": "Top"
+        },
+        {
+          "value": "bottom center",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "label": "Mobile maximum width",
+      "min": 320,
+      "max": 430,
+      "step": 5,
+      "unit": "px",
+      "default": 340
+    },
+    {
+      "type": "range",
+      "id": "desktop_max_width",
+      "label": "Desktop maximum width",
+      "min": 900,
+      "max": 1600,
+      "step": 10,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "desktop_item_gap",
+      "label": "Desktop item gap",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Benefit"
+    }
+  ]
+}
+{% endschema %}

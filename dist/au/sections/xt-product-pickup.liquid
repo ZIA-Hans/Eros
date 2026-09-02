@@ -1,0 +1,1049 @@
+{%- comment -%}
+  XT Product Pickup — 商品卡片 + Quick-Add 抽屉选购区
+  复用主题现有: card.liquid / quick-add-button.liquid / quick-add.js
+{%- endcomment -%}
+
+{%- if section.settings.enable_quick_add_button -%}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- comment -%} 移动端 Quick-Add 用底部 Drawer + 多图轮播，需加载 swiper.css + slider.js {%- endcomment -%}
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+<script type="module" src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+
+<div class="xt-product-pickup" data-section-id="{{ section.id }}">
+
+  {%- if section.settings.title != blank -%}
+    <div class="xt-product-pickup__header">
+      <h2 class="xt-product-pickup__title">{{ section.settings.title }}</h2>
+      {%- if section.settings.subtitle != blank -%}
+        <p class="xt-product-pickup__subtitle">{{ section.settings.subtitle }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="xt-product-pickup__grid">
+      {%- for block in section.blocks -%}
+        {%- assign prod = block.settings.product -%}
+        <div class="xt-product-pickup__item" {{ block.shopify_attributes }}>
+          {%- if prod != blank -%}
+            {% render 'card',
+              card_product: prod,
+              img: prod.featured_media,
+              title: prod.title,
+              subtitle: prod.vendor,
+              rating: section.settings.show_product_rating,
+              options: false,
+              url: prod.url,
+              uri: prod.handle,
+              text_alignment: 'center',
+              variants: prod.variants,
+              product_options: prod.options,
+              product: prod,
+              media_aspect_ratio: section.settings.image_ratio,
+              enable_quick_add_button: section.settings.enable_quick_add_button,
+              quick_add_mode: section.settings.quick_add_mode,
+              enable_vendor_link: false,
+              show_video: false
+            %}
+          {%- else -%}
+            <div class="xt-product-pickup__placeholder">
+              <p>在 Theme Editor 选择商品</p>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <div class="xt-product-pickup__empty">
+      <p>点击左侧 "Add block" 添加商品</p>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} 移动端 Quick-Add 底部 Drawer（PC 走主题原生侧边栏，由 JS 按 innerWidth 判定）{%- endcomment -%}
+  <sl-drawer id="xt-quick-add-drawer-{{ section.id }}" class="xt-quick-add-drawer" placement="bottom" label="Quick Add" no-header>
+    <div class="xt-quick-add-drawer__header">
+      <span class="xt-quick-add-drawer__title">Quick Add</span>
+      <div class="xt-quick-add-drawer__close" role="button" tabindex="0" aria-label="{{ 'aria-label.close-button' | t }}">
+        {% render 'icons', id: 'close' %}
+      </div>
+    </div>
+    <div class="xt-quick-add-drawer__loader">{% render 'loader' %}</div>
+    <div class="xt-quick-add-drawer__content"></div>
+    <div class="xt-quick-add-drawer__view-all-container hidden">
+      <a href="#">
+        <span>{{ 'general.quick_add.view_all_details' | t }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+          <path d="M5.65479 0.0600586C9.51861 -0.152443 12.5106 2.91321 12.1147 6.78467C11.8286 9.58123 9.47831 11.8998 6.67529 12.1294C2.61645 12.4617 -0.667983 8.81874 0.186035 4.80322C0.723795 2.27506 3.05394 0.203058 5.65479 0.0600586ZM5.93311 0.419434C1.71437 0.54172 -0.971454 5.17125 1.15674 8.87744C2.95093 12.0014 7.21461 12.7812 9.9126 10.3198C13.6075 6.94832 11.4901 0.778133 6.53857 0.431152V0.430176L5.93311 0.419434Z" fill="#2B2B2B" stroke="#2B2B2B" stroke-width="0.1"/>
+          <path d="M6.57642 4.09937C6.78668 4.55143 7.19224 4.9223 7.59985 5.21655C8.14374 5.60917 8.75446 5.87481 9.42114 5.97144L9.46606 5.97827L9.46313 6.02417L9.44751 6.26636L9.44458 6.3103L9.39966 6.31323C8.90265 6.34052 8.39092 6.5501 7.95435 6.79663C7.39704 7.11145 6.83775 7.57009 6.57153 8.1521L6.55786 8.1814H6.21704L6.22583 8.12378C6.2686 7.85002 6.45121 7.60098 6.61646 7.40308C6.94688 7.00716 7.38575 6.70314 7.82446 6.45093L7.82642 6.44897H7.82739L8.08521 6.32007H2.82935V5.94507H8.11548L7.61157 5.67358L7.60767 5.67163V5.67065C7.19056 5.40511 6.71252 5.00233 6.43091 4.58862C6.34397 4.46085 6.24692 4.31378 6.22583 4.14038L6.21899 4.08765L6.27271 4.08472L6.52856 4.07104L6.56274 4.06909L6.57642 4.09937Z" fill="#2B2B2B" stroke="white" stroke-width="0.1"/>
+        </svg>
+      </a>
+    </div>
+  </sl-drawer>
+
+</div>
+
+<script>
+(function() {
+  function init() {
+    const section = document.querySelector('.xt-product-pickup[data-section-id="{{ section.id }}"]');
+    if (!section) return;
+
+    const drawer = document.getElementById('xt-quick-add-drawer-{{ section.id }}');
+    if (!drawer) return;
+
+    // 移动端走底部 Drawer，PC 走主题原生侧边栏（与主题 quick-add.js 的 768 断点一致）
+    const isMobile = () => window.innerWidth < 768;
+
+    const contentEl = drawer.querySelector('.xt-quick-add-drawer__content');
+    const loaderEl = drawer.querySelector('.xt-quick-add-drawer__loader');
+    const closeBtn = drawer.querySelector('.xt-quick-add-drawer__close');
+    const viewAllContainer = drawer.querySelector('.xt-quick-add-drawer__view-all-container');
+
+    let currentTrigger = null;
+    let currentAbortController = null;
+
+    function hideViewAllDetails() {
+      viewAllContainer?.classList.add('hidden');
+    }
+
+    function showViewAllDetails(productUrl) {
+      if (!viewAllContainer) return;
+      const link = viewAllContainer.querySelector('a');
+      if (link) link.href = productUrl;
+      viewAllContainer.classList.remove('hidden');
+    }
+
+    // 插入"Quantity"模拟 option：1 Pair（默认选中，显示当前价格）+ 3 Pairs（点击直接加 3 件跳转 /cart）
+    // 解析套装配置 + 渲染 Quantity 栏目
+    // bundleConfigs: 从商详页 <script data-quantity-bundle> 解析出的套装数组，无配置时为 null
+    function injectQuantityBundle(productMain, bundleConfigs) {
+      const form = productMain.querySelector('form[data-type="add-to-cart-form"]');
+      if (!form) return;
+      const buttonWrapper = form.querySelector('.wt-product__add-to-cart_form--wrapper');
+      if (!buttonWrapper) return;
+      if (form.querySelector('.xt-quantity-bundle')) return;
+
+      // 组装选项列表：仅展示商品配置的套装档位（无选中态，样式统一）
+      const optionsHtml = [];
+
+      // 右下角购物车图标（带 + 号），点击加购的视觉指示
+      const cartIconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="14" fill="#A65D4A"/>
+        <path d="M21.984 10.2736L21.0864 15.9808C20.9888 16.7648 20.2688 17.4 19.4464 17.4L10.1536 17.6144C9.8512 17.6256 9.44 17.6032 9.3504 17.3984L8.3824 10.728L7.832 7.6096C7.7984 7.336 7.544 7.1168 7.2976 7.1168H6.5712C6.256 7.1168 6 6.8656 6 6.5584C6 6.2512 6.256 6 6.5712 6H7.2976C8.1296 6 8.8608 6.6368 8.96 7.4496L9.1088 8.352C8.9072 8.3696 9.128 8.472 9.128 8.472L9.1088 8.352C9.128 8.3504 9.1456 8.3488 9.1712 8.3488H20.4368C20.8736 8.3488 21.272 8.5264 21.5648 8.8496C21.8992 9.216 22.0512 9.7328 21.984 10.2736ZM17.8384 12.7248C17.8384 12.5328 17.6832 12.3776 17.4912 12.3776H15.7088V10.6016C15.7088 10.4096 15.5536 10.2544 15.3616 10.2544H15.0976C14.9056 10.2544 14.7504 10.4096 14.7504 10.6016V12.376H13.0656C12.8736 12.376 12.7184 12.5312 12.7184 12.7232V12.984C12.7184 13.176 12.8736 13.3312 13.0656 13.3312H14.7472V15.0064C14.7472 15.1984 14.9024 15.3536 15.0944 15.3536H15.3584C15.5504 15.3536 15.7056 15.1984 15.7056 15.0064V13.3328H17.488C17.68 13.3328 17.8352 13.1776 17.8352 12.9856V12.7248H17.8384ZM11.1424 19.0688C11.7712 19.0688 12.2832 19.5696 12.2832 20.1872C12.2832 20.8048 11.7728 21.3056 11.1424 21.3056C10.512 21.3056 10.0016 20.8048 10.0016 20.1872C10.0016 19.568 10.512 19.0688 11.1424 19.0688ZM19.1264 19.0688C19.7552 19.0688 20.2672 19.5696 20.2672 20.1872C20.2672 20.8048 19.7568 21.3056 19.1264 21.3056C18.496 21.3056 17.9856 20.8048 17.9856 20.1872C17.9856 19.568 18.496 19.0688 19.1264 19.0688Z" fill="white"/>
+      </svg>`;
+
+      (bundleConfigs || []).forEach((bundle, idx) => {
+        if (!bundle.quantity || bundle.quantity <= 1) return; // 件数≤1 视为无意义，跳过
+        // 顶部促销文案：直接取 metaobject 的 discount_label，无配置则不渲染该行
+        const saveHtml = bundle.discount_label
+          ? `<span class="xt-quantity-bundle__save">${bundle.discount_label}</span>`
+          : '';
+        optionsHtml.push(`
+          <li class="f-button__list__item xt-quantity-bundle__item">
+            <button type="button" class="f-button__list__link xt-quantity-bundle__btn" data-qty="${bundle.quantity}" data-bundle-idx="${idx}">
+              ${saveHtml}
+              <span class="xt-quantity-bundle__bottom">
+                <span class="xt-quantity-bundle__qty">${bundle.label || (bundle.quantity + ' items')}</span>
+                <span class="xt-quantity-bundle__cart">${cartIconSvg}</span>
+              </span>
+            </button>
+          </li>`);
+      });
+
+      // 没有配置任何有效套装档位时，不渲染 Quantity 栏目
+      if (optionsHtml.length === 0) return;
+
+      const bundle = document.createElement('div');
+      bundle.className = 'wt-product__option js xt-quantity-bundle';
+      bundle.innerHTML = `
+        <ul class="f-button__list xt-quantity-bundle__list">
+          ${optionsHtml.join('')}
+        </ul>
+      `;
+      form.insertBefore(bundle, buttonWrapper);
+
+      // 点击加购（无选中态：点击直接加购跳转 /cart；qty<=1 视为非法，兜底跳过）
+      bundle.querySelectorAll('.xt-quantity-bundle__btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const qty = parseInt(btn.getAttribute('data-qty'), 10);
+          if (qty <= 1) return;
+          const variantIdInput = form.querySelector('input[name="id"]');
+          if (!variantIdInput || !variantIdInput.value) return;
+
+          const tempForm = document.createElement('form');
+          tempForm.method = 'POST';
+          tempForm.action = `${window.Shopify?.routes?.root || '/'}cart/add`;
+          tempForm.style.display = 'none';
+
+          const idInput = document.createElement('input');
+          idInput.type = 'hidden';
+          idInput.name = 'id';
+          idInput.value = variantIdInput.value;
+          tempForm.appendChild(idInput);
+
+          const qtyInput = document.createElement('input');
+          qtyInput.type = 'hidden';
+          qtyInput.name = 'quantity';
+          qtyInput.value = String(qty);
+          tempForm.appendChild(qtyInput);
+
+          const redirectInput = document.createElement('input');
+          redirectInput.type = 'hidden';
+          redirectInput.name = 'return_to';
+          redirectInput.value = '/cart';
+          tempForm.appendChild(redirectInput);
+
+          document.body.appendChild(tempForm);
+          tempForm.submit();
+        });
+      });
+    }
+
+    function closeDrawer() {
+      currentAbortController?.abort();
+      drawer.hide();
+    }
+
+    closeBtn.addEventListener('click', closeDrawer);
+
+    // 与主题 quick-add.js 保持一致：关闭时发布 quickBuyDrawerClose，
+    // 打开完成后把焦点还给触发按钮（sl-after-hide 覆盖点击关闭 / Esc / 点遮罩等所有关闭路径）
+    drawer.addEventListener('sl-after-hide', () => {
+      publish(PUB_SUB_EVENTS.quickBuyDrawerClose, { source: 'xt-product-pickup' });
+      contentEl.innerHTML = '';
+      hideViewAllDetails();
+      currentTrigger?.focus();
+    });
+
+    function fetchAndRenderProduct(productUrl) {
+      contentEl.innerHTML = '';
+      hideViewAllDetails();
+      loaderEl.classList.remove('hidden');
+
+      currentAbortController?.abort();
+      const controller = new AbortController();
+      currentAbortController = controller;
+
+      fetch(productUrl, { signal: controller.signal })
+        .then((res) => res.text())
+        .then((html) => {
+          loaderEl.classList.add('hidden');
+          const doc = new DOMParser().parseFromString(html, 'text/html');
+
+          const productCard = doc.querySelector('.wt-product');
+          const productMain = doc.querySelector('.wt-product__main');
+          const productInfo = doc.querySelector('.wt-product__info');
+          if (!productCard || !productMain || !productInfo) return;
+
+          // 清理主题动画类，避免依赖滚入视口触发的动画在抽屉里卡在半透明/隐藏状态
+          productMain.querySelectorAll('.scroll-trigger.animate--slide-in').forEach((el) => {
+            el.classList.remove('scroll-trigger', 'animate--slide-in');
+          });
+
+          // 清理不需要的元素（与主题 quick-add.js 保持一致的精简逻辑）
+          const removeSelectors = [
+            'collapsible-section',
+            '[not-quick-add]',
+            '.product__inventory',
+            '.share-icons__container',
+            '#gallery-loader',
+            'pickup-availability',
+            '.wt-product__sku',
+            '.wt-product__feature-icons',
+          ];
+          removeSelectors.forEach((sel) => {
+            productMain.querySelectorAll(sel).forEach((el) => el.remove());
+          });
+
+          // 从 gallery-section 里取第一张图，包成简单的 product-image 容器
+          // （gallery-section 本身是带交互逻辑的自定义元素，直接整体注入不会正常工作）
+          // 从 gallery-section 摘出所有媒体，组装成主题 <slideshow-section> 多图轮播
+          // （gallery-section 自身带 swiper/缩略图联动等复杂状态，整体注入会失效，
+          //  所以只取其 slide 节点的 innerHTML，外包 slideshow-section 让 slider.js 接管）
+          const productGallery = productCard.querySelector('gallery-section');
+          const gallerySlides = productGallery?.querySelectorAll('li[data-swiper-slide]') || [];
+          const imageContainer = document.createElement('div');
+          imageContainer.className = 'product-image';
+          if (gallerySlides.length > 0) {
+            const slidesHtml = [...gallerySlides]
+              .map((li) => {
+                const mediaId = li.getAttribute('data-media-id') || '';
+                // 去掉 srcset，避免抽屉里加载多档大图；保留单 src
+                const clone = li.cloneNode(true);
+                clone.querySelectorAll('img').forEach((img) => img.removeAttribute('srcset'));
+                return `<li class="swiper-slide" data-media-id="${mediaId}">${clone.innerHTML}</li>`;
+              })
+              .join('');
+            imageContainer.innerHTML = `
+              <slideshow-section class="xt-quick-add-carousel">
+                <div class="xt-quick-add-carousel__viewport" data-swiper>
+                  <ul class="xt-quick-add-carousel__track" data-swiper-container>
+                    ${slidesHtml}
+                  </ul>
+                </div>
+                <script data-swiper-configuration type="text/json">
+                  {
+                    "slidesPerView": 2.5,
+                    "spaceBetween": 8,
+                    "speed": 300,
+                    "loop": false,
+                    "threshold": 5
+                  }
+                <\/script>
+              </slideshow-section>
+            `;
+          }
+
+          // 标题包一层链接（可点击跳转完整详情页），并把品牌/标题/评分/价格/税费提示
+          // 一起摘出来放进 product-info，和图片一起组成 wt-product__details
+          // （与主题 quick-add.js 的摘要区排布保持一致）
+          const titleEl = productInfo.querySelector('.wt-product__name');
+          if (titleEl) {
+            const link = document.createElement('a');
+            link.textContent = titleEl.textContent;
+            link.href = productUrl;
+            titleEl.innerHTML = '';
+            titleEl.appendChild(link);
+            titleEl.setAttribute('tabindex', '0');
+          }
+
+          const productAbout = document.createElement('div');
+          productAbout.className = 'product-info';
+          // 按固定顺序逐个摘取，保证 品牌 → 标题 → 评分 → 价格 → 税费 的排列，
+          // 不受商详页 Theme Editor 里 block 顺序影响（querySelectorAll 返回的是 DOM 顺序）
+          ['.wt-product__brand', '.wt-product__name', '.wt-rating', '.wt-product__price', '.product__tax']
+            .forEach((sel) => {
+              const el = productInfo.querySelector(sel);
+              if (el) productAbout.appendChild(el);
+            });
+
+          const productDetails = document.createElement('div');
+          productDetails.className = 'wt-product__details';
+          productDetails.appendChild(imageContainer);
+          productDetails.appendChild(productAbout);
+
+          productInfo.prepend(productDetails);
+
+          // ID 改名（照抄主题 quick-add.js 的处理）：
+          // variant-options / 价格 / 加购按钮 / 表单 / radio 都要重命名，
+          // 否则 variants.js 内部用 getElementById 拼 id 找不到对应元素，
+          // 图片联动、价格联动、按钮禁用状态都不会生效。
+          const variantOptions = productMain.querySelector('variant-options');
+          if (variantOptions) {
+            variantOptions.dataset.updateUrl = 'false';
+            const originalSection = variantOptions.getAttribute('data-section');
+            variantOptions.setAttribute('data-original-section', originalSection);
+            variantOptions.setAttribute('data-section', `quick-${originalSection}`);
+          }
+          const quickSection = variantOptions?.getAttribute('data-section');
+
+          const priceEl = productMain.querySelector('.wt-product__price');
+          if (priceEl && quickSection) priceEl.id = `price-${quickSection}`;
+
+          const addBtn = productMain.querySelector('button[name="add"]');
+          if (addBtn && quickSection) addBtn.id = `ProductSubmitButton-${quickSection}`;
+
+          const addForm = productMain.querySelector('form[method="post"][data-type="add-to-cart-form"]');
+          if (addForm && quickSection) addForm.id = `product-form-${quickSection}`;
+
+          productMain.querySelectorAll('fieldset').forEach((fieldset) => {
+            fieldset.querySelectorAll('input[type="radio"]').forEach((radio) => {
+              const originalId = radio.getAttribute('id');
+              if (!originalId) return;
+              radio.setAttribute('id', `quick-${originalId}`);
+              radio.setAttribute('form', `product-form-${quickSection}`);
+            });
+            fieldset.querySelectorAll('label').forEach((label) => {
+              const originalFor = label.getAttribute('for');
+              if (!originalFor) return;
+              label.setAttribute('for', `quick-${originalFor}`);
+            });
+          });
+
+          // 礼品卡：解除收件人字段禁用（与主题 quick-add.js 保持一致）
+          const giftCardInput = productMain.querySelector(
+            '[name="properties[__shopify_send_gift_card_to_recipient]"]',
+          );
+          giftCardInput?.removeAttribute('disabled');
+
+          // 订阅/分期购：同步 section id，并把隐藏的 selling_plan input 的 form 属性指向新表单
+          const subWidget = productMain.querySelector('.wt-subscription-widget');
+          if (subWidget && quickSection) {
+            const originalSection = variantOptions?.getAttribute('data-original-section');
+            subWidget.setAttribute('data-section-id', quickSection);
+            if (originalSection) subWidget.setAttribute('data-original-section-id', originalSection);
+            subWidget.setAttribute('data-update-url-on-plan-change', 'false');
+
+            const sellingPlanInput = subWidget.querySelector('input[name="selling_plan"]');
+            sellingPlanInput?.setAttribute('form', `product-form-${quickSection}`);
+          }
+
+          // 把 productMain 包进 .wt-product 容器（保留主题 CSS 作用域，
+          // 否则所有 .wt-product .xxx 子代选择器会失效，包括 product-form__input 等）
+          const wtProductWrapper = document.createElement('div');
+          wtProductWrapper.className = 'wt-product';
+          wtProductWrapper.appendChild(productMain);
+          contentEl.appendChild(wtProductWrapper);
+          showViewAllDetails(productUrl);
+
+          // 解析商详页输出的套装配置（<script data-quantity-bundle>），无配置时为 null
+          let bundleConfigs = null;
+          try {
+            const bundleScript = doc.querySelector('script[data-quantity-bundle]');
+            if (bundleScript && bundleScript.textContent.trim()) {
+              bundleConfigs = JSON.parse(bundleScript.textContent);
+            }
+          } catch (e) {
+            console.error('Quantity bundle config parse error:', e);
+          }
+
+          // 插入"Quantity"栏目：1 Pair（常驻）+ 套装（仅在有配置时展示）
+          injectQuantityBundle(productMain, bundleConfigs);
+
+          // 初始化变体选择器（如果主题用自定义元素承载变体切换逻辑）
+          if (variantOptions && typeof variantOptions.initialize === 'function') {
+            variantOptions.initialize();
+          }
+
+          // 监听 variant-options 的 data-featured-image-id 属性变化，
+          // 切换 SKU 时把轮播滑动到对应媒体（替代旧的单图换 src 逻辑）。
+          // data-featured-image-id 由 variants.js updateMedia() 写入 = variant.featured_media.id，
+          // 与每个 slide 的 data-media-id 一一对应。
+          if (variantOptions) {
+            let lastFeaturedId = null;
+            const observer = new MutationObserver(() => {
+              const featuredId = variantOptions.getAttribute('data-featured-image-id');
+              if (!featuredId || featuredId === lastFeaturedId) return;
+              lastFeaturedId = featuredId;
+
+              const slideshow = imageContainer.querySelector('slideshow-section');
+              const swiper = slideshow?.swiper;
+              const targetSlide = imageContainer.querySelector(
+                `.swiper-slide[data-media-id="${featuredId}"]`,
+              );
+
+              if (swiper && targetSlide) {
+                // 轮播已初始化：滑动到目标 slide
+                const slideIndex = [...targetSlide.parentElement.children].indexOf(targetSlide);
+                swiper.slideTo(slideIndex);
+                swiper.update();
+              } else if (targetSlide) {
+                // 轮播还没初始化（slider.js 异步懒加载）：先把目标 slide 置顶，
+                // 等 slideshow-section 升级后从这张图开始展示
+                targetSlide.parentElement.prepend(targetSlide);
+              }
+            });
+            observer.observe(variantOptions, {
+              attributes: true,
+              attributeFilter: ['data-featured-image-id'],
+            });
+          }
+        })
+        .catch((error) => {
+          loaderEl.classList.add('hidden');
+          if (error.name === 'AbortError') return;
+          console.error('Quick-add drawer fetch error:', error);
+        });
+    }
+
+    // 捕获阶段拦截，抢在主题 <quick-add> 的点击处理器之前触发（仅移动端）
+    // PC 端不拦截，放行给主题原生 quick-add.js 的侧边栏
+    section.addEventListener(
+      'click',
+      function (e) {
+        const button = e.target.closest('.xt-product-pickup__item quick-add button');
+        if (!button) return;
+        if (!isMobile()) return; // PC 走原生侧边栏，不拦截
+
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        const productUrl = button.getAttribute('data-product-url');
+        if (!productUrl) return;
+
+        currentTrigger = button.closest('.card__picture-container')?.querySelector('a.card') || button;
+
+        drawer.show();
+        publish(PUB_SUB_EVENTS.quickBuyDrawerOpen, { source: 'xt-product-pickup' });
+        fetchAndRenderProduct(productUrl);
+      },
+      true, // capture 阶段
+    );
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+<style>
+  .xt-product-pickup {
+    max-width: var(--page-width, 1200px);
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .xt-product-pickup__header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .xt-product-pickup__title {
+    margin: 0 0 8px;
+    font-size: clamp(24px, 4vw, 36px);
+  }
+  .xt-product-pickup__subtitle {
+    margin: 0;
+    opacity: 0.7;
+  }
+  .xt-product-pickup__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .xt-product-pickup__item > color-swatch {
+    width: 100%;
+  }
+  .xt-product-pickup__placeholder {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    background: #f7f7f7;
+    color: #999;
+    border-radius: 4px;
+  }
+  .xt-product-pickup__empty {
+    text-align: center;
+    padding: 60px 20px;
+    opacity: 0.5;
+  }
+
+  {%- comment -%} ============ 移动端：2×n 网格平铺 ============ {%- endcomment -%}
+  @media (max-width: 767px) {
+    /* 外层 section 留白收紧 */
+    .xt-product-pickup {
+      padding: 24px 16px;
+    }
+    .xt-product-pickup__header {
+      margin-bottom: 20px;
+    }
+
+    /* 网格：固定 2 列，自动行数 */
+    .xt-product-pickup__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);  /* 2 列等宽 */
+      gap: 12px;                              /* 行列间距 12px */
+    }
+
+    /* 卡片内部重排：图片 → 颜色options → 标题 → 价格 */
+    .xt-product-pickup__item color-swatch {
+      display: flex;
+      flex-direction: column;
+    }
+    .xt-product-pickup__item .card__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* 图片行 与 quick-add 行 用同一 grid-row，实现真正叠加 */
+      grid-template-rows: auto auto auto auto;
+      --aspect-ratio: 166 / 194;           /* 图片比例 166:194 */
+    }
+    .xt-product-pickup__item .card__img,
+    .xt-product-pickup__item .card__video {
+      aspect-ratio: 166 / 194;             /* 强制覆盖内联样式的 --aspect-ratio */
+      object-fit: cover;
+    }
+
+    /* 图片：占第 1 行 */
+    .xt-product-pickup__item .card__picture-container {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    /* quick-add 按钮：与图片同一行，靠底部对齐，实现叠在图片下方的浮层效果 */
+    .xt-product-pickup__item .card__quick-add-container {
+      grid-row: 1;
+      grid-column: 1;
+      align-self: end;
+      margin: 0;                        /* 去除主题自带的 margin-top/left/right */
+      padding: 0;                       /* 去除主题自带的 padding-right */
+      position: relative;
+      z-index: 5;
+    }
+    .xt-product-pickup__item .card__color-swatcher--container {
+      grid-row: 2;                       /* 颜色 options（第二行） */
+      margin-top: 8px;
+    }
+    .xt-product-pickup__item .card--center:not(.card__picture-container .card) {
+      grid-row: 3;                       /* 标题区（第三行） */
+    }
+    /* 标题/价格内部顺序微调 */
+    .xt-product-pickup__item .card__title {
+      order: 1;
+    }
+    .xt-product-pickup__item .card__price {
+      order: 2;
+      margin-top: 4px;
+    }
+    .xt-product-pickup__item .card__quick-add-container quick-add,
+    .xt-product-pickup__item .card__quick-add-container product-form,
+    .xt-product-pickup__item .card__quick-add-container form,
+    .xt-product-pickup__item .card__quick-add-container .wt-product__add-to-cart_form--wrapper {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .xt-product-pickup__item .card__quick-add-container button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 26px;
+      margin: 0;                         /* 去除按钮自带的额外 margin */
+      padding: 0;                        /* 去除按钮自带的额外 padding */
+      background: rgba(255, 255, 255, 0.80);
+      backdrop-filter: blur(3px);
+      border: none;
+      border-radius: 0;
+      font-size: 0;                      /* 隐藏原文案（Choose option / Add to cart） */
+    }
+    .xt-product-pickup__item .card__quick-add-container button span {
+      font-size: 0;                       /* 原 span 文案同步隐藏 */
+    }
+    .xt-product-pickup__item .card__quick-add-container button::after {
+      content: "QUICK ADD";
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: #2B2B2B;
+    }
+    .xt-product-pickup__item .card__quick-add-container button[disabled]::after {
+      content: "SOLD OUT";                /* 售罄时展示 SOLD OUT */
+    }
+
+    /* 隐藏 desktop hover 专用容器，避免重复按钮 */
+    .xt-product-pickup__item .card__quick-add-container--desktop {
+      display: none;
+    }
+
+    /* 颜色 swatch 居中展示 */
+    .xt-product-pickup__item .card__color-swatcher--container {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  {%- comment -%} ============ 标题样式（全断点统一）============ {%- endcomment -%}
+  .xt-product-pickup__item .card__title {
+    color: #2B2B2B;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.28px;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 36px;
+  }
+
+  {%- comment -%} ============ 价格样式（当前售价）============ {%- endcomment -%}
+  {%- comment -%} 合并选择器提升优先级，覆盖主题 .price-item.price-item--sale.price-item--last.wt-product__price__final {%- endcomment -%}
+  .xt-product-pickup__item .card__price .price-item.price-item--sale.price-item--last.wt-product__price__final,
+  .xt-product-pickup__item .card__price .price-item--sale.price-item--last,
+  .xt-product-pickup__item .card__price .wt-product__price__final {
+    color: #2B2B2B;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.36px;
+  }
+
+  {%- comment -%} ============ 划线价样式（原价/对比价）============ {%- endcomment -%}
+  .xt-product-pickup__item .card__price .price-item--regular,
+  .xt-product-pickup__item .card__price .price-item--lower,
+  .xt-product-pickup__item .card__price .wt-product__price__compare {
+    color: rgba(43, 43, 43, 0.50);
+    font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.24px;
+  }
+
+  {%- comment -%} ============ 价格布局：横排 + 10px 间距（覆盖主题默认的左右/上下布局）============ {%- endcomment -%}
+  .xt-product-pickup__item .card__price .price__sale.visible {
+    display: flex;
+    flex-direction: row-reverse;       /* 售价在左，划线价在右 */
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;                         /* 两个价格间距 10px */
+  }
+
+  {%- comment -%} ============ 隐藏折扣百分比（不需要）============ {%- endcomment -%}
+  .xt-product-pickup__item .card__price .price-item--percent {
+    display: none;
+  }
+
+  {%- comment -%} ============ 独立 Color Swatch：居中展示 ============ {%- endcomment -%}
+  .xt-color-swatches {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .xt-color-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-position: center;
+    flex-shrink: 0;
+  }
+  .xt-color-swatch.unavailable {
+    opacity: 0.3;
+  }
+
+  {%- comment -%} ============ 组件库 Drawer（sl-drawer）：底部弹层 80vh ============ {%- endcomment -%}
+  .xt-quick-add-drawer {
+    --size: 90vh;
+  }
+  .xt-quick-add-drawer::part(panel) {
+    border-radius: 16px 16px 0 0;
+  }
+  .xt-quick-add-drawer::part(body) {
+    padding: 0;
+    position: relative;
+  }
+  .xt-quick-add-drawer__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 14px 16px;
+  }
+  .xt-quick-add-drawer__title {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.3px;
+  }
+  .xt-quick-add-drawer__close {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  .xt-quick-add-drawer__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  .xt-quick-add-drawer__loader.hidden {
+    display: none;
+  }
+  .xt-quick-add-drawer__content {
+    padding: 16px;
+    padding-bottom: 0;
+    overflow-y: auto;
+  }
+  {%- comment -%} 商品图 + 详情布局（对齐主题 .wt__quick-buy 的 wt-product__details 排版）{%- endcomment -%}
+  .xt-quick-add-drawer__content .wt-product__details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  .xt-quick-add-drawer__content .wt-product__details .product-image {
+    width: 100%;
+  }
+  {%- comment -%} 多图轮播：复用主题 Swiper，但容器/分页器用独立 class 避免触发主题完整卡片样式 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quick-add-carousel {
+    display: block;
+    width: 100%;
+  }
+  .xt-quick-add-drawer__content .xt-quick-add-carousel__viewport {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius, 8px);
+    padding-bottom: unset;
+  }
+  .xt-quick-add-drawer__content .xt-quick-add-carousel__track {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+  .xt-quick-add-drawer__content .xt-quick-add-carousel .swiper-slide {
+    flex-shrink: 0;
+    height: auto;
+  }
+  {%- comment -%} 统一所有媒体（img/video）为 7:8 盒子，object-fit:cover 裁剪对齐 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quick-add-carousel .swiper-slide img,
+  .xt-quick-add-drawer__content .xt-quick-add-carousel .swiper-slide video {
+    width: 100%;
+    aspect-ratio: 7 / 8;
+    object-fit: cover;
+    display: block;
+    cursor: default;
+    border-radius: var(--border-radius, 8px);
+  }
+  .xt-quick-add-drawer__content .xt-quick-add-carousel .swiper-slide .wt-product__slide-media,
+  .xt-quick-add-drawer__content .xt-quick-add-carousel .swiper-slide .wt-product__thumbnail-video {
+    width: 100%;
+    aspect-ratio: 7 / 8;
+  }
+  .xt-quick-add-drawer__content .wt-product__details .product-info {
+    margin-top: 12px;
+  }
+  .xt-quick-add-drawer__content pickup-availability {
+    display: none;
+  }
+  .xt-quick-add-drawer__content .wt-product__main {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .xt-quick-add-drawer__content .wt-product__main.rte .wt-product__name a {
+    text-decoration: none;
+  }
+  .xt-quick-add-drawer__content .product__tax.caption.rte {
+    margin-bottom: 0;
+  }
+  .xt-quick-add-drawer__content .wt-product__options {
+    margin-top: 15px;
+  }
+  .xt-quick-add-drawer__content .wt-product__option .wt-product__option__dropdown {
+    margin-bottom: 0;
+  }
+  .xt-quick-add-drawer__content .wt-product__name {
+    font-size: calc(var(--text-size) + 2px);
+  }
+  .xt-quick-add-drawer__content .wt-product__brand {
+    margin-top: 4px;
+  }
+  .xt-quick-add-drawer__content .wt-product__add-to-cart_form.main-product__buy-buttons--container {
+    margin-top: 16px;
+  }
+  {%- comment -%} Quantity 模拟 option + 3 Pairs 快捷加购按钮 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__btn {
+    width: auto;
+    height: auto;
+    padding: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    line-height: 1.3;
+    position: relative;
+  }
+  {%- comment -%} 顶部行：Save $X Free Shipping {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__save {
+    color: #A65D4A;
+    font-family: Arial;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 14px */
+    letter-spacing: -0.2px;
+  }
+  {%- comment -%} 底部行：左 N items + 右购物车图标，space-between 撑开 {%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__qty {
+    color: #2B2B2B;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: -0.28px;
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__cart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    flex-shrink: 0;
+  }
+  .xt-quick-add-drawer__content .xt-quantity-bundle__cart svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+  {%- comment -%} 选项统一底色 #FAEEE5（无选中态）{%- endcomment -%}
+  .xt-quick-add-drawer__content .xt-quantity-bundle__btn {
+    background: #FAEEE5;
+    border: 1px solid #D2D2D2;
+  }
+  .xt-quick-add-drawer__content .wt-product__feature-tags {
+    margin: 16px 0;
+  }
+  .xt-quick-add-drawer__content::-webkit-scrollbar {
+    display: none;
+  }
+  .xt-quick-add-drawer__content .product-image a {
+    pointer-events: none;
+  }
+  {%- comment -%} SKU 促销徽章定位
+  主题原生 promotion 是 position:absolute + top:0，相对整个 .wt-product 容器定位
+  （靠 translate -75% 拉到第一行 option 上方）。商详页 .wt-product 是 row 布局，
+  容器顶部 = option 区顶部，所以视觉上贴在 option 上；抽屉是 column 布局，
+  容器顶部 = 图片顶部，导致徽章错位。
+  这里把定位上下文收窄到单个 f-button__list__item，让徽章真正贴在每个按钮上。{%- endcomment -%}
+  .xt-quick-add-drawer__content .f-button__list__item {
+    position: relative;
+  }
+  .xt-quick-add-drawer__content .wt-product__option-promotion {
+    top: 0;
+    transform: translate(2px, -75%);
+  }
+  {%- comment -%} 查看完整详情入口（Drawer 内容最下方，文字 + 圆圈箭头图标）{%- endcomment -%}
+  .xt-quick-add-drawer__view-all-container {
+    display: flex;
+    padding: 0 16px 20px;
+  }
+  .xt-quick-add-drawer__view-all-container a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #2B2B2B;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.28px;
+  }
+  .xt-quick-add-drawer__view-all-container a svg {
+    flex-shrink: 0;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "XT 商品选购区",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "标题"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "精选商品"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "点击商品快速选购"
+    },
+    {
+      "type": "header",
+      "content": "卡片样式"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        { "value": "adapt", "label": "适应图片" },
+        { "value": "portrait", "label": "纵向 3:4" },
+        { "value": "square", "label": "正方形 1:1" }
+      ],
+      "default": "portrait"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_rating",
+      "label": "显示评分",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Quick-Add 快速选购"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add_button",
+      "label": "启用快速选购按钮",
+      "info": "多 variant 商品显示 'Choose option'，点击弹出选购抽屉",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "quick_add_mode",
+      "label": "桌面端按钮位置",
+      "options": [
+        { "value": "below_product", "label": "商品下方常驻" },
+        { "value": "hover_desktop", "label": "悬停时显示" }
+      ],
+      "default": "below_product"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "商品",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "选择商品"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "XT 商品选购区",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}

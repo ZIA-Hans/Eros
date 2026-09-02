@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_DKVb4L": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Delivery on A$59",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_DKVb4L"
+      ],
+      "custom_css": [],
+      "settings": {
+        "marquee": true,
+        "animation_speed": "150",
+        "checkbox_close_announcement": true,
+        "color-body-text": "#2b2b2b",
+        "background_color": "#edeae0",
+        "size_text_desktop": 100,
+        "size_text_mobile": 100
+      }
+    },
+    "header": {
+      "type": "page-header",
+      "blocks": {
+        "column_yVYQQ3": {
+          "type": "column",
+          "settings": {
+            "title": "Shop",
+            "promo_section_width": 3,
+            "stack_view": false,
+            "image_ratio": "adapt",
+            "heading_1": "",
+            "text_1": "View All Products",
+            "link_1": "",
+            "heading_2": "",
+            "text_2": "Women's Multi Capsules",
+            "link_2": "",
+            "heading_3": "",
+            "text_3": "Immunity Boost Capsules",
+            "link_3": "",
+            "heading_4": "",
+            "text_4": "Natural Collagen Capsules",
+            "link_4": "",
+            "heading_5": "",
+            "text_5": "Boost Energy Capsules",
+            "link_5": "",
+            "heading_6": "",
+            "text_6": "Men's Multi Capsules",
+            "link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yVYQQ3"
+      ],
+      "settings": {
+        "layout": "option_3",
+        "sticky_header": true,
+        "sticky_header_always": false,
+        "header_bg_opacity": 95,
+        "header_bg_blur": 12,
+        "header_always_blurred": false,
+        "show_line_separator": false,
+        "show_shadow": false,
+        "logo": "shopify://shop_images/icon_trans.png",
+        "large_screen_logo_width": 220,
+        "mobile_screen_logo_width": 90,
+        "menu": "sonfeu-mega-menu",
+        "mobile_footer_menu": "",
+        "customer_account_menu": "customer-account-main-menu",
+        "teaser_menu": "main-menu",
+        "teaser_menu_limit": 3,
+        "transparent_logo": "shopify://shop_images/icon_trans.png",
+        "transparent_header_color": "{{ settings.colors.background }}",
+        "show_country_selector": true,
+        "show_country_selector_label": false,
+        "show_country_selector_flag": true,
+        "show_language_selector": false,
+        "drawer_title": "Explore Sofneu",
+        "enable_submenu_link_in_drawer": false,
+        "show_search": true,
+        "show_search_without_button": false,
+        "typing_search": "Search...",
+        "suggestions_title": "most popular",
+        "search_suggest_layout": "menu",
+        "suggestions_menu": "",
+        "suggest_products": [],
+        "suggest_products_title": "",
+        "suggest_collections": [],
+        "suggest_collections_title": "",
+        "suggest_pages_menu": "",
+        "suggest_pages_menu_title": "",
+        "suggest_search_terms": "",
+        "suggest_search_terms_title": "",
+        "show_suggest_on_no_results": true
+      }
+    },
+    "notification_popup_zieLt4": {
+      "type": "notification-popup",
+      "blocks": {
+        "heading_TzmqnN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Eros Girls",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "paragraph_LmwDFp": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Get 10% off when you subscribe</p>",
+            "text_disable_on_mobile": false
+          }
+        },
+        "email_form_BccFxn": {
+          "type": "email_form",
+          "settings": {
+            "button_select": "primary",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_TzmqnN",
+        "paragraph_LmwDFp",
+        "email_form_BccFxn"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.notification_popup.name",
+      "settings": {
+        "max_width": 450,
+        "delay": 20,
+        "show_border": false,
+        "show_shadow": true,
+        "desktop_image": "shopify://shop_images/m-no1-product-nude-show3.jpg",
+        "desktop_vertical_position": "center",
+        "desktop_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "notification_popup_zieLt4"
+  ]
+}

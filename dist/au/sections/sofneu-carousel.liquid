@@ -1,0 +1,1048 @@
+{% liquid
+  assign section_id = section.id | replace: '_', '' | downcase
+  assign card_image_class = 'sofneu-carousel__card-image-' | append: section_id
+  assign card_placeholder_class = 'sofneu-carousel__image-placeholder-' | append: section_id
+  assign avatar_class = 'sofneu-carousel__avatar-image-' | append: section_id
+  assign badge_icon_class = 'sofneu-carousel__badge-icon-' | append: section_id
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.section_background }};
+  }
+
+  .sofneu-carousel-{{ section_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ section.settings.padding_top_mobile }}px {{ section.settings.padding_right_mobile }}px {{ section.settings.padding_bottom_mobile }}px {{ section.settings.padding_left_mobile }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  .sofneu-carousel-{{ section_id }} * {
+    box-sizing: border-box;
+  }
+
+  .sofneu-carousel__inner-{{ section_id }} {
+    width: 100%;
+    max-width: {{ section.settings.mobile_max_width }}px;
+    margin: 0 auto;
+  }
+
+  .sofneu-carousel__header-{{ section_id }} {
+    width: 100%;
+    max-width: 285px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  .sofneu-carousel__eyebrow-{{ section_id }} {
+    margin: 0 0 20px;
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.eyebrow_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .sofneu-carousel__heading-{{ section_id }} {
+    margin: 0 0 20px;
+    color: {{ section.settings.heading_color }};
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .sofneu-carousel__review-row-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0;
+    color: {{ section.settings.text_color }};
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+
+  .sofneu-carousel__score-{{ section_id }} {
+    color: {{ section.settings.accent_color }};
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .sofneu-carousel__badge-{{ section_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  .sofneu-carousel__badge-icon-{{ section_id }} {
+    display: block;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+
+  .sofneu-carousel__stage-{{ section_id }} {
+    width: 100%;
+  }
+
+  .sofneu-carousel__card-{{ section_id }} {
+    display: none;
+    width: 100%;
+    min-height: 236px;
+    padding: 11px 12px;
+    border-radius: 12px;
+    background: {{ section.settings.card_background }};
+  }
+
+  .sofneu-carousel__card-{{ section_id }}.is-active {
+    display: block;
+  }
+
+  .sofneu-carousel__card-main-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 171px;
+  }
+
+  .sofneu-carousel__content-{{ section_id }} {
+    width: 174px;
+    min-width: 0;
+  }
+
+  .sofneu-carousel__quote-icon-{{ section_id }} {
+    display: block;
+    margin-bottom: 8px;
+    color: {{ section.settings.accent_color }};
+    font-size: 28px;
+    line-height: 0.7;
+    font-weight: 700;
+  }
+
+  .sofneu-carousel__card-title-{{ section_id }} {
+    margin: 0 0 9px;
+    color: {{ section.settings.card_title_color }};
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .sofneu-carousel__card-text-{{ section_id }} {
+    margin: 0 0 9px;
+    color: {{ section.settings.card_text_color }};
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+
+  .sofneu-carousel__card-text-{{ section_id }} p {
+    margin: 0;
+  }
+
+  .sofneu-carousel__product-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.card_title_color }};
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+
+  .sofneu-carousel__image-group-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+
+  .sofneu-carousel__image-wrap-{{ section_id }} {
+    width: 109px;
+    height: 127px;
+    flex: 0 0 109px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.45);
+  }
+
+  .sofneu-carousel__image-wrap-{{ section_id }}.is-secondary {
+    display: none;
+  }
+
+  .sofneu-carousel__card-image-{{ section_id }},
+  .sofneu-carousel__image-placeholder-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .sofneu-carousel__image-placeholder-{{ section_id }} {
+    background: #f3f3f3;
+  }
+
+  .sofneu-carousel__footer-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .sofneu-carousel__author-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  .sofneu-carousel__avatar-{{ section_id }} {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #000000;
+  }
+
+  .sofneu-carousel__avatar-image-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sofneu-carousel__avatar-placeholder-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 9px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .sofneu-carousel__author-name-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.card_title_color }};
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .sofneu-carousel__rating-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 6px;
+  }
+
+  .sofneu-carousel__star-{{ section_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background: {{ section.settings.star_background }};
+    color: {{ section.settings.star_color }};
+    font-size: 8px;
+    line-height: 1;
+  }
+
+  .sofneu-carousel__controls-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+
+  .sofneu-carousel__arrow-{{ section_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 1px solid {{ section.settings.arrow_color }};
+    border-radius: 50%;
+    background: transparent;
+    color: {{ section.settings.arrow_color }};
+    cursor: pointer;
+  }
+
+  .sofneu-carousel__arrow-{{ section_id }}:hover,
+  .sofneu-carousel__arrow-{{ section_id }}:focus {
+    background: transparent;
+    color: {{ section.settings.arrow_color }};
+    box-shadow: none;
+    outline: none;
+  }
+
+  .sofneu-carousel__arrow-{{ section_id }} svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+
+  .sofneu-carousel__button-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 36px;
+    margin-top: 30px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_color }};
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .sofneu-carousel__button-{{ section_id }}:hover,
+  .sofneu-carousel__button-{{ section_id }}:focus {
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    opacity: 0.92;
+  }
+
+  @media screen and (min-width: 750px) {
+    .sofneu-carousel-{{ section_id }} {
+      padding: {{ section.settings.padding_top_desktop }}px {{ section.settings.padding_right_desktop }}px {{ section.settings.padding_bottom_desktop }}px {{ section.settings.padding_left_desktop }}px;
+    }
+
+    .sofneu-carousel__inner-{{ section_id }} {
+      max-width: {{ section.settings.desktop_max_width }}px;
+    }
+
+    .sofneu-carousel__header-{{ section_id }} {
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+
+    .sofneu-carousel__eyebrow-{{ section_id }} {
+      font-size: {{ section.settings.eyebrow_size_desktop }}px;
+      margin-bottom: 18px;
+    }
+
+    .sofneu-carousel__heading-{{ section_id }} {
+      font-size: {{ section.settings.heading_size_desktop }}px;
+      line-height: 1.15;
+    }
+
+    .sofneu-carousel__review-row-{{ section_id }} {
+      font-size: 16px;
+      gap: 16px;
+    }
+
+    .sofneu-carousel__score-{{ section_id }} {
+      font-size: 24px;
+    }
+
+    .sofneu-carousel__badge-icon-{{ section_id }} {
+      width: 22px;
+      height: 22px;
+    }
+
+    .sofneu-carousel__card-{{ section_id }} {
+      min-height: 340px;
+      padding: 36px 42px;
+      border-radius: 18px;
+    }
+
+    .sofneu-carousel__card-{{ section_id }}.is-active {
+      display: grid;
+      grid-template-columns: minmax(360px, 440px) auto;
+      grid-template-rows: 1fr auto;
+      align-items: center;
+      justify-content: center;
+      column-gap: 64px;
+      row-gap: 28px;
+    }
+
+    .sofneu-carousel__card-main-{{ section_id }},
+    .sofneu-carousel__footer-{{ section_id }} {
+      display: contents;
+    }
+
+    .sofneu-carousel__content-{{ section_id }} {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100%;
+      max-width: 440px;
+      align-self: center;
+    }
+
+    .sofneu-carousel__image-group-{{ section_id }} {
+      grid-column: 2;
+      grid-row: 1;
+      gap: 18px;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .sofneu-carousel__author-{{ section_id }} {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: end;
+    }
+
+    .sofneu-carousel__controls-{{ section_id }} {
+      grid-column: 2;
+      grid-row: 2;
+      width: 100%;
+      justify-content: center;
+      justify-self: center;
+      gap: 32px;
+      align-self: end;
+    }
+
+    .sofneu-carousel__quote-icon-{{ section_id }} {
+      margin-bottom: 18px;
+      font-size: 48px;
+    }
+
+    .sofneu-carousel__card-title-{{ section_id }} {
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    .sofneu-carousel__card-text-{{ section_id }} {
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .sofneu-carousel__product-{{ section_id }} {
+      font-size: 14px;
+    }
+
+    .sofneu-carousel__image-wrap-{{ section_id }} {
+      width: 180px;
+      height: 210px;
+      flex-basis: 180px;
+      border-radius: 8px;
+    }
+
+    .sofneu-carousel__image-wrap-{{ section_id }}.is-secondary {
+      display: block;
+    }
+
+    .sofneu-carousel__avatar-{{ section_id }} {
+      width: 48px;
+      height: 48px;
+      flex-basis: 48px;
+    }
+
+    .sofneu-carousel__author-name-{{ section_id }} {
+      font-size: 16px;
+    }
+
+    .sofneu-carousel__star-{{ section_id }} {
+      width: 16px;
+      height: 16px;
+      font-size: 10px;
+    }
+
+    .sofneu-carousel__arrow-{{ section_id }} {
+      width: 48px;
+      height: 48px;
+    }
+
+    .sofneu-carousel__arrow-{{ section_id }} svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .sofneu-carousel__button-{{ section_id }} {
+      width: min(100%, {{ section.settings.desktop_button_width }}px);
+      min-height: 48px;
+      margin: 64px auto 0;
+      font-size: 16px;
+    }
+  }
+{% endstyle %}
+
+<sofneu-carousel-{{ section_id }} class="sofneu-carousel-{{ section_id }}" data-sofneu-carousel>
+  <div class="sofneu-carousel__inner-{{ section_id }}">
+    {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.show_review_summary or section.settings.show_badge %}
+      <div class="sofneu-carousel__header-{{ section_id }}">
+        {% if section.settings.eyebrow != blank %}
+          <p class="sofneu-carousel__eyebrow-{{ section_id }}">{{ section.settings.eyebrow }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="sofneu-carousel__heading-{{ section_id }}">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.show_review_summary or section.settings.show_badge %}
+          <div class="sofneu-carousel__review-row-{{ section_id }}">
+            {% if section.settings.show_review_summary %}
+              <span>{{ section.settings.review_label }}</span>
+              <strong class="sofneu-carousel__score-{{ section_id }}">{{ section.settings.review_score }}</strong>
+            {% endif %}
+
+            {% if section.settings.show_badge %}
+              <span class="sofneu-carousel__badge-{{ section_id }}">
+                {% if section.settings.badge_icon != blank %}
+                  {{ section.settings.badge_icon | image_url: width: 64 | image_tag: class: badge_icon_class, loading: 'lazy' }}
+                {% endif %}
+                <span>{{ section.settings.badge_text }}</span>
+              </span>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="sofneu-carousel__stage-{{ section_id }}">
+      {% for block in section.blocks %}
+        {% if block.settings.show_item %}
+          <article
+            class="sofneu-carousel__card-{{ section_id }}{% if forloop.first %} is-active{% endif %}"
+            data-sofneu-card
+            {{ block.shopify_attributes }}
+          >
+            <div class="sofneu-carousel__card-main-{{ section_id }}">
+              <div class="sofneu-carousel__content-{{ section_id }}">
+                {% if section.settings.show_quote_mark %}
+                  <span class="sofneu-carousel__quote-icon-{{ section_id }}" aria-hidden="true">“</span>
+                {% endif %}
+
+                {% if block.settings.title != blank %}
+                  <h3 class="sofneu-carousel__card-title-{{ section_id }}">{{ block.settings.title }}</h3>
+                {% endif %}
+
+                {% if block.settings.text != blank %}
+                  <div class="sofneu-carousel__card-text-{{ section_id }}">{{ block.settings.text }}</div>
+                {% endif %}
+
+                {% if block.settings.product_name != blank %}
+                  <p class="sofneu-carousel__product-{{ section_id }}">{{ block.settings.product_name }}</p>
+                {% endif %}
+              </div>
+
+              <div class="sofneu-carousel__image-group-{{ section_id }}">
+                <div class="sofneu-carousel__image-wrap-{{ section_id }}">
+                  {% if block.settings.image != blank %}
+                    {{ block.settings.image | image_url: width: 420 | image_tag: class: card_image_class, loading: 'lazy' }}
+                  {% else %}
+                    {{ 'image' | placeholder_svg_tag: card_placeholder_class }}
+                  {% endif %}
+                </div>
+
+                {% if block.settings.second_image != blank %}
+                  <div class="sofneu-carousel__image-wrap-{{ section_id }} is-secondary">
+                    {{ block.settings.second_image | image_url: width: 420 | image_tag: class: card_image_class, loading: 'lazy' }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="sofneu-carousel__footer-{{ section_id }}">
+              <div class="sofneu-carousel__author-{{ section_id }}">
+                <div class="sofneu-carousel__avatar-{{ section_id }}">
+                  {% if block.settings.avatar != blank %}
+                    {{ block.settings.avatar | image_url: width: 120 | image_tag: class: avatar_class, loading: 'lazy' }}
+                  {% else %}
+                    <span class="sofneu-carousel__avatar-placeholder-{{ section_id }}">{{ block.settings.author | slice: 0, 8 }}</span>
+                  {% endif %}
+                </div>
+
+                {% if block.settings.author != blank %}
+                  <p class="sofneu-carousel__author-name-{{ section_id }}">{{ block.settings.author }}</p>
+                {% endif %}
+
+                {% if block.settings.show_rating %}
+                  <div class="sofneu-carousel__rating-{{ section_id }}" aria-label="{{ block.settings.rating }} out of 5 stars">
+                    {% for index in (1..5) %}
+                      {% if index <= block.settings.rating %}
+                        <span class="sofneu-carousel__star-{{ section_id }}">★</span>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="sofneu-carousel__controls-{{ section_id }}">
+                <button class="sofneu-carousel__arrow-{{ section_id }}" type="button" aria-label="Previous" data-sofneu-prev>
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M19 12H6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M11 7l-5 5 5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+
+                <button class="sofneu-carousel__arrow-{{ section_id }}" type="button" aria-label="Next" data-sofneu-next>
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 12h13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M13 7l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_button and section.settings.button_text != blank %}
+      <a class="sofneu-carousel__button-{{ section_id }}" href="{{ section.settings.button_link | default: '#' }}">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</sofneu-carousel-{{ section_id }}>
+
+<script>
+  (() => {
+    const initSofneuCarousel = (root = document) => {
+      root.querySelectorAll('[data-sofneu-carousel]').forEach((section) => {
+        if (section.dataset.initialized === 'true') return;
+        section.dataset.initialized = 'true';
+
+        const cards = Array.from(section.querySelectorAll('[data-sofneu-card]'));
+        const prevButtons = Array.from(section.querySelectorAll('[data-sofneu-prev]'));
+        const nextButtons = Array.from(section.querySelectorAll('[data-sofneu-next]'));
+        let activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains('is-active')));
+
+        const showCard = (index) => {
+          if (!cards.length) return;
+          activeIndex = (index + cards.length) % cards.length;
+          cards.forEach((card, cardIndex) => {
+            card.classList.toggle('is-active', cardIndex === activeIndex);
+          });
+        };
+
+        if (cards.length <= 1) {
+          prevButtons.concat(nextButtons).forEach((button) => {
+            button.style.visibility = 'hidden';
+          });
+          showCard(0);
+          return;
+        }
+
+        prevButtons.forEach((button) => button.addEventListener('click', () => showCard(activeIndex - 1)));
+        nextButtons.forEach((button) => button.addEventListener('click', () => showCard(activeIndex + 1)));
+        showCard(activeIndex);
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => initSofneuCarousel());
+    document.addEventListener('shopify:section:load', (event) => initSofneuCarousel(event.target));
+    initSofneuCarousel();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Sofneu Carousel",
+  "tag": "section",
+  "class": "section-sofneu-carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Small title",
+      "default": "Don’t just take our word for it"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "See why women love Sofneu"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_review_summary",
+      "label": "Show review summary",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_label",
+      "label": "Review label",
+      "default": "Product Reviews"
+    },
+    {
+      "type": "text",
+      "id": "review_score",
+      "label": "Review score",
+      "default": "4.9"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badge",
+      "label": "Show badge",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_icon",
+      "label": "Badge icon"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Google Top Quality Store"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quote_mark",
+      "label": "Show quote mark",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Read All Reviews"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#fffafa"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#b3877b"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text color",
+      "default": "#6f6f6f"
+    },
+    {
+      "type": "color",
+      "id": "star_background",
+      "label": "Star background",
+      "default": "#faeee5"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#a65d4a"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size_mobile",
+      "label": "Small title size - mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size_desktop",
+      "label": "Small title size - desktop",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size - mobile",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading size - desktop",
+      "min": 20,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "label": "Mobile maximum width",
+      "min": 300,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "default": 345
+    },
+    {
+      "type": "range",
+      "id": "desktop_max_width",
+      "label": "Desktop maximum width",
+      "min": 800,
+      "max": 1600,
+      "step": 10,
+      "unit": "px",
+      "default": 1280
+    },
+    {
+      "type": "range",
+      "id": "desktop_button_width",
+      "label": "Desktop button width",
+      "min": 180,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "default": 320
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_left_mobile",
+      "label": "Left padding - mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_right_mobile",
+      "label": "Right padding - mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding - desktop",
+      "min": 0,
+      "max": 180,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding - desktop",
+      "min": 0,
+      "max": 180,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_left_desktop",
+      "label": "Left padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_right_desktop",
+      "label": "Right padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Carousel item",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_item",
+          "label": "Show item",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "The first choice wasn't particularly"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>The first choice wasn't particularly impressive, but after using it, I found it to be truly amazing. It's fantastic, and I will recommend it to my friends</p>"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "Product or source",
+          "default": "No.1 Glossy Control Top Tights"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card image"
+        },
+        {
+          "type": "image_picker",
+          "id": "second_image",
+          "label": "Second card image - desktop only"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar or logo"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Name",
+          "default": "Lisa"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "label": "Show rating",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sofneu Carousel",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

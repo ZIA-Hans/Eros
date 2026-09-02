@@ -1,0 +1,500 @@
+{% liquid
+  assign section_id = section.id | replace: '_', '' | downcase
+  assign image_class = 'category-guide__image-' | append: section_id
+  assign placeholder_class = 'category-guide__placeholder-' | append: section_id
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.section_background }};
+  }
+
+  .category-guide-{{ section_id }} {
+    display: block;
+    width: 100%;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    overflow: hidden;
+  }
+
+  .category-guide-{{ section_id }} * {
+    box-sizing: border-box;
+  }
+
+  .category-guide__inner-{{ section_id }} {
+    width: 100%;
+    max-width: {{ section.settings.mobile_max_width }}px;
+    margin: 0 auto;
+  }
+
+  .category-guide__title-{{ section_id }} {
+    margin: 0 0 28px;
+    color: {{ section.settings.title_color }};
+    font-size: {{ section.settings.title_size_mobile }}px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .category-guide__scroller-{{ section_id }} {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 {{ section.settings.mobile_side_padding }}px 4px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-guide__scroller-{{ section_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-guide__scroller-{{ section_id }} {
+    scrollbar-width: none;
+  }
+
+  .category-guide__card-{{ section_id }} {
+    display: block;
+    width: 134px;
+    min-width: 134px;
+    height: 216px;
+    padding: 10px 10px 7px;
+    border-radius: 16px;
+    background: {{ section.settings.card_background }};
+    color: inherit;
+    text-decoration: none;
+    scroll-snap-align: start;
+  }
+
+  .category-guide__card-{{ section_id }}:hover,
+  .category-guide__card-{{ section_id }}:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .category-guide__image-wrap-{{ section_id }} {
+    width: 114px;
+    height: 115px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+
+  .category-guide__image-{{ section_id }},
+  .category-guide__placeholder-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .category-guide__placeholder-{{ section_id }} {
+    background: #f3f3f3;
+  }
+
+  .category-guide__divider-{{ section_id }} {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0 7px;
+    background: {{ section.settings.divider_color }};
+  }
+
+  .category-guide__name-{{ section_id }} {
+    margin: 0 0 6px;
+    color: {{ section.settings.card_title_color }};
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .category-guide__temperature-{{ section_id }} {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 6px;
+    color: {{ section.settings.card_text_color }};
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .category-guide__temperature-icon-{{ section_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    color: {{ section.settings.icon_color }};
+  }
+
+  .category-guide__feeling-{{ section_id }} {
+    margin: 0;
+    color: {{ section.settings.card_text_color }};
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media screen and (min-width: 750px) {
+    .category-guide-{{ section_id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+
+    .category-guide__inner-{{ section_id }} {
+      max-width: {{ section.settings.desktop_max_width }}px;
+    }
+
+    .category-guide__title-{{ section_id }} {
+      margin-bottom: 40px;
+      font-size: {{ section.settings.title_size_desktop }}px;
+    }
+
+    .category-guide__scroller-{{ section_id }} {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 0;
+      overflow: visible;
+    }
+
+    .category-guide__card-{{ section_id }} {
+      width: 188px;
+      min-width: 188px;
+      height: 304px;
+      padding: 14px 14px 10px;
+      border-radius: 22px;
+    }
+
+    .category-guide__image-wrap-{{ section_id }} {
+      width: 160px;
+      height: 161px;
+      border-radius: 11px;
+    }
+
+    .category-guide__divider-{{ section_id }} {
+      margin: 14px 0 10px;
+    }
+
+    .category-guide__name-{{ section_id }} {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .category-guide__temperature-{{ section_id }},
+    .category-guide__feeling-{{ section_id }} {
+      font-size: 17px;
+    }
+
+    .category-guide__temperature-icon-{{ section_id }} {
+      width: 17px;
+      height: 17px;
+      flex-basis: 17px;
+    }
+  }
+{% endstyle %}
+
+<section class="category-guide-{{ section_id }}">
+  <div class="category-guide__inner-{{ section_id }}">
+    {% if section.settings.title != blank %}
+      <h2 class="category-guide__title-{{ section_id }}">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    <div class="category-guide__scroller-{{ section_id }}">
+      {% for block in section.blocks %}
+        {% if block.settings.show_card %}
+          {% liquid
+            assign card_tag = 'div'
+            if block.settings.link != blank
+              assign card_tag = 'a'
+            endif
+          %}
+
+          <{{ card_tag }}
+            class="category-guide__card-{{ section_id }}"
+            {% if block.settings.link != blank %}href="{{ block.settings.link }}"{% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <div class="category-guide__image-wrap-{{ section_id }}">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 360 | image_tag: class: image_class, loading: 'lazy' }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: placeholder_class }}
+              {% endif %}
+            </div>
+
+            <span class="category-guide__divider-{{ section_id }}"></span>
+
+            {% if block.settings.name != blank %}
+              <p class="category-guide__name-{{ section_id }}">{{ block.settings.name }}</p>
+            {% endif %}
+
+            {% if block.settings.temperature != blank %}
+              <p class="category-guide__temperature-{{ section_id }}">
+                <span class="category-guide__temperature-icon-{{ section_id }}" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none">
+                    <path d="M6 1.25v5.1" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                    <path d="M4.25 8.6a1.75 1.75 0 1 0 3.5 0c0-.67-.38-1.24-.94-1.54V2.5a.81.81 0 0 0-1.62 0v4.56c-.56.3-.94.87-.94 1.54Z" stroke="currentColor" stroke-width="1"/>
+                    <path d="M8.75 2.2h1.15M8.75 4h1.15M8.75 5.8h1.15" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>{{ block.settings.temperature }}</span>
+              </p>
+            {% endif %}
+
+            {% if block.settings.feeling != blank %}
+              <p class="category-guide__feeling-{{ section_id }}">{{ block.settings.feeling }}</p>
+            {% endif %}
+          </{{ card_tag }}>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Guide Carousel",
+  "tag": "section",
+  "class": "section-category-guide-carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Shop by Sheerness"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text color",
+      "default": "#6f6f6f"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Temperature icon color",
+      "default": "#6f6f6f"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#ece8e0"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title size - mobile",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Title size - desktop",
+      "min": 16,
+      "max": 44,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "label": "Mobile maximum width",
+      "min": 320,
+      "max": 430,
+      "step": 5,
+      "unit": "px",
+      "default": 375
+    },
+    {
+      "type": "range",
+      "id": "mobile_side_padding",
+      "label": "Mobile side padding",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop_max_width",
+      "label": "Desktop maximum width",
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Top padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Bottom padding - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Category card",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_card",
+          "label": "Show card",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Ultra Sheer (10D)"
+        },
+        {
+          "type": "text",
+          "id": "temperature",
+          "label": "Temperature",
+          "default": "25–35°C"
+        },
+        {
+          "type": "text",
+          "id": "feeling",
+          "label": "Feeling",
+          "default": "Almost invisible"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Guide Carousel",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card",
+          "settings": {
+            "name": "Sheer (20D)",
+            "temperature": "20–30°C",
+            "feeling": "Light sheer"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "name": "Semi-Opaque (40D)",
+            "temperature": "15–25°C",
+            "feeling": "Light opaque"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

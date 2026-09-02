@@ -1,6 +1,12 @@
 # Shopify CLI working directory (local cache, metafields, theme session)
 .shopify/
 
+# Multi-country pipeline (scripts/sync.mjs)
+# dist/ 提交到 git（各国完整主题）；.dev/ 是纯一次性预览区（可整体删除，dev 自动重建）
+.dev/
+tokens.local.json
+node_modules/
+
 # OS / editor
 .DS_Store
 Thumbs.db

@@ -1,0 +1,60 @@
+{% if size_link != empty %}
+<div class="wt-product__content wt-product__information-popup {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+    {% if size_icon != 'none' %}
+    <div class="wt-product__icon">
+        {% render 'icons', id: size_icon %}
+    </div>
+    {% endif %}
+    <div class="wt-product__page">
+    <button
+        id="SizeGuideBtn-{{ id }}"
+        class="wt-product__opener wt-product__button wt-product__link no-js-hidden quick-add-hidden"
+        type="button"
+        aria-haspopup="dialog"
+        data-size-guide-open="{{ id }}"
+        {{ shopify_attributes }}
+    >
+        {{ size_link | default: size_page.title }}
+    </button>
+    </div>
+</div>
+
+<sl-dialog
+    id="SizeGuideDialog-{{ id }}"
+    class="wt-product__size-guide-dialog"
+    label="{{ size_content.title | default: size_link | escape }}"
+    {{ shopify_attributes }}
+>
+    <div class="wt-product__modal--content-info rte">
+        {% assign metafield = metafield_name | strip | split: '.' %}
+        {% assign metafield_namespace = metafield | first | strip %}
+        {% assign metafield_key = metafield | last | strip %}
+        {% assign information_popup_table = product.metafields[metafield_namespace][metafield_key] %}
+        {% if information_popup_table %}
+        {% assign rows = information_popup_table | newline_to_br | split: '<br />'%}
+        <div class="size-table__wrapper">
+            <table class="size-table {% if enable-striped-rows %} size-table--striped {% endif %}">
+            {% for row in rows %}
+                <tr>
+                {% assign cells = row | split: '|' %}
+                {% for cell in cells %}
+                    {% assign clean_cell = cell | strip %}
+                    {% assign first_char = clean_cell | slice: 0, 1 %}
+                    {% if first_char == '#' %}
+                    <th>{{ clean_cell | remove_first: '#' | strip }}</th>
+                    {% else %}
+                    <td>{{ clean_cell }}</td>
+                    {% endif %}
+                {% endfor %}
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+        {% endif %}
+        {% if size_content != empty %}
+        {{ size_content.content }}
+        {% endif %}
+    </div>
+</sl-dialog>
+
+{% endif %}
