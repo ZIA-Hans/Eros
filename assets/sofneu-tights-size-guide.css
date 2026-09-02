@@ -1,0 +1,1076 @@
+/* =========================================================
+   SOFNEU TIGHTS SIZE GUIDE
+   FINAL SHARED CSS
+   Supports 1–6 size columns
+
+   Root namespace:
+   .sofneu-tights-size-guide
+
+   Mobile strategy:
+   1–4 sizes = fit within viewport
+   5–6 sizes = horizontal scroll + sticky first column
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.sofneu-tights-size-guide {
+  --stsg-primary: #C84668;
+  --stsg-primary-dark: #873449;
+  --stsg-deep: #693227;
+
+  --stsg-pink: #FBF4F4;
+  --stsg-cream: #FAEEE5;
+  --stsg-neutral: #F5F2EB;
+
+  --stsg-text: #2B2B2B;
+  --stsg-muted: #746E6A;
+
+  --stsg-border: #E9E2DE;
+  --stsg-border-soft: #F1ECE8;
+
+  --stsg-white: #FFFFFF;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  color: var(--stsg-text);
+  font-family: inherit;
+
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.sofneu-tights-size-guide *,
+.sofneu-tights-size-guide *::before,
+.sofneu-tights-size-guide *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOCAL BUTTON RESET
+   Only affects buttons inside this component.
+========================================================= */
+
+.sofneu-tights-size-guide button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: none;
+
+  color: inherit;
+  font: inherit;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   TOP TABS
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  border-bottom: 1px solid var(--stsg-border);
+}
+
+
+.sofneu-tights-size-guide .stsg-tab {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 44px;
+
+  padding: 9px 5px;
+
+  color: #8A8480;
+
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+
+  transition: color 0.18s ease;
+}
+
+
+.sofneu-tights-size-guide .stsg-tab::after {
+  content: "";
+
+  position: absolute;
+
+  left: 16%;
+  right: 16%;
+  bottom: -1px;
+
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  transition: background-color 0.18s ease;
+}
+
+
+/* SIZE & FIT ACTIVE */
+
+.sofneu-tights-size-guide.stsg-tab-fit-active
+.stsg-tab-fit {
+  color: var(--stsg-text);
+  font-weight: 700;
+}
+
+
+.sofneu-tights-size-guide.stsg-tab-fit-active
+.stsg-tab-fit::after {
+  background: var(--stsg-primary);
+}
+
+
+/* INTERNATIONAL ACTIVE */
+
+.sofneu-tights-size-guide.stsg-tab-international-active
+.stsg-tab-international {
+  color: var(--stsg-text);
+  font-weight: 700;
+}
+
+
+.sofneu-tights-size-guide.stsg-tab-international-active
+.stsg-tab-international::after {
+  background: var(--stsg-primary);
+}
+
+
+/* =========================================================
+   PANELS
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-panel-fit,
+.sofneu-tights-size-guide .stsg-panel-international {
+  display: none;
+}
+
+
+.sofneu-tights-size-guide.stsg-tab-fit-active
+.stsg-panel-fit {
+  display: block;
+}
+
+
+.sofneu-tights-size-guide.stsg-tab-international-active
+.stsg-panel-international {
+  display: block;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-heading {
+  margin: 0 0 5px;
+
+  color: var(--stsg-text);
+
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  letter-spacing: -0.015em;
+}
+
+
+.sofneu-tights-size-guide .stsg-description {
+  max-width: 600px;
+
+  margin: 0 0 14px;
+
+  color: var(--stsg-muted);
+
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   UNIT SWITCH
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-unit-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3px;
+
+  width: 100%;
+
+  margin: 0 0 14px;
+  padding: 3px;
+
+  border-radius: 999px;
+
+  background: var(--stsg-neutral);
+}
+
+
+.sofneu-tights-size-guide .stsg-unit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 36px;
+
+  padding: 7px 10px;
+
+  border-radius: 999px;
+
+  color: var(--stsg-muted);
+
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 600;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* METRIC ACTIVE */
+
+.sofneu-tights-size-guide.stsg-unit-metric-active
+.stsg-unit-metric {
+  background: var(--stsg-white);
+
+  color: var(--stsg-primary);
+
+  font-weight: 700;
+
+  box-shadow:
+    0 1px 4px rgba(43, 43, 43, 0.06),
+    0 2px 8px rgba(43, 43, 43, 0.03);
+}
+
+
+/* IMPERIAL ACTIVE */
+
+.sofneu-tights-size-guide.stsg-unit-imperial-active
+.stsg-unit-imperial {
+  background: var(--stsg-white);
+
+  color: var(--stsg-primary);
+
+  font-weight: 700;
+
+  box-shadow:
+    0 1px 4px rgba(43, 43, 43, 0.06),
+    0 2px 8px rgba(43, 43, 43, 0.03);
+}
+
+
+/* =========================================================
+   METRIC / IMPERIAL VALUES
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-value-metric,
+.sofneu-tights-size-guide .stsg-value-imperial {
+  display: none;
+}
+
+
+.sofneu-tights-size-guide.stsg-unit-metric-active
+.stsg-value-metric {
+  display: inline;
+}
+
+
+.sofneu-tights-size-guide.stsg-unit-imperial-active
+.stsg-value-imperial {
+  display: inline;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-table-wrap {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--stsg-border) !important;
+  border-radius: 13px;
+
+  background: var(--stsg-white);
+
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-table {
+  width: 100%;
+
+  margin: 0 !important;
+
+  table-layout: fixed;
+
+  border: 0 !important;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  background: transparent;
+
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+.sofneu-tights-size-guide .stsg-table thead,
+.sofneu-tights-size-guide .stsg-table tbody,
+.sofneu-tights-size-guide .stsg-table tr {
+  border: 0 !important;
+
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+.sofneu-tights-size-guide .stsg-table th,
+.sofneu-tights-size-guide .stsg-table td {
+  height: 44px;
+
+  margin: 0;
+  padding: 6px 2px;
+
+  border-top: 0 !important;
+  border-left: 0 !important;
+
+  border-right:
+    1px solid var(--stsg-border-soft) !important;
+
+  border-bottom:
+    1px solid var(--stsg-border-soft) !important;
+
+  outline: 0 !important;
+  box-shadow: none !important;
+
+  background: #FFFFFF;
+
+  color: var(--stsg-text);
+
+  text-align: center;
+  vertical-align: middle;
+
+  font-size: 9px;
+  line-height: 1.22;
+  font-weight: 500;
+
+  letter-spacing: -0.01em;
+
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+
+/* Keep product size labels on one line */
+
+.sofneu-tights-size-guide
+.stsg-table
+thead
+th:not(:first-child) {
+  white-space: nowrap;
+}
+
+
+/* Last column */
+
+.sofneu-tights-size-guide .stsg-table th:last-child,
+.sofneu-tights-size-guide .stsg-table td:last-child {
+  border-right: 0 !important;
+}
+
+
+/* Last row */
+
+.sofneu-tights-size-guide
+.stsg-table
+tbody
+tr:last-child
+th,
+
+.sofneu-tights-size-guide
+.stsg-table
+tbody
+tr:last-child
+td {
+  border-bottom: 0 !important;
+}
+
+
+/* Header */
+
+.sofneu-tights-size-guide .stsg-table thead th {
+  background: var(--stsg-pink);
+
+  color: var(--stsg-text);
+
+  font-weight: 700;
+}
+
+
+.sofneu-tights-size-guide .stsg-table thead th:first-child {
+  background: #FAF8F6;
+}
+
+
+/* Row labels */
+
+.sofneu-tights-size-guide .stsg-table tbody th {
+  background: #FAF8F6;
+
+  color: #5F5955;
+
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   COLUMN SYSTEM — 1 SIZE
+========================================================= */
+
+.sofneu-tights-size-guide.stsg-cols-1
+.stsg-table th:first-child {
+  width: 34%;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-1
+.stsg-table th:not(:first-child),
+.sofneu-tights-size-guide.stsg-cols-1
+.stsg-table td {
+  width: 66%;
+}
+
+
+/* =========================================================
+   COLUMN SYSTEM — 2 SIZES
+========================================================= */
+
+.sofneu-tights-size-guide.stsg-cols-2
+.stsg-table th:first-child {
+  width: 28%;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-2
+.stsg-table th:not(:first-child),
+.sofneu-tights-size-guide.stsg-cols-2
+.stsg-table td {
+  width: 36%;
+}
+
+
+/* =========================================================
+   COLUMN SYSTEM — 3 SIZES
+========================================================= */
+
+.sofneu-tights-size-guide.stsg-cols-3
+.stsg-table th:first-child {
+  width: 22%;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-3
+.stsg-table th:not(:first-child),
+.sofneu-tights-size-guide.stsg-cols-3
+.stsg-table td {
+  width: 26%;
+}
+
+
+/* =========================================================
+   COLUMN SYSTEM — 4 SIZES
+========================================================= */
+
+.sofneu-tights-size-guide.stsg-cols-4
+.stsg-table th:first-child {
+  width: 18%;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-4
+.stsg-table th:not(:first-child),
+.sofneu-tights-size-guide.stsg-cols-4
+.stsg-table td {
+  width: 20.5%;
+}
+
+
+/* =========================================================
+   FIT TIP
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-fit-tip {
+  margin-top: 12px;
+
+  padding: 12px 13px;
+
+  border-radius: 12px;
+
+  background: var(--stsg-neutral);
+}
+
+
+.sofneu-tights-size-guide .stsg-fit-tip-title {
+  margin: 0 0 4px;
+
+  color: var(--stsg-text);
+
+  font-size: 10.5px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+.sofneu-tights-size-guide .stsg-fit-tip-copy {
+  margin: 0;
+
+  color: var(--stsg-muted);
+
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   INTERNATIONAL NOTE
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-international-note {
+  margin: 10px 1px 0;
+
+  color: var(--stsg-muted);
+
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FULL SIZE DETAILS
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-full-guide {
+  margin-top: 14px;
+
+  padding: 15px 13px;
+
+  border-radius: 14px;
+
+  background: var(--stsg-pink);
+
+  text-align: center;
+}
+
+
+.sofneu-tights-size-guide .stsg-full-guide-title {
+  margin: 0 0 4px;
+
+  color: var(--stsg-text);
+
+  font-size: 10.5px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+}
+
+
+.sofneu-tights-size-guide .stsg-full-guide-copy {
+  margin: 0 0 11px;
+
+  color: var(--stsg-muted);
+
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+
+.sofneu-tights-size-guide .stsg-full-guide-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 43px;
+
+  padding: 11px 14px;
+
+  border-radius: 9px;
+
+  background: var(--stsg-primary);
+
+  color: #FFFFFF !important;
+
+  text-decoration: none !important;
+
+  font-size: 10.5px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.sofneu-tights-size-guide .stsg-full-guide-link:hover {
+  background: var(--stsg-primary-dark);
+}
+
+
+.sofneu-tights-size-guide .stsg-full-guide-link:active {
+  transform: scale(0.99);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.sofneu-tights-size-guide .stsg-tab:focus-visible,
+.sofneu-tights-size-guide .stsg-unit:focus-visible,
+.sofneu-tights-size-guide .stsg-full-guide-link:focus-visible {
+  outline: 2px solid var(--stsg-primary) !important;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MOBILE — 1 SIZE
+========================================================= */
+
+@media screen and (max-width: 699px) {
+
+  .sofneu-tights-size-guide.stsg-cols-1
+  .stsg-table th,
+  .sofneu-tights-size-guide.stsg-cols-1
+  .stsg-table td {
+    padding-left: 7px;
+    padding-right: 7px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE — 2 SIZES
+========================================================= */
+
+@media screen and (max-width: 699px) {
+
+  .sofneu-tights-size-guide.stsg-cols-2
+  .stsg-table th,
+  .sofneu-tights-size-guide.stsg-cols-2
+  .stsg-table td {
+    padding-left: 4px;
+    padding-right: 4px;
+
+    font-size: 9.5px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE — 3 SIZES
+========================================================= */
+
+@media screen and (max-width: 699px) {
+
+  .sofneu-tights-size-guide.stsg-cols-3
+  .stsg-table th,
+  .sofneu-tights-size-guide.stsg-cols-3
+  .stsg-table td {
+    padding-left: 2px;
+    padding-right: 2px;
+
+    font-size: 8.8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE — 4 SIZES
+========================================================= */
+
+@media screen and (max-width: 699px) {
+
+  .sofneu-tights-size-guide.stsg-cols-4
+  .stsg-table th,
+  .sofneu-tights-size-guide.stsg-cols-4
+  .stsg-table td {
+    height: 46px;
+
+    padding-left: 1px;
+    padding-right: 1px;
+
+    font-size: 8px;
+    line-height: 1.18;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  .sofneu-tights-size-guide.stsg-cols-4
+  .stsg-table
+  thead
+  th:not(:first-child) {
+    font-size: 7.8px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 374px) {
+
+  .sofneu-tights-size-guide .stsg-tab {
+    min-height: 42px;
+
+    padding-left: 3px;
+    padding-right: 3px;
+
+    font-size: 10px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-heading {
+    font-size: 17px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-description {
+    font-size: 10px;
+  }
+
+
+  .sofneu-tights-size-guide.stsg-cols-4
+  .stsg-table th,
+  .sofneu-tights-size-guide.stsg-cols-4
+  .stsg-table td {
+    height: 45px;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 7.5px;
+    line-height: 1.16;
+
+    letter-spacing: -0.035em;
+  }
+
+
+  .sofneu-tights-size-guide.stsg-cols-4
+  .stsg-table
+  thead
+  th:not(:first-child) {
+    font-size: 7.3px;
+  }
+
+}
+
+
+/* =========================================================
+   5 / 6 SIZE TABLES
+   Use horizontal scroll on mobile.
+========================================================= */
+
+.sofneu-tights-size-guide.stsg-cols-5
+.stsg-table-wrap,
+
+.sofneu-tights-size-guide.stsg-cols-6
+.stsg-table-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+  scrollbar-color:
+    var(--stsg-border)
+    transparent;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-5
+.stsg-table-wrap::-webkit-scrollbar,
+
+.sofneu-tights-size-guide.stsg-cols-6
+.stsg-table-wrap::-webkit-scrollbar {
+  height: 4px;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-5
+.stsg-table-wrap::-webkit-scrollbar-track,
+
+.sofneu-tights-size-guide.stsg-cols-6
+.stsg-table-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.sofneu-tights-size-guide.stsg-cols-5
+.stsg-table-wrap::-webkit-scrollbar-thumb,
+
+.sofneu-tights-size-guide.stsg-cols-6
+.stsg-table-wrap::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: var(--stsg-border);
+}
+
+
+/* 5 sizes */
+
+.sofneu-tights-size-guide.stsg-cols-5
+.stsg-table {
+  min-width: 600px;
+}
+
+
+/* 6 sizes */
+
+.sofneu-tights-size-guide.stsg-cols-6
+.stsg-table {
+  min-width: 700px;
+}
+
+
+/* Mobile sticky first column */
+
+@media screen and (max-width: 699px) {
+
+  .sofneu-tights-size-guide.stsg-cols-5
+  .stsg-table th:first-child,
+
+  .sofneu-tights-size-guide.stsg-cols-6
+  .stsg-table th:first-child {
+    position: sticky;
+
+    left: 0;
+
+    z-index: 3;
+
+    width: 94px;
+    min-width: 94px;
+    max-width: 94px;
+
+    background: #FAF8F6;
+
+    box-shadow:
+      4px 0 7px rgba(43, 43, 43, 0.035);
+  }
+
+
+  .sofneu-tights-size-guide.stsg-cols-5
+  .stsg-table thead th:first-child,
+
+  .sofneu-tights-size-guide.stsg-cols-6
+  .stsg-table thead th:first-child {
+    z-index: 4;
+  }
+
+
+  .sofneu-tights-size-guide.stsg-cols-5
+  .stsg-table th:not(:first-child),
+  .sofneu-tights-size-guide.stsg-cols-5
+  .stsg-table td,
+
+  .sofneu-tights-size-guide.stsg-cols-6
+  .stsg-table th:not(:first-child),
+  .sofneu-tights-size-guide.stsg-cols-6
+  .stsg-table td {
+    width: 98px;
+    min-width: 98px;
+
+    padding-left: 6px;
+    padding-right: 6px;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+========================================================= */
+
+@media screen and (min-width: 700px) {
+
+  .sofneu-tights-size-guide .stsg-tabs {
+    margin-bottom: 21px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-tab {
+    min-height: 47px;
+
+    font-size: 12px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-heading {
+    font-size: 22px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-description {
+    margin-bottom: 17px;
+
+    font-size: 13px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-unit-switch {
+    margin-bottom: 17px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-unit {
+    min-height: 39px;
+
+    font-size: 11px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-table th,
+  .sofneu-tights-size-guide .stsg-table td {
+    height: 49px;
+
+    padding: 8px 6px;
+
+    font-size: 11px;
+
+    letter-spacing: 0;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-fit-tip {
+    margin-top: 15px;
+
+    padding: 14px 15px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-fit-tip-title {
+    font-size: 12px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-fit-tip-copy,
+  .sofneu-tights-size-guide .stsg-international-note,
+  .sofneu-tights-size-guide .stsg-full-guide-copy {
+    font-size: 11px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-full-guide {
+    margin-top: 18px;
+
+    padding: 18px 16px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-full-guide-title {
+    font-size: 11px;
+  }
+
+
+  .sofneu-tights-size-guide .stsg-full-guide-link {
+    min-height: 44px;
+
+    font-size: 11px;
+  }
+
+
+  /* 5 / 6 sizes return to normal desktop table */
+
+  .sofneu-tights-size-guide.stsg-cols-5
+  .stsg-table,
+
+  .sofneu-tights-size-guide.stsg-cols-6
+  .stsg-table {
+    width: 100%;
+    min-width: 0;
+
+    table-layout: fixed;
+  }
+
+
+  .sofneu-tights-size-guide.stsg-cols-5
+  .stsg-table th:first-child,
+
+  .sofneu-tights-size-guide.stsg-cols-6
+  .stsg-table th:first-child {
+    width: 16%;
+  }
+
+}
