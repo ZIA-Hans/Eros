@@ -37,6 +37,11 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 749px) {
+  .wt-cart__drawer {
+    width: 90vw;
+  }
+}
 .drawers-animated .wt-cart__drawer {
   transition: transform 0.3s cubic-bezier(0.12, 0.67, 0.53, 1), opacity 0.3s cubic-bezier(0.12, 0.67, 0.53, 1);
 }
