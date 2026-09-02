@@ -1,0 +1,5 @@
+# dist/<country>/ 和 .dev/ 是多店同步管线的构建产物（见 docs/multi-store-sync.zh.md），
+# 不是独立主题源码；theme check 扫描它们会产生大量误报（OrphanedSnippet / UndefinedObject）。
+ignore:
+  - dist/**
+  - .dev/**
