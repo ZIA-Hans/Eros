@@ -44,22 +44,36 @@
           {%- endif -%}
         </div>
 
-        <div class="wt-cart__subtitle__tax">
-          {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-            {{
-              'sections.cart.taxes_included_and_shipping_policy_html'
-              | t: link: shop.shipping_policy.url, tabindex: 0
-            }}
-          {%- elsif cart.taxes_included -%}
-            {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
-          {%- elsif shop.shipping_policy.body != blank -%}
-            {{
-              'sections.cart.taxes_and_shipping_policy_at_checkout_html'
-              | t: link: shop.shipping_policy.url, tabindex: 0
-            }}
-          {%- else -%}
-            {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
-          {%- endif -%}
+        {%- comment -%}
+          Once the free-shipping minimum (settings.free_shipping_bar_amount)
+          is reached, the cart total already covers shipping (and tax in
+          tax-inclusive markets), so the disclaimer is hidden entirely.
+          Below the minimum the default tax/shipping text still shows. Math
+          comes from snippets/cart-shipping-math.liquid. `js-contents-tax`
+          must stay in the DOM for cart.js partial refresh (see the :empty
+          rule in main.css that collapses the hidden state).
+        {%- endcomment -%}
+        {%- capture shipping_math %}{% render 'cart-shipping-math' %}{%- endcapture -%}
+        {%- assign math_parts = shipping_math | split: '|' -%}
+        {%- assign fs_remaining = math_parts[2] | plus: 0 -%}
+        <div class="wt-cart__subtitle__tax js-contents-tax">
+          {%- unless fs_remaining <= 0 -%}
+            {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+              {{
+                'sections.cart.taxes_included_and_shipping_policy_html'
+                | t: link: shop.shipping_policy.url, tabindex: 0
+              }}
+            {%- elsif cart.taxes_included -%}
+              {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+            {%- elsif shop.shipping_policy.body != blank -%}
+              {{
+                'sections.cart.taxes_and_shipping_policy_at_checkout_html'
+                | t: link: shop.shipping_policy.url, tabindex: 0
+              }}
+            {%- else -%}
+              {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+            {%- endif -%}
+          {%- endunless -%}
         </div>
         <div class="wt-cart__footer__body">
           {% for block in section.blocks %}

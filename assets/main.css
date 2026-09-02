@@ -5924,6 +5924,11 @@ body .wt-filter__close.wt-filter__close {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 749px) {
+  .wt-cart__drawer {
+    width: 90vw;
+  }
+}
 .drawers-animated .wt-cart__drawer {
   transition: transform 0.3s cubic-bezier(0.12, 0.67, 0.53, 1), opacity 0.3s cubic-bezier(0.12, 0.67, 0.53, 1);
 }
@@ -6540,6 +6545,12 @@ body .wt-filter__close.wt-filter__close {
 }
 .wt-cart__subtitle__tax {
   color: var(--color-body-text-light);
+}
+/* Free shipping unlocked: the disclaimer is emptied via Liquid and the
+   wrapper must stay in the DOM for cart.js partial refresh — collapse it
+   instead of leaving its mobile padding behind. */
+.wt-cart__subtitle__tax:empty {
+  display: none;
 }
 .wt-cart__subtitle__text {
   display: block;
@@ -14142,7 +14153,7 @@ main#root > .wt-featured-nav {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: var(--xt-price-gap, 10px);
+  gap: var(--xt-price-gap, 4px);
   justify-content: flex-start;
 }
 
@@ -14150,7 +14161,7 @@ main#root > .wt-featured-nav {
 .price__sale.visible .price-item--sale {
   color: var(--xt-price-sale-color, #2B2B2B);
   font-family: var(--xt-price-sale-font-family, Inter);
-  font-size: var(--xt-price-sale-font-size, 25px);
+  font-size: var(--xt-price-sale-font-size, 18px);
   font-style: normal;
   font-weight: 400;
   line-height: 140%;

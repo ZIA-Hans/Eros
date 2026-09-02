@@ -1,28 +1,13 @@
-{% comment %}Parse the free shipping threshold based on currency{% endcomment %}
-{% assign free_shipping_setting = settings.free_shipping_bar_amount | default: '100' %}
-{% assign free_shipping_threshold = free_shipping_setting | split: '|' | first | strip %}
+{% comment %}
+  Threshold + remaining math lives in snippets/cart-shipping-math.liquid so
+  the cart footer shipping notice stays in sync with this bar.
+{% endcomment %}
+{% capture shipping_math %}{% render 'cart-shipping-math' %}{% endcapture %}
+{% assign math_parts = shipping_math | split: '|' %}
+{% assign free_shipping_threshold = math_parts[0] | plus: 0 %}
+{% assign cart_value = math_parts[1] | plus: 0 %}
+{% assign remaining_amount = math_parts[2] | plus: 0 %}
 
-{% comment %}Check if we have currency-specific thresholds{% endcomment %}
-{% assign current_currency = cart.currency.iso_code %}
-{% assign currency_specific_threshold = '' %}
-{% assign setting_parts = free_shipping_setting | split: '|' %}
-{% for part in setting_parts %}
-  {% if part contains ':' %}
-    {% assign currency_amount = part | split: ':' %}
-    {% assign currency_code = currency_amount[0] | strip %}
-    {% if currency_code == current_currency %}
-      {% assign currency_specific_threshold = currency_amount[1] | strip %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% if currency_specific_threshold != '' %}
-  {% assign free_shipping_threshold = currency_specific_threshold %}
-{% endif %}
-{% assign cart_value = cart.total_price | divided_by: 100.0 %}
-
-{% assign remaining_amount = free_shipping_threshold | minus: cart_value %}
 {% assign progress_percentage = cart_value | times: 100 | divided_by: free_shipping_threshold | round %}
 
 {% if remaining_amount < 0 %}

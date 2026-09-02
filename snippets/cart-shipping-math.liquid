@@ -1,0 +1,35 @@
+{% comment %}
+  Shared shipping math for the free-shipping progress bar
+  (snippets/cart-free-shipping-bar.liquid) and the cart footer shipping
+  notice (snippets/cart-footer.liquid, sections/main-cart-footer.liquid).
+
+  Renders pipe-delimited values on a single line:
+    threshold|cart_value|remaining_amount
+  Amounts are in major currency units. `remaining_amount` <= 0 means
+  free shipping is unlocked.
+
+  Threshold format (settings.free_shipping_bar_amount):
+    "100"              base threshold for every currency
+    "59|AUD:59|NZD:80" base 59, overridden per currency via `CUR:amount`
+{% endcomment %}
+{%- assign free_shipping_setting = settings.free_shipping_bar_amount | default: '100' -%}
+{%- assign current_currency = cart.currency.iso_code -%}
+{%- assign free_shipping_threshold = free_shipping_setting | split: '|' | first | strip -%}
+{%- assign currency_specific_threshold = '' -%}
+{%- assign setting_parts = free_shipping_setting | split: '|' -%}
+{%- for part in setting_parts -%}
+  {%- if part contains ':' -%}
+    {%- assign currency_amount = part | split: ':' -%}
+    {%- assign currency_code = currency_amount[0] | strip -%}
+    {%- if currency_code == current_currency -%}
+      {%- assign currency_specific_threshold = currency_amount[1] | strip -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if currency_specific_threshold != '' -%}
+  {%- assign free_shipping_threshold = currency_specific_threshold -%}
+{%- endif -%}
+{%- assign cart_value = cart.total_price | divided_by: 100.0 -%}
+{%- assign remaining_amount = free_shipping_threshold | minus: cart_value -%}
+{{ free_shipping_threshold }}|{{ cart_value }}|{{ remaining_amount }}
