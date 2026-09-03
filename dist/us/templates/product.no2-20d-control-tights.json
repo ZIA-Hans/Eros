@@ -773,7 +773,6 @@
         "heading_richtext": "<h2>Video hero</h2>",
         "full-width-enabled": false,
         "container_max_width": 0,
-        "mobile_video_hosted": "shopify://files/videos/solumeyarn.webm",
         "autoplay": true,
         "video_controls": false,
         "video_custom_play_controls": false,

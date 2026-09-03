@@ -18,8 +18,6 @@
         "heading_richtext": "<h2>Video hero</h2>",
         "full-width-enabled": true,
         "container_max_width": 0,
-        "video_hosted": "shopify://files/videos/pc banner.mp4",
-        "mobile_video_hosted": "shopify://files/videos/mobile banner.mp4",
         "autoplay": true,
         "video_controls": false,
         "video_custom_play_controls": true,
