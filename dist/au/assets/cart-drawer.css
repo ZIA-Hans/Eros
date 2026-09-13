@@ -206,7 +206,7 @@
   text-transform: var(--font-base-transform, none);
   letter-spacing: var(--font-base-letter-spacing, normal);
   line-height: var(--font-base-line-height, normal);
-  margin: 0 calc(var(--gap, 8px) * 2) calc(var(--gap, 8px) * 2) calc(var(--gap, 8px) * 2);
+  margin: 0 calc(var(--gap, 8px) * 2) calc(var(--gap, 8px) * 1) calc(var(--gap, 8px) * 2);
   display: flex;
   justify-content: space-between;
   align-items: center;
