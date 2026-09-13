@@ -23,7 +23,7 @@
     assign money_price_max = price_max | money_with_currency
   endif
 
-  if target == product and product.price_varies
+  if target == product and product.price_varies and hide_from_price != true
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
@@ -80,7 +80,7 @@
         <span class="price-item price-item--sale price-item--last wt-product__price__final">
           {{ money_price }}
         </span>
-        {% if compare_at_price > price %}
+        {% if compare_at_price > price and hide_percent != true %}
           {% if use_variant or product.price_varies == false %}
             <span class="price-item--percent">
               -{{ compare_at_price | minus: price | times: 100 | divided_by: compare_at_price }}%

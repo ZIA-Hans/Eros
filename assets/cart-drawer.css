@@ -157,7 +157,6 @@
   display: grid;
   grid-template-rows: auto 1fr;
   transition: grid-template-rows 0.3s ease;
-  --cross-sell-content-height: calc(100px + gap(2));
 }
 .wt-cart__cross-sell .wt-slider__container:not(.swiper-initialized) {
   display: none !important;
@@ -178,7 +177,7 @@
   height: 22px;
 }
 .wt-cart__cross-sell .shoppable-product-card--cross-sell {
-  height: var(--cross-sell-content-height);
+  min-height: 100px;
   margin-inline-start: calc(var(--gap, 8px) * 2);
 }
 .wt-cart__cross-sell .wt-slider--cross-sell .shoppable-product-card--cross-sell {
@@ -207,7 +206,7 @@
   text-transform: var(--font-base-transform, none);
   letter-spacing: var(--font-base-letter-spacing, normal);
   line-height: var(--font-base-line-height, normal);
-  margin: 0 calc(var(--gap, 8px) * 2) calc(var(--gap, 8px) * 2) calc(var(--gap, 8px) * 2);
+  margin: 0 calc(var(--gap, 8px) * 2) calc(var(--gap, 8px) * 1) calc(var(--gap, 8px) * 2);
   display: flex;
   justify-content: space-between;
   align-items: center;

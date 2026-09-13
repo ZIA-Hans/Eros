@@ -31,7 +31,7 @@
           {% endif %}
           <div class="wt-dot__title">{{ product.title }}</div>
           <div class="wt-dot__price">
-            {% render 'price', product: product, show_compare_at_price: true, price_class: '' %}
+            {% render 'price', product: product, show_compare_at_price: true, price_class: '', hide_percent: true, hide_from_price: true %}
           </div>
         </div>
       </a>
