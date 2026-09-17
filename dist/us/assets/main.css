@@ -6070,6 +6070,13 @@ body .wt-filter__close.wt-filter__close {
 .wt-cart__cross-sell .wt-slider--cross-sell .shoppable-product-card--cross-sell {
   margin-inline-start: 0;
 }
+.wt-cart__cross-sell .shoppable-product-card .price-item--sale.price-item--last,
+.wt-cart__cross-sell .shoppable-product-card .price__regular .price-item--regular {
+  font-size: 18px;
+}
+.wt-cart__cross-sell .shoppable-product-card .price__sale .price-item--lower {
+  font-size: 14px;
+}
 .wt-cart__cross-sell__empty {
   padding: calc(var(--gap, 8px) * 2);
   margin: calc(var(--gap, 8px) * 2);

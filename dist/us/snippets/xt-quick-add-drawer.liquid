@@ -1,0 +1,59 @@
+{%- comment -%}
+  XT Quick-Add Drawer 装载器
+  参数：
+    scope — 快速加购点击拦截范围的 CSS 选择器（必填，如 '.wt-cart__cross-sell'）
+  行为：移动端（<768px）capture 阶段拦截 scope 内 quick-add 按钮点击 → 底部 sl-drawer 快速加购
+       （多图轮播 + Quantity 套装 + 查看详情）；PC 端不拦截，放行主题原生 quick-add.js 右侧栏。
+  依赖：constants.js / pubsub.js（theme.liquid 全站加载）、Shoelace autoloader（sl-drawer）
+{%- endcomment -%}
+
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'xt-quick-add-drawer.css' | asset_url | stylesheet_tag }}
+<script type="module" src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'xt-quick-add-drawer.js' | asset_url }}" defer="defer"></script>
+
+{%- comment -%} 抽屉 markup 放进 <template>，由 xt-quick-add-drawer.js 克隆挂到 document.body，
+     不随 cart-drawer 等 section 重渲染而销毁 {%- endcomment -%}
+<template class="xt-quick-add-drawer-template">
+  <sl-drawer id="xt-quick-add-drawer" class="xt-quick-add-drawer" placement="bottom" label="Quick Add" no-header>
+    <div class="xt-quick-add-drawer__header">
+      <span class="xt-quick-add-drawer__title">Quick Add</span>
+      <div class="xt-quick-add-drawer__close" role="button" tabindex="0" aria-label="{{ 'aria-label.close-button' | t }}">
+        {% render 'icons', id: 'close' %}
+      </div>
+    </div>
+    <div class="xt-quick-add-drawer__loader">{% render 'loader' %}</div>
+    <div class="xt-quick-add-drawer__content"></div>
+    <div class="xt-quick-add-drawer__view-all-container hidden">
+      <a href="#">
+        <span>{{ 'general.quick_add.view_all_details' | t }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+          <path d="M5.65479 0.0600586C9.51861 -0.152443 12.5106 2.91321 12.1147 6.78467C11.8286 9.58123 9.47831 11.8998 6.67529 12.1294C2.61645 12.4617 -0.667983 8.81874 0.186035 4.80322C0.723795 2.27506 3.05394 0.203058 5.65479 0.0600586ZM5.93311 0.419434C1.71437 0.54172 -0.971454 5.17125 1.15674 8.87744C2.95093 12.0014 7.21461 12.7812 9.9126 10.3198C13.6075 6.94832 11.4901 0.778133 6.53857 0.431152V0.430176L5.93311 0.419434Z" fill="#2B2B2B" stroke="#2B2B2B" stroke-width="0.1"/>
+          <path d="M6.57642 4.09937C6.78668 4.55143 7.19224 4.9223 7.59985 5.21655C8.14374 5.60917 8.75446 5.87481 9.42114 5.97144L9.46606 5.97827L9.46313 6.02417L9.44751 6.26636L9.44458 6.3103L9.39966 6.31323C8.90265 6.34052 8.39092 6.5501 7.95435 6.79663C7.39704 7.11145 6.83775 7.57009 6.57153 8.1521L6.55786 8.1814H6.21704L6.22583 8.12378C6.2686 7.85002 6.45121 7.60098 6.61646 7.40308C6.94688 7.00716 7.38575 6.70314 7.82446 6.45093L7.82642 6.44897H7.82739L8.08521 6.32007H2.82935V5.94507H8.11548L7.61157 5.67358L7.60767 5.67163V5.67065C7.19056 5.40511 6.71252 5.00233 6.43091 4.58862C6.34397 4.46085 6.24692 4.31378 6.22583 4.14038L6.21899 4.08765L6.27271 4.08472L6.52856 4.07104L6.56274 4.06909L6.57642 4.09937Z" fill="#2B2B2B" stroke="white" stroke-width="0.1"/>
+        </svg>
+      </a>
+    </div>
+  </sl-drawer>
+</template>
+
+<script>
+  (function () {
+    var scope = {{ scope | json }};
+    if (!scope) return;
+    var retries = 20;
+    function boot() {
+      if (window.XTQuickAddDrawer && typeof window.XTQuickAddDrawer.init === 'function') {
+        window.XTQuickAddDrawer.init(scope);
+        return;
+      }
+      // xt-quick-add-drawer.js 为 defer，正常先于 DOMContentLoaded 执行；
+      // 重试兜底 Theme Editor 等 snippet 晚于 DOM 就绪渲染的场景
+      if (retries-- > 0) setTimeout(boot, 50);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', boot);
+    } else {
+      boot();
+    }
+  })();
+</script>

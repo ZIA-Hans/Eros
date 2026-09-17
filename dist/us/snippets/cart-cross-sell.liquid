@@ -110,5 +110,8 @@
         {% endfor %}
       {% endif %}
     </div>
+
+    {% comment %} 移动端底部快速加购抽屉（PC 走主题原生侧边栏） {% endcomment %}
+    {% render 'xt-quick-add-drawer', scope: '.wt-cart__cross-sell' %}
   </div>
 {% endif %}
