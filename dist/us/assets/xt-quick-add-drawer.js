@@ -211,16 +211,19 @@
         const gallerySlides = productGallery?.querySelectorAll('li[data-swiper-slide]') || [];
         const imageContainer = document.createElement('div');
         imageContainer.className = 'product-image';
-        if (gallerySlides.length > 0) {
-          const slidesHtml = [...gallerySlides]
-            .map((li) => {
-              const mediaId = li.getAttribute('data-media-id') || '';
-              // 去掉 srcset，避免抽屉里加载多档大图；保留单 src
-              const clone = li.cloneNode(true);
-              clone.querySelectorAll('img').forEach((img) => img.removeAttribute('srcset'));
-              return `<li class="swiper-slide" data-media-id="${mediaId}">${clone.innerHTML}</li>`;
-            })
-            .join('');
+
+        // 全量媒体底稿（已去 srcset）：SKU 图片组窗口每次从这里取，见下方 renderImageGroup
+        const allSlides = [...gallerySlides].map((li) => {
+          const clone = li.cloneNode(true);
+          // 去掉 srcset，避免抽屉里加载多档大图；保留单 src
+          clone.querySelectorAll('img').forEach((img) => img.removeAttribute('srcset'));
+          return clone;
+        });
+        const toSlideHtml = (slide) =>
+          `<li class="swiper-slide" data-media-id="${slide.getAttribute('data-media-id') || ''}">${slide.innerHTML}</li>`;
+
+        if (allSlides.length > 0) {
+          const slidesHtml = allSlides.map(toSlideHtml).join('');
           imageContainer.innerHTML = `
             <slideshow-section class="xt-quick-add-carousel">
               <div class="xt-quick-add-carousel__viewport" data-swiper>
@@ -240,6 +243,50 @@
             </slideshow-section>
           `;
         }
+
+        // 对齐商详页 filterSlides（gallery.js:791）的图片组逻辑：
+        // 有主图取"主图起连续 5 张"，商品末尾是视频且不在窗口内则追加；
+        // 无主图 / 按媒体 id 找不到主图时回退全量
+        function getImageGroupSlides(featuredId) {
+          if (!featuredId) return [...allSlides];
+          const featuredIndex = allSlides.findIndex(
+            (slide) => (slide.getAttribute('data-media-id') || '') === String(featuredId),
+          );
+          if (featuredIndex < 0) return [...allSlides];
+          const group = allSlides.slice(featuredIndex, featuredIndex + 5);
+          const lastSlide = allSlides[allSlides.length - 1];
+          if (lastSlide?.querySelector('video') && !group.includes(lastSlide)) {
+            group.push(lastSlide);
+          }
+          return group;
+        }
+
+        // 切换 SKU 时重建轮播内容为当前 SKU 的图片组窗口；
+        // 窗口集合没变则跳过（对齐商详页 renderedSlidesChanged，避免闪烁）。
+        // swiper 已接管时走 appendSlide；尚未懒加载升级时直接换 track 内容，
+        // slider.js 初始化时以此为准。
+        let renderedGroupKey = null;
+        function renderImageGroup(featuredId) {
+          if (allSlides.length === 0) return;
+          const group = getImageGroupSlides(featuredId);
+          const groupKey = group.map((s) => s.getAttribute('data-media-id')).join(',');
+          if (groupKey === renderedGroupKey) return;
+          renderedGroupKey = groupKey;
+
+          const track = imageContainer.querySelector('[data-swiper-container]');
+          if (!track) return;
+          const swiper = imageContainer.querySelector('slideshow-section')?.swiper;
+          if (swiper) {
+            swiper.removeAllSlides();
+            swiper.appendSlide(group.map(toSlideHtml));
+            swiper.update();
+            swiper.slideTo(0);
+          } else {
+            track.innerHTML = group.map(toSlideHtml).join('');
+          }
+        }
+        // 初始渲染即全量（等价于无主图窗口），记录 key 供后续变更比对
+        renderedGroupKey = allSlides.map((s) => s.getAttribute('data-media-id')).join(',');
 
         // 标题包一层链接（可点击跳转完整详情页），并把品牌/标题/评分/价格/税费提示
         // 一起摘出来放进 product-info，和图片一起组成 wt-product__details
@@ -352,37 +399,17 @@
           variantOptions.initialize();
         }
 
-        // 监听 variant-options 的 data-featured-image-id 属性变化，
-        // 切换 SKU 时把轮播滑动到对应媒体（替代旧的单图换 src 逻辑）。
-        // data-featured-image-id 由 variants.js updateMedia() 写入 = variant.featured_media.id，
-        // 与每个 slide 的 data-media-id 一一对应。
+        // 切换 SKU 时重建图片组（对齐商详页「主图起连续 5 张」的 updateGallery → filterSlides）：
+        // variants.js 每次变体解析完成后（updateMedia 之后）会派发 variantChangeEnd，
+        // 此时 currentVariant 已就绪，直接取 featured_media 计算窗口；
+        // SKU 未配主图时 currentVariant.featured_media 为空 → 窗口回退全量（与商详页一致）。
+        // 抽屉里没有 MediaGallery-* 载体，variants.js 的 updateGallery() 在这里是空操作。
         if (variantOptions) {
-          let lastFeaturedId = null;
-          const observer = new MutationObserver(() => {
-            const featuredId = variantOptions.getAttribute('data-featured-image-id');
-            if (!featuredId || featuredId === lastFeaturedId) return;
-            lastFeaturedId = featuredId;
-
-            const slideshow = imageContainer.querySelector('slideshow-section');
-            const swiper = slideshow?.swiper;
-            const targetSlide = imageContainer.querySelector(
-              `.swiper-slide[data-media-id="${featuredId}"]`,
-            );
-
-            if (swiper && targetSlide) {
-              // 轮播已初始化：滑动到目标 slide
-              const slideIndex = [...targetSlide.parentElement.children].indexOf(targetSlide);
-              swiper.slideTo(slideIndex);
-              swiper.update();
-            } else if (targetSlide) {
-              // 轮播还没初始化（slider.js 异步懒加载）：先把目标 slide 置顶，
-              // 等 slideshow-section 升级后从这张图开始展示
-              targetSlide.parentElement.prepend(targetSlide);
-            }
-          });
-          observer.observe(variantOptions, {
-            attributes: true,
-            attributeFilter: ['data-featured-image-id'],
+          const initialFeatured = variantOptions.currentVariant?.featured_media;
+          if (initialFeatured) renderImageGroup(String(initialFeatured.id));
+          variantOptions.addEventListener('variantChangeEnd', () => {
+            const featured = variantOptions.currentVariant?.featured_media;
+            renderImageGroup(featured ? String(featured.id) : null);
           });
         }
       })
