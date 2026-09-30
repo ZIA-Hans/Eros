@@ -1913,11 +1913,20 @@
                         {% assign swatch_option_key = 'option' | append: forloop.index %}
                         <div class="js wt-product__option">
                           <div class="wt-product__option__wrapper">
-                            <div id="{{ option.name }}-option-label" class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-                              <span class="label">{{ option.name }} </span>
-                            </div>
                             {% assign variant_name = block.settings.variant_name | downcase %}
                             {% assign option_name = option.name | downcase %}
+                            {% comment %} 仅色块形态的颜色 option（picker_type == 'color_swatch'）展示当前选中值；其余 option 不展示 {% endcomment %}
+                            {% assign is_color_swatch_option = false %}
+                            {% if color_swatch_names contains option_name %}
+                              {% assign is_color_swatch_option = true %}
+                            {% endif %}
+                            <div id="{{ option.name }}-option-label" class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+                              {% if is_color_swatch_option %}
+                                <span class="label">{{ option.name }}: </span> <strong class="value">{{ option.selected_value }}</strong>
+                              {% else %}
+                                <span class="label">{{ option.name }} </span>
+                              {% endif %}
+                            </div>
                             {%  if variant_name == option_name %}
                               <div class="wt-product__option__size-guide">
                                 {% render 'popup', product: product, id: block.id, shopify_attributes: block.shopify_attributes, size_icon: block.settings.size_icon, size_link: block.settings.size_link, size_page: block.settings.size_page, size_content: block.settings.size_content, metafield_name: block.settings.metafield, enable-striped-rows: block.settings.enable-striped-rows %}

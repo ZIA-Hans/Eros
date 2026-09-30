@@ -261,11 +261,12 @@ if (!customElements.get("variant-options")) {
 
           if (!selectedOption) return;
 
-          // .value may be pre-filled by Liquid for SSR; we overwrite for client state
-          // ! 不展示option的Value
-          // fieldset.querySelector(
-          //   ".wt-product__option__title .value",
-          // ).innerHTML = selectedOption;
+          // Liquid 已给 .value 输出 SSR 初值（见 main-product.liquid variant_picker block），这里按客户端选中态覆写
+          // 仅色块形态的颜色 option 会渲染 .value，其余 option 无该元素，需判空跳过
+          const optionValue = fieldset.querySelector(
+            ".wt-product__option__title .value",
+          );
+          if (optionValue) optionValue.textContent = selectedOption;
           const dropdownSpan = fieldset.querySelector(
             ".wt-product__option__dropdown span",
           );
