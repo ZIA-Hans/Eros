@@ -148,6 +148,24 @@ function processExists(pid) {
   }
 }
 
+/**
+ * 把目录内文本文件的 CRLF 行尾统一为 LF，返回修改的文件数。
+ * 线上主题可能存有 CRLF 版本（历史遗留），pull 原样下载会让 git
+ * 把整份文件误判为变更（Shopify 校验和视 CRLF/LF 等价，push 不会纠正线上）。
+ * 含 NUL 字节的文件视为二进制，跳过。
+ */
+function normalizeEol(dir) {
+  let fixed = 0;
+  walk(dir, dir, (abs) => {
+    const buf = fs.readFileSync(abs);
+    if (!buf.includes(0) && buf.includes('\r\n')) {
+      fs.writeFileSync(abs, buf.toString('utf8').replace(/\r\n/g, '\n'));
+      fixed++;
+    }
+  });
+  return fixed;
+}
+
 // ---------- 店铺注册表 ----------
 
 function loadStores() {
@@ -212,6 +230,14 @@ function isTemplateJson(rel) {
 }
 
 /**
+ * 主题编辑器可直接编辑、需指纹保护的 JSON：templates/*.json 与 sections/*-group.json
+ * （header-group/footer-group 等分区组配置，运营在后台即可改动，漏保护会被 build 覆盖）。
+ */
+function isFingerprintedJson(rel) {
+  return isTemplateJson(rel) || (rel.startsWith('sections/') && rel.endsWith('-group.json'));
+}
+
+/**
  * 把根目录共享代码合并进目标目录（dist/<国> 或 .dev/<国>）：
  *   - 代码文件：增量覆盖 + 镜像删除，以根目录为准；
  *   - config/settings_data.json：只在缺失时种入一次；
@@ -243,7 +269,7 @@ function mergeRootInto(destDir) {
       }
       continue;
     }
-    if (isTemplateJson(r)) {
+    if (isFingerprintedJson(r)) {
       if (!fs.existsSync(dest)) {
         fs.mkdirSync(path.dirname(dest), { recursive: true });
         fs.copyFileSync(src, dest);
@@ -281,7 +307,7 @@ function mergeRootInto(destDir) {
     walk(path.join(destDir, d), destDir, (abs, r) => {
       if (r === 'config/settings_data.json') return;
       if (base.has(r)) return;
-      if (isTemplateJson(r)) {
+      if (isFingerprintedJson(r)) {
         const recorded = oldManifest[r];
         if (recorded && recorded === semHash(abs)) {
           fs.rmSync(abs);
@@ -320,6 +346,9 @@ function captureBack(country) {
   const targets = ['config/settings_data.json'];
   walk(path.join(DEV_DIR, 'templates'), path.join(DEV_DIR, 'templates'), (abs, r) => {
     if (r.endsWith('.json')) targets.push(`templates/${r}`);
+  });
+  walk(path.join(DEV_DIR, 'sections'), path.join(DEV_DIR, 'sections'), (abs, r) => {
+    if (r.endsWith('-group.json')) targets.push(`sections/${r}`);
   });
   let saved = 0;
   for (const rel of targets) {
@@ -453,21 +482,25 @@ async function push(countries, stores) {
 
 // ---------- pull ----------
 
-/** pull 后重建指纹清单：与基准一致的模板标记为共享原版，基准改动可继续向该国传播。 */
+/** pull 后重建指纹清单：与基准一致的模板/分区组标记为共享原版，基准改动可继续向该国传播。 */
 function remarkPristine(country) {
   const dist = path.join(DIST_DIR, country);
   const manifestFile = path.join(dist, MANIFEST_NAME);
   const old = fs.existsSync(manifestFile) ? readJson(manifestFile) : {};
   const manifest = {};
-  walk(path.join(dist, 'templates'), path.join(dist, 'templates'), (abs, r) => {
-    if (!r.endsWith('.json')) return;
-    const baseFile = path.join(ROOT, 'templates', r);
-    if (fs.existsSync(baseFile)) {
-      const ds = semHash(abs);
-      if (ds === semHash(baseFile)) manifest[`templates/${r}`] = ds;
-    }
-  });
-  // 保留 templates 之外的既有记录（目前只有 templates，稳妥起见合并）
+  const scan = (subDir, filter) => {
+    walk(path.join(dist, subDir), path.join(dist, subDir), (abs, r) => {
+      if (!filter(r)) return;
+      const baseFile = path.join(ROOT, subDir, r);
+      if (fs.existsSync(baseFile)) {
+        const ds = semHash(abs);
+        if (ds === semHash(baseFile)) manifest[`${subDir}/${r}`] = ds;
+      }
+    });
+  };
+  scan('templates', (r) => r.endsWith('.json'));
+  scan('sections', (r) => r.endsWith('-group.json'));
+  // 保留已记录但当前无法核对的条目（稳妥起见合并）
   writeJsonIfChanged(manifestFile, { ...old, ...manifest });
 }
 
@@ -483,7 +516,7 @@ async function pull(countries, stores) {
       fs.mkdirSync(dist, { recursive: true });
     }
     const args = ['theme', 'pull', '--path', `dist/${c}`, '--store', store.domain, '--theme', String(store.themeId)];
-    if (configOnly) args.push('--only', 'config/settings_data.json', '--only', 'templates/*.json');
+    if (configOnly) args.push('--only', 'config/settings_data.json', '--only', 'templates/*.json', '--only', 'sections/*-group.json');
     if (flags.has('dry-run')) {
       console.log(`[dry-run] > shopify ${args.join(' ')}`);
       console.log(`[dry-run] 线上内容将写入 dist/${c}/（该国即分开保存）\n`);
@@ -492,6 +525,8 @@ async function pull(countries, stores) {
     console.log(`\n> shopify ${args.join(' ')}\n`);
     const code = await runShopify(args, c);
     if (code === 0) {
+      const fixed = normalizeEol(dist);
+      if (fixed) console.log(`[pull:${c}] 已把 ${fixed} 个文件的 CRLF 行尾统一为 LF（消除 git 假差异）`);
       remarkPristine(c);
       console.log(`[pull:${c}] 完成，线上内容已写入 dist/${c}/`);
     } else {
