@@ -56,12 +56,12 @@
             "radius": "default",
             "border_radius": 15,
             "dropdown_swatch_names": "",
-            "margin-top": 0,
+            "margin-top": 8,
             "margin-bottom": 8,
-            "size_icon": "check_mark",
-            "size_link": "",
-            "variant_name": "",
-            "size_content": "",
+            "size_icon": "ruler",
+            "size_link": "Size Guide",
+            "variant_name": "Size",
+            "size_content": "size-guide-no1的副本",
             "metafield": "",
             "enable-striped-rows": true,
             "enable_skin_popup": false,
@@ -80,7 +80,7 @@
             "text_color": "#ffffff",
             "background_color": "#956052",
             "text_color_hover": "",
-            "background_color_hover": "#75463C"
+            "background_color_hover": "#75463c"
           }
         }
       },
@@ -132,7 +132,7 @@
           "settings": {
             "heading": "Product Grade",
             "show_info_icon": true,
-            "info_page": "",
+            "info_page": "understanding-product-grade",
             "desktop_columns": "4",
             "show_item_1": true,
             "title_1": "Warmth",
@@ -242,7 +242,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard&nbsp;</p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -305,33 +305,33 @@
         "allow_multiple_open": false
       }
     },
-    "features_banner_m4Y7Bg": {
+    "features_banner_PFj4xU": {
       "type": "features-banner",
       "blocks": {
-        "image_mkr3kg": {
+        "image_gFdtng": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "desktop_image": "shopify://shop_images/free-shipping.png",
             "select_icon": "bag",
             "heading": "Free Delivery on A$59",
             "text": "",
             "link": ""
           }
         },
-        "image_wQzpNF": {
+        "image_ieKcnq": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "desktop_image": "shopify://shop_images/30-days_warranty.png",
             "select_icon": "user",
             "heading": "30-Day Free Returns",
             "text": "",
             "link": ""
           }
         },
-        "image_EKqUjq": {
+        "image_Y8BAgx": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "desktop_image": "shopify://shop_images/snag-techlogy.png",
             "select_icon": "search",
             "heading": "Anti-Snag Warranty",
             "text": "",
@@ -340,9 +340,9 @@
         }
       },
       "block_order": [
-        "image_mkr3kg",
-        "image_wQzpNF",
-        "image_EKqUjq"
+        "image_gFdtng",
+        "image_ieKcnq",
+        "image_Y8BAgx"
       ],
       "settings": {
         "advanced_heading": false,
@@ -366,10 +366,10 @@
         "margin-bottom-mobile": 10
       }
     },
-    "rich_text_EPKFJy": {
+    "rich_text_TYgbJ8": {
       "type": "rich-text",
       "blocks": {
-        "heading_AiQTLj": {
+        "heading_QkGhHb": {
           "type": "heading",
           "settings": {
             "advanced_heading": false,
@@ -384,14 +384,14 @@
         }
       },
       "block_order": [
-        "heading_AiQTLj"
+        "heading_QkGhHb"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.rich-text.presets.name__3",
       "settings": {
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
         "full-width-enabled": false,
-        "color-body-text": "#2b2b2b",
+        "color-body-text": "#2B2B2B",
         "background_color": "",
         "background_gradient": "",
         "margin-top": 20,
@@ -409,7 +409,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p><strong>Inspired by Yoga Leggings</strong></p>",
+            "heading": "<p><strong>Yoga-Inspired Waistband</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -455,6 +455,7 @@
       ],
       "name": "Text Overlay",
       "settings": {
+        "mobile_image": "shopify://shop_images/80d_yoga.webp",
         "image_size_mode": "auto",
         "mobile_image_height": 420,
         "desktop_image_height": 800,
@@ -469,7 +470,7 @@
         "mobile_content_gap": 16,
         "mobile_content_layout": "overlay",
         "mobile_overlay_x": 50,
-        "mobile_overlay_y": 85,
+        "mobile_overlay_y": 80,
         "mobile_overlay_safe_padding": 16,
         "content_alignment": "center",
         "content_text_align": "center",
@@ -501,20 +502,34 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p><strong>Flexible Stretch That Moves With You</strong></p>",
+            "heading": "<p><strong>Stretches. Recovers. Stays Put</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
             "desktop_size": 36,
             "animation": "none"
           }
+        },
+        "text_WQcFw9": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "text": "<p>Flexible stretch that adapts without losing its shape</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 14,
+            "desktop_size": 16,
+            "animation": "none"
+          }
         }
       },
       "block_order": [
-        "heading_nBtyTT"
+        "heading_nBtyTT",
+        "text_WQcFw9"
       ],
       "name": "Text Overlay",
       "settings": {
+        "mobile_image": "shopify://shop_images/80d_stretch.webp",
         "image_size_mode": "auto",
         "mobile_image_height": 420,
         "desktop_image_height": 800,
@@ -529,7 +544,7 @@
         "mobile_content_gap": 16,
         "mobile_content_layout": "overlay",
         "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
+        "mobile_overlay_y": 80,
         "mobile_overlay_safe_padding": 16,
         "content_alignment": "center",
         "content_text_align": "center",
@@ -584,107 +599,19 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
-          }
-        },
-        "image_KYpUm7": {
-          "type": "image",
-          "settings": {
-            "subheading": "",
-            "subheading_disable_on_mobile": false,
-            "subheading_advanced_settings": false,
-            "subheading_text_style": "subtitle",
-            "text_uppercase": false,
-            "letter_spacing": 1,
-            "size_text_desktop": 100,
-            "size_text_mobile": 100,
-            "heading": "<strong>Smooth Comfort, Seamless Feel</strong>",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/80d_move.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
         }
       },
       "block_order": [
-        "image_L9YTKi",
-        "image_KYpUm7"
+        "image_L9YTKi"
       ],
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
         "title": "Made to Move with You",
-        "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": true,
-        "full-width-enabled": false,
-        "image_ratio": "adapt",
-        "spacing_desktop": "24",
-        "spacing_mobile": "16",
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": true,
-        "margin-top-mobile": 10,
-        "margin-bottom-mobile": 10
-      }
-    },
-    "grid_view_rcbpWK": {
-      "type": "grid-view",
-      "blocks": {
-        "image_d3fXcp": {
-          "type": "image",
-          "settings": {
-            "subheading": "",
-            "subheading_disable_on_mobile": false,
-            "subheading_advanced_settings": false,
-            "subheading_text_style": "subtitle",
-            "text_uppercase": false,
-            "letter_spacing": 1,
-            "size_text_desktop": 100,
-            "size_text_mobile": 100,
-            "heading": "<strong>Double 6 Nylon  and LYCRA Elastane</strong>",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
-          }
-        }
-      },
-      "block_order": [
-        "image_d3fXcp"
-      ],
-      "name": "t:sections.grid-view.settings.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "title": "Premium Materials",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": false,
         "full-width-enabled": false,
@@ -700,6 +627,52 @@
         "margin-bottom-mobile": 10
       }
     },
+    "background_video_ge9ayy": {
+      "type": "background-video",
+      "blocks": {
+        "text_z4NbrQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>PA66 Nylon + LYCRA®</strong></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "text_z4NbrQ"
+      ],
+      "name": "t:sections.background-video.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Premium Materials",
+        "heading_richtext": "<h2>Video hero</h2>",
+        "full-width-enabled": false,
+        "container_max_width": 0,
+        "mobile_video_hosted": "shopify://files/videos/fabric_macro_clean_shopify_1035x600.webm",
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "video_url": "",
+        "original_ratio": "original_ratio",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
     "text_overlay_qcmFHm": {
       "type": "text-overlay",
       "blocks": {
@@ -707,7 +680,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p><strong>Sofneu Velvet, Made to Last</strong></p>",
+            "heading": "<p><strong>Velvet Soft. Made to Last.</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -721,21 +694,6 @@
             "show_block": true,
             "icon": "shopify://shop_images/pdp-no1-2.svg",
             "title": "Enhanced Run Resistance",
-            "mobile_icon_size": 26,
-            "desktop_icon_size": 52,
-            "max_width": 420,
-            "title_color": "#2b2b2b",
-            "desktop_title_color": "#2b2b2b",
-            "mobile_title_size": 12,
-            "desktop_title_size": 15
-          }
-        },
-        "icon_item_UUEX8w": {
-          "type": "icon_item",
-          "settings": {
-            "show_block": true,
-            "icon": "shopify://shop_images/pdp-no1-1.svg",
-            "title": "Shape-Retaining Stretch",
             "mobile_icon_size": 26,
             "desktop_icon_size": 52,
             "max_width": 420,
@@ -764,11 +722,11 @@
       "block_order": [
         "heading_f8XzHR",
         "icon_item_rYW4VB",
-        "icon_item_UUEX8w",
         "icon_item_cft4zi"
       ],
       "name": "Text Overlay",
       "settings": {
+        "mobile_image": "shopify://shop_images/sofneu_velvet.webp",
         "image_size_mode": "auto",
         "mobile_image_height": 420,
         "desktop_image_height": 800,
@@ -808,14 +766,14 @@
         "padding_bottom_desktop": 20
       }
     },
-    "rich_text_XpJW9J": {
+    "rich_text_ey6xGC": {
       "type": "rich-text",
       "blocks": {
-        "heading_j96jRV": {
+        "heading_LQVbN3": {
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "Smooth Matte Velvet Texture",
+            "heading": "A Finer Kind of Velvet",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 100,
@@ -826,37 +784,39 @@
         }
       },
       "block_order": [
-        "heading_j96jRV"
+        "heading_LQVbN3"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.rich-text.presets.name__3",
       "settings": {
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
         "full-width-enabled": false,
-        "color-body-text": "",
+        "color-body-text": "#2B2B2B",
         "background_color": "",
         "background_gradient": "",
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
         "margin-bottom-mobile": 10,
-        "compact_size": false
+        "compact_size": true
       }
     },
     "pair_comparison_htBBdW": {
       "type": "pair-comparison",
       "name": "Pair Comparison",
       "settings": {
+        "image_1": "shopify://shop_images/fabric_01_fine_knit.webp",
+        "image_2": "shopify://shop_images/fabric_02_standard_knit.webp",
         "image_ratio": "1 / 1",
         "image_fit": "cover",
         "image_radius": 12,
         "brand_1": "Sofneu",
-        "title_1": "Refined Velvet",
-        "description_1": "Smooth • Matte • High-Density",
-        "brand_2": "Others",
-        "title_2": "Traditional Velvet",
-        "description_2": "Rougher • Shinier • Less Refined",
+        "title_1": "Fine, Dense Knit",
+        "description_1": "Smooth · Matte · Refined",
+        "brand_2": "Conventional",
+        "title_2": "Coarser Knit",
+        "description_2": "Rougher · More Visible Texture",
         "width_style": "contained",
         "mobile_max_width": 420,
         "desktop_max_width": 1280,
@@ -894,14 +854,14 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "features_banner_m4Y7Bg",
-    "rich_text_EPKFJy",
+    "features_banner_PFj4xU",
+    "rich_text_TYgbJ8",
     "text_overlay_9AbVzy",
     "text_overlay_pPWpUC",
     "grid_view_wCynBd",
-    "grid_view_rcbpWK",
+    "background_video_ge9ayy",
     "text_overlay_qcmFHm",
-    "rich_text_XpJW9J",
+    "rich_text_ey6xGC",
     "pair_comparison_htBBdW"
   ]
 }

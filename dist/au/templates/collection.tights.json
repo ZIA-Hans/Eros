@@ -191,6 +191,7 @@
           "type": "card",
           "settings": {
             "show_card": true,
+            "image": "shopify://shop_images/10d-top.webp",
             "name": "Ultra Sheer (10D)",
             "temperature": "25–35°C",
             "feeling": "Almost invisible",
@@ -201,6 +202,7 @@
           "type": "card",
           "settings": {
             "show_card": true,
+            "image": "shopify://shop_images/20d-top.webp",
             "name": "Sheer (20D)",
             "temperature": "20–30°C",
             "feeling": "Light sheer",
@@ -209,6 +211,7 @@
         },
         "card_rrdtV3": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "show_card": true,
             "name": "Semi-Opaque (40D)",
@@ -221,6 +224,7 @@
           "type": "card",
           "settings": {
             "show_card": true,
+            "image": "shopify://shop_images/80d-top.webp",
             "name": "Opaque (80D)",
             "temperature": "-5–15°C",
             "feeling": "Opaque",
@@ -231,6 +235,7 @@
           "type": "card",
           "settings": {
             "show_card": true,
+            "image": "shopify://shop_images/200d-top.webp",
             "name": "Fleece (200D)",
             "temperature": "-10–5°C",
             "feeling": "Opaque Extra warm",
@@ -241,6 +246,7 @@
           "type": "card",
           "settings": {
             "show_card": true,
+            "image": "shopify://shop_images/pattern-top.webp",
             "name": "Patterned",
             "temperature": "10–25°C",
             "feeling": "Chic essentials",
@@ -285,7 +291,7 @@
           "settings": {
             "advanced_heading": true,
             "heading": "Not Sure Which One to Choose?",
-            "heading_richtext": "<p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\">Not Sure Which One to Choose?</a></p>",
+            "heading_richtext": "<p><a href=\"/pages/understanding-product-grade\" title=\"Product Grade\">Not Sure Which One to Choose?</a></p>",
             "disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -317,10 +323,11 @@
       "type": "feature-text-image",
       "name": "Feature Text Image",
       "settings": {
+        "image": "shopify://shop_images/10d-detail.webp",
         "thickness": "Ultra Sheer (10D)",
         "weather": "Summer / Hot Days",
         "content_title": "No. series powered by Soflume™",
-        "content": "<p>A proprietary knitting innovation, exclusive to Sofneu</p><p>Engineered for next-level comfort — ultra-light, soft, and barely there like a second skin</p>",
+        "content": "<p>Our sheerest, lightest tights — designed for an almost-bare look.</p><p>Ultra-fine and barely there, with a sensual sheer finish that lets your natural skin tone show through.</p>",
         "section_background": "#ffffff",
         "meta_color": "#2b2b2b",
         "content_title_color": "#2b2b2b",
@@ -352,10 +359,17 @@
           "settings": {
             "product": "no1-10d-control-top-sheer-tights"
           }
+        },
+        "product_iW3ik9": {
+          "type": "product",
+          "settings": {
+            "product": "eros-no-1-10d-tight-black"
+          }
         }
       },
       "block_order": [
-        "product_zhDrip"
+        "product_zhDrip",
+        "product_iW3ik9"
       ],
       "name": "XT 商品选购区",
       "settings": {
@@ -371,6 +385,7 @@
       "type": "feature-text-image",
       "name": "Feature Text Image",
       "settings": {
+        "image": "shopify://shop_images/20d-detail.webp",
         "thickness": "Sheer (20D)",
         "weather": "Work / Everyday",
         "content_title": "No. series powered by Soflume™",
@@ -404,19 +419,12 @@
         "product_FEGJaQ": {
           "type": "product",
           "settings": {
-            "product": ""
-          }
-        },
-        "product_L3zpTV": {
-          "type": "product",
-          "settings": {
-            "product": ""
+            "product": "no2-20d-control-top-sheer-tights"
           }
         }
       },
       "block_order": [
-        "product_FEGJaQ",
-        "product_L3zpTV"
+        "product_FEGJaQ"
       ],
       "name": "XT 商品选购区",
       "settings": {
@@ -430,6 +438,7 @@
     },
     "feature_text_image_CXdbKc": {
       "type": "feature-text-image",
+      "disabled": true,
       "name": "Feature Text Image",
       "settings": {
         "thickness": "Semi-Opaque (40D)",
@@ -459,33 +468,11 @@
         "padding_bottom_desktop": 64
       }
     },
-    "xt_product_pickup_KwTQHb": {
-      "type": "xt-product-pickup",
-      "blocks": {
-        "product_HH6U4D": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_HH6U4D"
-      ],
-      "name": "XT 商品选购区",
-      "settings": {
-        "title": "",
-        "subtitle": "",
-        "image_ratio": "portrait",
-        "show_product_rating": false,
-        "enable_quick_add_button": true,
-        "quick_add_mode": "below_product"
-      }
-    },
     "feature_text_image_x6bMet": {
       "type": "feature-text-image",
       "name": "Feature Text Image",
       "settings": {
+        "image": "shopify://shop_images/80d-detail.webp",
         "thickness": "Opaque (80D)",
         "weather": "Chilly Days / Fall Looks",
         "content_title": "Crafted with a dense, velvet-like finish look",
@@ -519,7 +506,7 @@
         "product_QRzgfb": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "80d-velvet-control-top-opaque-tights"
           }
         }
       },
@@ -528,8 +515,8 @@
       ],
       "name": "XT 商品选购区",
       "settings": {
-        "title": "精选商品",
-        "subtitle": "点击商品快速选购",
+        "title": "",
+        "subtitle": "",
         "image_ratio": "portrait",
         "show_product_rating": false,
         "enable_quick_add_button": true,
@@ -540,6 +527,7 @@
       "type": "feature-text-image",
       "name": "Feature Text Image",
       "settings": {
+        "image": "shopify://shop_images/200d-detail.webp",
         "thickness": "Opaque (200D)",
         "weather": "Freezing Days / Outdoor Winter",
         "content_title": "Sheer glow finish with a natural, skin-like look, even in freezing temperatures.",
@@ -573,7 +561,7 @@
         "product_HHwFRx": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "200d-fleece-lined-thermal-tights"
           }
         }
       },
@@ -594,6 +582,7 @@
       "type": "feature-text-image",
       "name": "Feature Text Image",
       "settings": {
+        "image": "shopify://shop_images/shimmer-detail.webp",
         "thickness": "Patterned",
         "weather": "Spring / Autumn",
         "content_title": "Designed for Style to complement different looks",
@@ -627,12 +616,33 @@
         "product_6FN8fQ": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "50d-shimmer-tights"
+          }
+        },
+        "product_rmCMdU": {
+          "type": "product",
+          "settings": {
+            "product": "eros-20d-line-tights"
+          }
+        },
+        "product_JixeXY": {
+          "type": "product",
+          "settings": {
+            "product": "eros-30d-dot-tights"
+          }
+        },
+        "product_GUkxCR": {
+          "type": "product",
+          "settings": {
+            "product": "eros-30d-ring-tights"
           }
         }
       },
       "block_order": [
-        "product_6FN8fQ"
+        "product_6FN8fQ",
+        "product_rmCMdU",
+        "product_JixeXY",
+        "product_GUkxCR"
       ],
       "name": "XT 商品选购区",
       "settings": {
@@ -871,7 +881,6 @@
     "feature_text_image_b3rxpW",
     "xt_product_pickup_GrmmqG",
     "feature_text_image_CXdbKc",
-    "xt_product_pickup_KwTQHb",
     "feature_text_image_x6bMet",
     "xt_product_pickup_4drBqf",
     "feature_text_image_7i3mka",

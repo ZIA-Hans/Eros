@@ -66,12 +66,6 @@
             "size_text_mobile": 140
           }
         },
-        "dd5cf19e-afbd-4294-a8c3-4a0a19669079": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "text_LQ6bM9": {
           "type": "text",
           "disabled": true,
@@ -257,7 +251,6 @@
         "feature_tags_ktxUht",
         "share_buttons_QJQBWK",
         "price",
-        "dd5cf19e-afbd-4294-a8c3-4a0a19669079",
         "text_LQ6bM9",
         "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e",
         "product_variations_7LBAAU",
@@ -1016,17 +1009,6 @@
     },
     "17553557861ba2a1f6": {
       "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_reviews_kjWDyw": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "eros-no-1-10d-tight-nude"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_reviews_kjWDyw"
-      ],
       "settings": {
         "include_margins": true
       }

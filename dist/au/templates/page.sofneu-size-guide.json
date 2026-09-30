@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_banner_AafMi7": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_d63bqk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sofneu Official Size Guide",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_wakiRx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Accurate Size Chart · Standard Measuring Tutorial</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_d63bqk",
+        "text_wakiRx"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/sizeguide_banner.png",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "{{ settings.colors.background }}",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 10,
+        "lcp_optimize": false
+      }
+    },
+    "category_benefit_hgrLex": {
+      "type": "category-benefit",
+      "name": "Category Benefit",
+      "settings": {
+        "image_1": "shopify://shop_images/aboutus_banner.png",
+        "link_1": "shopify://pages/tights-size-guide",
+        "label_1": "Tights",
+        "benefit_1_1_title": "Tights Size Guide Intro",
+        "benefit_1_1_text": "Multi-gradient Size Chart",
+        "benefit_1_2_title": "perfect measurement",
+        "benefit_1_2_text": "Find Your Perfect Fit",
+        "benefit_1_3_title": "distance measurement",
+        "benefit_1_3_text": "Waist & Hip Measurement",
+        "link_2": "shopify://pages/sticky-bra-nipple-cover-size-guide",
+        "label_2": "Sticky Bra",
+        "benefit_2_1_title": "Sticky Bra Size Guide",
+        "benefit_2_1_text": "Full Size Chart (A-G)",
+        "benefit_2_2_title": "perfect measurement",
+        "benefit_2_2_text": "Find Your Perfect Fit",
+        "benefit_2_3_title": "bust measurement",
+        "benefit_2_3_text": "Band & cup sizes",
+        "image_3": "shopify://shop_images/pajama-1.webp",
+        "link_3": "shopify://pages/pajama-size-guide",
+        "label_3": "Pajamas",
+        "benefit_3_1_title": "Pajamas Size Guide Intro",
+        "benefit_3_1_text": "Full Size Chart (XS-XL)",
+        "benefit_3_2_title": "perfect measurement",
+        "benefit_3_2_text": "Find Your Perfect Fit",
+        "benefit_3_3_title": "precise measurement",
+        "benefit_3_3_text": "How to measure",
+        "show_button": false,
+        "button_text": "General Knowledge",
+        "button_link": "",
+        "button_background": "#a65d4a",
+        "button_text_color": "#ffffff",
+        "button_width_mobile": 176,
+        "button_width_desktop": 192,
+        "section_background": "#ffffff",
+        "image_label_color": "#2b2b2b",
+        "benefit_title_color": "#2b2b2b",
+        "benefit_text_color": "#6f6f6f",
+        "image_position": "center",
+        "mobile_max_width": 340,
+        "desktop_max_width": 1200,
+        "desktop_item_gap": 32,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_AafMi7",
+    "category_benefit_hgrLex"
+  ]
+}

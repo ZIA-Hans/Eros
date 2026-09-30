@@ -57,6 +57,7 @@
         "title_1": "Tights",
         "description_1": "Soft comfort for every night",
         "link_1": "",
+        "image_2": "shopify://shop_images/HP-4.jpg",
         "title_2": "Sticky Bra",
         "description_2": "Invisible support for every neckline",
         "link_2": "",
@@ -278,6 +279,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/HP-5.jpg",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
@@ -299,61 +301,16 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "#f9f7f3",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 10
       }
     },
     "sofneu_carousel_jNbMDz": {
       "type": "sofneu-carousel",
       "blocks": {
-        "item_TdHTBe": {
-          "type": "item",
-          "settings": {
-            "show_item": true,
-            "title": "The best tights I have",
-            "text": "<p>The best tights I have ever worn. So comfortable and feel nice on. Highly recommend！</p>",
-            "product_name": "No.1 Sheer tights",
-            "image": "shopify://shop_images/sylvie-with-tights-1.webp",
-            "second_image": "shopify://shop_images/sylvie-with-tights_d72ac285-8c85-4374-968f-dc83cf904d0e.webp",
-            "avatar": "shopify://shop_images/sylvie-with-tights_icon_f84adf2f-c6b3-4a93-9cbd-405918e6f6d8.webp",
-            "author": "Sylvie",
-            "show_rating": true,
-            "rating": 5
-          }
-        },
-        "item_TQrnEV": {
-          "type": "item",
-          "settings": {
-            "show_item": true,
-            "title": "Amazing product and customer service!",
-            "text": "<p>Thank you for great communication</p>",
-            "product_name": "No.1 Sheer tights",
-            "image": "shopify://shop_images/elena-with-tights.webp",
-            "second_image": "shopify://shop_images/elena-with-tights-1.webp",
-            "avatar": "shopify://shop_images/elena-with-tights_icon_75bb939b-d942-4f31-98d2-008d177bea7d.webp",
-            "author": "Elena",
-            "show_rating": true,
-            "rating": 5
-          }
-        },
-        "item_RxUFJg": {
-          "type": "item",
-          "settings": {
-            "show_item": true,
-            "title": "Love these tights A+ Resilient",
-            "text": "<p>They feel incredibly light on the body, almost like a second skin, while still holding everything nicely. </p>",
-            "product_name": "No.2 Sheer tights",
-            "image": "shopify://shop_images/sandi-with-tights-1.webp",
-            "second_image": "shopify://shop_images/sandi-with-tights.webp",
-            "avatar": "shopify://shop_images/sandi-with-tights_icon_29990966-52ea-414d-b814-bc5fe52a8b1d.webp",
-            "author": "Sandi",
-            "show_rating": true,
-            "rating": 5
-          }
-        },
         "item_KrjG3U": {
           "type": "item",
           "settings": {
@@ -384,6 +341,36 @@
             "rating": 5
           }
         },
+        "item_RxUFJg": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Love these tights A+ Resilient",
+            "text": "<p>They feel incredibly light on the body, almost like a second skin, while still holding everything nicely. </p>",
+            "product_name": "No.2 Sheer tights",
+            "image": "shopify://shop_images/sandi-with-tights-1.webp",
+            "second_image": "shopify://shop_images/sandi-with-tights.webp",
+            "avatar": "shopify://shop_images/sandi-with-tights_icon_29990966-52ea-414d-b814-bc5fe52a8b1d.webp",
+            "author": "Sandi",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
+        "item_TQrnEV": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "Amazing product and customer service!",
+            "text": "<p>Thank you for great communication</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/elena-with-tights.webp",
+            "second_image": "shopify://shop_images/elena-with-tights-1.webp",
+            "avatar": "shopify://shop_images/elena-with-tights_icon_75bb939b-d942-4f31-98d2-008d177bea7d.webp",
+            "author": "Elena",
+            "show_rating": true,
+            "rating": 5
+          }
+        },
         "item_t3z3gt": {
           "type": "item",
           "settings": {
@@ -398,15 +385,30 @@
             "show_rating": true,
             "rating": 5
           }
+        },
+        "item_TdHTBe": {
+          "type": "item",
+          "settings": {
+            "show_item": true,
+            "title": "The best tights I have",
+            "text": "<p>The best tights I have ever worn. So comfortable and feel nice on. Highly recommend！</p>",
+            "product_name": "No.1 Sheer tights",
+            "image": "shopify://shop_images/sylvie-with-tights-1.webp",
+            "second_image": "shopify://shop_images/sylvie-with-tights_d72ac285-8c85-4374-968f-dc83cf904d0e.webp",
+            "avatar": "shopify://shop_images/sylvie-with-tights_icon_f84adf2f-c6b3-4a93-9cbd-405918e6f6d8.webp",
+            "author": "Sylvie",
+            "show_rating": true,
+            "rating": 5
+          }
         }
       },
       "block_order": [
-        "item_TdHTBe",
-        "item_TQrnEV",
-        "item_RxUFJg",
         "item_KrjG3U",
         "item_MkGEyk",
-        "item_t3z3gt"
+        "item_RxUFJg",
+        "item_TQrnEV",
+        "item_t3z3gt",
+        "item_TdHTBe"
       ],
       "name": "Sofneu Carousel",
       "settings": {
@@ -457,7 +459,8 @@
         "gsc_instagram_feed_instafeed_fHnUh7": {
           "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
           "settings": {
-            "widget_id": "GSC-sbpKzKfojEhjyfJ"
+            "widget_id": "GSC-sbpKzKfojEhjyfJ",
+            "min_height": 0
           }
         }
       },

@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "custom_liquid_DkjynW": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"sofneu-pajama-guide\">\n  <section class=\"sg-section\">\n    <h2>Find Your Size</h2>\n    <div class=\"sg-controls\">\n      <div class=\"sg-control\"><span>Style</span><div class=\"sg-segment\"><button type=\"button\" class=\"sg-style-button sg-style-short is-active\" aria-pressed=\"true\">Short Set</button><button type=\"button\" class=\"sg-style-button sg-style-long\" aria-pressed=\"false\">Long Set</button></div></div>\n      <div class=\"sg-control\"><span>Region</span><div class=\"sg-segment\"><button type=\"button\" class=\"sg-region-button sg-region-au is-active\" aria-pressed=\"true\">AU / NZ</button><button type=\"button\" class=\"sg-region-button sg-region-us\" aria-pressed=\"false\">US</button></div></div>\n      <div class=\"sg-control\"><span>Unit</span><div class=\"sg-segment\"><button type=\"button\" class=\"sg-unit-button sg-unit-metric is-active\" aria-pressed=\"true\">cm / kg</button><button type=\"button\" class=\"sg-unit-button sg-unit-imperial\" aria-pressed=\"false\">in / lb</button></div></div>\n    </div>\n    <div class=\"sg-calculator\">\n      <div class=\"sg-fields\">\n        <label>Bust <small>(<span class=\"sg-length-unit\">cm</span>)</small><input class=\"sg-measure-input sg-input-bust\" type=\"number\" inputmode=\"decimal\" step=\"0.1\" autocomplete=\"off\"></label>\n        <label>Waist <small>(<span class=\"sg-length-unit\">cm</span>)</small><input class=\"sg-measure-input sg-input-waist\" type=\"number\" inputmode=\"decimal\" step=\"0.1\" autocomplete=\"off\"></label>\n        <label>Hip <small>(<span class=\"sg-length-unit\">cm</span>)</small><input class=\"sg-measure-input sg-input-hip\" type=\"number\" inputmode=\"decimal\" step=\"0.1\" autocomplete=\"off\"></label>\n      </div>\n      <div class=\"sg-fields sg-optional\">\n        <label>Height <small>(<span class=\"sg-length-unit\">cm</span>)</small><input class=\"sg-measure-input sg-input-height\" type=\"number\" inputmode=\"decimal\" step=\"0.1\" autocomplete=\"off\"></label>\n        <label>Weight <small>(<span class=\"sg-weight-unit\">kg</span>)</small><input class=\"sg-measure-input sg-input-weight\" type=\"number\" inputmode=\"decimal\" step=\"0.1\" autocomplete=\"off\"></label>\n      </div>\n      <p class=\"sg-note\">Bust and hip are the most important measurements. Height and weight can be used alone for a quick estimate.</p>\n      <button type=\"button\" class=\"sg-calculate\">Find My Size</button>\n      <p class=\"sg-error\" hidden aria-live=\"assertive\"></p>\n      <div class=\"sg-result\" hidden aria-live=\"polite\"><div class=\"sg-result-title\"></div><div class=\"sg-result-size\"></div><div class=\"sg-result-code\"></div><div class=\"sg-result-detail\"></div></div>\n    </div>\n  </section>\n\n  <section class=\"sg-section\">\n    <h2>How to Measure</h2>\n    <div class=\"sg-measure-content\">\n      <img class=\"sg-body-measure-image\" src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-body-measurement-4-points.webp?v=1788849958\" alt=\"How to measure shoulder, bust, waist and hip\" width=\"504\" height=\"1200\" loading=\"lazy\">\n      <div class=\"sg-measure-grid\">\n        <article class=\"sg-measure-card\"><strong>Shoulder</strong><p>Measure straight across the back from one shoulder point to the other.</p></article>\n        <article class=\"sg-measure-card\"><strong>Bust</strong><p>Measure around the fullest part of your bust, keeping the tape level and comfortably relaxed.</p></article>\n        <article class=\"sg-measure-card\"><strong>Waist</strong><p>Measure around your natural waistline without pulling the tape tight.</p></article>\n        <article class=\"sg-measure-card\"><strong>Hip</strong><p>Stand with your feet together and measure around the fullest part of your hips and seat.</p></article>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"sg-section\"><h2>Body Measurements — <span class=\"sg-current-style\">Short Sleeve & Shorts Set</span></h2><div class=\"sg-table-wrap\"><table class=\"sg-body-table\"></table></div></section>\n  <section class=\"sg-section\"><h2>Garment Measurements — <span class=\"sg-current-style\">Short Sleeve & Shorts Set</span></h2><img class=\"sg-garment-measure-image\" src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-short-pajama-garment-measurement.webp?v=1788849997\" data-short-src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-short-pajama-garment-measurement.webp?v=1788849997\" data-long-src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-long-pajama-garment-measurement.webp?v=1788849988\" alt=\"Short sleeve pajama garment measurement guide\" width=\"1200\" height=\"800\" loading=\"lazy\"><p class=\"sg-note\">Finished garment measurements. Length tolerance: ±1 cm; shoulder width tolerance: ±0.5 cm. Small differences may occur due to manual measurement.</p><div class=\"sg-table-wrap\"><table class=\"sg-garment-table\"></table></div></section>\n  <section class=\"sg-section\"><h2>Fit Notes</h2><div class=\"sg-fit-notes\"><div class=\"sg-fit-note\"><strong>How to choose</strong><p>This style has a generous, relaxed fit. If you are between sizes, choose the smaller size for a neater fit or the larger size for extra room.</p></div><div class=\"sg-fit-note\"><strong>Body and garment measurements</strong><p>Body measurements are measurements of your body and should be used to choose your size. Garment measurements describe the finished product and already include the intended ease.</p></div><div class=\"sg-fit-note\"><strong>Measurement tolerance</strong><p>Finished garment lengths may vary by ±1 cm and shoulder width by ±0.5 cm. Measurements taken by hand may also differ slightly depending on placement and technique.</p></div></div></section>\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_DkjynW"
+  ]
+}

@@ -56,7 +56,7 @@
             "radius": "default",
             "border_radius": 15,
             "dropdown_swatch_names": "",
-            "margin-top": 0,
+            "margin-top": 8,
             "margin-bottom": 8,
             "size_icon": "ruler",
             "size_link": "Size Guide",
@@ -132,7 +132,7 @@
           "settings": {
             "heading": "Product Grade",
             "show_info_icon": true,
-            "info_page": "",
+            "info_page": "understanding-product-grade",
             "desktop_columns": "4",
             "show_item_1": true,
             "title_1": "Warmth",
@@ -242,7 +242,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard&nbsp;</p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -305,33 +305,33 @@
         "allow_multiple_open": false
       }
     },
-    "features_banner_rr8A4F": {
+    "features_banner_VrBrnw": {
       "type": "features-banner",
       "blocks": {
-        "image_JXh9mq": {
+        "image_cexaXD": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "desktop_image": "shopify://shop_images/free-shipping.png",
             "select_icon": "bag",
             "heading": "Free Delivery on A$59",
             "text": "",
             "link": ""
           }
         },
-        "image_yiKJcY": {
+        "image_JJ4KWP": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "desktop_image": "shopify://shop_images/30-days_warranty.png",
             "select_icon": "user",
             "heading": "30-Day Free Returns",
             "text": "",
             "link": ""
           }
         },
-        "image_hENbhA": {
+        "image_7gn44Y": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "desktop_image": "shopify://shop_images/snag-techlogy.png",
             "select_icon": "search",
             "heading": "Anti-Snag Warranty",
             "text": "",
@@ -340,9 +340,9 @@
         }
       },
       "block_order": [
-        "image_JXh9mq",
-        "image_yiKJcY",
-        "image_hENbhA"
+        "image_cexaXD",
+        "image_JJ4KWP",
+        "image_7gn44Y"
       ],
       "settings": {
         "advanced_heading": false,
@@ -401,38 +401,6 @@
             "mobile_text_horizontal_position": "left"
           }
         },
-        "image_ExH7aa": {
-          "type": "image",
-          "settings": {
-            "subheading": "",
-            "subheading_disable_on_mobile": false,
-            "subheading_advanced_settings": false,
-            "subheading_text_style": "subtitle",
-            "text_uppercase": false,
-            "letter_spacing": 1,
-            "size_text_desktop": 100,
-            "size_text_mobile": 100,
-            "heading": "",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/photo_1.webp",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
-          }
-        },
         "image_YMitB4": {
           "type": "image",
           "settings": {
@@ -464,12 +432,44 @@
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
+        },
+        "image_ExH7aa": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/photo_1.webp",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
         }
       },
       "block_order": [
         "image_MzzbNp",
-        "image_ExH7aa",
-        "image_YMitB4"
+        "image_YMitB4",
+        "image_ExH7aa"
       ],
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
@@ -678,7 +678,7 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "features_banner_rr8A4F",
+    "features_banner_VrBrnw",
     "grid_view_LXJM3g",
     "grid_view_ifkAgV",
     "grid_view_wCynBd"

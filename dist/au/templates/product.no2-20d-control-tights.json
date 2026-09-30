@@ -71,12 +71,12 @@
             "radius": "default",
             "border_radius": 15,
             "dropdown_swatch_names": "",
-            "margin-top": 0,
+            "margin-top": 8,
             "margin-bottom": 8,
-            "size_icon": "check_mark",
-            "size_link": "",
-            "variant_name": "",
-            "size_content": "",
+            "size_icon": "ruler",
+            "size_link": "Size Guide",
+            "variant_name": "Size",
+            "size_content": "size-guide-no1的副本",
             "metafield": "",
             "enable-striped-rows": true,
             "enable_skin_popup": false,
@@ -148,7 +148,7 @@
           "settings": {
             "heading": "Product Grade",
             "show_info_icon": true,
-            "info_page": "",
+            "info_page": "understanding-product-grade",
             "desktop_columns": "4",
             "show_item_1": true,
             "title_1": "Warmth",
@@ -160,7 +160,7 @@
             "label_2": "Everyday",
             "show_item_3": true,
             "title_3": "Stretch",
-            "value_3": 90,
+            "value_3": 80,
             "label_3": "Adaptive Stretch",
             "show_item_4": true,
             "title_4": "Sheerness",
@@ -258,7 +258,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard&nbsp;</p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over A$59.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -321,33 +321,33 @@
         "allow_multiple_open": false
       }
     },
-    "features_banner_gtNjfg": {
+    "features_banner_zQaVDg": {
       "type": "features-banner",
       "blocks": {
-        "image_6Mapq8": {
+        "image_LhgnRL": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "desktop_image": "shopify://shop_images/free-shipping.png",
             "select_icon": "bag",
             "heading": "Free Delivery on A$59",
             "text": "",
             "link": ""
           }
         },
-        "image_PbAdtb": {
+        "image_8NEez8": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "desktop_image": "shopify://shop_images/30-days_warranty.png",
             "select_icon": "user",
             "heading": "30-Day Free Returns",
             "text": "",
             "link": ""
           }
         },
-        "image_Cttxfp": {
+        "image_mxik9N": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "desktop_image": "shopify://shop_images/snag-techlogy.png",
             "select_icon": "search",
             "heading": "Anti-Snag Warranty",
             "text": "",
@@ -356,9 +356,9 @@
         }
       },
       "block_order": [
-        "image_6Mapq8",
-        "image_PbAdtb",
-        "image_Cttxfp"
+        "image_LhgnRL",
+        "image_8NEez8",
+        "image_mxik9N"
       ],
       "settings": {
         "advanced_heading": false,
@@ -425,7 +425,7 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p><strong>Sculpted Support, Without the Squeeze</strong></p>",
+            "heading": "<p><strong>Smooths Without the Squeeze</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
@@ -433,44 +433,26 @@
             "animation": "none"
           }
         },
-        "icon_item_pYTdgD": {
-          "type": "icon_item",
+        "text_eQAziD": {
+          "type": "text",
           "settings": {
             "show_block": true,
-            "icon": "shopify://shop_images/pdp-no1-1.svg",
-            "title": "Soft Stretch - Comfortable, flexible fit",
-            "mobile_icon_size": 26,
-            "desktop_icon_size": 52,
-            "max_width": 420,
-            "title_color": "#2b2b2b",
-            "desktop_title_color": "#2b2b2b",
-            "mobile_title_size": 12,
-            "desktop_title_size": 15
-          }
-        },
-        "icon_item_jTzGta": {
-          "type": "icon_item",
-          "settings": {
-            "show_block": true,
-            "icon": "shopify://shop_images/pdp-no1-2.svg",
-            "title": "Target Control - Smooth shaping support",
-            "mobile_icon_size": 26,
-            "desktop_icon_size": 52,
-            "max_width": 420,
-            "title_color": "#2b2b2b",
-            "desktop_title_color": "#2b2b2b",
-            "mobile_title_size": 12,
-            "desktop_title_size": 15
+            "text": "<p>Gentle shaping that never feels restrictive</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 14,
+            "desktop_size": 16,
+            "animation": "none"
           }
         }
       },
       "block_order": [
         "heading_7k9UKc",
-        "icon_item_pYTdgD",
-        "icon_item_jTzGta"
+        "text_eQAziD"
       ],
       "name": "Text Overlay",
       "settings": {
+        "mobile_image": "shopify://shop_images/no2waist1.webp",
         "image_size_mode": "auto",
         "mobile_image_height": 420,
         "desktop_image_height": 800,
@@ -485,7 +467,7 @@
         "mobile_content_gap": 16,
         "mobile_content_layout": "overlay",
         "mobile_overlay_x": 50,
-        "mobile_overlay_y": 85,
+        "mobile_overlay_y": 80,
         "mobile_overlay_safe_padding": 16,
         "content_alignment": "center",
         "content_text_align": "center",
@@ -517,20 +499,34 @@
           "type": "heading",
           "settings": {
             "show_block": true,
-            "heading": "<p><strong>Flexible Stretch That Moves With You</strong></p>",
+            "heading": "<p><strong>Stretches to Fit You</strong></p>",
             "color": "#2b2b2b",
             "desktop_color": "#2b2b2b",
             "mobile_size": 16,
             "desktop_size": 36,
             "animation": "none"
           }
+        },
+        "text_bYkqrj": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "text": "<p>Flexible stretch that adapts to your body</p>",
+            "color": "#2b2b2b",
+            "desktop_color": "#2b2b2b",
+            "mobile_size": 14,
+            "desktop_size": 16,
+            "animation": "none"
+          }
         }
       },
       "block_order": [
-        "heading_nBtyTT"
+        "heading_nBtyTT",
+        "text_bYkqrj"
       ],
       "name": "Text Overlay",
       "settings": {
+        "mobile_image": "shopify://shop_images/no2waist2.webp",
         "image_size_mode": "auto",
         "mobile_image_height": 420,
         "desktop_image_height": 800,
@@ -545,7 +541,7 @@
         "mobile_content_gap": 16,
         "mobile_content_layout": "overlay",
         "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
+        "mobile_overlay_y": 80,
         "mobile_overlay_safe_padding": 16,
         "content_alignment": "center",
         "content_text_align": "center",
@@ -600,6 +596,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/no2_move1.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -631,6 +628,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/no2_move2.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -849,7 +847,7 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "features_banner_gtNjfg",
+    "features_banner_zQaVDg",
     "rich_text_EAc7VG",
     "text_overlay_9AbVzy",
     "text_overlay_pPWpUC",
