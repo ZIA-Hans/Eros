@@ -207,13 +207,45 @@
         // 从 gallery-section 摘出所有媒体，组装成主题 <slideshow-section> 多图轮播
         // （gallery-section 自身带 swiper/缩略图联动等复杂状态，整体注入会失效，
         //  所以只取其 slide 节点的 innerHTML，外包 slideshow-section 让 slider.js 接管）
-        const productGallery = productCard.querySelector('gallery-section');
+        // 只取 [data-gallery] 主图区：缩略图区 [data-thumbs] 的 slide 同样带
+        // data-swiper-slide，一起收进来每张媒体会出现两份
+        const productGallery = productCard.querySelector('gallery-section [data-gallery]');
         const gallerySlides = productGallery?.querySelectorAll('li[data-swiper-slide]') || [];
         const imageContainer = document.createElement('div');
         imageContainer.className = 'product-image';
 
+        // 商详页 gallery 会把 URL 选中变体的主图前置为第一张 slide，并在 for media
+        // 循环里跳过该主图（main-product.liquid），DOM 顺序 ≠ 后台配置顺序，
+        // 「主图起连续 5 张」的窗口会因此取错。循环 slide 带 id="image-N"（N 为该媒体
+        // 在 product.media 里的 1-based 位置），缺失的那个 N 即前置主图的真实位次，
+        // 据此还原配置顺序；无 id 标记（主题结构变化）时保持 DOM 原序兜底
+        function normalizeSlideOrder(slides) {
+          const marked = [];
+          const unmarked = [];
+          slides.forEach((li) => {
+            const match = /^image-(\d+)$/.exec(li.id || '');
+            if (match) marked.push({ li, n: parseInt(match[1], 10) });
+            else unmarked.push(li);
+          });
+          if (marked.length === 0) return slides;
+          marked.sort((a, b) => a.n - b.n);
+          const result = marked;
+          unmarked.forEach((li) => {
+            const taken = new Set(result.map((s) => s.n));
+            let pos = result.length + 1;
+            for (let n = 1; n <= result.length + 1; n++) {
+              if (!taken.has(n)) {
+                pos = n;
+                break;
+              }
+            }
+            result.splice(pos - 1, 0, { li, n: pos });
+          });
+          return result.map((s) => s.li);
+        }
+
         // 全量媒体底稿（已去 srcset）：SKU 图片组窗口每次从这里取，见下方 renderImageGroup
-        const allSlides = [...gallerySlides].map((li) => {
+        const allSlides = normalizeSlideOrder([...gallerySlides]).map((li) => {
           const clone = li.cloneNode(true);
           // 去掉 srcset，避免抽屉里加载多档大图；保留单 src
           clone.querySelectorAll('img').forEach((img) => img.removeAttribute('srcset'));

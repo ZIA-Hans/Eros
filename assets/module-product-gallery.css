@@ -239,10 +239,11 @@
     bottom: calc(var(--gap, 8px) * 2);
   }
 }
-@media (min-width: 900px) {
-  .wt-product__gallery .swiper-pagination {
-    display: none;
-  }
+/* 商品 gallery 的 fraction 页码指示器不展示（纯显示元素，隐藏不影响
+   滑动/切图/缩略图联动；勿删 liquid 里的 div，避免 pagination 字符串
+   选择器被 Swiper 全局解析后串台到其他 section） */
+.wt-product__gallery .swiper-pagination {
+  display: none;
 }
 .wt-product__gallery--carousel-vertical .thumbs-list-item, .wt-product__gallery--carousel-horizontal .thumbs-list-item {
   outline-offset: -4px;
