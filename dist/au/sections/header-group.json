@@ -85,8 +85,8 @@
         "menu": "sonfeu-mega-menu",
         "mobile_footer_menu": "",
         "customer_account_menu": "customer-account-main-menu",
-        "teaser_menu": "main-menu",
-        "teaser_menu_limit": 3,
+        "teaser_menu": "sonfeu-mega-menu",
+        "teaser_menu_limit": 5,
         "transparent_logo": "shopify://shop_images/icon_trans.png",
         "transparent_header_color": "{{ settings.colors.background }}",
         "show_country_selector": true,
@@ -99,7 +99,7 @@
         "show_search_without_button": false,
         "typing_search": "Search...",
         "suggestions_title": "most popular",
-        "search_suggest_layout": "menu",
+        "search_suggest_layout": "results",
         "suggestions_menu": "",
         "suggest_products": [],
         "suggest_products_title": "",
@@ -112,57 +112,27 @@
         "show_suggest_on_no_results": true
       }
     },
-    "notification_popup_zieLt4": {
-      "type": "notification-popup",
+    "17907404823dcb13a2": {
+      "type": "apps",
       "blocks": {
-        "heading_TzmqnN": {
-          "type": "heading",
+        "klaviyo_email_marketing_sms_form_embed_block_FJ86Fc": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
           "settings": {
-            "heading": "Join the Eros Girls",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100
-          }
-        },
-        "paragraph_LmwDFp": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "<p>Get 10% off when you subscribe</p>",
-            "text_disable_on_mobile": false
-          }
-        },
-        "email_form_BccFxn": {
-          "type": "email_form",
-          "settings": {
-            "button_select": "primary",
-            "button_label": ""
+            "formId": ""
           }
         }
       },
       "block_order": [
-        "heading_TzmqnN",
-        "paragraph_LmwDFp",
-        "email_form_BccFxn"
+        "klaviyo_email_marketing_sms_form_embed_block_FJ86Fc"
       ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:sections.notification_popup.name",
       "settings": {
-        "max_width": 450,
-        "delay": 20,
-        "show_border": false,
-        "show_shadow": true,
-        "desktop_image": "shopify://shop_images/m-no1-product-nude-show3.jpg",
-        "desktop_vertical_position": "center",
-        "desktop_horizontal_position": "center",
-        "color-body-text": "rgba(0,0,0,0)",
-        "background_color": "rgba(0,0,0,0)"
+        "include_margins": true
       }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "notification_popup_zieLt4"
+    "17907404823dcb13a2"
   ]
 }

@@ -1,0 +1,333 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_nwqHUg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aTWFgY": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Find Your Perfect Bra Solution",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_BTKaK9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chose the product you want to size, then use your usual bra size or preferred coverage to find the best fit.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aTWFgY",
+        "text_BTKaK9"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": true,
+        "color-body-text": "#2b2b2b",
+        "background_color": "{{ settings.colors.background }}",
+        "background_gradient": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10,
+        "compact_size": false
+      }
+    },
+    "custom_liquid_DkjynW": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\nSofneu adhesive bra master size guide — Custom Liquid.\nReplace only the four product image URLs when final artwork is ready.\n{% endcomment %}\n<style>\n    :root{--ink:#2b2b2b;--muted:#746d69;--warm:#947b5c;--line:#e8e0da;--paper:#fff;--soft:#f7f4ef;--blush:#fbf1ed;--rose:#ad5e4d}\n     .sofneu-adhesive-guide-page,.sofneu-adhesive-guide-page *{box-sizing:border-box}.sofneu-adhesive-guide-page{max-width:1200px;margin:auto;background:var(--paper)}\n    button{font:inherit;color:inherit}.shell{padding-left:14px;padding-right:14px}.hero{padding-top:42px;padding-bottom:36px;text-align:center;background:linear-gradient(180deg,#faf7f2 0,#fff 100%)}\n    .eyebrow{margin:0 0 8px;color:var(--warm);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.hero h1{margin:0}.hero p{max-width:610px;margin:14px auto 0;color:var(--muted)}\n    .section{padding-top:34px;padding-bottom:34px}.section-head{text-align:center;margin-bottom:20px}.section-head h2{margin:0}.section-head p{max-width:650px;margin:7px auto 0;color:var(--muted)}\n    .finder{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.product-card{position:relative;min-width:0;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;cursor:pointer;text-align:left;padding:0;transition:.2s;letter-spacing:normal;text-transform:none;font-weight:400;line-height:1.5}.product-card:hover,.product-card.is-active{border-color:var(--warm);box-shadow:0 8px 28px #4a321312}.product-card.is-active:after{content:'Selected';position:absolute;top:10px;right:10px;border-radius:999px;background:var(--warm);color:#fff;padding:4px 8px;font-size:10px;font-weight:700;letter-spacing:.06em}\n    .product-visual{height:170px;display:grid;place-items:center;background:var(--soft)}.product-visual img{width:100%;height:100%;object-fit:contain}.nipples{display:flex;align-items:center;gap:10px}.nipples i{display:block;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7d8c9,#d99f87);box-shadow:0 3px 12px #7f4b3330}.nipples i:nth-child(1){width:60px;height:60px}.nipples i:nth-child(2){width:78px;height:78px}.nipples i:nth-child(3){width:96px;height:96px}.product-copy{padding:15px}.product-name{display:block;margin:0 0 5px;font-size:15px;font-weight:700;letter-spacing:normal;text-transform:none;line-height:1.3}.product-copy p{margin:0;color:var(--muted);font-size:12px;letter-spacing:normal;text-transform:none;line-height:1.5}.best{display:block;margin-top:10px;color:var(--warm);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em}\n    .workspace{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.tool{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:24px;align-items:start}.tool-summary{position:sticky;top:20px}.tool-summary h2{margin:4px 0 8px}.tool-summary p{color:var(--muted)}.steps{margin:22px 0 0;padding:0;list-style:none}.steps li{display:flex;gap:10px;margin:12px 0}.num{flex:0 0 24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--warm);color:#fff;font-size:11px;font-weight:700}\n    .calculator{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.control-row{display:grid;grid-template-columns:80px 1fr;align-items:center;gap:12px;margin-bottom:12px}.control-row>span{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.segment{display:grid;grid-template-columns:1fr 1fr;border:1px solid #d9cec3;border-radius:7px;overflow:hidden}.segment button{border:0;background:#fff;padding:9px;cursor:pointer;font-size:12px}.segment button.active{background:var(--warm);color:#fff;font-weight:700}.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.field{padding:14px;border:1px solid var(--line);border-radius:9px}.field span{display:block;color:var(--muted);font-size:11px}.field strong{font-size:16px}.cta{width:100%;border:0;border-radius:7px;background:var(--ink);color:#fff;padding:13px;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.result{margin-top:12px;padding:14px;border-left:3px solid var(--warm);background:var(--soft)}.result small{color:var(--muted)}\n    .details{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.detail{padding:15px;border:1px solid var(--line);border-radius:10px}.detail h3{margin:0 0 5px}.detail p{font-size:12px;color:var(--muted);margin:0}\n    .compare{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}.compare article{background:#fff;padding:18px}.compare h3{font-size:14px;margin:0 0 6px}.compare p{font-size:12px;color:var(--muted);margin:0}.compare b{display:block;margin-top:12px;color:var(--warm);font-size:11px}\n    .note{text-align:center;padding:26px 14px;color:var(--muted);font-size:11px;background:#292929}\n    .product-visual{position:relative;display:flex;align-items:flex-end;justify-content:center;padding:12px 16px 0;background:#f7f4ef}.product-visual:after{display:none}.product-visual img{width:100%;height:100%;object-fit:contain;object-position:center bottom}.product-card:nth-child(1) .product-visual img{width:88%}.product-card:nth-child(2) .product-visual img,.product-card:nth-child(3) .product-visual img{width:80%}.product-card .nipples{height:100%;align-items:flex-end;padding-bottom:16px}.product-card .nipples i{box-shadow:none}.product-card{appearance:none;display:flex;flex-direction:column}.product-copy{flex:1;width:100%}.product-card.is-active{background:#fffaf5}.product-card.is-active .product-copy{box-shadow:inset 0 -3px var(--warm)}.product-how{display:block;margin-top:9px;padding-top:9px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.product-how b{color:var(--ink)}\n    .picker-label{margin:18px 0 7px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.choice-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.choice{border:1px solid #d9cec3;border-radius:7px;background:#fff;padding:9px 4px;cursor:pointer}.choice.active{background:var(--warm);border-color:var(--warm);color:#fff;font-weight:700}.size-chart{margin-top:18px}.chart-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:10px}.chart-head h3{margin:0}.chart-head p{margin:0;color:var(--muted);font-size:11px}.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:#fff}.size-table{width:100%;min-width:560px;border-collapse:collapse;text-align:center;font-size:12px}.size-table th{background:var(--warm);color:#fff;padding:10px 8px}.size-table td{padding:10px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.size-table tbody tr:last-child td{border-bottom:0}.size-table td:first-child{font-weight:700;background:#faf8f5}.size-table .hit{background:#f1e8dc;font-weight:700;color:#6f5434}.size-table .na{color:#bbb}.chart-note{margin:8px 0 0;color:var(--muted);font-size:11px}.diameters{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}.diameter{border:1px solid var(--line);border-radius:10px;background:#fff;padding:14px 8px;text-align:center}.diameter strong{display:block;font-size:23px;color:var(--warm)}.diameter span{font-size:10px;color:var(--muted)}\n    .tool.is-nipple{grid-template-columns:1fr}.tool.is-nipple .tool-summary,.tool.is-nipple .calculator,.tool.is-nipple .details,.tool.is-nipple .chart-head,.tool.is-nipple .chart-note{display:none}.tool.is-nipple .size-chart{margin:0}.tool.is-nipple .table-scroll{overflow:visible;border:0;background:transparent}.nipple-guide{max-width:980px;margin:auto}.nc-intro{margin:0 0 18px;color:var(--muted)}.nc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}.nc-card{padding:20px 18px;border-radius:16px;border:1px solid var(--line)}.nc-card:nth-child(1){background:#f8f5f1}.nc-card:nth-child(2){background:#eee5da;border-color:#dfd2c4}.nc-card:nth-child(3){background:var(--warm);border-color:var(--warm);color:#fff}.nc-card-top{display:flex;justify-content:space-between;align-items:start;gap:10px}.nc-name{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.nc-size{font-size:36px;font-weight:600;line-height:1;color:var(--warm)}.nc-size small{font-size:11px;font-weight:400}.nc-card h3{margin:16px 0 5px}.nc-card p{margin:0;color:var(--muted);font-size:13px}.nc-card:nth-child(3) .nc-size,.nc-card:nth-child(3) p{color:#fff}.nc-cup{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:999px;background:#fff;color:#333;font-size:11px}.nc-card:nth-child(3) .nc-cup{background:#ffffff24;color:#fff}.nc-title{margin:0 0 5px}.nc-copy{margin:0 0 14px;color:var(--muted);font-size:13px}.nc-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}.nc-table{width:100%;min-width:560px;border-collapse:collapse;text-align:center;font-size:11px}.nc-table th,.nc-table td{padding:12px 8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.nc-table th{background:#faf7f4;font-weight:600}.nc-table tr:last-child td{border-bottom:0}.nc-table th:last-child,.nc-table td:last-child{border-right:0}.nc-8{color:#725b42;font-weight:700;background:#f8f5f1}.nc-10{color:#725b42;font-weight:700;background:#eee5da}.nc-13{color:#fff;font-weight:700;background:var(--warm)}.nc-info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.nc-info article{padding:18px;border-radius:14px;background:#f5f2eb}.nc-info h3{margin:0 0 8px}.nc-info p,.nc-info ol{margin:0;color:var(--muted);font-size:13px}.nc-info ol{padding-left:18px}.nc-info li+li{margin-top:7px}\n    @media(min-width:750px){.shell{padding-left:20px;padding-right:20px}}\n    @media(max-width:749px){body{background:#fff}.hero{padding-top:28px;padding-bottom:27px}.hero p{font-size:12px}.section{padding-top:28px;padding-bottom:28px}.section-head p{font-size:12px}.finder{grid-template-columns:1fr 1fr;gap:8px}.product-visual{height:125px}.product-copy{padding:11px}.product-copy p{font-size:11px}.nipples{gap:5px}.nipples i:nth-child(1){width:38px;height:38px}.nipples i:nth-child(2){width:50px;height:50px}.nipples i:nth-child(3){width:62px;height:62px}.product-card.is-active:after{font-size:8px;padding:3px 6px}.tool{grid-template-columns:1fr;gap:16px}.tool-summary{position:static}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.steps li{display:flex;align-items:flex-start;margin:0;font-size:10px}.num{flex:0 0 22px;width:22px;height:22px}.calculator{padding:14px}.control-row{grid-template-columns:62px 1fr}.fields{grid-template-columns:1fr 1fr}.details{grid-template-columns:1fr}.compare{grid-template-columns:1fr 1fr}.compare article{padding:13px}.compare p{font-size:11px}.choice-grid{grid-template-columns:repeat(5,1fr)}.chart-head{display:block}.chart-head p{margin-top:3px}.size-table{font-size:10px;min-width:520px}.nc-cards{grid-template-columns:1fr;gap:10px}.nc-card{padding:17px 16px}.nc-size{font-size:30px}.nc-info{grid-template-columns:1fr}.nc-table{min-width:520px;font-size:10px}}\n    /* Mobile overflow guard: only the table may scroll horizontally. */\n    .sofneu-adhesive-guide-page{width:100%;max-width:1200px;min-width:0;overflow-x:hidden}\n    .sofneu-adhesive-guide-page .shell,.sofneu-adhesive-guide-page .tool,.sofneu-adhesive-guide-page .tool>*,.sofneu-adhesive-guide-page .calculator,.sofneu-adhesive-guide-page .size-chart{width:100%;min-width:0;max-width:100%}\n    .sofneu-adhesive-guide-page .table-scroll,.sofneu-adhesive-guide-page .nc-table-wrap{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}\n    @media(max-width:749px){\n      .sofneu-adhesive-guide-page .tool{display:block}\n      .sofneu-adhesive-guide-page .tool-summary{position:static;width:100%;margin-bottom:16px}\n      .sofneu-adhesive-guide-page .calculator{padding:14px}\n      .sofneu-adhesive-guide-page .control-row{grid-template-columns:62px minmax(0,1fr)}\n      .sofneu-adhesive-guide-page .fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}\n      .sofneu-adhesive-guide-page .field{min-width:0}\n      .sofneu-adhesive-guide-page .band-grid{grid-template-columns:repeat(5,minmax(0,1fr))}\n      .sofneu-adhesive-guide-page .cup-grid{grid-template-columns:repeat(4,minmax(0,1fr))}\n      .sofneu-adhesive-guide-page .cup-grid .choice{min-width:0;min-height:42px;padding:8px 3px;font-size:13px;line-height:1.1;white-space:nowrap}\n    }\n    .sofneu-adhesive-guide-page .size-table th{white-space:nowrap}\n    /* Stable Shopify-safe product and region controls. */\n    .sofneu-adhesive-guide-page .segment{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;width:100%!important;min-width:0;overflow:hidden}\n    .sofneu-adhesive-guide-page .segment button{display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:9px!important;border:0!important;border-radius:0!important;background:#fff!important;color:var(--ink)!important;opacity:1!important;visibility:visible!important;line-height:1.2!important;text-align:center!important}\n    .sofneu-adhesive-guide-page .segment button.active{background:var(--warm)!important;color:#fff!important}\n    .sofneu-adhesive-guide-page .product-card,.sofneu-adhesive-guide-page .product-card:hover,.sofneu-adhesive-guide-page .product-card:focus,.sofneu-adhesive-guide-page .product-card:active,.sofneu-adhesive-guide-page .product-card.is-active{background:#fff!important;color:var(--ink)!important}\n    .sofneu-adhesive-guide-page .product-card{border:1px solid var(--line)!important;box-shadow:none!important;outline:0!important}\n    .sofneu-adhesive-guide-page .product-card.is-active{border-color:var(--warm)!important;box-shadow:inset 0 -3px var(--warm)!important}\n    .sofneu-adhesive-guide-page .product-card.is-active .product-copy{background:#fff!important;color:var(--ink)!important;box-shadow:none!important}\n    .sofneu-adhesive-guide-page .product-visual{height:170px!important;padding:12px 16px 0!important;background:var(--soft)!important}\n    .sofneu-adhesive-guide-page .product-visual img{width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;object-position:center bottom!important}\n    @media(max-width:749px){.sofneu-adhesive-guide-page .product-visual{height:125px!important;padding:10px 8px 0!important}}\n    .sofneu-adhesive-guide-page .result{padding:16px 14px!important}\n    .sofneu-adhesive-guide-page .result strong{display:block;font-size:17px!important;line-height:1.35!important;font-weight:700!important;color:var(--ink)!important}\n    .sofneu-adhesive-guide-page .result small{display:block;margin-top:5px;font-size:12px!important;line-height:1.45!important;color:var(--muted)!important}\n    @media(max-width:749px){.sofneu-adhesive-guide-page .result strong{font-size:16px!important}.sofneu-adhesive-guide-page .result small{font-size:11px!important}}\n  </style>\n\n<div class=\"sofneu-adhesive-guide-page\">\n  <section class=\"section shell\">\n    <div class=\"section-head\"><h2>What are you shopping for?</h2><p>Each solution fits and sizes differently. Choose your product first, then use the sizing method shown on its card.</p></div>\n    <div class=\"finder\" role=\"tablist\">\n      <button type=\"button\" class=\"product-card is-active\" data-product=\"insert\" role=\"tab\" aria-selected=\"true\">\n        <div class=\"product-visual\"><img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/insertbra_trans.webp?v=1788273007\" alt=\"Bra inserts\"></div>\n        <div class=\"product-copy\"><strong class=\"product-name\">Bra Inserts</strong><p>Add shape and coverage inside your own bra or swimwear.</p></div>\n      </button>\n      <button type=\"button\" class=\"product-card\" data-product=\"cleavage\" role=\"tab\" aria-selected=\"false\">\n        <div class=\"product-visual\"><img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/cleveragebra_trans.webp?v=1788275033\" alt=\"Cleavage adhesive bra\"></div>\n        <div class=\"product-copy\"><strong class=\"product-name\">Cleavage Sticky Bra</strong><p>Connects at the centre to lift and create cleavage.</p></div>\n      </button>\n      <button type=\"button\" class=\"product-card\" data-product=\"fabric\" role=\"tab\" aria-selected=\"false\">\n        <div class=\"product-visual\"><img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/fabricbra_trans.webp?v=1788276734\" alt=\"Fabric adhesive bra\"></div>\n        <div class=\"product-copy\"><strong class=\"product-name\">Fabric Sticky Bra</strong><p>Strapless coverage with breathable or strong adhesive options.</p></div>\n      </button>\n      <button type=\"button\" class=\"product-card\" data-product=\"nipple\" role=\"tab\" aria-selected=\"false\">\n        <div class=\"product-visual\"><span class=\"nipples\" aria-hidden=\"true\"><i></i><i></i><i></i></span></div>\n        <div class=\"product-copy\"><strong class=\"product-name\">Nipple Covers</strong><p>Smooth, discreet coverage under fitted clothing.</p></div>\n      </button>\n    </div>\n  </section>\n\n  <section class=\"section shell workspace\">\n    <div class=\"tool\">\n      <div class=\"tool-summary\">\n        <p class=\"eyebrow\">Bra Inserts</p><h2 id=\"tool-title\">Find your Sofneu insert size</h2>\n        <p id=\"tool-intro\">Use the bra size you already wear. We’ll translate it into the closest Sofneu insert size.</p>\n        <ol class=\"steps\"><li><span class=\"num\">1</span>Choose AU/NZ or US.</li><li><span class=\"num\">2</span>Select band and cup.</li><li><span class=\"num\">3</span>See your Sofneu size.</li></ol>\n      </div>\n      <div>\n        <div class=\"calculator\">\n          <div class=\"control-row\"><span>Region</span><div class=\"segment\"><button type=\"button\" class=\"active\" data-region=\"au\" aria-pressed=\"true\">AU / NZ</button><button type=\"button\" data-region=\"us\" aria-pressed=\"false\">US</button></div></div>\n          <div id=\"product-controls\">\n            <div class=\"picker-label\">Band size</div><div class=\"choice-grid band-grid\"><button type=\"button\" class=\"choice\">6</button><button type=\"button\" class=\"choice\">8</button><button type=\"button\" class=\"choice\">10</button><button type=\"button\" class=\"choice active\">12</button><button type=\"button\" class=\"choice\">14</button><button type=\"button\" class=\"choice\">16</button><button type=\"button\" class=\"choice\">18</button></div>\n            <div class=\"picker-label\">Cup size</div><div class=\"choice-grid cup-grid\"><button type=\"button\" class=\"choice\">A</button><button type=\"button\" class=\"choice\">B</button><button type=\"button\" class=\"choice active\">C</button><button type=\"button\" class=\"choice\">D</button><button type=\"button\" class=\"choice\">E</button><button type=\"button\" class=\"choice\">F</button><button type=\"button\" class=\"choice\">G</button></div>\n          </div>\n          <div class=\"fields\"><div class=\"field\"><span>Your bra size</span><strong>AU 12C</strong></div><div class=\"field\"><span>Your Sofneu size</span><strong>Size B</strong></div></div>\n          <div class=\"result\"><strong>Recommended: Size B</strong><br><small>The best starting fit based on your selected bra size.</small></div>\n        </div>\n        <div class=\"size-chart\"><div class=\"chart-head\"><h3 id=\"chart-title\">Bra Inserts Size Chart</h3><p id=\"chart-copy\">Your usual bra size is the starting point.</p></div><div class=\"table-scroll\" id=\"chart\"><table class=\"size-table\"><thead><tr><th>Band</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr></thead><tbody><tr><td>6</td><td class=\"hit\">A</td><td class=\"hit\">A</td><td class=\"hit\">A</td><td class=\"hit\">A</td><td class=\"hit\">B</td><td class=\"hit\">C</td><td class=\"hit\">D</td></tr><tr><td>8</td><td class=\"hit\">A</td><td class=\"hit\">A</td><td class=\"hit\">A</td><td class=\"hit\">B</td><td class=\"hit\">C</td><td class=\"hit\">D</td><td class=\"na\">–</td></tr><tr><td>10</td><td class=\"hit\">A</td><td class=\"hit\">A</td><td class=\"hit\">B</td><td class=\"hit\">C</td><td class=\"hit\">D</td><td class=\"na\">–</td><td class=\"na\">–</td></tr><tr><td>12</td><td class=\"hit\">A</td><td class=\"hit\">B</td><td class=\"hit\">C</td><td class=\"hit\">D</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td></tr><tr><td>14</td><td class=\"hit\">B</td><td class=\"hit\">C</td><td class=\"hit\">D</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td></tr><tr><td>16</td><td class=\"hit\">C</td><td class=\"hit\">D</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td></tr><tr><td>18</td><td class=\"hit\">D</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td><td class=\"na\">–</td></tr></tbody></table></div><p class=\"chart-note\" id=\"chart-note\">Swipe sideways on mobile to see all cup sizes.</p></div>\n        <div class=\"details\"><article class=\"detail\"><h3>Prefer more coverage?</h3><p>When two sizes may work, choose the larger option for more coverage and the smaller option for a lighter look.</p></article><article class=\"detail\"><h3>Not sure of your bra size?</h3><p>Use our measuring guide first, then return here to choose the matching product size.</p></article></div>\n      </div>\n    </div>\n  </section>\n\n</div>\n<script>\n(function(){\n  'use strict';\n  const root=document.querySelector('.sofneu-adhesive-guide-page');\n  if(!root)return;\n\n  let currentProduct='insert';\n  let currentRegion='au';\n  const copy={insert:['Bra Inserts','Find your Sofneu insert size','Use the bra size you already wear. We’ll translate it into the closest Sofneu insert size.'],cleavage:['Cleavage Sticky Bra','Find your Cleavage Sticky Bra size','Select your usual band and cup size, then choose whether you prefer less or more coverage.'],fabric:['Fabric Sticky Bra','Find your Fabric Sticky Bra size','Choose the adhesive style first, then select your usual band and cup size.'],nipple:['Nipple Covers','Choose your preferred coverage','Use your cup size as a starting point, then choose 8, 10 or 13 cm based on the coverage you prefer.']};\n  const data={\n    insert:{bands:['6','8','10','12','14','16','18'],rows:[['A','A','A','A','B','C','D'],['A','A','A','B','C','D','–'],['A','A','B','C','D','–','–'],['A','B','C','D','–','–','–'],['B','C','D','–','–','–','–'],['C','D','–','–','–','–','–'],['D','–','–','–','–','–','–']]},\n    cleavage:{bands:['6','8','10','12','14','16','18','20','22'],rows:[['A–B','A–B','A–B','C–D','C–D','C–D','C–D'],['A–B','A–B','A–B','A–B','A–B','C–D','C–D'],['A–B','A–B','A–B','C–D','C–D','DD+','DD+'],['A–B','C–D','C–D','DD+','DD+','DD+','DD+'],['C–D','C–D / DD+','DD+','DD+','DD+','DD+','DD+'],['C–D / DD+','DD+','DD+','DD+','DD+','DD+','DD+'],['DD+','DD+','DD+','DD+','DD+','DD+','DD+'],['DD+','DD+','DD+','DD+','DD+','DD+','DD+'],['DD+','DD+','DD+','DD+','DD+','DD+','DD+']]},\n    fabric:{bands:['6','8','10','12','14','16','18','20','22'],rows:[['A','A','A','A','B','B','C'],['A','A','A','B','B','C','C'],['A','A','B','B','C','C','D'],['A','B','B','C','C','D','D'],['B','B','C','C','D','D','E'],['B','C','C','D','D','E','E'],['C','C','D','D','E','E','E*'],['C','D','D','E','E','E*','E*'],['D','D','E','E','E*','E*','E*']]}\n  };\n  const regionLabels={\n    au:{cups:['A','B','C','D','E','F','G'],insert:['6','8','10','12','14','16','18'],full:['6','8','10','12','14','16','18','20','22']},\n    us:{cups:['A','B','C','D','DD/E','DDD/F','G'],insert:['28','30','32','34','36','38','40'],full:['28','30','32','34','36','38','40','42','44']}\n  };\n  const nippleGuide=`<div class=\"nipple-guide\"><p class=\"nc-intro\">Find your best fit based on your cup size and preferred coverage.</p><div class=\"nc-cards\"><article class=\"nc-card\"><div class=\"nc-card-top\"><span class=\"nc-name\">Small</span><span class=\"nc-size\">8<small> cm</small></span></div><h3>Minimal Coverage</h3><p>Discreet coverage for a barely-there feel.</p><span class=\"nc-cup\">Best for AA–A cups</span></article><article class=\"nc-card\"><div class=\"nc-card-top\"><span class=\"nc-name\">Medium</span><span class=\"nc-size\">10<small> cm</small></span></div><h3>Balanced Coverage</h3><p>Versatile everyday coverage with a smooth, natural finish.</p><span class=\"nc-cup\">Best for B–DD cups</span></article><article class=\"nc-card\"><div class=\"nc-card-top\"><span class=\"nc-name\">Large</span><span class=\"nc-size\">13<small> cm</small></span></div><h3>Full Coverage</h3><p>More coverage for a smooth and secure feel.</p><span class=\"nc-cup\">Best for DDD+ cups</span></article></div><h3 class=\"nc-title\">Find Your Size</h3><p class=\"nc-copy\">More than one size can work depending on how much coverage you prefer.</p><div class=\"nc-table-wrap\"><table class=\"nc-table\"><thead><tr><th>AA</th><th>A</th><th>B</th><th>C</th><th>D</th><th>DD</th><th>DDD</th><th>G+</th></tr></thead><tbody><tr><td class=\"nc-8\">8 cm</td><td class=\"nc-8\">8 cm</td><td class=\"nc-8\">8 cm</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><td>–</td><td class=\"nc-10\">10 cm</td><td class=\"nc-10\">10 cm</td><td class=\"nc-10\">10 cm</td><td class=\"nc-10\">10 cm</td><td class=\"nc-10\">10 cm</td><td class=\"nc-10\">10 cm</td><td>–</td></tr><tr><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td class=\"nc-13\">13 cm</td><td class=\"nc-13\">13 cm</td><td class=\"nc-13\">13 cm</td></tr></tbody></table></div><div class=\"nc-info\"><article><h3>How to choose your size</h3><ol><li>Start with your usual bra cup size using the chart above.</li><li>Choose the smaller option for lighter, more minimal coverage.</li><li>Choose the larger option for more coverage and a smoother edge under clothing.</li></ol></article><article><h3>Between sizes?</h3><p>We recommend sizing up if you prefer more coverage. A larger cover may also help create a smoother, less visible edge under fitted clothing.</p></article></div></div>`;\n\n  function controls(product){\n    const labels=regionLabels[currentRegion];\n    const bands=product==='insert'?labels.insert:labels.full;\n    const defaultBand=Math.min(3,bands.length-1);\n    return '<div class=\"picker-label\">Band size</div><div class=\"choice-grid band-grid\">'+bands.map((x,i)=>'<button type=\"button\" class=\"choice'+(i===defaultBand?' active':'')+'\">'+x+'</button>').join('')+'</div><div class=\"picker-label\">Cup size</div><div class=\"choice-grid cup-grid\">'+labels.cups.map((x,i)=>'<button type=\"button\" class=\"choice'+(i===2?' active':'')+'\">'+x+'</button>').join('')+'</div>';\n  }\n  function table(product){\n    if(product==='nipple')return nippleGuide;\n    const d=data[product],labels=regionLabels[currentRegion];\n    const bands=product==='insert'?labels.insert:labels.full;\n    return '<table class=\"size-table\"><thead><tr><th>Band</th>'+labels.cups.map(x=>'<th>'+x+'</th>').join('')+'</tr></thead><tbody>'+d.rows.map((row,i)=>'<tr><td>'+bands[i]+'</td>'+row.map(x=>'<td class=\"'+(x==='–'?'na':'hit')+'\">'+x+'</td>').join('')+'</tr>').join('')+'</tbody></table>';\n  }\n  function updateResult(){\n    if(currentProduct==='nipple')return;\n    const grids=root.querySelectorAll('#product-controls .choice-grid');\n    if(grids.length<2)return;\n    const bandIndex=[...grids[0].querySelectorAll('.choice')].findIndex(x=>x.classList.contains('active'));\n    const cupIndex=[...grids[1].querySelectorAll('.choice')].findIndex(x=>x.classList.contains('active'));\n    const band=grids[0].querySelector('.choice.active')?.textContent.trim();\n    const cup=grids[1].querySelector('.choice.active')?.textContent.trim();\n    const size=data[currentProduct].rows[bandIndex]?.[cupIndex]||'–';\n    const fields=root.querySelectorAll('.fields strong');\n    if(fields[0])fields[0].textContent=(currentRegion==='us'?'US ':'AU ')+band+cup;\n    if(fields[1])fields[1].textContent=size==='–'?'Not available':'Size '+size;\n    root.querySelector('.result').innerHTML=size==='–'?'<strong>No recommended size available</strong><br><small>Please check another size or product style.</small>':'<strong>Recommended: Size '+size+'</strong><br><small>The best starting fit based on your selected bra size.</small>';\n  }\n  function show(product,scroll=true){\n    currentProduct=product;\n    const x=copy[product],tool=root.querySelector('.tool');\n    tool.classList.toggle('is-nipple',product==='nipple');\n    root.querySelector('.tool-summary .eyebrow').textContent=x[0];\n    root.querySelector('#tool-title').textContent=x[1];\n    root.querySelector('#tool-intro').textContent=x[2];\n    root.querySelector('#chart-title').textContent=x[0]+' Size Chart';\n    root.querySelector('#chart').innerHTML=table(product);\n    root.querySelector('#product-controls').innerHTML=controls(product);\n    root.querySelector('.fields').style.display='grid';\n    root.querySelector('#chart-note').textContent='Swipe sideways on mobile to see all cup sizes.';\n    updateResult();\n    if(scroll)root.querySelector('.workspace').scrollIntoView({behavior:'smooth',block:'start',inline:'nearest'});\n  }\n  root.querySelectorAll('.product-card').forEach(card=>card.addEventListener('click',()=>{\n    root.querySelectorAll('.product-card').forEach(c=>{c.classList.remove('is-active');c.setAttribute('aria-selected','false')});\n    card.classList.add('is-active');card.setAttribute('aria-selected','true');show(card.dataset.product);\n  }));\n  root.addEventListener('click',function(event){\n    const button=event.target.closest('.choice,.control-row .segment button');\n    if(!button||!root.contains(button))return;\n    const group=button.parentElement;\n    group.querySelectorAll('button').forEach(item=>{item.classList.remove('active');if(item.hasAttribute('aria-pressed'))item.setAttribute('aria-pressed','false')});\n    button.classList.add('active');\n    if(button.hasAttribute('aria-pressed'))button.setAttribute('aria-pressed','true');\n    if(button.dataset.region){\n      currentRegion=button.dataset.region;\n      if(currentProduct!=='nipple'){\n        root.querySelector('#product-controls').innerHTML=controls(currentProduct);\n        root.querySelector('#chart').innerHTML=table(currentProduct);\n      }\n    }\n    updateResult();\n  });\n  show('insert',false);\n})();\n</script>"
+      }
+    },
+    "faq_tabs_BkRwHh": {
+      "type": "faq-tabs",
+      "blocks": {
+        "faq_VPXj9a": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Should I choose the same size as my regular bra?",
+            "answer": "<p>Start with the band and cup size of your best-fitting everyday bra, then use the Sofneu size chart to find the corresponding Sticky Bra size. Do not select by cup letter alone, as the volume of a cup changes with the band size.</p>",
+            "default_open": true
+          }
+        },
+        "faq_aBTKGG": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Why are some Sticky Bra sizes shown as A–B, C–D or DD+?",
+            "answer": "<p>Sticky Bras do not have a traditional underband, so several regular bra sizes may fit the same adhesive cup. The combined labels represent groups of bra sizes with similar coverage needs rather than exact traditional bra cup sizes.</p>",
+            "default_open": false
+          }
+        },
+        "faq_MXxTbD": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "What should I do if I am between two Sticky Bra sizes?",
+            "answer": "<p>Choose the smaller option for a closer, more minimal fit. Choose the larger option if you prefer more coverage or if your breast tissue reaches beyond the sides or top of the cup. Your breast shape and preferred placement can also affect which size feels best.</p>",
+            "default_open": false
+          }
+        },
+        "faq_EttYUR": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Why do the cup labels change when I switch between AU/NZ and US sizing?",
+            "answer": "<p>AU/NZ and US bra systems use different band numbers and cup naming conventions. For example, a US combined label such as DD/E may correspond to a different label in AU/NZ sizing. Switching the region changes the familiar bra-size labels used to locate your Sofneu size—it does not change the physical product.</p>",
+            "default_open": false
+          }
+        },
+        "faq_hp9yWH": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "How can I tell if my Sticky Bra is too small or too large?",
+            "answer": "<p>It may be too small if breast tissue spills over the top or sides, the centre cannot sit correctly, or the cups do not provide enough coverage. It may be too large if the edges extend too far around the breast, wrinkle, or cannot lie smoothly against the skin. When only one breast differs in size, fit the larger side first and adjust the placement on the smaller side.</p>",
+            "default_open": false
+          }
+        },
+        "faq_pxbGHd": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Should I choose Nipple Covers by cup size or diameter?",
+            "answer": "<p>Use your usual bra cup size as a starting point, then choose the diameter according to how much coverage you prefer. Cup size provides guidance, while the 8 cm, 10 cm and 13 cm options describe the actual coverage area.</p>",
+            "default_open": false
+          }
+        },
+        "faq_eJkM7D": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Which diameter should I choose?",
+            "answer": "<p>As a general starting point:</p><ul><li>8 cm provides minimal, discreet coverage.</li><li>10 cm provides balanced everyday coverage.</li><li>13 cm provides fuller coverage and a wider, smoother edge.</li></ul><p>More than one diameter may work for the same cup size depending on your breast shape and outfit.</p><h3></h3>",
+            "default_open": false
+          }
+        },
+        "faq_9gVBAg": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "What should I choose if two diameters are recommended for my cup size?",
+            "answer": "<p>Choose the smaller diameter for a lighter, more minimal look. Choose the larger diameter for more coverage and a smoother transition under fitted clothing. CAKES similarly recommends sizing up when additional coverage and less visible edges are preferred.</p>",
+            "default_open": false
+          }
+        },
+        "faq_d3aXLE": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Does a larger Nipple Cover provide more lift?",
+            "answer": "<p>Not necessarily. A larger diameter provides more surface coverage, but Nipple Covers are primarily designed for coverage and smoothing rather than structured lift. If lift or cleavage is your main goal, a Sticky Bra or another support product may be more suitable.</p>",
+            "default_open": false
+          }
+        },
+        "faq_mEkDC6": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Will the edge of the Nipple Cover show under clothing?",
+            "answer": "<p>The correct size should extend beyond the nipple and areola and lie smoothly against the breast. If the edge is visible, try a larger diameter, reposition the cover, and smooth it outward from the centre. Very thin or tightly fitted fabrics may still reveal some outline depending on the garment and lighting.</p>",
+            "default_open": false
+          }
+        },
+        "faq_ikbDDt": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Should I choose Bra Inserts based on my current bra size or the size I want to look?",
+            "answer": "<p>Choose the insert using your current, best-fitting bra size and the Sofneu size chart. The chart determines which insert fits inside your existing cup. The size you would like to appear is not the starting size for selecting the insert.</p>",
+            "default_open": false
+          }
+        },
+        "faq_jL6pYb": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Does my band size matter when choosing Bra Inserts?",
+            "answer": "<p>Yes. Cup letters do not represent the same volume across every band size, so both your band and cup size should be used. For example, a C cup on one band size may require a different Sofneu insert from a C cup on another band size.</p>",
+            "default_open": false
+          }
+        },
+        "faq_fYCnxQ": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "What should I do if the chart places me between two insert sizes?",
+            "answer": "<p>Choose the smaller insert for subtle shaping and less added volume. Choose the larger insert for more coverage and a fuller effect, provided your bra cup has enough room. The insert should sit smoothly without pushing breast tissue over the cup edge.</p>",
+            "default_open": false
+          }
+        },
+        "faq_Qa8FP6": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Can I use one Bra Insert to balance uneven breasts?",
+            "answer": "<p>Yes. Fit your bra to the larger breast, then place an insert on the smaller side to improve balance. Start with the Sofneu insert size recommended for your bra size; the final result may depend on the amount of asymmetry and the available space inside the cup. This reflects a recurring question in bra-fitting communities about sizing for the smaller side.</p>",
+            "default_open": false
+          }
+        },
+        "faq_dyzKek": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Do I need to wear a larger bra cup when using inserts?",
+            "answer": "<p>Not always. Begin with a well-fitting bra that has enough cup depth to accommodate the insert. If the insert causes spilling, compresses the breast, or pushes the cup away from the body, try a thinner insert or a bra with a larger cup while keeping the band size consistent. Users frequently ask whether they should keep the band and increase the cup when adding inserts; available space inside the bra is the deciding factor.</p>",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_VPXj9a",
+        "faq_aBTKGG",
+        "faq_MXxTbD",
+        "faq_EttYUR",
+        "faq_hp9yWH",
+        "faq_pxbGHd",
+        "faq_eJkM7D",
+        "faq_9gVBAg",
+        "faq_d3aXLE",
+        "faq_mEkDC6",
+        "faq_ikbDDt",
+        "faq_jL6pYb",
+        "faq_fYCnxQ",
+        "faq_Qa8FP6",
+        "faq_dyzKek"
+      ],
+      "name": "FAQ Tabs",
+      "settings": {
+        "heading": "GENERAL FAQS",
+        "heading_size_mobile": 16,
+        "heading_size_desktop": 18,
+        "heading_letter_spacing": -2,
+        "heading_weight": "400",
+        "heading_color": "#2b2b2b",
+        "heading_alignment": "center",
+        "heading_spacing": 30,
+        "show_tabs": true,
+        "default_tab": "tab_1",
+        "tab_1_label": "Sticky Bra",
+        "tab_2_label": "Nipple Cover",
+        "tab_3_label": "Bra Insert",
+        "tab_4_label": "",
+        "tab_size_mobile": 14,
+        "tab_size_desktop": 14,
+        "tab_letter_spacing": -2,
+        "tabs_spacing": 16,
+        "tab_gap": 8,
+        "tab_height": 34,
+        "tab_padding_x": 14,
+        "tab_radius": 12,
+        "tab_background": "#f8f8f8",
+        "tab_color": "#2b2b2b",
+        "tab_border_color": "#f8f8f8",
+        "tab_border_thickness": 1,
+        "active_tab_background": "#b7644e",
+        "active_tab_color": "#ffffff",
+        "active_tab_border_color": "#b7644e",
+        "section_background": "#ffffff",
+        "max_width": 800,
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
+        "item_gap": 15,
+        "item_radius": 12,
+        "closed_item_height": 42,
+        "closed_background": "#f8f8f8",
+        "closed_border_color": "#f8f8f8",
+        "closed_border_thickness": 1,
+        "open_background": "#faeee5",
+        "open_border_color": "#e8beb0",
+        "item_padding_x": 10,
+        "item_padding_y": 10,
+        "title_icon_gap": 12,
+        "question_icon_gap": 6,
+        "show_question_icon": true,
+        "question_icon_text": "?",
+        "question_icon_size": 16,
+        "question_icon_text_size": 11,
+        "question_icon_background": "#d8b6ad",
+        "question_icon_color": "#6e4136",
+        "question_size_mobile": 14,
+        "question_size_desktop": 14,
+        "question_letter_spacing": -2,
+        "question_weight": "400",
+        "question_color": "#2b2b2b",
+        "chevron_color": "#2b2b2b",
+        "chevron_size": 12,
+        "answer_size_mobile": 12,
+        "answer_size_desktop": 12,
+        "answer_letter_spacing": -2,
+        "answer_line_height": 140,
+        "answer_color": "#6f6f6f",
+        "answer_padding_x": 10,
+        "answer_padding_bottom": 10,
+        "allow_multiple_open": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_nwqHUg",
+    "custom_liquid_DkjynW",
+    "faq_tabs_BkRwHh"
+  ]
+}

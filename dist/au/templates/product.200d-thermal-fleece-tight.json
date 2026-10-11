@@ -132,7 +132,7 @@
           "settings": {
             "heading": "Product Grade",
             "show_info_icon": true,
-            "info_page": "",
+            "info_page": "understanding-product-grade",
             "desktop_columns": "4",
             "show_item_1": true,
             "title_1": "Warmth",
@@ -305,33 +305,33 @@
         "allow_multiple_open": false
       }
     },
-    "features_banner_QEfy66": {
+    "features_banner_cBDrDt": {
       "type": "features-banner",
       "blocks": {
-        "image_7bWDzt": {
+        "image_zfwLkc": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "desktop_image": "shopify://shop_images/free-shipping.png",
             "select_icon": "bag",
             "heading": "Free Delivery on A$59",
             "text": "",
             "link": ""
           }
         },
-        "image_4mwEP3": {
+        "image_tjLXam": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "desktop_image": "shopify://shop_images/30-days_warranty.png",
             "select_icon": "user",
             "heading": "30-Day Free Returns",
             "text": "",
             "link": ""
           }
         },
-        "image_dhWXgi": {
+        "image_yHrdUc": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "desktop_image": "shopify://shop_images/snag-techlogy.png",
             "select_icon": "search",
             "heading": "Anti-Snag Warranty",
             "text": "",
@@ -340,9 +340,9 @@
         }
       },
       "block_order": [
-        "image_7bWDzt",
-        "image_4mwEP3",
-        "image_dhWXgi"
+        "image_zfwLkc",
+        "image_tjLXam",
+        "image_yHrdUc"
       ],
       "settings": {
         "advanced_heading": false,
@@ -813,7 +813,7 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "features_banner_QEfy66",
+    "features_banner_cBDrDt",
     "background_video_QUHbQz",
     "pair_comparison_G6kwLG",
     "text_overlay_9AbVzy",

@@ -44,21 +44,6 @@
             "size_text_mobile": 140
           }
         },
-        "product_variations_7LBAAU": {
-          "type": "product_variations",
-          "settings": {
-            "option_name": "Color",
-            "picker_type": "swatch",
-            "swatch_size": 36,
-            "radius": "default",
-            "border_radius": 0,
-            "option_value_metafield": "custom.tab",
-            "products": [
-              "eros-no-2-20d-tight-beige",
-              "eros-no-2-20d-tight-black"
-            ]
-          }
-        },
         "variant_picker_7mHC3V": {
           "type": "variant_picker",
           "settings": {
@@ -71,7 +56,7 @@
             "radius": "default",
             "border_radius": 15,
             "dropdown_swatch_names": "",
-            "margin-top": 0,
+            "margin-top": 8,
             "margin-bottom": 8,
             "size_icon": "check_mark",
             "size_link": "",
@@ -82,26 +67,6 @@
             "enable_skin_popup": false,
             "skin_variant_name": "Color",
             "skin_button_label": "Match your skin"
-          }
-        },
-        "information_popup_pw9mqt": {
-          "type": "information_popup",
-          "disabled": true,
-          "settings": {
-            "size_icon": "ruler",
-            "size_link": "Size Chart",
-            "size_content": "eross-story",
-            "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "separator_xgqTJM": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 4
           }
         },
         "buy_buttons": {
@@ -122,10 +87,7 @@
       "block_order": [
         "title",
         "price",
-        "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
-        "information_popup_pw9mqt",
-        "separator_xgqTJM",
         "buy_buttons"
       ],
       "settings": {
@@ -183,8 +145,8 @@
             "icon_gap_mobile": 20,
             "icon_gap_desktop": 40,
             "icon_text_spacing": 12,
-            "text_size_mobile": 12,
-            "text_size_desktop": 14,
+            "text_size_mobile": 14,
+            "text_size_desktop": 16,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
             "benefit_1_icon": "shopify://shop_images/Replaceable_Adhesive_Pads.svg",

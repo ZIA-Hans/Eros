@@ -19,7 +19,7 @@
     "color-body-text-light": "#2b2b2b",
     "color-links": "#3c2f2f",
     "color-links-active": "#2b2b2b",
-    "color-border": "#2b2b2b",
+    "color-border": "#E8E5DF",
     "color-action-text": "#ffffff",
     "color-action-background": "#fc7e7e",
     "color-header-text": "#2B2B2B",
@@ -78,7 +78,7 @@
     "cart_type": "drawer",
     "show_view_cart": false,
     "cart_show_savings": false,
-    "cart_show_payment_badge": true,
+    "cart_show_payment_badge": false,
     "cart_features_enable_icons": false,
     "cart_show_order_note": false,
     "cart_features_enable_estimate_shipping": false,
@@ -122,7 +122,7 @@
     "discount_bar_milestone_2_threshold": "4",
     "discount_bar_milestone_3_enabled": true,
     "discount_bar_milestone_3_threshold": "4",
-    "discount_bar_milestone_3_label": "A$30 off",
+    "discount_bar_milestone_3_label": "Total A$30 off",
     "discount_bar_milestone_3_message": "Add ||amount|| more item to unlock ||label||!",
     "discount_bar_milestone_3_icon_type": "price_tag",
     "discount_bar_all_achieved_label": "All savings unlocked!",
@@ -138,7 +138,7 @@
     "enable_color_swatch": true,
     "enable_color_swatch_in_filters": false,
     "enable_round_color_swatches": true,
-    "swatches_config": "Midnight Black:#252424\nCocoa Brown:#9B735E\nNatural Nude:#E5CFA9\nLight Nude:#EDEAE0\nIvory White:#EFEFE8\nSlate Blue:#252B36\nSheer Black:#252424#E5CFA9",
+    "swatches_config": "Midnight Black:#252424\nCocoa Brown:#9B735E\nNatural Nude:#E5CFA9\nLight Nude:#EDEAE0\nIvory White:#EFEFE8\nSlate Blue:#252B36\nSheer Black:#252424#E5CFA9\nHoney:#E8C5AE\nCaramel:#B57A5A\nCocoa:#6B4438\nBlack Gold:black-gold-swatch.webp\nBlack Silver:black-silver-swatch.webp\nGrey Silver:grey-silver-swatch.webp\nNude Gold:nude-gold-swatch.webp",
     "enable_product_variations": false,
     "badges-uppercase": "none",
     "custom-badge-1-text": "#151515",
@@ -150,20 +150,35 @@
     "ucp_enable_return_policy": false,
     "content_for_index": [],
     "blocks": {
-      "7570552984445421165": {
-        "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+      "13305437469741356523": {
+        "type": "shopify://apps/gsc-instagram-feed/blocks/embed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "14868561720390754469": {
+        "type": "shopify://apps/cwill-loyalty/blocks/boom-cend/930ac91f-2bf2-4655-9ba0-574771f782d6",
         "disabled": false,
         "settings": {}
       },
       "14339172867238703359": {
         "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_tab/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "product": "eros-no-1-10d-tight-black"
         }
       },
-      "13305437469741356523": {
-        "type": "shopify://apps/gsc-instagram-feed/blocks/embed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+      "7570552984445421165": {
+        "type": "shopify://apps/yotpo-product-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": true,
+        "settings": {}
+      },
+      "1143683040400472741": {
+        "type": "shopify://apps/cwilltrustoo-reviews/blocks/trustoo-review-switch/c8f15077-6475-4e86-ad06-b66038d5ba2c",
         "disabled": false,
         "settings": {}
       }

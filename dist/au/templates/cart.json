@@ -88,7 +88,7 @@
         "product_r4W8HG": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "no1-10d-control-top-sheer-tights"
           }
         },
         "product_Y6eKTy": {
@@ -132,7 +132,6 @@
         "image_Gd8Xht": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
             "select_icon": "bag",
             "heading": "Free Express Shipping Over $59",
             "text": "",
@@ -142,7 +141,6 @@
         "image_JAjHMQ": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
             "select_icon": "user",
             "heading": "30-Day Money-Back Guarantee",
             "text": "",
@@ -152,7 +150,6 @@
         "image_yRLHHp": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
             "select_icon": "search",
             "heading": "Safe & Secure Checkout",
             "text": "",

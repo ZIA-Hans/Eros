@@ -1,0 +1,103 @@
+/* SOFNEU PAJAMA SIZE GUIDE — shared mobile-first styles */
+.sofneu-pajama-guide,.sofneu-pajama-guide *,.sofneu-pajama-popup,.sofneu-pajama-popup *{box-sizing:border-box}
+.sofneu-pajama-guide,.sofneu-pajama-popup{--sg-ink:#2f2b28;--sg-muted:#7e756e;--sg-line:#e9e1da;--sg-accent:#8b7355;--sg-dark:#5c4a3a;--sg-soft:#f6f1ec;color:var(--sg-ink);font-family:inherit;line-height:1.5}
+.sofneu-pajama-guide button,.sofneu-pajama-popup button{font:inherit}
+.sofneu-pajama-guide button:focus-visible,.sofneu-pajama-guide input:focus-visible,.sofneu-pajama-guide summary:focus-visible,.sofneu-pajama-popup button:focus-visible,.sofneu-pajama-popup a:focus-visible{outline:3px solid rgba(139,115,85,.35);outline-offset:2px}
+.sofneu-pajama-guide .sg-segment,.sofneu-pajama-popup .sg-segment{display:flex;overflow:hidden;border:1px solid #dcd2ca;border-radius:8px;background:#fff}
+.sofneu-pajama-guide .sg-segment button,.sofneu-pajama-popup .sg-segment button{flex:1;border:0;border-right:1px solid #dcd2ca;background:#fff;color:#6f6862;font-weight:700;cursor:pointer}
+.sofneu-pajama-guide .sg-segment button:last-child,.sofneu-pajama-popup .sg-segment button:last-child{border-right:0}
+.sofneu-pajama-guide .sg-segment button.is-active,.sofneu-pajama-popup .sg-segment button.is-active{background:var(--sg-accent);color:#fff}
+
+/* Full page */
+.sofneu-pajama-guide{width:100%;max-width:960px;margin:auto}
+.sofneu-pajama-guide .sg-section{padding:20px 14px;border-bottom:1px solid var(--sg-line)}
+.sofneu-pajama-guide h2{margin:0 0 14px;color:var(--sg-dark);font-size:14px;letter-spacing:.07em;text-transform:uppercase}
+.sofneu-pajama-guide .sg-controls{display:grid;gap:10px;margin-bottom:18px}
+.sofneu-pajama-guide .sg-control{display:grid;grid-template-columns:58px 1fr;gap:9px;align-items:center}
+.sofneu-pajama-guide .sg-control>span{color:var(--sg-muted);font-size:10px;font-weight:700;text-transform:uppercase}
+.sofneu-pajama-guide .sg-segment button{min-height:44px;font-size:12px}
+.sofneu-pajama-guide .sg-calculator{padding:14px 10px;border-radius:12px;background:var(--sg-soft)}
+.sofneu-pajama-guide .sg-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.sofneu-pajama-guide .sg-fields.sg-optional{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:10px}
+.sofneu-pajama-guide label{display:block;min-width:0;font-size:10px;font-weight:700}
+.sofneu-pajama-guide input{width:100%;min-height:46px;margin-top:5px;padding:10px;border:1px solid #d8ccc2;border-radius:7px;background:#fff;color:var(--sg-ink);font-size:16px}
+.sofneu-pajama-guide .sg-note{margin:13px 0 0;color:var(--sg-muted);font-size:12px}
+.sofneu-pajama-guide .sg-calculate{width:100%;min-height:48px;margin-top:16px;border:0;border-radius:7px;background:var(--sg-accent);color:#fff;font-weight:800;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
+.sofneu-pajama-guide .sg-error{margin:12px 0 0;color:#9f3232;font-size:12px;font-weight:700}
+.sofneu-pajama-guide .sg-result{margin-top:16px;padding:18px;border:1px solid #e4d7ca;border-radius:10px;background:#fff;text-align:center}
+.sofneu-pajama-guide .sg-result-title{color:var(--sg-muted);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.sofneu-pajama-guide .sg-result-size{color:var(--sg-accent);font-size:40px;font-weight:800}
+.sofneu-pajama-guide .sg-result-code{font-size:13px;font-weight:700}
+.sofneu-pajama-guide .sg-result-detail{max-width:600px;margin:8px auto 0;color:var(--sg-muted);font-size:12px}
+.sofneu-pajama-guide .sg-table-wrap,.sofneu-pajama-popup .sg-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
+.sofneu-pajama-guide table{width:520px;min-width:520px;border:0!important;border-collapse:collapse;table-layout:fixed;font-size:10px;box-shadow:none!important}
+.sofneu-pajama-guide th,.sofneu-pajama-guide td{padding:8px 4px;border:0!important;border-bottom:1px solid var(--sg-line)!important;outline:0!important;box-shadow:none!important;text-align:center;white-space:nowrap}
+.sofneu-pajama-guide thead th{background:var(--sg-accent);color:#fff}
+.sofneu-pajama-guide th:first-child{position:sticky;left:0;z-index:2;width:82px;background:#fff;text-align:left}
+.sofneu-pajama-guide .sg-garment-table{width:620px;min-width:620px}
+.sofneu-pajama-guide .sg-garment-table th:first-child{width:145px}
+.sofneu-pajama-guide thead th:first-child{background:var(--sg-accent)}
+.sofneu-pajama-guide .sg-body-table thead th:first-child .sg-first-header{display:none}
+.sofneu-pajama-guide th small{display:block;font-size:7px;font-weight:500;opacity:.85}
+.sofneu-pajama-guide .sg-primary-row{background:var(--sg-soft)}
+.sofneu-pajama-guide .sg-table-wrap:after{content:'Swipe to view all sizes \2192';display:block;margin-top:7px;color:var(--sg-muted);font-size:10px;text-align:right}
+.sofneu-pajama-guide .sg-measure-content{display:grid;grid-template-columns:1fr;gap:16px;align-items:center}
+.sofneu-pajama-guide .sg-body-measure-image{display:block;width:auto;max-width:210px;height:auto;margin:0 auto}
+.sofneu-pajama-guide .sg-measure-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.sofneu-pajama-guide .sg-measure-card{padding:16px;border-radius:10px;background:var(--sg-soft)}
+.sofneu-pajama-guide .sg-measure-card strong{display:block;color:var(--sg-dark);font-size:12px;text-transform:uppercase}
+.sofneu-pajama-guide .sg-measure-card p{margin:5px 0 0;color:var(--sg-muted);font-size:12px}
+.sofneu-pajama-guide .sg-garment-measure-image{display:block;width:100%;max-width:680px;height:auto;margin:0 auto 14px}
+.sofneu-pajama-guide .sg-fit-notes{display:grid;gap:10px}
+.sofneu-pajama-guide .sg-fit-note{padding:14px;border-left:3px solid var(--sg-accent);background:var(--sg-soft)}
+.sofneu-pajama-guide .sg-fit-note strong{display:block;color:var(--sg-dark);font-size:12px}
+.sofneu-pajama-guide .sg-fit-note p{margin:5px 0 0;color:var(--sg-muted);font-size:12px}
+
+/* Popup: compact, three cards per row and no garment table */
+.sofneu-pajama-popup{width:100%}
+.sofneu-pajama-popup .sg-section{padding:17px 0;border-bottom:1px solid var(--sg-line)}
+.sofneu-pajama-popup .sg-section:first-child{padding-top:2px}.sofneu-pajama-popup .sg-section:last-child{border:0}
+.sofneu-pajama-popup h3{margin:0 0 10px;color:var(--sg-dark);font-size:11px;letter-spacing:.09em;text-transform:uppercase}
+.sofneu-pajama-popup .sg-control{display:grid;grid-template-columns:55px 1fr;gap:8px;align-items:center;margin-bottom:8px}
+.sofneu-pajama-popup .sg-control>span{color:var(--sg-muted);font-size:9px;font-weight:800;text-transform:uppercase}
+.sofneu-pajama-popup .sg-segment button{min-height:38px;font-size:11px}
+.sofneu-pajama-popup .sg-quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.sofneu-pajama-popup .sg-quick-card{display:grid;gap:2px;padding:8px 3px;border:1px solid var(--sg-line);border-radius:8px;text-align:center}
+.sofneu-pajama-popup .sg-quick-card strong{color:var(--sg-dark);font-size:15px}.sofneu-pajama-popup .sg-quick-card small{color:var(--sg-accent);font-size:8px;font-weight:800}.sofneu-pajama-popup .sg-quick-card span{color:var(--sg-muted);font-size:8px}
+.sofneu-pajama-popup .sg-note{margin:10px 0 0;padding:10px;border-left:3px solid var(--sg-accent);background:var(--sg-soft);color:var(--sg-muted);font-size:10px}
+.sofneu-pajama-popup table{width:500px;min-width:500px;border:0!important;border-collapse:collapse;table-layout:fixed;font-size:9.5px;box-shadow:none!important}
+.sofneu-pajama-popup th,.sofneu-pajama-popup td{padding:8px 3px;border:0!important;border-bottom:1px solid var(--sg-line)!important;outline:0!important;box-shadow:none!important;text-align:center;white-space:nowrap}
+.sofneu-pajama-popup thead th{background:var(--sg-accent);color:#fff}
+.sofneu-pajama-popup th:first-child{position:sticky;left:0;z-index:2;width:76px;background:#fff;text-align:left}
+.sofneu-pajama-popup thead th:first-child{background:var(--sg-accent)}
+.sofneu-pajama-popup .sg-body-table thead th:first-child .sg-first-header{display:none}
+.sofneu-pajama-popup th small{display:block;font-size:7px;font-weight:500}.sofneu-pajama-popup .sg-primary-row{background:var(--sg-soft)}
+.sofneu-pajama-popup .sg-full-desc{margin:0 0 10px;color:var(--sg-muted);font-size:9.5px;line-height:1.5;text-align:center}
+.sofneu-pajama-popup .sg-full-link{display:flex;align-items:center;justify-content:center;min-height:45px;border-radius:7px;background:var(--sg-accent);color:#fff!important;font-size:11px;font-weight:800;text-decoration:none!important;text-transform:uppercase}
+
+@media(min-width:641px){
+  .sofneu-pajama-guide .sg-section{padding:24px 20px}
+  .sofneu-pajama-guide h2{font-size:17px}
+  .sofneu-pajama-guide .sg-calculator{padding:18px}
+  .sofneu-pajama-guide .sg-fields{grid-template-columns:repeat(3,1fr)}
+  .sofneu-pajama-guide .sg-fields.sg-optional{grid-template-columns:repeat(2,1fr)}
+  .sofneu-pajama-guide label{font-size:11px}
+  .sofneu-pajama-guide table{width:100%;min-width:720px;font-size:12px}
+  .sofneu-pajama-guide th,.sofneu-pajama-guide td{padding:11px}
+  .sofneu-pajama-guide th:first-child{width:130px}
+  .sofneu-pajama-guide .sg-garment-table{width:100%;min-width:720px}
+  .sofneu-pajama-guide .sg-garment-table th:first-child{width:180px}
+  .sofneu-pajama-guide .sg-body-table thead th:first-child .sg-first-header{display:inline}
+  .sofneu-pajama-guide th small{font-size:9px}
+  .sofneu-pajama-guide .sg-table-wrap:after{display:none}
+  .sofneu-pajama-guide .sg-measure-content{grid-template-columns:260px 1fr;gap:24px}
+  .sofneu-pajama-guide .sg-body-measure-image{max-width:240px}
+  .sofneu-pajama-guide .sg-measure-grid{grid-template-columns:repeat(2,1fr)}
+  .sofneu-pajama-popup .sg-quick-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .sofneu-pajama-popup .sg-quick-card{padding:12px 4px}
+  .sofneu-pajama-popup .sg-quick-card strong{font-size:17px}
+  .sofneu-pajama-popup .sg-quick-card small,.sofneu-pajama-popup .sg-quick-card span{font-size:9px}
+  .sofneu-pajama-popup table{width:100%;min-width:700px}
+  .sofneu-pajama-popup th:first-child{width:110px}
+}
+@media(prefers-reduced-motion:reduce){.sofneu-pajama-guide *,.sofneu-pajama-popup *{scroll-behavior:auto!important}}

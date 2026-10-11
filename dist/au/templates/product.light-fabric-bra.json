@@ -47,15 +47,15 @@
         "product_variations_7LBAAU": {
           "type": "product_variations",
           "settings": {
-            "option_name": "Color",
-            "picker_type": "swatch",
+            "option_name": "",
+            "picker_type": "button",
             "swatch_size": 36,
             "radius": "default",
             "border_radius": 0,
             "option_value_metafield": "custom.tab",
             "products": [
-              "eros-no-2-20d-tight-beige",
-              "eros-no-2-20d-tight-black"
+              "ultra-light-breathable-fabric-sticky-bra",
+              "ultra-light-fabric-sticky-bra"
             ]
           }
         },
@@ -71,37 +71,17 @@
             "radius": "default",
             "border_radius": 15,
             "dropdown_swatch_names": "",
-            "margin-top": 0,
+            "margin-top": 8,
             "margin-bottom": 8,
-            "size_icon": "check_mark",
-            "size_link": "size guide",
-            "variant_name": "size",
+            "size_icon": "ruler",
+            "size_link": "Size Guide",
+            "variant_name": "Size",
             "size_content": "fabric-sticky-bra-size-guide",
             "metafield": "",
             "enable-striped-rows": true,
             "enable_skin_popup": false,
             "skin_variant_name": "Color",
             "skin_button_label": "Match your skin"
-          }
-        },
-        "information_popup_pw9mqt": {
-          "type": "information_popup",
-          "disabled": true,
-          "settings": {
-            "size_icon": "ruler",
-            "size_link": "Size Chart",
-            "size_content": "eross-story",
-            "metafield": "",
-            "enable-striped-rows": true
-          }
-        },
-        "separator_xgqTJM": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 4
           }
         },
         "buy_buttons": {
@@ -124,8 +104,6 @@
         "price",
         "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
-        "information_popup_pw9mqt",
-        "separator_xgqTJM",
         "buy_buttons"
       ],
       "settings": {
@@ -183,8 +161,8 @@
             "icon_gap_mobile": 20,
             "icon_gap_desktop": 40,
             "icon_text_spacing": 12,
-            "text_size_mobile": 12,
-            "text_size_desktop": 14,
+            "text_size_mobile": 14,
+            "text_size_desktop": 16,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
             "benefit_1_icon": "shopify://shop_images/Feather_of_Velvet.svg",
@@ -220,9 +198,9 @@
           "type": "item",
           "settings": {
             "show_item": true,
-            "title": "62% Polyamide, 38% Elastane",
+            "title": "89% Polyamide, 11% Elastane",
             "default_open": false,
-            "content": "<p>The perfect balance of sheer coverage and everyday durability. Crafted with 38% elastane for adaptive stretch and a secure, second-skin fit.</p>",
+            "content": "<p>Ultra-light fabric sticky bra with enhanced adhesive strength for a secure, barely-there fit. Invisible, comfortable and reusable for confident wear.</p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -248,7 +226,7 @@
             "show_item": true,
             "title": "Fast & Reliable Delivery",
             "default_open": false,
-            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard </p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over $59.99.</p><p><em><strong>Click here to visit our Shipping Policy.</strong></em></p>",
+            "content": "<p>We offer reliable delivery across Australia and New Zealand.Standard&nbsp;</p><p>Delivery: 2–5 business days</p><p>Express Delivery: 1–4 business days</p><p>Free standard delivery is available on orders over $59.99.</p><p><a href=\"/pages/shipping-policy\" title=\"Shipping Policy\"><em><strong>Click here to visit our Shipping Policy.</strong></em></a></p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -311,160 +289,62 @@
         "allow_multiple_open": false
       }
     },
-    "rich_text_wpnHRD": {
-      "type": "rich-text",
+    "grid_view_4fniWr": {
+      "type": "grid-view",
       "blocks": {
-        "heading_3JyNKt": {
-          "type": "heading",
+        "image_GT3Frn": {
+          "type": "image",
           "settings": {
-            "advanced_heading": false,
-            "heading": "Breathable by Design",
-            "heading_richtext": "<h2>Your headline here</h2>",
-            "disable_on_mobile": false,
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "",
+            "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "heading_richtext_color": "",
-            "heading_richtext_gradient": ""
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-19.webp",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
           }
         }
       },
       "block_order": [
-        "heading_3JyNKt"
+        "image_GT3Frn"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
-        "section_width": "regular",
-        "desktop_text_horizontal_position": "center",
+        "advanced_heading": false,
+        "title": "Breathable by Design",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": false,
         "full-width-enabled": false,
-        "color-body-text": "rgba(0,0,0,0)",
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
+        "spacing_mobile": "16",
+        "color-body-text": "",
         "background_color": "",
-        "background_gradient": "",
         "margin-top": 20,
         "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 10,
-        "compact_size": true
-      }
-    },
-    "text_overlay_9AbVzy": {
-      "type": "text-overlay",
-      "blocks": {
-        "heading_HTXxfm": {
-          "type": "heading",
-          "settings": {
-            "show_block": true,
-            "heading": "<p>Light & Breathable</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 16,
-            "desktop_size": 36,
-            "animation": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_HTXxfm"
-      ],
-      "name": "Text Overlay",
-      "settings": {
-        "image_size_mode": "auto",
-        "mobile_image_height": 420,
-        "desktop_image_height": 800,
-        "image_fit": "contain",
-        "image_radius": 12,
-        "width_style": "contained",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "image_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 40,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
-        "mobile_overlay_safe_padding": 16,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 420,
-        "desktop_content_max_width": 800,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 14,
-        "primary_button_background": "#2b2b2b",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#2b2b2b",
-        "text_link_color": "#2b2b2b",
-        "section_background": "#ffffff",
-        "side_padding_mobile": 14,
-        "side_padding_desktop": 20,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
-      }
-    },
-    "text_overlay_pPWpUC": {
-      "type": "text-overlay",
-      "blocks": {
-        "heading_nBtyTT": {
-          "type": "heading",
-          "settings": {
-            "show_block": true,
-            "heading": "<p>Thoughtful Design</p>",
-            "color": "#2b2b2b",
-            "desktop_color": "#2b2b2b",
-            "mobile_size": 16,
-            "desktop_size": 36,
-            "animation": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_nBtyTT"
-      ],
-      "name": "Text Overlay",
-      "settings": {
-        "image_size_mode": "auto",
-        "mobile_image_height": 420,
-        "desktop_image_height": 800,
-        "image_fit": "contain",
-        "image_radius": 12,
-        "width_style": "contained",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1280,
-        "desktop_layout": "content_left",
-        "desktop_image_width": "50",
-        "desktop_gap": 40,
-        "mobile_content_gap": 16,
-        "mobile_content_layout": "overlay",
-        "mobile_overlay_x": 50,
-        "mobile_overlay_y": 50,
-        "mobile_overlay_safe_padding": 16,
-        "content_alignment": "center",
-        "content_text_align": "center",
-        "content_gap": 12,
-        "mobile_content_max_width": 420,
-        "desktop_content_max_width": 800,
-        "icon_text_gap": 10,
-        "button_height": 42,
-        "button_padding_x": 20,
-        "button_radius": 0,
-        "button_text_size": 14,
-        "primary_button_background": "#2b2b2b",
-        "primary_button_color": "#ffffff",
-        "outline_button_color": "#2b2b2b",
-        "text_link_color": "#2b2b2b",
-        "section_background": "#ffffff",
-        "side_padding_mobile": 14,
-        "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40
+        "margin-bottom-mobile": 10
       }
     },
     "grid_view_wCynBd": {
@@ -481,7 +361,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Skin-Friendly Adhesive",
+            "heading": "<strong>Skin-Friendly Adhesive</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -497,6 +377,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-30.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -512,7 +393,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Washable & Reusable",
+            "heading": "<strong>Washable & Reusable</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -528,6 +409,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-31.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -549,10 +431,10 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 20,
+        "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
     },
@@ -570,7 +452,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Breathable Design",
+            "heading": "<strong>Breathable Design</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -586,6 +468,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-32.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -601,7 +484,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "Ultra-Thin Edge",
+            "heading": "<strong>Ultra-Thin Edge</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -617,6 +500,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-33.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -638,11 +522,11 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 0
+        "margin-bottom-mobile": 10
       }
     },
     "grid_view_cCPAKE": {
@@ -675,6 +559,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-25.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -686,64 +571,20 @@
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Invisible Comfort",
+        "title": "Lift & Shape",
         "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "full-width-enabled": false,
         "image_ratio": "adapt",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 0
-      }
-    },
-    "pair_comparison_XqiQLD": {
-      "type": "pair-comparison",
-      "name": "Pair Comparison",
-      "settings": {
-        "image_ratio": "1 / 1",
-        "image_fit": "cover",
-        "image_radius": 12,
-        "brand_1": "Without",
-        "title_1": "",
-        "description_1": "",
-        "brand_2": "With",
-        "title_2": "",
-        "description_2": "",
-        "width_style": "full",
-        "mobile_max_width": 420,
-        "desktop_max_width": 1240,
-        "gap_mobile": 12,
-        "gap_desktop": 24,
-        "text_padding_mobile": 10,
-        "text_padding_desktop": 18,
-        "title_description_gap": 4,
-        "brand_color": "#693227",
-        "brand_size_mobile": 15,
-        "brand_size_desktop": 22,
-        "brand_letter_spacing": -2,
-        "brand_text_transform": "none",
-        "title_color": "#2b2b2b",
-        "title_size_mobile": 16,
-        "title_size_desktop": 26,
-        "title_weight": "700",
-        "title_letter_spacing": -2,
-        "description_color": "#6f6f6f",
-        "description_size_mobile": 9,
-        "description_size_desktop": 14,
-        "description_letter_spacing": -2,
-        "section_background": "#ffffff",
-        "side_padding_mobile": 20,
-        "side_padding_desktop": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 20,
-        "padding_bottom_desktop": 40
+        "margin-bottom-mobile": 10
       }
     }
   },
@@ -752,12 +593,9 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "rich_text_wpnHRD",
-    "text_overlay_9AbVzy",
-    "text_overlay_pPWpUC",
+    "grid_view_4fniWr",
     "grid_view_wCynBd",
     "grid_view_nKwkMT",
-    "grid_view_cCPAKE",
-    "pair_comparison_XqiQLD"
+    "grid_view_cCPAKE"
   ]
 }

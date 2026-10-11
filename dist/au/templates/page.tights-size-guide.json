@@ -1,0 +1,324 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "custom_liquid_PHQiDE": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Sofneu Size Guide heading\n  Paste the entire file into a Shopify Custom liquid block.\n{% endcomment %}\n\n<style>\n  .sofneu-size-guide-heading,\n  .sofneu-size-guide-heading * {\n    box-sizing: border-box;\n  }\n\n  .sofneu-size-guide-heading {\n    --sgh-ink: #2f2b28;\n    --sgh-accent: #a45f49;\n    position: relative;\n    display: grid;\n    grid-template-columns: 52px minmax(0, 1fr) 52px;\n    align-items: center;\n    width: 100%;\n    max-width: 1100px;\n    min-height: 140px;\n    margin: 0 auto;\n    padding: 18px 20px;\n    overflow: hidden;\n    background: #fff;\n  }\n\n  .sofneu-size-guide-heading .sgh-title-wrap {\n    position: relative;\n    display: grid;\n    min-width: 0;\n    min-height: 92px;\n    place-items: center;\n  }\n\n  .sofneu-size-guide-heading .sgh-watermark {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    width: min(370px, 75%);\n    max-height: 96px;\n    object-fit: contain;\n    opacity: .055;\n    transform: translate(-50%, -50%);\n    pointer-events: none;\n    user-select: none;\n  }\n\n  .sofneu-size-guide-heading h1 {\n    position: relative;\n    z-index: 1;\n    margin: 0;\n    color: var(--sgh-ink);\n    font-family: inherit;\n    font-size: clamp(28px, 3vw, 34px);\n    font-weight: 600;\n    letter-spacing: -.02em;\n    line-height: 1.15;\n    text-align: center;\n  }\n\n  .sofneu-size-guide-heading .sgh-quote {\n    color: var(--sgh-accent);\n    font-family: Georgia, 'Times New Roman', serif;\n    font-size: 66px;\n    font-weight: 700;\n    line-height: .8;\n  }\n\n  .sofneu-size-guide-heading .sgh-quote:first-child {\n    align-self: start;\n    padding-top: 24px;\n    text-align: left;\n  }\n\n  .sofneu-size-guide-heading .sgh-quote:last-child {\n    align-self: end;\n    padding-bottom: 17px;\n    text-align: right;\n  }\n\n  @media (max-width: 749px) {\n    .sofneu-size-guide-heading {\n      grid-template-columns: 35px minmax(0, 1fr) 35px;\n      min-height: 104px;\n      padding: 10px 14px;\n    }\n\n    .sofneu-size-guide-heading .sgh-title-wrap {\n      min-height: 78px;\n    }\n\n    .sofneu-size-guide-heading .sgh-watermark {\n      width: min(245px, 88%);\n      max-height: 72px;\n      opacity: .055;\n    }\n\n    .sofneu-size-guide-heading h1 {\n      font-size: 23px;\n    }\n\n    .sofneu-size-guide-heading .sgh-quote {\n      font-size: 47px;\n    }\n\n    .sofneu-size-guide-heading .sgh-quote:first-child {\n      padding-top: 18px;\n    }\n\n    .sofneu-size-guide-heading .sgh-quote:last-child {\n      padding-bottom: 13px;\n    }\n  }\n</style>\n\n<section class=\"sofneu-size-guide-heading\" aria-labelledby=\"sofneu-size-guide-title\">\n  <span class=\"sgh-quote\" aria-hidden=\"true\">“</span>\n\n  <div class=\"sgh-title-wrap\">\n    <img\n      class=\"sgh-watermark\"\n      src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/icon_trans.png?v=1787647953\"\n      alt=\"\"\n      width=\"600\"\n      height=\"220\"\n      loading=\"eager\"\n      aria-hidden=\"true\"\n    >\n    <h1 id=\"sofneu-size-guide-title\">Size Guide</h1>\n  </div>\n\n  <span class=\"sgh-quote\" aria-hidden=\"true\">”</span>\n</section>"
+      }
+    },
+    "separator_ARVBMY": {
+      "type": "separator",
+      "name": "t:sections.separator.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Tights Full Size Guide",
+        "heading_richtext": "<h2>Separator</h2>",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "show-separator-line": false,
+        "full-width-line": false,
+        "color-background": "#000000",
+        "color-body-text": "",
+        "color-section-background": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "custom_liquid_gzEaDg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Sofneu single-size tights chart — standalone Custom Liquid.\n  Paste this entire file into one Shopify Custom liquid block.\n{% endcomment %}\n\n<style>\n  .sofneu-tights-single,.sofneu-tights-single *{box-sizing:border-box}\n  .sofneu-tights-single{--ts-ink:#2f2b28;--ts-muted:#7e756e;--ts-line:#e9e1da;--ts-accent:#8b7355;--ts-soft:#f6f1ec;width:100%;max-width:1100px;margin:0 auto;padding-right:10px;padding-left:10px;color:var(--ts-ink);font-family:inherit;line-height:1.45}\n  .sofneu-tights-single .ts-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:12px}\n  .sofneu-tights-single .ts-intro{max-width:500px;margin:0;color:var(--ts-muted);font-size:12px}\n  .sofneu-tights-single .ts-controls{display:flex;align-items:center;gap:14px;flex-shrink:0}\n  .sofneu-tights-single .ts-control-row{display:flex;align-items:center;gap:6px}\n  .sofneu-tights-single .ts-control-row>span{color:var(--ts-muted);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}\n  .sofneu-tights-single .ts-toggle{display:flex;width:156px;overflow:hidden;border:1px solid #dcd2ca;border-radius:7px;background:#fff}\n  .sofneu-tights-single .ts-toggle button{flex:1;min-height:32px;padding:5px 9px;border:0;border-right:1px solid #dcd2ca;background:#fff;color:#6f6862;font:inherit;font-size:10px;font-weight:700;cursor:pointer;touch-action:manipulation}\n  .sofneu-tights-single .ts-toggle button:last-child{border-right:0}\n  .sofneu-tights-single .ts-toggle button.is-active{background:var(--ts-accent);color:#fff}\n  .sofneu-tights-single button:focus-visible{outline:3px solid rgba(139,115,85,.35);outline-offset:2px}\n  .sofneu-tights-single .ts-scroll{overflow-x:auto;border-top:1px solid var(--ts-line);-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}\n  .sofneu-tights-single table{width:100%;min-width:900px;margin:0;border:0!important;border-collapse:collapse;table-layout:fixed;box-shadow:none!important;font-size:12px}\n  .sofneu-tights-single th,.sofneu-tights-single td{padding:11px 7px;border:0!important;border-bottom:1px solid var(--ts-line)!important;outline:0!important;box-shadow:none!important;text-align:center;white-space:nowrap}\n  .sofneu-tights-single thead th{background:var(--ts-accent);color:#fff;font-weight:700}\n  .sofneu-tights-single thead th:first-child{width:108px}\n  .sofneu-tights-single tbody th{position:sticky;left:0;z-index:2;background:#fff;color:#5c4a3a;text-align:left}\n  .sofneu-tights-single tbody tr:nth-child(-n+4) td{background:rgba(246,241,236,.72)}\n  .sofneu-tights-single th small{display:block;margin-top:2px;font-size:9px;font-weight:500;opacity:.82}\n  .sofneu-tights-single tbody th small{margin-top:0;color:var(--ts-muted);font-size:8px}\n  .sofneu-tights-single .ts-region-name,.sofneu-tights-single .ts-region-code{display:inline}\n  .sofneu-tights-single .ts-region-name::after{content:' '}\n  .sofneu-tights-single .ts-swipe{display:none;margin:7px 0 0;color:var(--ts-muted);font-size:10px;text-align:right}\n\n  @media(max-width:749px){\n    .sofneu-tights-single .ts-head{display:block;margin-bottom:10px}\n    .sofneu-tights-single .ts-intro{font-size:10px;line-height:1.4}\n    .sofneu-tights-single .ts-controls{display:grid;gap:5px;width:100%;margin-top:9px}\n    .sofneu-tights-single .ts-control-row{display:grid;grid-template-columns:42px 1fr;gap:5px;align-items:center}\n    .sofneu-tights-single .ts-toggle{width:100%}\n    .sofneu-tights-single .ts-toggle button{min-height:32px;padding:4px 8px;font-size:10px}\n    .sofneu-tights-single table{min-width:720px;font-size:9px}\n    .sofneu-tights-single th,.sofneu-tights-single td{padding:8px 4px}\n    .sofneu-tights-single thead th:first-child{width:76px}\n    .sofneu-tights-single thead th small{font-size:7px;line-height:1.15}\n    .sofneu-tights-single tbody th{font-size:9px;line-height:1.2}\n    .sofneu-tights-single tbody th small{font-size:7px}\n    .sofneu-tights-single .ts-region-name,.sofneu-tights-single .ts-region-code{display:block}\n    .sofneu-tights-single .ts-region-name::after{content:''}\n    .sofneu-tights-single .ts-swipe{display:block}\n  }\n</style>\n\n<section class=\"sofneu-tights-single\" data-region=\"au\" data-unit=\"metric\" aria-label=\"Sofneu single-size tights chart\">\n  <div class=\"ts-head\">\n    <p class=\"ts-intro\">Use your body measurements to choose your Sofneu size. Regional clothing sizes are approximate equivalents.</p>\n\n    <div class=\"ts-controls\">\n      <div class=\"ts-control-row\">\n        <span>Region</span>\n        <div class=\"ts-toggle\" aria-label=\"Choose region\">\n          <button type=\"button\" class=\"ts-region-button is-active\" data-region=\"au\" aria-pressed=\"true\">AU / NZ</button>\n          <button type=\"button\" class=\"ts-region-button\" data-region=\"us\" aria-pressed=\"false\">US</button>\n        </div>\n      </div>\n\n      <div class=\"ts-control-row\">\n        <span>Units</span>\n        <div class=\"ts-toggle\" aria-label=\"Choose measurement units\">\n          <button type=\"button\" class=\"ts-unit-button is-active\" data-unit=\"metric\" aria-pressed=\"true\">cm / kg</button>\n          <button type=\"button\" class=\"ts-unit-button\" data-unit=\"imperial\" aria-pressed=\"false\">in / lb</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"ts-scroll\" tabindex=\"0\" aria-label=\"Tights size chart. Swipe horizontally to view all sizes on mobile.\">\n    <table>\n      <thead></thead>\n      <tbody></tbody>\n    </table>\n  </div>\n\n  <p class=\"ts-swipe\" aria-hidden=\"true\">Swipe to view all sizes →</p>\n</section>\n\n<script>\n(function(){\n  'use strict';\n\n  var DATA=[\n    {size:'S',au:'4–8',us:'0–4',metric:['150–165','40–55','60–74','82–94','44–52','100–110'],imperial:['4′11″–5′5″','88–121','23.6–29.1','32.3–37.0','17.3–20.5','39.4–43.3']},\n    {size:'M',au:'8–12',us:'4–8',metric:['155–170','50–65','65–79','88–100','48–56','105–116'],imperial:['5′1″–5′7″','110–143','25.6–31.1','34.6–39.4','18.9–22.0','41.3–45.7']},\n    {size:'L',au:'12–16',us:'8–12',metric:['160–175','60–75','70–84','94–106','52–60','111–123'],imperial:['5′3″–5′9″','132–165','27.6–33.1','37.0–41.7','20.5–23.6','43.7–48.4']},\n    {size:'XL',au:'16–20',us:'12–16',metric:['165–180','70–85','76–90','100–112','56–64','117–128'],imperial:['5′5″–5′11″','154–187','29.9–35.4','39.4–44.1','22.0–25.2','46.1–50.4']},\n    {size:'2XL',au:'20–22',us:'16–18',metric:['168–183','80–98','82–97','106–118','60–69','123–134'],imperial:['5′6″–6′0″','176–216','32.3–38.2','41.7–46.5','23.6–27.2','48.4–52.8']},\n    {size:'3XL',au:'22–24',us:'18–20',metric:['168–185','92–113','90–106','114–129','65–75','123–134'],imperial:['5′6″–6′1″','203–249','35.4–41.7','44.9–50.8','25.6–29.5','48.4–52.8']},\n    {size:'4XL',au:'24–26',us:'20–22',metric:['168–185','105–128','100–116','124–139','70–80','123–134'],imperial:['5′6″–6′1″','231–282','39.4–45.7','48.8–54.7','27.6–31.5','48.4–52.8']},\n    {size:'5XL',au:'26–28',us:'22–24',metric:['168–185','120–143','110–126','134–149','76–86','123–134'],imperial:['5′6″–6′1″','265–315','43.3–49.6','52.8–58.7','29.9–33.9','48.4–52.8']},\n    {size:'6XL',au:'28–32',us:'24–28',metric:['168–185','135–158','120–136','144–161','82–92','123–134'],imperial:['5′6″–6′1″','298–348','47.2–53.5','56.7–63.4','32.3–36.2','48.4–52.8']}\n  ];\n  var ROWS=['Height','Weight','Waist','Hip','Thigh','Leg Length'];\n\n  function render(root){\n    var region=root.getAttribute('data-region')||'au';\n    var unit=root.getAttribute('data-unit')||'metric';\n    var regionLabel=region==='au'?'AU / NZ':'US';\n\n    root.querySelectorAll('.ts-region-button').forEach(function(button){\n      var active=button.getAttribute('data-region')===region;\n      button.classList.toggle('is-active',active);\n      button.setAttribute('aria-pressed',active?'true':'false');\n    });\n    root.querySelectorAll('.ts-unit-button').forEach(function(button){\n      var active=button.getAttribute('data-unit')===unit;\n      button.classList.toggle('is-active',active);\n      button.setAttribute('aria-pressed',active?'true':'false');\n    });\n\n    var rowUnits=unit==='metric'?['cm','kg','cm','cm','cm','cm']:['ft / in','lb','in','in','in','in'];\n\n    root.querySelector('thead').innerHTML='<tr><th>Measurement</th>'+DATA.map(function(item){\n      return '<th>'+item.size+'<small><span class=\"ts-region-name\">'+regionLabel+'</span><span class=\"ts-region-code\">'+item[region]+'</span></small></th>';\n    }).join('')+'</tr>';\n\n    root.querySelector('tbody').innerHTML=ROWS.map(function(row,rowIndex){\n      return '<tr><th>'+row+'<small>'+rowUnits[rowIndex]+'</small></th>'+DATA.map(function(item){\n        return '<td>'+item[unit][rowIndex]+'</td>';\n      }).join('')+'</tr>';\n    }).join('');\n  }\n\n  function init(root){\n    if(root.getAttribute('data-ts-ready')==='true')return;\n    root.setAttribute('data-ts-ready','true');\n    render(root);\n  }\n\n  document.querySelectorAll('.sofneu-tights-single').forEach(init);\n\n  if(window.__sofneuTightsSingleBound)return;\n  window.__sofneuTightsSingleBound=true;\n\n  document.addEventListener('click',function(event){\n    var button=event.target.closest('.sofneu-tights-single .ts-region-button,.sofneu-tights-single .ts-unit-button');\n    if(!button)return;\n    var root=button.closest('.sofneu-tights-single');\n    if(button.hasAttribute('data-region'))root.setAttribute('data-region',button.getAttribute('data-region'));\n    if(button.hasAttribute('data-unit'))root.setAttribute('data-unit',button.getAttribute('data-unit'));\n    render(root);\n  });\n\n  document.addEventListener('shopify:section:load',function(event){\n    event.target.querySelectorAll('.sofneu-tights-single').forEach(init);\n  });\n})();\n</script>"
+      }
+    },
+    "custom_liquid_zLBj8J": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Sofneu Tights — Fit Tips\n  Shopify: paste this complete block into a Custom liquid section.\n  Desktop: four cards in one row. Mobile: two columns by two rows.\n  No JavaScript required.\n{% endcomment %}\n\n<style>\n  .sofneu-fit-tips,\n  .sofneu-fit-tips * {\n    box-sizing: border-box;\n  }\n\n  .sofneu-fit-tips {\n    --sft-ink: #2b2b2b;\n    --sft-muted: #7e756e;\n    --sft-accent: #8b7355;\n    --sft-line: #e9e1da;\n    --sft-soft: #f6f1ec;\n    width: 100%;\n    max-width: 1100px;\n    margin: 0 auto;\n    padding: 24px 20px;\n    color: var(--sft-ink);\n    font-family: inherit;\n  }\n\n  .sofneu-fit-tips .sft-title {\n    margin: 0 0 18px;\n    color: var(--sft-ink);\n    text-align: center;\n  }\n\n  .sofneu-fit-tips .sft-grid {\n    display: grid;\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n    gap: 12px;\n  }\n\n  .sofneu-fit-tips .sft-card {\n    min-width: 0;\n    padding: 16px 14px;\n    border: 1px solid var(--sft-line);\n    border-radius: 10px;\n    background: var(--sft-soft);\n  }\n\n  .sofneu-fit-tips .sft-card-head {\n    display: flex;\n    align-items: flex-start;\n    gap: 9px;\n  }\n\n  .sofneu-fit-tips .sft-icon {\n    display: inline-flex;\n    flex: 0 0 24px;\n    align-items: center;\n    justify-content: center;\n    width: 24px;\n    height: 24px;\n    border-radius: 50%;\n    background: var(--sft-accent);\n    color: #fff;\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1;\n  }\n\n  .sofneu-fit-tips .sft-card h3 {\n    margin: 2px 0 0;\n    color: var(--sft-ink);\n    font: inherit;\n    font-weight: 700;\n    line-height: 1.3;\n  }\n\n  .sofneu-fit-tips .sft-card p {\n    margin: 9px 0 0;\n    color: var(--sft-muted);\n    font: inherit;\n    line-height: 1.5;\n  }\n\n  .sofneu-fit-tips .sft-note {\n    margin: 12px 0 0;\n    padding: 11px 13px;\n    border-left: 3px solid var(--sft-accent);\n    background: var(--sft-soft);\n    color: var(--sft-muted);\n    line-height: 1.5;\n  }\n\n  .sofneu-fit-tips .sft-note strong {\n    color: var(--sft-ink);\n  }\n\n  @media (max-width: 749px) {\n    .sofneu-fit-tips {\n      padding: 22px 14px;\n    }\n\n    .sofneu-fit-tips .sft-title {\n      margin-bottom: 13px;\n      font-size: 18px;\n    }\n\n    .sofneu-fit-tips .sft-grid {\n      grid-template-columns: repeat(2, minmax(0, 1fr));\n      gap: 8px;\n    }\n\n    .sofneu-fit-tips .sft-card {\n      padding: 12px 10px;\n      border-radius: 8px;\n    }\n\n    .sofneu-fit-tips .sft-card-head {\n      display: block;\n    }\n\n    .sofneu-fit-tips .sft-icon {\n      width: 22px;\n      height: 22px;\n      margin-bottom: 7px;\n      font-size: 12px;\n    }\n\n    .sofneu-fit-tips .sft-card h3 {\n      margin: 0;\n      font-size: 12px;\n    }\n\n    .sofneu-fit-tips .sft-card p {\n      margin-top: 6px;\n      font-size: 11px;\n      line-height: 1.4;\n    }\n\n    .sofneu-fit-tips .sft-note {\n      margin-top: 10px;\n      padding: 10px 11px;\n      font-size: 11px;\n    }\n  }\n</style>\n\n<section class=\"sofneu-fit-tips\" aria-labelledby=\"sofneu-fit-tips-title\">\n  <h2 id=\"sofneu-fit-tips-title\" class=\"sft-title h2\">Fit Tips</h2>\n\n  <div class=\"sft-grid\">\n    <article class=\"sft-card\">\n      <div class=\"sft-card-head\">\n        <span class=\"sft-icon\" aria-hidden=\"true\">↕</span>\n        <h3>Taller or longer legs</h3>\n      </div>\n      <p>If you are between sizes, choose the larger size for additional leg length and comfort.</p>\n    </article>\n\n    <article class=\"sft-card\">\n      <div class=\"sft-card-head\">\n        <span class=\"sft-icon\" aria-hidden=\"true\">↔</span>\n        <h3>Petite or shorter legs</h3>\n      </div>\n      <p>Use your waist and hip measurements first. Do not size down based on height alone.</p>\n    </article>\n\n    <article class=\"sft-card\">\n      <div class=\"sft-card-head\">\n        <span class=\"sft-icon\" aria-hidden=\"true\">＋</span>\n        <h3>Fuller hips or thighs</h3>\n      </div>\n      <p>Follow the largest relevant measurement. If it reaches the next range, choose the larger size.</p>\n    </article>\n\n    <article class=\"sft-card\">\n      <div class=\"sft-card-head\">\n        <span class=\"sft-icon\" aria-hidden=\"true\">✓</span>\n        <h3>Slim waist with longer legs</h3>\n      </div>\n      <p>Prioritise leg length while keeping your waist within the recommended size range.</p>\n    </article>\n  </div>\n\n  <p class=\"sft-note\"><strong>Measurements point to different sizes?</strong> Choose the larger size for more length and comfort.</p>\n</section>"
+      }
+    },
+    "separator_tAxE98": {
+      "type": "separator",
+      "name": "t:sections.separator.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Separator</h2>",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "show-separator-line": false,
+        "full-width-line": false,
+        "color-background": "#000000",
+        "color-body-text": "",
+        "color-section-background": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "custom_liquid_DkjynW": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}\n  Sofneu tights image guides\n  Responsive layout: desktop two columns; mobile stacked layout.\n{% endcomment %}\n\n<style>\n  .sofneu-tights-visuals,\n  .sofneu-tights-visuals * { box-sizing: border-box; }\n\n  .sofneu-tights-visuals {\n    --stv-ink: #342d28;\n    --stv-muted: #7d736b;\n    --stv-accent: #8b7355;\n    --stv-line: #eadfd6;\n    width: 100%;\n    max-width: 1100px;\n    margin: 0 auto;\n    padding-right: 20px;\n    padding-left: 20px;\n    color: var(--stv-ink);\n    font-family: inherit;\n  }\n\n  .sofneu-tights-visuals .stv-layout {\n    display: grid;\n    grid-template-columns: minmax(260px, 34%) minmax(0, 66%);\n    gap: 32px;\n    align-items: start;\n  }\n\n  .sofneu-tights-visuals .stv-section + .stv-section {\n    margin-top: 0;\n    padding: 0 0 0 32px;\n    border-top: 0;\n    border-left: 1px solid var(--stv-line);\n  }\n\n  .sofneu-tights-visuals .stv-title {\n    margin: 0 0 18px;\n    color: #2b2b2b;\n    text-align: center;\n  }\n\n  .sofneu-tights-visuals .stv-measure-image {\n    display: block;\n    width: auto;\n    max-width: 100%;\n    height: min(600px, 56vw);\n    margin: 0 auto;\n    object-fit: contain;\n  }\n\n  .sofneu-tights-visuals .stv-step-scroll {\n    overflow-x: auto;\n    padding: 2px 2px 10px;\n    scrollbar-width: thin;\n    scrollbar-color: #c8b9aa transparent;\n    -webkit-overflow-scrolling: touch;\n    overscroll-behavior-inline: contain;\n  }\n\n  .sofneu-tights-visuals .stv-steps {\n    display: grid;\n    grid-template-columns: repeat(6, minmax(0, 1fr));\n    gap: 10px;\n    min-width: 0;\n  }\n\n  .sofneu-tights-visuals .stv-step {\n    position: relative;\n    overflow: hidden;\n    min-width: 0;\n    border: 1px solid var(--stv-line);\n    border-radius: 12px;\n    background: #fff;\n    grid-column: span 2;\n  }\n\n  .sofneu-tights-visuals .stv-step:nth-child(4) { grid-column: 2 / span 2; }\n  .sofneu-tights-visuals .stv-step:nth-child(5) { grid-column: 4 / span 2; }\n\n  .sofneu-tights-visuals .stv-step img {\n    display: block;\n    width: 100%;\n    height: auto;\n    aspect-ratio: 4 / 5;\n    object-fit: contain;\n    background: #fff;\n  }\n\n  .sofneu-tights-visuals .stv-step-number {\n    position: absolute;\n    top: 8px;\n    left: 8px;\n    z-index: 1;\n    display: grid;\n    width: 27px;\n    height: 27px;\n    place-items: center;\n    border-radius: 50%;\n    background: var(--stv-accent);\n    color: #fff;\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1;\n  }\n\n  .sofneu-tights-visuals .stv-step-copy {\n    min-height: 58px;\n    margin: 0;\n    padding: 10px 9px 12px;\n    border-top: 1px solid var(--stv-line);\n    color: var(--stv-ink);\n    font-size: 12px;\n    line-height: 1.35;\n    text-align: center;\n  }\n\n  .sofneu-tights-visuals .stv-swipe {\n    display: none;\n    margin: 6px 0 0;\n    color: var(--stv-muted);\n    font-size: 11px;\n    text-align: right;\n  }\n\n  @media (max-width: 749px) {\n    .sofneu-tights-visuals {\n      padding-right: 14px;\n      padding-left: 14px;\n    }\n\n    .sofneu-tights-visuals .stv-layout { display: block; }\n\n    .sofneu-tights-visuals .stv-section + .stv-section {\n      margin-top: 28px;\n      padding-top: 26px;\n      padding-left: 0;\n      border-top: 1px solid var(--stv-line);\n      border-left: 0;\n    }\n\n    .sofneu-tights-visuals .stv-title {\n      margin-bottom: 13px;\nfont-size: 18px;\n    }\n\n    .sofneu-tights-visuals .stv-measure-image {\n      width: auto;\n      max-width: min(100%, 330px);\n      height: min(430px, 115vw);\n    }\n\n    .sofneu-tights-visuals .stv-step-scroll {\n      overflow: visible;\n      padding: 0;\n    }\n\n    .sofneu-tights-visuals .stv-steps {\n      display: grid;\n      grid-template-columns: repeat(6, minmax(0, 1fr));\n      gap: 8px;\n      min-width: 0;\n    }\n\n    .sofneu-tights-visuals .stv-step {\n      grid-column: span 2;\n      border-radius: 8px;\n    }\n\n    .sofneu-tights-visuals .stv-step-number {\n      top: 5px;\n      left: 5px;\n      width: 22px;\n      height: 22px;\n      font-size: 11px;\n    }\n\n    .sofneu-tights-visuals .stv-step-copy {\n      min-height: 56px;\n      padding: 7px 4px 8px;\n      font-size: 10px;\n      line-height: 1.25;\n    }\n\n    .sofneu-tights-visuals .stv-step:nth-child(4) {\n      grid-column: 2 / span 2;\n    }\n\n    .sofneu-tights-visuals .stv-step:nth-child(5) {\n      grid-column: 4 / span 2;\n    }\n\n    .sofneu-tights-visuals .stv-swipe {\n      display: none;\n    }\n  }\n</style>\n\n<section class=\"sofneu-tights-visuals\" aria-label=\"Tights measuring and dressing guides\">\n  <div class=\"stv-layout\">\n  <div class=\"stv-section\">\n    <h2 class=\"stv-title h2\">How To Measure</h2>\n    <img\n      class=\"stv-measure-image\"\n      src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/body_measure.png?v=1788830559E\"\n      alt=\"How to measure waist, hip, thigh and leg length for tights\"\n      loading=\"lazy\"\n      width=\"1200\"\n      height=\"900\"\n    >\n  </div>\n\n  <div class=\"stv-section\">\n    <h2 class=\"stv-title h2\">How To Put On Your Tights</h2>\n\n    <div class=\"stv-step-scroll\" tabindex=\"0\" aria-label=\"Five steps for putting on tights. Swipe horizontally on mobile.\">\n      <div class=\"stv-steps\">\n        <div class=\"stv-step\">\n          <span class=\"stv-step-number\" aria-hidden=\"true\">1</span>\n          <img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-tights-step-2.webp?v=1788830558\" alt=\"Step 1: Gather your tights and find the waistband\" loading=\"lazy\" width=\"800\" height=\"1000\">\n          <p class=\"stv-step-copy\">Gather your tights and find the waistband.</p>\n        </div>\n        <div class=\"stv-step\">\n          <span class=\"stv-step-number\" aria-hidden=\"true\">2</span>\n          <img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-tights-step-3.webp?v=1788830558\" alt=\"Step 2: Position your toes and heel\" loading=\"lazy\" width=\"800\" height=\"1000\">\n          <p class=\"stv-step-copy\">Position your toes and heel.</p>\n        </div>\n        <div class=\"stv-step\">\n          <span class=\"stv-step-number\" aria-hidden=\"true\">3</span>\n          <img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-tights-step-4.webp?v=1788830558\" alt=\"Step 3: Gently pull the tights up to your knees\" loading=\"lazy\" width=\"800\" height=\"1000\">\n          <p class=\"stv-step-copy\">Gently pull up to your knees.</p>\n        </div>\n        <div class=\"stv-step\">\n          <span class=\"stv-step-number\" aria-hidden=\"true\">4</span>\n          <img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-tights-step-5.webp?v=1788830558\" alt=\"Step 4: Adjust evenly and smooth the fabric\" loading=\"lazy\" width=\"800\" height=\"1000\">\n          <p class=\"stv-step-copy\">Adjust evenly and smooth the fabric.</p>\n        </div>\n        <div class=\"stv-step\">\n          <span class=\"stv-step-number\" aria-hidden=\"true\">5</span>\n          <img src=\"https://cdn.shopify.com/s/files/1/0639/7716/0843/files/sofneu-tights-step-1.webp?v=1788830558\" alt=\"Step 5: Check the tights for a comfortable even fit\" loading=\"lazy\" width=\"800\" height=\"1000\">\n          <p class=\"stv-step-copy\">Check for a comfortable fit.</p>\n        </div>\n      </div>\n    </div>\n\n    <p class=\"stv-swipe\" aria-hidden=\"true\">Swipe to see all steps →</p>\n  </div>\n  </div>\n</section>"
+      }
+    },
+    "separator_7iRLdq": {
+      "type": "separator",
+      "name": "t:sections.separator.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Separator</h2>",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "show-separator-line": false,
+        "full-width-line": false,
+        "color-background": "#000000",
+        "color-body-text": "",
+        "color-section-background": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "faq_tabs_trMwMV": {
+      "type": "faq-tabs",
+      "blocks": {
+        "faq_cj6qAa": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Why do Sofneu tights come in combined sizes?",
+            "answer": "<p>Sofneu tights are highly stretchable and designed to comfortably adapt to a range of body shapes. Combined sizing offers more flexibility, makes choosing a size easier and reduces the risk of selecting the wrong size.</p><p>If your measurements fall across two sizes, use your hip and waist measurements as the primary reference.</p>",
+            "default_open": false
+          }
+        },
+        "faq_H3jF4F": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "How do I choose my Sofneu tights size?",
+            "answer": "<p>Measure your natural waist, the fullest part of your hips and the fullest part of your upper thigh, then compare them with the size chart.</p><p>Waist and hip measurements are the most important. Height, weight and leg length should be used as additional references.</p>",
+            "default_open": true
+          }
+        },
+        "faq_zpiwNm": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "What should I do if I am between two sizes?",
+            "answer": "<p>If your measurements fall between two sizes, choose the larger size for more length and comfort.</p><p>If your waist and hips fit the smaller size and you prefer a closer, more supportive fit, you may choose the smaller size. If any key measurement exceeds the smaller size range, choose the larger size.</p>",
+            "default_open": false
+          }
+        },
+        "faq_ELJNcp": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Do different tights styles fit differently?",
+            "answer": "<p>Yes. Stretch, waistband construction, compression level and fabric thickness can affect how each style feels and fits.</p><p>Always check the size chart shown on the individual product page. If that product has a style-specific recommendation, follow it instead of relying only on your usual clothing size.</p>",
+            "default_open": false
+          }
+        },
+        "faq_BNrQVU": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Where should high-waisted and mid-rise tights sit?",
+            "answer": "<p>High-waisted tights are designed to sit at the natural waist, usually around or slightly above the belly button.</p><p>Mid-rise tights sit lower, generally below the belly button and above the hip bones. The exact position may vary slightly depending on torso length and body shape.</p>",
+            "default_open": false
+          }
+        },
+        "faq_h9QJJi": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Will the tights slip down or sag?",
+            "answer": "<p>Correctly sized tights should sit comfortably with the gusset positioned close to the body and should not require frequent pulling up.</p><p>Slipping or sagging may indicate that the size is too large, the tights have not been pulled up evenly, or insufficient fabric has been distributed along the legs. If the waistband feels tight while the crotch sits too low, you may need a larger size or more leg length.</p>",
+            "default_open": false
+          }
+        },
+        "faq_CYjKWp": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "How can I tell if my tights are too small?",
+            "answer": "<p>Your tights may be too small if:</p><ul><li>The waistband digs in or leaves strong pressure marks.</li><li>The fabric feels excessively stretched or difficult to pull on.</li><li>The crotch cannot be comfortably pulled into position.</li><li>The toes feel tight or the fabric is under excessive tension.</li><li>The tights become noticeably more sheer than intended.</li></ul>",
+            "default_open": false
+          }
+        },
+        "faq_KcJnYx": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "How can I tell if my tights are too large?",
+            "answer": "<p>Your tights may be too large if:</p><ul><li>They bunch around the ankles or knees.</li><li>The waistband slips down repeatedly.</li><li>The crotch sags during wear.</li><li>You need to pull the waistband unusually high to position the gusset correctly.</li><li>The fabric looks loose or uneven on the legs.</li></ul>",
+            "default_open": false
+          }
+        },
+        "faq_Bdc9QK": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "What size should I choose if I am tall, short, curvy or slim?",
+            "answer": "<p>If you are tall or have longer legs, choose the larger size when you are between sizes to allow more vertical stretch.</p><p>If you are shorter, do not automatically size down—use your waist and hip measurements first. If you have fuller hips, thighs or tummy, follow the largest relevant body measurement. If you are slim with longer legs, prioritise leg length without choosing a size that will be too loose at the waist.</p>",
+            "default_open": false
+          }
+        },
+        "faq_QpxXCK": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Should I use my usual clothing size to choose tights?",
+            "answer": "<p>Your usual AU/NZ or US clothing size is a helpful reference, but sizing can vary between brands.</p><p>For the most reliable fit, use your actual body measurements and treat regional clothing sizes as approximate equivalents. If your clothing size and measurements suggest different Sofneu sizes, follow your waist and hip measurements first.</p>",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_cj6qAa",
+        "faq_H3jF4F",
+        "faq_zpiwNm",
+        "faq_ELJNcp",
+        "faq_BNrQVU",
+        "faq_h9QJJi",
+        "faq_CYjKWp",
+        "faq_KcJnYx",
+        "faq_Bdc9QK",
+        "faq_QpxXCK"
+      ],
+      "name": "FAQ Tabs",
+      "settings": {
+        "heading": "SIZE  FAQ",
+        "heading_size_mobile": 16,
+        "heading_size_desktop": 18,
+        "heading_letter_spacing": 4,
+        "heading_weight": "400",
+        "heading_color": "#2B2B2B",
+        "heading_alignment": "center",
+        "heading_spacing": 30,
+        "show_tabs": false,
+        "default_tab": "tab_1",
+        "tab_1_label": "General",
+        "tab_2_label": "Product",
+        "tab_3_label": "Shipping",
+        "tab_4_label": "Returns",
+        "tab_size_mobile": 14,
+        "tab_size_desktop": 14,
+        "tab_letter_spacing": -2,
+        "tabs_spacing": 16,
+        "tab_gap": 8,
+        "tab_height": 34,
+        "tab_padding_x": 14,
+        "tab_radius": 12,
+        "tab_background": "#f8f8f8",
+        "tab_color": "#2b2b2b",
+        "tab_border_color": "#f8f8f8",
+        "tab_border_thickness": 1,
+        "active_tab_background": "#b7644e",
+        "active_tab_color": "#ffffff",
+        "active_tab_border_color": "#b7644e",
+        "section_background": "#ffffff",
+        "max_width": 800,
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
+        "item_gap": 10,
+        "item_radius": 12,
+        "closed_item_height": 42,
+        "closed_background": "#f8f8f8",
+        "closed_border_color": "#f8f8f8",
+        "closed_border_thickness": 1,
+        "open_background": "#faeee5",
+        "open_border_color": "#e8beb0",
+        "item_padding_x": 10,
+        "item_padding_y": 10,
+        "title_icon_gap": 12,
+        "question_icon_gap": 6,
+        "show_question_icon": true,
+        "question_icon_text": "?",
+        "question_icon_size": 16,
+        "question_icon_text_size": 11,
+        "question_icon_background": "#d8b6ad",
+        "question_icon_color": "#6e4136",
+        "question_size_mobile": 14,
+        "question_size_desktop": 14,
+        "question_letter_spacing": -2,
+        "question_weight": "400",
+        "question_color": "#2b2b2b",
+        "chevron_color": "#2b2b2b",
+        "chevron_size": 12,
+        "answer_size_mobile": 12,
+        "answer_size_desktop": 12,
+        "answer_letter_spacing": -2,
+        "answer_line_height": 140,
+        "answer_color": "#6f6f6f",
+        "answer_padding_x": 10,
+        "answer_padding_bottom": 10,
+        "allow_multiple_open": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_PHQiDE",
+    "separator_ARVBMY",
+    "custom_liquid_gzEaDg",
+    "custom_liquid_zLBj8J",
+    "separator_tAxE98",
+    "custom_liquid_DkjynW",
+    "separator_7iRLdq",
+    "faq_tabs_trMwMV"
+  ]
+}
