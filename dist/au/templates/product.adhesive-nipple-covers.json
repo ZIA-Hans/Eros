@@ -44,6 +44,21 @@
             "size_text_mobile": 140
           }
         },
+        "product_variations_7LBAAU": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "",
+            "picker_type": "button",
+            "swatch_size": 36,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "custom.tab",
+            "products": [
+              "adhesive-silicone-nipple-covers",
+              "grip-nipple-covers"
+            ]
+          }
+        },
         "variant_picker_7mHC3V": {
           "type": "variant_picker",
           "settings": {
@@ -61,7 +76,7 @@
             "size_icon": "ruler",
             "size_link": "Size Guide",
             "variant_name": "Size",
-            "size_content": "cleavage-sticky-bra-size-guide",
+            "size_content": "nipple-cover-size-guide",
             "metafield": "",
             "enable-striped-rows": true,
             "enable_skin_popup": false,
@@ -87,6 +102,7 @@
       "block_order": [
         "title",
         "price",
+        "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
         "buy_buttons"
       ],
@@ -145,23 +161,23 @@
             "icon_gap_mobile": 20,
             "icon_gap_desktop": 40,
             "icon_text_spacing": 12,
-            "text_size_mobile": 14,
-            "text_size_desktop": 16,
+            "text_size_mobile": 12,
+            "text_size_desktop": 14,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
-            "benefit_1_icon": "shopify://shop_images/Skin-Safe_Silicone.svg",
-            "benefit_1_icon_alt": "Skin-Safe Silicone icon",
-            "benefit_1_text": "Skin-Safe Silicone",
+            "benefit_1_icon": "shopify://shop_images/Non-Toxic_Silicone.svg",
+            "benefit_1_icon_alt": "Non-Toxic Silicone icon",
+            "benefit_1_text": "Non-Toxic Silicone",
             "benefit_1_link": "",
             "benefit_2_enabled": true,
-            "benefit_2_icon": "shopify://shop_images/Medical-Grade_Adhesive.svg",
-            "benefit_2_icon_alt": "Medical-Grade Adhesive icon",
-            "benefit_2_text": "Medical-Grade Adhesive",
+            "benefit_2_icon": "shopify://shop_images/Safe_for_Sensitive_Skin.svg",
+            "benefit_2_icon_alt": "Safe for Sensitive Skin icon",
+            "benefit_2_text": "Safe for Sensitive Skin",
             "benefit_2_link": "",
             "benefit_3_enabled": true,
-            "benefit_3_icon": "shopify://shop_images/Featherlight_Feel.svg",
-            "benefit_3_icon_alt": "Featherlight Feel icon",
-            "benefit_3_text": "Featherlight Feel",
+            "benefit_3_icon": "shopify://shop_images/Nipple-Covering_Design.svg",
+            "benefit_3_icon_alt": "Nipple-Covering Design icon",
+            "benefit_3_text": "Nipple-Covering Design",
             "benefit_3_link": ""
           },
           "blocks": {}
@@ -184,7 +200,7 @@
             "show_item": true,
             "title": "100% Silicone",
             "default_open": false,
-            "content": "<p>Create natural-looking lift and cleavage with a seamless silicone sticky bra. Soft, secure and reusable for backless, strapless and low-cut looks.</p>",
+            "content": "<p>Soft, flexible siliconeUltra-thin, skin-like feel</p>",
             "image_position": "top",
             "button_text": "",
             "button_link": "",
@@ -238,10 +254,10 @@
         "accordion_max_width": 800,
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 12,
-        "padding_top_desktop": 20,
-        "padding_bottom_desktop": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
         "accordion_background": "#f9f5f3",
         "accordion_radius": 0,
         "content_padding_mobile": 10,
@@ -273,10 +289,10 @@
         "allow_multiple_open": false
       }
     },
-    "grid_view_VJb37P": {
+    "grid_view_prfE6h": {
       "type": "grid-view",
       "blocks": {
-        "image_y3pcTR": {
+        "image_qzXkAA": {
           "type": "image",
           "settings": {
             "subheading": "",
@@ -287,7 +303,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "",
+            "heading": "<strong>Adhesive-Free Center</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -301,14 +317,14 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
+            "desktop_text_vertical_position": "top",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-1.webp",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center"
+            "mobile_image": "shopify://shop_images/adhesive-caramel-2.webp",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
           }
         },
-        "image_XbMEBR": {
+        "image_aEcFfN": {
           "type": "image",
           "settings": {
             "subheading": "",
@@ -319,7 +335,7 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "",
+            "heading": "<strong>2-Pair Value Set</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
@@ -333,22 +349,22 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
+            "desktop_text_vertical_position": "top",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-2.webp",
-            "mobile_text_vertical_position": "center",
-            "mobile_text_horizontal_position": "center"
+            "mobile_image": "shopify://shop_images/grippy-caramel-1.webp",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
           }
         }
       },
       "block_order": [
-        "image_y3pcTR",
-        "image_XbMEBR"
+        "image_qzXkAA",
+        "image_aEcFfN"
       ],
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Invisible Support, Endless Styling",
+        "title": "Gentle Protection, Better Value",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": false,
         "full-width-enabled": false,
@@ -357,10 +373,10 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
+        "margin-top": 40,
+        "margin-bottom": 40,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 10,
+        "margin-top-mobile": 20,
         "margin-bottom-mobile": 10
       }
     },
@@ -378,11 +394,11 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "<strong>Skin-Friendly Adhesive</strong>",
+            "heading": "<strong>Medical-Grade Adhesive</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Gentle on skin with reliable all-day hold.",
+            "text": "Gentle on skin with reliable hold",
             "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
@@ -392,9 +408,9 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/b-pd-1-44.webp",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-3.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -414,7 +430,7 @@
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Maintains adhesion for 30+ days with proper care.",
+            "text": "Maintains adhesion through repeated use",
             "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
@@ -426,7 +442,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-4.webp",
+            "mobile_image": "shopify://shop_images/b-pd-1-53.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -439,7 +455,7 @@
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Thoughtful Care, Lasting Comfort",
+        "title": "Advanced Skin-Friendly Adhesive",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": true,
         "full-width-enabled": false,
@@ -448,17 +464,17 @@
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
+        "margin-top": 40,
+        "margin-bottom": 40,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 10,
+        "margin-top-mobile": 20,
         "margin-bottom-mobile": 10
       }
     },
-    "grid_view_h8yryQ": {
+    "grid_view_nKwkMT": {
       "type": "grid-view",
       "blocks": {
-        "image_DmQQEq": {
+        "image_BrqAJn": {
           "type": "image",
           "settings": {
             "subheading": "",
@@ -469,11 +485,11 @@
             "letter_spacing": 1,
             "size_text_desktop": 100,
             "size_text_mobile": 100,
-            "heading": "<strong>Skin-Tone Matching</strong>",
+            "heading": "<strong>Skin-Tone Shades</strong>",
             "heading_disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Multiple shades designed to blend naturally with your skin.",
+            "text": "Multiple shades for a more natural match",
             "text_disable_on_mobile": false,
             "button_select": "primary",
             "button_label": "",
@@ -485,90 +501,126 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-5.webp",
+            "mobile_image": "shopify://shop_images/b-pd-1-54.webp",
+            "mobile_text_vertical_position": "top",
+            "mobile_text_horizontal_position": "left"
+          }
+        },
+        "image_WyXVAN": {
+          "type": "image",
+          "settings": {
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "<strong>Ultra-Thin Edges</strong>",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Seamless edges disappear under clothing",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/b-pd-1-55.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
         }
       },
       "block_order": [
-        "image_DmQQEq"
+        "image_BrqAJn",
+        "image_WyXVAN"
       ],
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
         "title": "Invisible by Design",
         "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "full-width-enabled": false,
         "image_ratio": "adapt",
         "spacing_desktop": "24",
         "spacing_mobile": "16",
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
+        "margin-top": 40,
+        "margin-bottom": 40,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
-        "margin-bottom-mobile": 10
+        "margin-bottom-mobile": 0
       }
     },
-    "grid_view_VX6CaD": {
-      "type": "grid-view",
+    "xt_product_pickup_yBTnYx": {
+      "type": "xt-product-pickup",
       "blocks": {
-        "image_H6CfCr": {
-          "type": "image",
+        "product_httbiH": {
+          "type": "product",
           "settings": {
-            "subheading": "",
-            "subheading_disable_on_mobile": false,
-            "subheading_advanced_settings": false,
-            "subheading_text_style": "subtitle",
-            "text_uppercase": false,
-            "letter_spacing": 1,
-            "size_text_desktop": 100,
-            "size_text_mobile": 100,
-            "heading": "",
-            "heading_disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "button_select": "primary",
-            "button_label": "",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "color-body-text": "",
-            "color-overlay": "",
-            "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
-            "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-8.webp",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "product": "tencel-modal-short-sleeve-pajama-set"
+          }
+        },
+        "product_BgMhAb": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_MaX6ji": {
+          "type": "product",
+          "settings": {
+            "product": "ultra-light-breathable-fabric-sticky-bra"
+          }
+        },
+        "product_xLgMP3": {
+          "type": "product",
+          "settings": {
+            "product": "push-up-bra-inserts"
           }
         }
       },
       "block_order": [
-        "image_H6CfCr"
+        "product_httbiH",
+        "product_BgMhAb",
+        "product_MaX6ji",
+        "product_xLgMP3"
       ],
-      "name": "t:sections.grid-view.settings.presets.name",
+      "name": "XT 商品选购区",
       "settings": {
-        "advanced_heading": false,
-        "title": "Lift & Shape",
-        "heading_richtext": "<h2>Grid view</h2>",
-        "swipe_on_mobile": false,
-        "full-width-enabled": false,
+        "title": "Complete Your Look",
+        "subtitle": "",
         "image_ratio": "adapt",
-        "spacing_desktop": "24",
-        "spacing_mobile": "16",
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": true,
-        "margin-top-mobile": 10,
-        "margin-bottom-mobile": 10
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "1790910517ac3d4b94": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_review_widget_8H79ae": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_review_widget_8H79ae"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -577,9 +629,10 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "grid_view_VJb37P",
+    "grid_view_prfE6h",
     "grid_view_wCynBd",
-    "grid_view_h8yryQ",
-    "grid_view_VX6CaD"
+    "grid_view_nKwkMT",
+    "xt_product_pickup_yBTnYx",
+    "1790910517ac3d4b94"
   ]
 }

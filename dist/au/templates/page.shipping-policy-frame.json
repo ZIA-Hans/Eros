@@ -191,7 +191,7 @@
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "NewZealand Delivery Information",
+            "heading": "New Zealand Delivery Information",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 100,
@@ -199,20 +199,10 @@
             "heading_richtext_color": "",
             "heading_richtext_gradient": ""
           }
-        },
-        "text_N6J7my": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Please find below the estimated shipping times from the table. </p>",
-            "text_style": "body",
-            "disable_on_mobile": false
-          }
         }
       },
       "block_order": [
-        "heading_dXnjWC",
-        "text_N6J7my"
+        "heading_dXnjWC"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {

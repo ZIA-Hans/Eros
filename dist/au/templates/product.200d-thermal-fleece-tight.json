@@ -35,6 +35,18 @@
             "size_text_mobile": 100
           }
         },
+        "cwilltrustoo_reviews_star_rating_widget_4imnMB": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "star_size": 20,
+            "font_size": 16,
+            "text_color": "#2b2b2b",
+            "block_aligment": "left",
+            "rating_decimal_places": "1",
+            "margin_top": 10,
+            "margin_bottom": 10
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -86,6 +98,7 @@
       },
       "block_order": [
         "title",
+        "cwilltrustoo_reviews_star_rating_widget_4imnMB",
         "price",
         "variant_picker_7mHC3V",
         "buy_buttons"
@@ -806,6 +819,67 @@
         "padding_top_desktop": 20,
         "padding_bottom_desktop": 20
       }
+    },
+    "xt_product_pickup_EEk6pw": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_bNfRzw": {
+          "type": "product",
+          "settings": {
+            "product": "80d-velvet-control-top-opaque-tights"
+          }
+        },
+        "product_rR9kLn": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-long-sleeve-pajama-set"
+          }
+        },
+        "product_BF3bxm": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_EhV8ey": {
+          "type": "product",
+          "settings": {
+            "product": "push-up-bra-inserts"
+          }
+        }
+      },
+      "block_order": [
+        "product_bNfRzw",
+        "product_rR9kLn",
+        "product_BF3bxm",
+        "product_EhV8ey"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "You May Also Like",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "1790782163bac88a98": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_review_widget_B8wqVw": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": "200d-fleece-lined-thermal-tights"
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_review_widget_B8wqVw"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -820,6 +894,8 @@
     "grid_view_wCynBd",
     "rich_text_XpJW9J",
     "text_overlay_qcmFHm",
-    "pair_comparison_htBBdW"
+    "pair_comparison_htBBdW",
+    "xt_product_pickup_EEk6pw",
+    "1790782163bac88a98"
   ]
 }

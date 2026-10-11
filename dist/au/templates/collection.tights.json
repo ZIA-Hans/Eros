@@ -136,7 +136,7 @@
         "subheading_Cr6n9r": {
           "type": "subheading",
           "settings": {
-            "subheading": "Tights for Everyday Moment",
+            "subheading": "Tights for Everyday Moments",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": true,
             "text_style": "subtitle",
@@ -158,14 +158,14 @@
         "heading_richtext": "<h2>Image banner</h2>",
         "full-width-enabled": true,
         "container_max_width": 0,
-        "slide_height": "adapt_to_first_image",
-        "desktop_fixed_height": 320,
-        "mobile_fixed_height": 460,
-        "desktop_image": "shopify://shop_images/collection_tight_banner_pc.png",
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 500,
+        "mobile_fixed_height": 440,
+        "desktop_image": "shopify://shop_images/homepage-tights-m.jpg",
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
-        "mobile_image": "shopify://shop_images/collection_tight_banner_m.png",
-        "mobile_text_vertical_position": "center",
+        "mobile_image": "shopify://shop_images/ChatGPT_2026_10_1_18_47_43.webp",
+        "mobile_text_vertical_position": "top",
         "mobile_text_horizontal_position": "center",
         "out_hero_mobile": false,
         "out-background-color": "",
@@ -173,14 +173,14 @@
         "color-heading": "",
         "section-color-overlay": "",
         "section-color-overlay-opacity": 0,
-        "color-body-text": "{{ settings.colors.background }}",
+        "color-body-text": "{{ settings.colors.primary }}",
         "text-container-color": "",
         "color-overlay-opacity": 100,
         "margin-top": 0,
         "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
-        "margin-bottom-mobile": 20,
+        "margin-bottom-mobile": 10,
         "lcp_optimize": true
       }
     },
@@ -194,6 +194,7 @@
             "image": "shopify://shop_images/10d-top.webp",
             "name": "Ultra Sheer (10D)",
             "temperature": "25–35°C",
+            "icon_style": "thermometer",
             "feeling": "Almost invisible",
             "link": ""
           }
@@ -205,6 +206,7 @@
             "image": "shopify://shop_images/20d-top.webp",
             "name": "Sheer (20D)",
             "temperature": "20–30°C",
+            "icon_style": "thermometer",
             "feeling": "Light sheer",
             "link": ""
           }
@@ -216,6 +218,7 @@
             "show_card": true,
             "name": "Semi-Opaque (40D)",
             "temperature": "15–25°C",
+            "icon_style": "thermometer",
             "feeling": "Light opaque",
             "link": ""
           }
@@ -227,6 +230,7 @@
             "image": "shopify://shop_images/80d-top.webp",
             "name": "Opaque (80D)",
             "temperature": "-5–15°C",
+            "icon_style": "thermometer",
             "feeling": "Opaque",
             "link": ""
           }
@@ -238,6 +242,7 @@
             "image": "shopify://shop_images/200d-top.webp",
             "name": "Fleece (200D)",
             "temperature": "-10–5°C",
+            "icon_style": "thermometer",
             "feeling": "Opaque Extra warm",
             "link": ""
           }
@@ -249,6 +254,7 @@
             "image": "shopify://shop_images/pattern-top.webp",
             "name": "Patterned",
             "temperature": "10–25°C",
+            "icon_style": "thermometer",
             "feeling": "Chic essentials",
             "link": ""
           }
@@ -277,10 +283,10 @@
         "mobile_max_width": 350,
         "mobile_side_padding": 14,
         "desktop_max_width": 1400,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 48,
-        "padding_bottom_desktop": 48
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "rich_text_zM47mb": {
@@ -311,11 +317,11 @@
         "color-body-text": "",
         "background_color": "#faeee5",
         "background_gradient": "",
-        "margin-top": 24,
-        "margin-bottom": 24,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 12,
-        "margin-bottom-mobile": 12,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10,
         "compact_size": true
       }
     },
@@ -345,10 +351,10 @@
         "desktop_max_width": 800,
         "desktop_image_size": 480,
         "desktop_gap": 72,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 64
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "xt_product_pickup_R7fdGr": {
@@ -363,7 +369,7 @@
         "product_iW3ik9": {
           "type": "product",
           "settings": {
-            "product": "eros-no-1-10d-tight-black"
+            "product": "10d-tight-black"
           }
         }
       },
@@ -407,10 +413,10 @@
         "desktop_max_width": 800,
         "desktop_image_size": 480,
         "desktop_gap": 72,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 64
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "xt_product_pickup_GrmmqG": {
@@ -494,10 +500,10 @@
         "desktop_max_width": 800,
         "desktop_image_size": 480,
         "desktop_gap": 72,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 64
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "xt_product_pickup_4drBqf": {
@@ -549,10 +555,10 @@
         "desktop_max_width": 800,
         "desktop_image_size": 480,
         "desktop_gap": 72,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 64
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "xt_product_pickup_fhAam4": {
@@ -604,10 +610,10 @@
         "desktop_max_width": 800,
         "desktop_image_size": 480,
         "desktop_gap": 72,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 64
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
       }
     },
     "xt_product_pickup_MPPdrX": {
@@ -622,19 +628,19 @@
         "product_rmCMdU": {
           "type": "product",
           "settings": {
-            "product": "eros-20d-line-tights"
+            "product": "20d-line-tights"
           }
         },
         "product_JixeXY": {
           "type": "product",
           "settings": {
-            "product": "eros-30d-dot-tights"
+            "product": "30d-dot-tights"
           }
         },
         "product_GUkxCR": {
           "type": "product",
           "settings": {
-            "product": "eros-30d-ring-tights"
+            "product": "30d-ring-tights"
           }
         }
       },
@@ -827,10 +833,10 @@
         "max_width": 800,
         "side_padding_mobile": 14,
         "side_padding_desktop": 20,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_top_desktop": 40,
-        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
         "item_gap": 15,
         "item_radius": 12,
         "closed_item_height": 42,

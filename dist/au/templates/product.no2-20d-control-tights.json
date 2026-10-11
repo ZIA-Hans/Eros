@@ -35,6 +35,18 @@
             "size_text_mobile": 100
           }
         },
+        "cwilltrustoo_reviews_star_rating_widget_n3grh3": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "star_size": 20,
+            "font_size": 16,
+            "text_color": "#2b2b2b",
+            "block_aligment": "left",
+            "rating_decimal_places": "1",
+            "margin_top": 8,
+            "margin_bottom": 8
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -42,21 +54,6 @@
             "show_shipping_policy": true,
             "size_text": 140,
             "size_text_mobile": 140
-          }
-        },
-        "product_variations_7LBAAU": {
-          "type": "product_variations",
-          "settings": {
-            "option_name": "",
-            "picker_type": "button",
-            "swatch_size": 36,
-            "radius": "default",
-            "border_radius": 0,
-            "option_value_metafield": "custom.tab",
-            "products": [
-              "no2-20d-control-top-sheer-tights",
-              "no2-20d-sheer-tights"
-            ]
           }
         },
         "variant_picker_7mHC3V": {
@@ -101,8 +98,8 @@
       },
       "block_order": [
         "title",
+        "cwilltrustoo_reviews_star_rating_widget_n3grh3",
         "price",
-        "product_variations_7LBAAU",
         "variant_picker_7mHC3V",
         "buy_buttons"
       ],
@@ -597,8 +594,8 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/no2_move1.webp",
-            "mobile_text_vertical_position": "top",
-            "mobile_text_horizontal_position": "left"
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
           }
         },
         "image_KYpUm7": {
@@ -629,7 +626,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/no2_move2.webp",
-            "mobile_text_vertical_position": "top",
+            "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "left"
           }
         }
@@ -840,6 +837,74 @@
         "padding_top_desktop": 20,
         "padding_bottom_desktop": 20
       }
+    },
+    "xt_product_pickup_8AfAVb": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_wxaYmz": {
+          "type": "product",
+          "settings": {
+            "product": "no1-10d-control-top-sheer-tights"
+          }
+        },
+        "product_hNMMCm": {
+          "type": "product",
+          "settings": {
+            "product": "50d-shimmer-tights"
+          }
+        },
+        "product_kdNDNm": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_g3fxiP": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-short-sleeve-pajama-set"
+          }
+        }
+      },
+      "block_order": [
+        "product_wxaYmz",
+        "product_hNMMCm",
+        "product_kdNDNm",
+        "product_g3fxiP"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "You May Also Like",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "1790822968969d27d6": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_ai_summary_KNiTnP": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/ai-summary/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": "no2-20d-control-top-sheer-tights"
+          }
+        },
+        "cwilltrustoo_reviews_review_widget_ttmYxh": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": "no2-20d-control-top-sheer-tights"
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_ai_summary_KNiTnP",
+        "cwilltrustoo_reviews_review_widget_ttmYxh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -855,6 +920,8 @@
     "grid_view_rcbpWK",
     "before_and_after_EkW3rc",
     "background_video_iTM7p9",
-    "pair_comparison_htBBdW"
+    "pair_comparison_htBBdW",
+    "xt_product_pickup_8AfAVb",
+    "1790822968969d27d6"
   ]
 }

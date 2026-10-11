@@ -35,6 +35,18 @@
             "size_text_mobile": 100
           }
         },
+        "cwilltrustoo_reviews_star_rating_widget_g4pagX": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "star_size": 20,
+            "font_size": 16,
+            "text_color": "#2b2b2b",
+            "block_aligment": "left",
+            "rating_decimal_places": "1",
+            "margin_top": 8,
+            "margin_bottom": 8
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -86,6 +98,7 @@
       },
       "block_order": [
         "title",
+        "cwilltrustoo_reviews_star_rating_widget_g4pagX",
         "price",
         "variant_picker_7mHC3V",
         "buy_buttons"
@@ -543,7 +556,7 @@
             "color-overlay-opacity": 0,
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/b-pd-1-8.webp",
+            "mobile_image": "shopify://shop_images/b-pdp-1-2_556a4b1c-78d9-44ae-a133-a4b1bf4ef520.webp",
             "mobile_text_vertical_position": "top",
             "mobile_text_horizontal_position": "left"
           }
@@ -570,6 +583,67 @@
         "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
+    },
+    "xt_product_pickup_PCKKYj": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_cRdgRF": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-short-sleeve-pajama-set"
+          }
+        },
+        "product_fwCE3X": {
+          "type": "product",
+          "settings": {
+            "product": "adhesive-silicone-nipple-covers"
+          }
+        },
+        "product_yNcW3V": {
+          "type": "product",
+          "settings": {
+            "product": "ultra-light-breathable-fabric-sticky-bra"
+          }
+        },
+        "product_xdW448": {
+          "type": "product",
+          "settings": {
+            "product": "push-up-bra-inserts"
+          }
+        }
+      },
+      "block_order": [
+        "product_cRdgRF",
+        "product_fwCE3X",
+        "product_yNcW3V",
+        "product_xdW448"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "Complete Your Look",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "1790907628b9c35850": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_review_widget_CVDQ9N": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_review_widget_CVDQ9N"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -580,6 +654,8 @@
     "grid_view_VJb37P",
     "grid_view_wCynBd",
     "grid_view_h8yryQ",
-    "grid_view_VX6CaD"
+    "grid_view_VX6CaD",
+    "xt_product_pickup_PCKKYj",
+    "1790907628b9c35850"
   ]
 }

@@ -35,17 +35,16 @@
             "size_text_mobile": 100
           }
         },
-        "product_variations_dUJHfz": {
-          "type": "product_variations",
-          "disabled": true,
+        "cwilltrustoo_reviews_star_rating_widget_MPwkBz": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {
-            "option_name": "",
-            "picker_type": "button",
-            "swatch_size": 40,
-            "radius": "default",
-            "border_radius": 0,
-            "option_value_metafield": "",
-            "products": []
+            "star_size": 20,
+            "font_size": 16,
+            "text_color": "#2b2b2b",
+            "block_aligment": "left",
+            "rating_decimal_places": "1",
+            "margin_top": 8,
+            "margin_bottom": 8
           }
         },
         "price": {
@@ -55,6 +54,21 @@
             "show_shipping_policy": true,
             "size_text": 140,
             "size_text_mobile": 140
+          }
+        },
+        "product_variations_dUJHfz": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "",
+            "picker_type": "button",
+            "swatch_size": 40,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "custom.tab",
+            "products": [
+              "tencel-modal-short-sleeve-pajama-set",
+              "tencel-modal-long-sleeve-pajama-set"
+            ]
           }
         },
         "variant_picker_7mHC3V": {
@@ -74,7 +88,7 @@
             "size_icon": "ruler",
             "size_link": "Size Guide",
             "variant_name": "Size",
-            "size_content": "",
+            "size_content": "short-sleeve-pajama-size-guide",
             "metafield": "",
             "enable-striped-rows": true,
             "enable_skin_popup": false,
@@ -99,8 +113,9 @@
       },
       "block_order": [
         "title",
-        "product_variations_dUJHfz",
+        "cwilltrustoo_reviews_star_rating_widget_MPwkBz",
         "price",
+        "product_variations_dUJHfz",
         "variant_picker_7mHC3V",
         "buy_buttons"
       ],
@@ -287,33 +302,33 @@
         "allow_multiple_open": false
       }
     },
-    "features_banner_ThHHi7": {
+    "features_banner_YTCkRB": {
       "type": "features-banner",
       "blocks": {
-        "image_6T466M": {
+        "image_PC3BYj": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "desktop_image": "shopify://shop_images/free-shipping.png",
             "select_icon": "bag",
             "heading": "Free Delivery on A$59",
             "text": "",
             "link": ""
           }
         },
-        "image_WytYkN": {
+        "image_t7QGAG": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "desktop_image": "shopify://shop_images/30-days_warranty.png",
             "select_icon": "user",
             "heading": "30-Day Free Returns",
             "text": "",
             "link": ""
           }
         },
-        "image_LbCUBa": {
+        "image_apfBG9": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "desktop_image": "shopify://shop_images/snag-techlogy.png",
             "select_icon": "search",
             "heading": "Easy Size Exchange",
             "text": "",
@@ -322,9 +337,9 @@
         }
       },
       "block_order": [
-        "image_6T466M",
-        "image_WytYkN",
-        "image_LbCUBa"
+        "image_PC3BYj",
+        "image_t7QGAG",
+        "image_apfBG9"
       ],
       "settings": {
         "advanced_heading": false,
@@ -688,7 +703,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/pearl.webp",
-            "mobile_text_vertical_position": "center",
+            "mobile_text_vertical_position": "bottom",
             "mobile_text_horizontal_position": "center"
           }
         },
@@ -717,10 +732,10 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_text_vertical_position": "center",
+            "desktop_text_vertical_position": "bottom",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/binding.webp",
-            "mobile_text_vertical_position": "center",
+            "mobile_text_vertical_position": "bottom",
             "mobile_text_horizontal_position": "center"
           }
         },
@@ -752,7 +767,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/stitching.webp",
-            "mobile_text_vertical_position": "center",
+            "mobile_text_vertical_position": "bottom",
             "mobile_text_horizontal_position": "center"
           }
         }
@@ -780,6 +795,65 @@
         "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
+    },
+    "xt_product_pickup_zTpyyU": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_Wkr3KQ": {
+          "type": "product",
+          "settings": {
+            "product": "no1-10d-control-top-sheer-tights"
+          }
+        },
+        "product_NfzDpt": {
+          "type": "product",
+          "settings": {
+            "product": "grip-nipple-covers"
+          }
+        },
+        "product_EeqiNP": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_Pgxfky": {
+          "type": "product",
+          "settings": {
+            "product": "push-up-bra-inserts"
+          }
+        }
+      },
+      "block_order": [
+        "product_Wkr3KQ",
+        "product_NfzDpt",
+        "product_EeqiNP",
+        "product_Pgxfky"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "You May Also Like",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "17909169717d9c5742": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_buyers_shows_7Jy6iR": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/buyers-shows/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_buyers_shows_7Jy6iR"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -787,11 +861,13 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_VWMA9q",
-    "features_banner_ThHHi7",
+    "features_banner_YTCkRB",
     "grid_view_caKhJf",
     "grid_view_wCynBd",
     "grid_view_h8yryQ",
     "rich_text_X4j76U",
-    "grid_view_M9qFdd"
+    "grid_view_M9qFdd",
+    "xt_product_pickup_zTpyyU",
+    "17909169717d9c5742"
   ]
 }

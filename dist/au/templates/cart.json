@@ -13,11 +13,11 @@
       "type": "main-cart-items",
       "settings": {
         "show_vendor": false,
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
       }
     },
     "cart-footer": {
@@ -37,93 +37,11 @@
         "buttons"
       ],
       "settings": {
-        "margin-top": 40,
-        "margin-bottom": 40,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": true,
         "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "advanced_heading": false,
-        "title": "Others also bought",
-        "heading_richtext": "<h2>Featured collection</h2>",
-        "disable_on_mobile": false,
-        "hide_empty_section": false,
-        "collection": "",
-        "product_list": [],
-        "products_to_show": 9,
-        "enable_stack_products": false,
-        "show_view_all": true,
-        "button_select": "primary",
-        "number_of_column_desktop": 3,
-        "spacing_desktop": "16",
-        "make_products_full_width": false,
-        "number_of_column_mobile": 2.1,
-        "spacing_mobile": "16",
-        "text_alignment": "left",
-        "image_ratio": "square",
-        "show_video": false,
-        "show_secondary_image": false,
-        "show_vendor": true,
-        "enable_vendor_link": false,
-        "show_product_rating": true,
-        "enable_quick_add_button": false,
-        "quick_add_mode": "hover_desktop",
-        "color-body-text": "rgba(0,0,0,0)",
-        "background_color": "rgba(0,0,0,0)",
-        "margin-top": 0,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "xt_product_pickup_GBwJ8b": {
-      "type": "xt-product-pickup",
-      "blocks": {
-        "product_r4W8HG": {
-          "type": "product",
-          "settings": {
-            "product": "no1-10d-control-top-sheer-tights"
-          }
-        },
-        "product_Y6eKTy": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_y494Lg": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_3XRgqE": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_r4W8HG",
-        "product_Y6eKTy",
-        "product_y494Lg",
-        "product_3XRgqE"
-      ],
-      "name": "XT 商品选购区",
-      "settings": {
-        "title": "精选商品",
-        "subtitle": "点击商品快速选购",
-        "image_ratio": "portrait",
-        "show_product_rating": false,
-        "enable_quick_add_button": true,
-        "quick_add_mode": "below_product"
       }
     },
     "features_banner_xQXV6x": {
@@ -132,6 +50,7 @@
         "image_Gd8Xht": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/freeshipping.png",
             "select_icon": "bag",
             "heading": "Free Express Shipping Over $59",
             "text": "",
@@ -141,6 +60,7 @@
         "image_JAjHMQ": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/30daysfreererun.png",
             "select_icon": "user",
             "heading": "30-Day Money-Back Guarantee",
             "text": "",
@@ -150,6 +70,7 @@
         "image_yRLHHp": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/securecheckout.png",
             "select_icon": "search",
             "heading": "Safe & Secure Checkout",
             "text": "",
@@ -169,7 +90,7 @@
         "size_heading_mobile": 80,
         "size_heading": 80,
         "icon_width_mobile": 52,
-        "icon_width_desktop": 52,
+        "icon_width_desktop": 80,
         "icon_layout": "center",
         "columns_desktop": "3",
         "icon_layout_mobile": "grid",
@@ -177,19 +98,62 @@
         "color_background_icon": "rgba(0,0,0,0)",
         "color_body_text": "#2b2b2b",
         "background_color": "rgba(0,0,0,0)",
-        "margin-top": 0,
-        "margin-bottom": 24,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 10,
+        "margin-bottom-mobile": 10
+      }
+    },
+    "xt_product_pickup_GBwJ8b": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_Y6eKTy": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-short-sleeve-pajama-set"
+          }
+        },
+        "product_Fc488g": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-long-sleeve-pajama-set"
+          }
+        },
+        "product_4KYBe4": {
+          "type": "product",
+          "settings": {
+            "product": "adhesive-silicone-nipple-covers"
+          }
+        },
+        "product_GMiWw9": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        }
+      },
+      "block_order": [
+        "product_Y6eKTy",
+        "product_Fc488g",
+        "product_4KYBe4",
+        "product_GMiWw9"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "Complete Your Look",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
       }
     }
   },
   "order": [
     "cart-items",
     "cart-footer",
-    "featured-collection",
-    "xt_product_pickup_GBwJ8b",
-    "features_banner_xQXV6x"
+    "features_banner_xQXV6x",
+    "xt_product_pickup_GBwJ8b"
   ]
 }

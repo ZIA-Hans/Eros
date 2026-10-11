@@ -35,17 +35,16 @@
             "size_text_mobile": 100
           }
         },
-        "product_variations_dgk99c": {
-          "type": "product_variations",
-          "disabled": true,
+        "cwilltrustoo_reviews_star_rating_widget_VBBjyN": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {
-            "option_name": "Option",
-            "picker_type": "product_image",
-            "swatch_size": 40,
-            "radius": "default",
-            "border_radius": 0,
-            "option_value_metafield": "",
-            "products": []
+            "star_size": 20,
+            "font_size": 16,
+            "text_color": "#2b2b2b",
+            "block_aligment": "left",
+            "rating_decimal_places": "1",
+            "margin_top": 8,
+            "margin_bottom": 8
           }
         },
         "price": {
@@ -55,6 +54,21 @@
             "show_shipping_policy": true,
             "size_text": 140,
             "size_text_mobile": 140
+          }
+        },
+        "product_variations_dgk99c": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "",
+            "picker_type": "button",
+            "swatch_size": 40,
+            "radius": "default",
+            "border_radius": 0,
+            "option_value_metafield": "custom.tab",
+            "products": [
+              "tencel-modal-long-sleeve-pajama-set",
+              "tencel-modal-short-sleeve-pajama-set"
+            ]
           }
         },
         "variant_picker_7mHC3V": {
@@ -99,8 +113,9 @@
       },
       "block_order": [
         "title",
-        "product_variations_dgk99c",
+        "cwilltrustoo_reviews_star_rating_widget_VBBjyN",
         "price",
+        "product_variations_dgk99c",
         "variant_picker_7mHC3V",
         "buy_buttons"
       ],
@@ -287,33 +302,33 @@
         "allow_multiple_open": false
       }
     },
-    "features_banner_NWbeiF": {
+    "features_banner_9ax8ND": {
       "type": "features-banner",
       "blocks": {
-        "image_FLLTrB": {
+        "image_Xmq3PC": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_3x_7dc9eafa-7be7-4166-bc4c-32007ef45e86.png",
+            "desktop_image": "shopify://shop_images/free-shipping.png",
             "select_icon": "bag",
             "heading": "Free Delivery on A$59",
             "text": "",
             "link": ""
           }
         },
-        "image_wtQEcA": {
+        "image_FfWxMA": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315.png",
+            "desktop_image": "shopify://shop_images/30-days_warranty.png",
             "select_icon": "user",
             "heading": "30-Day Free Returns",
             "text": "",
             "link": ""
           }
         },
-        "image_PFrzcg": {
+        "image_EMkJXQ": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_123315_1.png",
+            "desktop_image": "shopify://shop_images/snag-techlogy.png",
             "select_icon": "search",
             "heading": "Easy Size Exchange",
             "text": "",
@@ -322,9 +337,9 @@
         }
       },
       "block_order": [
-        "image_FLLTrB",
-        "image_wtQEcA",
-        "image_PFrzcg"
+        "image_Xmq3PC",
+        "image_FfWxMA",
+        "image_EMkJXQ"
       ],
       "settings": {
         "advanced_heading": false,
@@ -528,7 +543,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "left",
             "mobile_image": "shopify://shop_images/Notch_Collar.webp",
-            "mobile_text_vertical_position": "top",
+            "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
         },
@@ -560,7 +575,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/Flared_Silhouette.webp",
-            "mobile_text_vertical_position": "top",
+            "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
         }
@@ -655,7 +670,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/pearl.webp",
-            "mobile_text_vertical_position": "center",
+            "mobile_text_vertical_position": "bottom",
             "mobile_text_horizontal_position": "center"
           }
         },
@@ -687,7 +702,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/binding.webp",
-            "mobile_text_vertical_position": "center",
+            "mobile_text_vertical_position": "bottom",
             "mobile_text_horizontal_position": "center"
           }
         },
@@ -719,7 +734,7 @@
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_image": "shopify://shop_images/stitching.webp",
-            "mobile_text_vertical_position": "center",
+            "mobile_text_vertical_position": "bottom",
             "mobile_text_horizontal_position": "center"
           }
         }
@@ -747,6 +762,67 @@
         "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
+    },
+    "xt_product_pickup_fzL8Qj": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_Wzr4rf": {
+          "type": "product",
+          "settings": {
+            "product": "no2-20d-control-top-sheer-tights"
+          }
+        },
+        "product_qki6RY": {
+          "type": "product",
+          "settings": {
+            "product": "grip-nipple-covers"
+          }
+        },
+        "product_ViGyzG": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_9qEx6m": {
+          "type": "product",
+          "settings": {
+            "product": "push-up-bra-inserts"
+          }
+        }
+      },
+      "block_order": [
+        "product_Wzr4rf",
+        "product_qki6RY",
+        "product_ViGyzG",
+        "product_9qEx6m"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "You May Also Like",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "1790825684c917c188": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_review_widget_WB8j9e": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_review_widget_WB8j9e"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -754,11 +830,13 @@
     "main",
     "blocks_X9QmkE",
     "product_accordion_tabs_keJR4r",
-    "features_banner_NWbeiF",
+    "features_banner_9ax8ND",
     "grid_view_inAtRL",
     "grid_view_qe3tVB",
     "grid_view_h8yryQ",
     "rich_text_UbGPKX",
-    "grid_view_Ltnpea"
+    "grid_view_Ltnpea",
+    "xt_product_pickup_fzL8Qj",
+    "1790825684c917c188"
   ]
 }

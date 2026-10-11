@@ -149,19 +149,19 @@
             "text_size_desktop": 16,
             "text_color": "#2b2b2b",
             "benefit_1_enabled": true,
-            "benefit_1_icon": "shopify://shop_images/Feather_of_Velvet.svg",
-            "benefit_1_icon_alt": "Ultra-Light 10g icon",
-            "benefit_1_text": "Ultra-Light 10g",
+            "benefit_1_icon": "shopify://shop_images/Double_Sided_Adhesive.svg",
+            "benefit_1_icon_alt": "Double sided adhesive",
+            "benefit_1_text": "Double sided adhesive",
             "benefit_1_link": "",
             "benefit_2_enabled": true,
-            "benefit_2_icon": "shopify://shop_images/Breathable_Comfort.svg",
+            "benefit_2_icon": "shopify://shop_images/Secure_All_Day_Hold.svg",
             "benefit_2_icon_alt": "Secure All Day Hold icon",
             "benefit_2_text": "Secure All Day Hold",
             "benefit_2_link": "",
             "benefit_3_enabled": true,
-            "benefit_3_icon": "shopify://shop_images/Seamless_Invisible.svg",
-            "benefit_3_icon_alt": "Seamless Invisible icon",
-            "benefit_3_text": "Seamless Invisible",
+            "benefit_3_icon": "shopify://shop_images/Sweat_Water_Resistant.svg",
+            "benefit_3_icon_alt": "Sweat Water Resistant icon",
+            "benefit_3_text": "Sweat Water Resistant",
             "benefit_3_link": ""
           },
           "blocks": {}
@@ -432,6 +432,67 @@
         "padding_top_desktop": 20,
         "padding_bottom_desktop": 20
       }
+    },
+    "xt_product_pickup_yGBJyD": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_q37P6a": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-short-sleeve-pajama-set"
+          }
+        },
+        "product_mJjrNF": {
+          "type": "product",
+          "settings": {
+            "product": "adhesive-silicone-nipple-covers"
+          }
+        },
+        "product_g4zUC9": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_pCTTnC": {
+          "type": "product",
+          "settings": {
+            "product": "ultra-light-breathable-fabric-sticky-bra"
+          }
+        }
+      },
+      "block_order": [
+        "product_q37P6a",
+        "product_mJjrNF",
+        "product_g4zUC9",
+        "product_pCTTnC"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "Complete Your Look",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "1791007819e4322405": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_review_widget_hrLBFR": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_review_widget_hrLBFR"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -442,6 +503,8 @@
     "rich_text_AT9QqN",
     "text_overlay_pPWpUC",
     "rich_text_wpnHRD",
-    "text_overlay_9AbVzy"
+    "text_overlay_9AbVzy",
+    "xt_product_pickup_yGBJyD",
+    "1791007819e4322405"
   ]
 }

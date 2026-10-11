@@ -138,6 +138,17 @@
     color: {{ section.settings.icon_color }};
   }
 
+  .category-guide__temperature-icon-{{ section_id }} svg,
+  .category-guide__temperature-icon-{{ section_id }} img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .category-guide__temperature-icon-{{ section_id }} img {
+    object-fit: contain;
+  }
+
   .category-guide__feeling-{{ section_id }} {
     margin: 0;
     color: {{ section.settings.card_text_color }};
@@ -246,13 +257,19 @@
 
             {% if block.settings.temperature != blank %}
               <p class="category-guide__temperature-{{ section_id }}">
-                <span class="category-guide__temperature-icon-{{ section_id }}" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none">
-                    <path d="M6 1.25v5.1" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-                    <path d="M4.25 8.6a1.75 1.75 0 1 0 3.5 0c0-.67-.38-1.24-.94-1.54V2.5a.81.81 0 0 0-1.62 0v4.56c-.56.3-.94.87-.94 1.54Z" stroke="currentColor" stroke-width="1"/>
-                    <path d="M8.75 2.2h1.15M8.75 4h1.15M8.75 5.8h1.15" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
-                  </svg>
-                </span>
+                {% unless block.settings.icon_style == 'none' %}
+                  <span class="category-guide__temperature-icon-{{ section_id }}" aria-hidden="true">
+                    {% if block.settings.icon_style == 'custom' and block.settings.custom_icon != blank %}
+                      {{ block.settings.custom_icon | image_url: width: 48 | image_tag: loading: 'lazy' }}
+                    {% else %}
+                      <svg viewBox="0 0 12 12" fill="none">
+                        <path d="M6 1.25v5.1" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M4.25 8.6a1.75 1.75 0 1 0 3.5 0c0-.67-.38-1.24-.94-1.54V2.5a.81.81 0 0 0-1.62 0v4.56c-.56.3-.94.87-.94 1.54Z" stroke="currentColor" stroke-width="1"/>
+                        <path d="M8.75 2.2h1.15M8.75 4h1.15M8.75 5.8h1.15" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+                      </svg>
+                    {% endif %}
+                  </span>
+                {% endunless %}
                 <span>{{ block.settings.temperature }}</span>
               </p>
             {% endif %}
@@ -455,6 +472,31 @@
           "id": "temperature",
           "label": "Temperature",
           "default": "25–35°C"
+        },
+        {
+          "type": "select",
+          "id": "icon_style",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "thermometer",
+              "label": "Thermometer"
+            },
+            {
+              "value": "custom",
+              "label": "Custom icon"
+            },
+            {
+              "value": "none",
+              "label": "Hide icon"
+            }
+          ],
+          "default": "thermometer"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon"
         },
         {
           "type": "text",

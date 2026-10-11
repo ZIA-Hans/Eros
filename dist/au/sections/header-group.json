@@ -17,13 +17,21 @@
         "announcement_DKVb4L": {
           "type": "announcement",
           "settings": {
-            "text": "Free Delivery on A$59",
+            "text": "Free Delivery on A$59+",
+            "link": ""
+          }
+        },
+        "announcement_gwtBkw": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy 3, Save A$15 · Buy 4, Save A$30",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_DKVb4L"
+        "announcement_DKVb4L",
+        "announcement_gwtBkw"
       ],
       "custom_css": [],
       "settings": {
@@ -38,38 +46,6 @@
     },
     "header": {
       "type": "page-header",
-      "blocks": {
-        "column_yVYQQ3": {
-          "type": "column",
-          "settings": {
-            "title": "Shop",
-            "promo_section_width": 3,
-            "stack_view": false,
-            "image_ratio": "adapt",
-            "heading_1": "",
-            "text_1": "View All Products",
-            "link_1": "",
-            "heading_2": "",
-            "text_2": "Women's Multi Capsules",
-            "link_2": "",
-            "heading_3": "",
-            "text_3": "Immunity Boost Capsules",
-            "link_3": "",
-            "heading_4": "",
-            "text_4": "Natural Collagen Capsules",
-            "link_4": "",
-            "heading_5": "",
-            "text_5": "Boost Energy Capsules",
-            "link_5": "",
-            "heading_6": "",
-            "text_6": "Men's Multi Capsules",
-            "link_6": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_yVYQQ3"
-      ],
       "settings": {
         "layout": "option_3",
         "sticky_header": true,
@@ -80,7 +56,7 @@
         "show_line_separator": false,
         "show_shadow": false,
         "logo": "shopify://shop_images/icon_trans.png",
-        "large_screen_logo_width": 220,
+        "large_screen_logo_width": 100,
         "mobile_screen_logo_width": 90,
         "menu": "sonfeu-mega-menu",
         "mobile_footer_menu": "",
@@ -93,16 +69,22 @@
         "show_country_selector_label": false,
         "show_country_selector_flag": true,
         "show_language_selector": false,
-        "drawer_title": "Explore Sofneu",
+        "drawer_title": "Discover Sofneu",
         "enable_submenu_link_in_drawer": false,
         "show_search": true,
         "show_search_without_button": false,
-        "typing_search": "Search...",
-        "suggestions_title": "most popular",
+        "typing_search": "Search Sofneu…",
+        "suggestions_title": "Popular Right Now",
         "search_suggest_layout": "results",
         "suggestions_menu": "",
-        "suggest_products": [],
-        "suggest_products_title": "",
+        "suggest_products": [
+          "tencel-modal-short-sleeve-pajama-set",
+          "tencel-modal-long-sleeve-pajama-set",
+          "no2-20d-control-top-sheer-tights",
+          "adhesive-silicone-nipple-covers",
+          "cleavage-silicone-sticky-bra"
+        ],
+        "suggest_products_title": "Popular Searches",
         "suggest_collections": [],
         "suggest_collections_title": "",
         "suggest_pages_menu": "",

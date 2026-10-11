@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": false,
+        "text_color": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 16,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_placeholder_image": true,
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 260,
+        "mobile_fixed_height": 260,
+        "full-width-enabled": true,
+        "size_heading": 180,
+        "size_heading_mobile": 230,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 12,
+        "margin-bottom": 12,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "title": {
+      "type": "main-collection-title",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": false,
+        "show_collection_description": true,
+        "desktop_text_horizontal_position": "center",
+        "size_heading": 500,
+        "size_heading_mobile": 140,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#ff9900",
+        "margin-top": 32,
+        "margin-bottom": 16,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 12,
+        "columns_mobile": "2",
+        "columns_desktop": "4",
+        "spacing_desktop": "16",
+        "full-width-enabled": true,
+        "spacing_mobile": "16",
+        "image_ratio": "portrait",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": true,
+        "enable_product_url_within_collection": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "text_alignment": "left",
+        "toolbar_style": "buttons",
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "filter_position": "drawer",
+        "open_first_filter": false,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_banner_QNznE6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_bUVyny": {
+          "type": "heading",
+          "settings": {
+            "heading": "Softness, Made to Live In.",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "subheading_KrCR44": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Comfort Through Every Season.",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading_bUVyny",
+        "subheading_KrCR44"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 500,
+        "mobile_fixed_height": 440,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/p-pdp-36-422.webp",
+        "mobile_text_vertical_position": "bottom",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 0,
+        "color-body-text": "#2b2b2b",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 10,
+        "lcp_optimize": true
+      }
+    },
+    "feature_text_image_LEkWNX": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "image": "shopify://shop_images/short_white_3.webp",
+        "thickness": "TENCEL™ Modal",
+        "weather": "Soft & Breathable",
+        "content_title": "Made to Feel Better",
+        "content": "<p>Smooth and soft against the skin<br/>Flexible comfort for day and night</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "xt_product_pickup_R7fdGr": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_zhDrip": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-long-sleeve-pajama-set"
+          }
+        },
+        "product_iW3ik9": {
+          "type": "product",
+          "settings": {
+            "product": "tencel-modal-short-sleeve-pajama-set"
+          }
+        }
+      },
+      "block_order": [
+        "product_zhDrip",
+        "product_iW3ik9"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "banner",
+    "title",
+    "product-grid",
+    "image_banner_QNznE6",
+    "feature_text_image_LEkWNX",
+    "xt_product_pickup_R7fdGr"
+  ]
+}

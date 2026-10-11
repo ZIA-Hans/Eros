@@ -35,6 +35,18 @@
             "size_text_mobile": 100
           }
         },
+        "cwilltrustoo_reviews_star_rating_widget_R7Ctx8": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "star_size": 20,
+            "font_size": 16,
+            "text_color": "#2b2b2b",
+            "block_aligment": "left",
+            "rating_decimal_places": "1",
+            "margin_top": 10,
+            "margin_bottom": 10
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -86,6 +98,7 @@
       },
       "block_order": [
         "title",
+        "cwilltrustoo_reviews_star_rating_widget_R7Ctx8",
         "price",
         "variant_picker_7mHC3V",
         "buy_buttons"
@@ -671,6 +684,67 @@
         "margin-top-mobile": 10,
         "margin-bottom-mobile": 10
       }
+    },
+    "xt_product_pickup_YNMiYy": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_TNinkh": {
+          "type": "product",
+          "settings": {
+            "product": "no1-10d-control-top-sheer-tights"
+          }
+        },
+        "product_ghEXKX": {
+          "type": "product",
+          "settings": {
+            "product": "20d-line-tights"
+          }
+        },
+        "product_bnm8yx": {
+          "type": "product",
+          "settings": {
+            "product": "30d-dot-tights"
+          }
+        },
+        "product_cRzUq7": {
+          "type": "product",
+          "settings": {
+            "product": "30d-ring-tights"
+          }
+        }
+      },
+      "block_order": [
+        "product_TNinkh",
+        "product_ghEXKX",
+        "product_bnm8yx",
+        "product_cRzUq7"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "You May Also Like",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "17908233894bb6a267": {
+      "type": "apps",
+      "blocks": {
+        "cwilltrustoo_reviews_review_widget_hagER3": {
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "cwilltrustoo_reviews_review_widget_hagER3"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -681,6 +755,8 @@
     "features_banner_VrBrnw",
     "grid_view_LXJM3g",
     "grid_view_ifkAgV",
-    "grid_view_wCynBd"
+    "grid_view_wCynBd",
+    "xt_product_pickup_YNMiYy",
+    "17908233894bb6a267"
   ]
 }

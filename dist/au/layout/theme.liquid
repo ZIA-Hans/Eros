@@ -215,6 +215,7 @@
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     </script>
     {{ 'sofneu-tights-size-guide.css' | asset_url | stylesheet_tag }}
+    {{ 'pajama-size-guide.css' | asset_url | stylesheet_tag }}
   </head>
 
   {% assign template_name = template | handleize %}
@@ -356,6 +357,10 @@
 ></script>
 <script
   src="{{ 'sofneu-tights-size-guide.js' | asset_url }}"
+  defer
+></script>
+<script
+  src="{{ 'pajama-size-guide.js' | asset_url }}"
   defer
 ></script>
   </body>

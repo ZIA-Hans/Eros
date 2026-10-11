@@ -64,7 +64,7 @@
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
         "mobile_image": "shopify://shop_images/aboutus_banner.png",
-        "mobile_text_vertical_position": "center",
+        "mobile_text_vertical_position": "bottom",
         "mobile_text_horizontal_position": "center",
         "out_hero_mobile": false,
         "out-background-color": "",

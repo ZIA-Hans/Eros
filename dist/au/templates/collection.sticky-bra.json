@@ -1,0 +1,617 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": false,
+        "text_color": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 16,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_placeholder_image": true,
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 260,
+        "mobile_fixed_height": 260,
+        "full-width-enabled": true,
+        "size_heading": 180,
+        "size_heading_mobile": 230,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 12,
+        "margin-bottom": 12,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "title": {
+      "type": "main-collection-title",
+      "disabled": true,
+      "settings": {
+        "full-width-enabled": false,
+        "show_collection_description": true,
+        "desktop_text_horizontal_position": "center",
+        "size_heading": 500,
+        "size_heading_mobile": 140,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#ff9900",
+        "margin-top": 32,
+        "margin-bottom": 16,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 12,
+        "columns_mobile": "2",
+        "columns_desktop": "4",
+        "spacing_desktop": "16",
+        "full-width-enabled": true,
+        "spacing_mobile": "16",
+        "image_ratio": "portrait",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": true,
+        "enable_product_url_within_collection": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "text_alignment": "left",
+        "toolbar_style": "buttons",
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "filter_position": "drawer",
+        "open_first_filter": false,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_banner_QNznE6": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 500,
+        "mobile_fixed_height": 440,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/c-b-1.webp",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 0,
+        "color-body-text": "{{ settings.colors.background }}",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 10,
+        "lcp_optimize": true
+      }
+    },
+    "category_guide_carousel_rAV7Ek": {
+      "type": "category-guide-carousel",
+      "blocks": {
+        "card_ynqUiy": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "image": "shopify://shop_images/c-b-2.webp",
+            "name": "Sticky Bra",
+            "temperature": "Lift & Invisible",
+            "icon_style": "none",
+            "feeling": "I want lift",
+            "link": ""
+          }
+        },
+        "card_Qx8t9L": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "image": "shopify://shop_images/c-b-3.webp",
+            "name": "Nipple Cover",
+            "temperature": "Invisible & Natural",
+            "icon_style": "none",
+            "feeling": "I Want Coverage",
+            "link": ""
+          }
+        },
+        "card_yWMPqH": {
+          "type": "card",
+          "settings": {
+            "show_card": true,
+            "image": "shopify://shop_images/c-b-4.webp",
+            "name": "Insert Bra",
+            "temperature": "Volume & Shape",
+            "icon_style": "none",
+            "feeling": "I Want Curves",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_ynqUiy",
+        "card_Qx8t9L",
+        "card_yWMPqH"
+      ],
+      "name": "Category Guide Carousel",
+      "settings": {
+        "title": "Shop by Shapes",
+        "section_background": "#ffffff",
+        "card_background": "#f8f8f8",
+        "title_color": "#2b2b2b",
+        "card_title_color": "#2b2b2b",
+        "card_text_color": "#6f6f6f",
+        "icon_color": "#6f6f6f",
+        "divider_color": "#ece8e0",
+        "title_size_mobile": 16,
+        "title_size_desktop": 24,
+        "mobile_max_width": 350,
+        "mobile_side_padding": 14,
+        "desktop_max_width": 1400,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "feature_text_image_LEkWNX": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "image": "shopify://shop_images/b-pdp-1-6.webp",
+        "thickness": "Sticky Bra",
+        "weather": "Shape Enhancement",
+        "content_title": "Designed to prevent slipping and movement",
+        "content": "<p>Secure hold that stays in place all day</p><p>Creates a lifted shape with natural-looking cleavage</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "xt_product_pickup_R7fdGr": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_zhDrip": {
+          "type": "product",
+          "settings": {
+            "product": "cleavage-silicone-sticky-bra"
+          }
+        },
+        "product_iW3ik9": {
+          "type": "product",
+          "settings": {
+            "product": "ultra-light-breathable-fabric-sticky-bra"
+          }
+        },
+        "product_yqg3gD": {
+          "type": "product",
+          "settings": {
+            "product": "ultra-light-fabric-sticky-bra"
+          }
+        }
+      },
+      "block_order": [
+        "product_zhDrip",
+        "product_iW3ik9",
+        "product_yqg3gD"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "adapt",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "feature_text_image_b3rxpW": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "image": "shopify://shop_images/grippy-cocoa-2.webp",
+        "thickness": "Nipple Cover",
+        "weather": "Nipple Concealment",
+        "content_title": "Designed to stay seamless and secure on skin",
+        "content": "<p>Creates an invisible look under clothing</p><p>Soft, skin-friendly materials for all-day comfort</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "xt_product_pickup_GrmmqG": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_KYt74C": {
+          "type": "product",
+          "settings": {
+            "product": "adhesive-silicone-nipple-covers"
+          }
+        },
+        "product_FEGJaQ": {
+          "type": "product",
+          "settings": {
+            "product": "grip-nipple-covers"
+          }
+        }
+      },
+      "block_order": [
+        "product_KYt74C",
+        "product_FEGJaQ"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "feature_text_image_x6bMet": {
+      "type": "feature-text-image",
+      "name": "Feature Text Image",
+      "settings": {
+        "image": "shopify://shop_images/b-pdp-1-33.webp",
+        "thickness": "Insert Bra",
+        "weather": "Volume Enhancement",
+        "content_title": "Designed to stay in place with a natural feel",
+        "content": "<p>Creates a visible boost with enhanced curves</p><p>Blends naturally for a smooth, realistic shape</p>",
+        "section_background": "#ffffff",
+        "meta_color": "#2b2b2b",
+        "content_title_color": "#2b2b2b",
+        "content_text_color": "#6f6f6f",
+        "image_position": "center",
+        "image_radius_mobile": 16,
+        "image_radius_desktop": 32,
+        "meta_size_mobile": 16,
+        "meta_size_desktop": 28,
+        "content_title_size_mobile": 13,
+        "content_title_size_desktop": 20,
+        "content_text_size_mobile": 12,
+        "content_text_size_desktop": 16,
+        "mobile_max_width": 320,
+        "desktop_max_width": 800,
+        "desktop_image_size": 480,
+        "desktop_gap": 72,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20
+      }
+    },
+    "xt_product_pickup_4drBqf": {
+      "type": "xt-product-pickup",
+      "blocks": {
+        "product_QRzgfb": {
+          "type": "product",
+          "settings": {
+            "product": "push-up-bra-inserts"
+          }
+        }
+      },
+      "block_order": [
+        "product_QRzgfb"
+      ],
+      "name": "XT 商品选购区",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_ratio": "portrait",
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product"
+      }
+    },
+    "faq_tabs_mKhqgV": {
+      "type": "faq-tabs",
+      "blocks": {
+        "faq_hHRt6R": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "What is the difference between Sticky Bras, Nipple Covers, and Inserts?",
+            "answer": "<p>Sticky Bras provide lift and support, Nipple Covers create a smooth invisible look, and Inserts add natural-looking volume and shape. Choose based on your desired result and outfit needs.</p>",
+            "default_open": false
+          }
+        },
+        "faq_mr4c73": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Which Sticky Bra is right for me?",
+            "answer": "<p>Choose a Sticky Bra based on your needs. For lift and cleavage, choose a supportive style. For invisible coverage, choose a lightweight design. For added fullness, choose inserts.</p>",
+            "default_open": false
+          }
+        },
+        "faq_EHwrKc": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_1",
+            "question": "Should I choose a Sticky Bra or a Nipple Cover?",
+            "answer": "<p>Choose a Sticky Bra if you want lift and shaping. Choose a Nipple Cover if you only need invisible coverage and a natural look under clothing.</p>",
+            "default_open": false
+          }
+        },
+        "faq_m9jhTq": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Will a Sticky Bra stay in place all day?",
+            "answer": "<p>Yes. Our skin-friendly adhesive and thoughtful design help provide a secure hold that stays comfortable and in place throughout the day.</p>",
+            "default_open": false
+          }
+        },
+        "faq_dEJEbe": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "How much lift and support can a Sticky Bra provide?",
+            "answer": "<p>Sticky Bras are designed to enhance your natural shape, provide gentle lift, and create a flattering silhouette without traditional straps.</p>",
+            "default_open": false
+          }
+        },
+        "faq_9PXL8n": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_2",
+            "question": "Will Sticky Bras create a natural-looking shape?",
+            "answer": "<p>Yes. Our designs are made to enhance your curves while maintaining a smooth, natural-looking appearance.</p>",
+            "default_open": false
+          }
+        },
+        "faq_faphMC": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Are Sticky Bras comfortable for all-day wear?",
+            "answer": "<p>Yes. Lightweight materials and skin-friendly adhesives are designed for comfortable wear without feeling heavy or restrictive.</p>",
+            "default_open": false
+          }
+        },
+        "faq_xLMWTg": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Is the adhesive safe for sensitive skin?",
+            "answer": "<p>Our skin-friendly adhesive is designed to provide a gentle hold while remaining comfortable on the skin. We recommend testing on a small area before extended wear.</p>",
+            "default_open": false
+          }
+        },
+        "faq_qPG6R8": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_3",
+            "question": "Will a Sticky Bra feel hot or uncomfortable?",
+            "answer": "<p>Our breathable and lightweight designs help reduce the feeling of heaviness, keeping you comfortable throughout the day.</p>",
+            "default_open": false
+          }
+        },
+        "faq_UPennz": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_4",
+            "question": "How many times can I reuse a Sticky Bra?",
+            "answer": "<p>With proper care, Sticky Bras can be reused multiple times. The lifespan depends on usage, cleaning, and how well the adhesive surface is maintained.</p>",
+            "default_open": false
+          }
+        },
+        "faq_LXBWe3": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_4",
+            "question": "How do I clean and store my Sticky Bra?",
+            "answer": "<p>Gently wash with mild soap and water, allow it to air dry, and store it with the protective film to help maintain the adhesive surface.</p>",
+            "default_open": false
+          }
+        },
+        "faq_QpeBR8": {
+          "type": "faq",
+          "settings": {
+            "show_item": true,
+            "category": "tab_4",
+            "question": "How can I make my Sticky Bra last longer?",
+            "answer": "<p>Keep the adhesive surface clean, avoid touching it unnecessarily, and always store it properly after use.</p>",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_hHRt6R",
+        "faq_mr4c73",
+        "faq_EHwrKc",
+        "faq_m9jhTq",
+        "faq_dEJEbe",
+        "faq_9PXL8n",
+        "faq_faphMC",
+        "faq_xLMWTg",
+        "faq_qPG6R8",
+        "faq_UPennz",
+        "faq_LXBWe3",
+        "faq_QpeBR8"
+      ],
+      "name": "FAQ Tabs",
+      "settings": {
+        "heading": "GENERAL FAQS",
+        "heading_size_mobile": 16,
+        "heading_size_desktop": 18,
+        "heading_letter_spacing": -2,
+        "heading_weight": "400",
+        "heading_color": "#2b2b2b",
+        "heading_alignment": "center",
+        "heading_spacing": 16,
+        "show_tabs": true,
+        "default_tab": "tab_1",
+        "tab_1_label": "Choose",
+        "tab_2_label": "Fit",
+        "tab_3_label": "Comfort",
+        "tab_4_label": "Care",
+        "tab_size_mobile": 14,
+        "tab_size_desktop": 16,
+        "tab_letter_spacing": -2,
+        "tabs_spacing": 20,
+        "tab_gap": 10,
+        "tab_height": 30,
+        "tab_padding_x": 14,
+        "tab_radius": 12,
+        "tab_background": "#f8f8f8",
+        "tab_color": "#2b2b2b",
+        "tab_border_color": "#f8f8f8",
+        "tab_border_thickness": 1,
+        "active_tab_background": "#b7644e",
+        "active_tab_color": "#ffffff",
+        "active_tab_border_color": "#b7644e",
+        "section_background": "#ffffff",
+        "max_width": 800,
+        "side_padding_mobile": 14,
+        "side_padding_desktop": 20,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
+        "item_gap": 15,
+        "item_radius": 12,
+        "closed_item_height": 42,
+        "closed_background": "#f8f8f8",
+        "closed_border_color": "#f8f8f8",
+        "closed_border_thickness": 1,
+        "open_background": "#faeee5",
+        "open_border_color": "#e8beb0",
+        "item_padding_x": 10,
+        "item_padding_y": 10,
+        "title_icon_gap": 12,
+        "question_icon_gap": 6,
+        "show_question_icon": true,
+        "question_icon_text": "?",
+        "question_icon_size": 16,
+        "question_icon_text_size": 11,
+        "question_icon_background": "#d8b6ad",
+        "question_icon_color": "#6e4136",
+        "question_size_mobile": 14,
+        "question_size_desktop": 14,
+        "question_letter_spacing": -2,
+        "question_weight": "400",
+        "question_color": "#2b2b2b",
+        "chevron_color": "#2b2b2b",
+        "chevron_size": 12,
+        "answer_size_mobile": 12,
+        "answer_size_desktop": 12,
+        "answer_letter_spacing": -2,
+        "answer_line_height": 140,
+        "answer_color": "#6f6f6f",
+        "answer_padding_x": 10,
+        "answer_padding_bottom": 10,
+        "allow_multiple_open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "banner",
+    "title",
+    "product-grid",
+    "image_banner_QNznE6",
+    "category_guide_carousel_rAV7Ek",
+    "feature_text_image_LEkWNX",
+    "xt_product_pickup_R7fdGr",
+    "feature_text_image_b3rxpW",
+    "xt_product_pickup_GrmmqG",
+    "feature_text_image_x6bMet",
+    "xt_product_pickup_4drBqf",
+    "faq_tabs_mKhqgV"
+  ]
+}
