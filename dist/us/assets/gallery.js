@@ -174,6 +174,55 @@ if (!customElements.get("gallery-section")) {
           this.elements.thumbs.querySelectorAll("[data-swiper-slide]"),
         ).map((e) => e.cloneNode(true));
 
+        // 商详页 DOM 的媒体顺序 ≠ 后台配置顺序：URL 选中变体的主图被前置为
+        // 第一张 slide，并在 for media 循环里跳过它（main-product.liquid）。
+        // 主图区循环 slide 带 id="image-N"（N = 该媒体在 product.media 里的
+        // 1-based 位置），缺失的那个 N 即前置主图的真实位次，据此还原；
+        // 无 id 标记（主题结构变化）时保持 DOM 原序兜底。
+        // 不还原的话「主图起连续 5 张」的窗口会随入口变体漂移取错
+        const normalizeByMediaPosition = (slides) => {
+          const marked = [];
+          const unmarked = [];
+          slides.forEach((li) => {
+            const match = /^image-(\d+)$/.exec(li.id || "");
+            if (match) marked.push({ li, n: parseInt(match[1], 10) });
+            else unmarked.push(li);
+          });
+          if (marked.length === 0) return slides;
+          marked.sort((a, b) => a.n - b.n);
+          const result = marked;
+          unmarked.forEach((li) => {
+            const taken = new Set(result.map((s) => s.n));
+            let pos = result.length + 1;
+            for (let n = 1; n <= result.length + 1; n++) {
+              if (!taken.has(n)) {
+                pos = n;
+                break;
+              }
+            }
+            result.splice(pos - 1, 0, { li, n: pos });
+          });
+          return result.map((s) => s.li);
+        };
+
+        this.elements.gallerySlides = normalizeByMediaPosition(
+          this.elements.gallerySlides,
+        );
+        // 缩略图 slide 无 id 标记：按还原后主图区的 media id 顺序对齐重排
+        const mediaOrder = new Map(
+          this.elements.gallerySlides.map((li, idx) => [li.dataset.mediaId, idx]),
+        );
+        this.elements.thumbsSlides = this.elements.thumbsSlides
+          .map((li, idx) => ({
+            li,
+            idx,
+            pos: mediaOrder.has(li.dataset.slideMediaId)
+              ? mediaOrder.get(li.dataset.slideMediaId)
+              : this.elements.gallerySlides.length + idx,
+          }))
+          .sort((a, b) => a.pos - b.pos)
+          .map((s) => s.li);
+
         const default_configuration = {
           sliderEnabledBreakpoint: 900,
           desktopLayout: "carousel-vertical",
@@ -535,6 +584,23 @@ if (!customElements.get("gallery-section")) {
               ...thumbs_configuration,
               autoHeight: autoHeightEnabled,
             };
+          // 分页元素必须在实例内解析：字符串选择器会被 Swiper 全局
+          // querySelector，本实例内没有该元素时会命中页面上其他
+          // section 的分页 div，把 fraction 页码写进别人的指示器
+          if (this.gallery_configuration.pagination) {
+            const pagEl = this.querySelector(".swiper-pagination");
+            if (pagEl) {
+              this.gallery_configuration = {
+                ...this.gallery_configuration,
+                pagination: {
+                  ...this.gallery_configuration.pagination,
+                  el: pagEl,
+                },
+              };
+            } else {
+              delete this.gallery_configuration.pagination;
+            }
+          }
           this.gallerySwiper = new Swiper(
             this.elements.gallery,
             this.gallery_configuration,
